@@ -1,0 +1,47 @@
+# Solodit Pattern Stub: [M-01] `cancelSig` will not completely cancel signatures due to malleability vulnerabilities
+
+Source:
+- https://solodit.cyfrin.io/issues/m-01-cancelsig-will-not-completely-cancel-signatures-due-to-malleability-vulnerabilities-code4rena-nouns-dao-nouns-dao-git
+
+Imported:
+- 2026-05-23
+
+Status:
+- needs distillation
+
+Severity:
+- MEDIUM
+
+Protocol:
+- unknown
+
+Source platform / firm:
+- unknown
+
+Tags:
+- unknown
+
+Dedupe:
+- id: `20190`
+- fingerprint: `bcc6e6da66ffa6c96dd069ccbbc6a3ca0464e50c62014e1bce93f840ae3bca1b`
+
+Core idea:
+- TODO: Distill the reusable attack pattern from the source.
+
+Broken invariant:
+- TODO
+
+Where to look in code:
+- TODO
+
+Attack path:
+1. TODO
+
+False-positive checks:
+- TODO
+
+PoC shape:
+- TODO
+
+Triage notes:
+- TODO

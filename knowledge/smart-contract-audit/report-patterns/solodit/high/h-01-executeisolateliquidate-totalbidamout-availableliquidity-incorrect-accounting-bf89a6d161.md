@@ -1,0 +1,47 @@
+# Solodit Pattern Stub: [H-01] `executeIsolateLiquidate()` `totalBidAmout/availableLiquidity` incorrect accounting
+
+Source:
+- https://solodit.cyfrin.io/issues/h-01-executeisolateliquidate-totalbidamoutavailableliquidity-incorrect-accounting-code4rena-benddao-benddao-git
+
+Imported:
+- 2026-05-23
+
+Status:
+- needs distillation
+
+Severity:
+- HIGH
+
+Protocol:
+- unknown
+
+Source platform / firm:
+- unknown
+
+Tags:
+- unknown
+
+Dedupe:
+- id: `49592`
+- fingerprint: `bf89a6d1613b5bb85ff80bd494a32b11e9e758093584727355b02891da58cdf5`
+
+Core idea:
+- TODO: Distill the reusable attack pattern from the source.
+
+Broken invariant:
+- TODO
+
+Where to look in code:
+- TODO
+
+Attack path:
+1. TODO
+
+False-positive checks:
+- TODO
+
+PoC shape:
+- TODO
+
+Triage notes:
+- TODO

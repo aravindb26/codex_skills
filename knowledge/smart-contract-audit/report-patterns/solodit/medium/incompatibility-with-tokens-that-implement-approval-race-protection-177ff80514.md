@@ -1,0 +1,47 @@
+# Solodit Pattern Stub: Incompatibility with Tokens That Implement Approval Race Protection
+
+Source:
+- https://solodit.cyfrin.io/issues/incompatibility-with-tokens-that-implement-approval-race-protection-openzeppelin-none-tesseract-protocol-audit-markdown
+
+Imported:
+- 2026-05-23
+
+Status:
+- needs distillation
+
+Severity:
+- MEDIUM
+
+Protocol:
+- unknown
+
+Source platform / firm:
+- unknown
+
+Tags:
+- unknown
+
+Dedupe:
+- id: `43723`
+- fingerprint: `177ff805140aea62bcbd3a91c193f096d7e9aa60a497f228a5e645c98a3f8f4c`
+
+Core idea:
+- TODO: Distill the reusable attack pattern from the source.
+
+Broken invariant:
+- TODO
+
+Where to look in code:
+- TODO
+
+Attack path:
+1. TODO
+
+False-positive checks:
+- TODO
+
+PoC shape:
+- TODO
+
+Triage notes:
+- TODO

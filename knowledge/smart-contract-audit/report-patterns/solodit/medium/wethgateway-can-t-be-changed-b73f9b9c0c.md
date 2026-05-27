@@ -1,0 +1,47 @@
+# Solodit Pattern Stub: `wethGateway` can't be changed
+
+Source:
+- https://solodit.cyfrin.io/issues/wethgateway-cant-be-changed-mixbytes-none-gearbox-protocol-markdown_
+
+Imported:
+- 2026-05-23
+
+Status:
+- needs distillation
+
+Severity:
+- MEDIUM
+
+Protocol:
+- unknown
+
+Source platform / firm:
+- unknown
+
+Tags:
+- unknown
+
+Dedupe:
+- id: `30798`
+- fingerprint: `b73f9b9c0cb92ed28328bbc208f1e8050292ff33ac0cb1eb59f7da30196ea9a0`
+
+Core idea:
+- TODO: Distill the reusable attack pattern from the source.
+
+Broken invariant:
+- TODO
+
+Where to look in code:
+- TODO
+
+Attack path:
+1. TODO
+
+False-positive checks:
+- TODO
+
+PoC shape:
+- TODO
+
+Triage notes:
+- TODO

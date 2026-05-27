@@ -1,0 +1,47 @@
+# Solodit Pattern Stub: Malicious User Can Increase the Gas Cost of Verification
+
+Source:
+- https://solodit.cyfrin.io/issues/malicious-user-can-increase-the-gas-cost-of-verification-openzeppelin-none-scroll-zktrieverifier-audit-markdown
+
+Imported:
+- 2026-05-23
+
+Status:
+- needs distillation
+
+Severity:
+- MEDIUM
+
+Protocol:
+- unknown
+
+Source platform / firm:
+- unknown
+
+Tags:
+- unknown
+
+Dedupe:
+- id: `32526`
+- fingerprint: `fed2f3755a703fe0f9a0264da0c27b902b3b7d9d80a9e708e6fcd4ae30ec9db9`
+
+Core idea:
+- TODO: Distill the reusable attack pattern from the source.
+
+Broken invariant:
+- TODO
+
+Where to look in code:
+- TODO
+
+Attack path:
+1. TODO
+
+False-positive checks:
+- TODO
+
+PoC shape:
+- TODO
+
+Triage notes:
+- TODO

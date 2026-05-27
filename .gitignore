@@ -1,0 +1,36 @@
+# Runtime and identity files. This repository is for reusable audit assets only.
+auth.json
+solodit.env
+*.env
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.log
+
+# Codex runtime state and conversation history.
+sessions/
+archived_sessions/
+history.jsonl
+session_index.jsonl
+shell_snapshots/
+log/
+logs/
+cache/
+tmp/
+.tmp/
+models_cache.json
+installation_id
+
+# Build/tool caches that may appear inside skills or scripts.
+__pycache__/
+.pytest_cache/
+node_modules/
+target/
+out/
+dist/
+build/
+
+# Local OS/editor noise.
+.DS_Store
+*.swp
+*.swo
