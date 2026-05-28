@@ -149,6 +149,8 @@ Do not claim the audit is complete, or that no strong finding exists, until ever
 
 Long audit chats must not drift into scanner-only, memory-only, or guess-based work.
 
+At the start of every serious audit session, first re-anchor on this `AGENTS.md` file before doing code hunting, even if the user does not repeat these rules.
+
 Re-anchor on the audit operating system whenever:
 
 - starting a new audit phase
