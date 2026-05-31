@@ -136,8 +136,9 @@ Use this sequence by default:
 6. Form concrete exploit hypotheses.
 7. Try to disprove each hypothesis first.
 8. Check scope, known issues, prior audits, V12/excluded AI findings, intended behavior, and duplicate risk.
-9. Build the smallest useful PoC only after the idea survives the early gates.
-10. Reassess impact and severity after validation, not before.
+9. Run the mandatory strengthening pass before downgrading, killing, or presenting a candidate as low severity.
+10. Build the smallest useful PoC only after the idea survives the early gates.
+11. Reassess impact and severity after validation, not before.
 
 Do not rush into reporting before understanding the system. Low-hanging fruit is usually duplicated.
 
@@ -286,6 +287,34 @@ Reject or strongly downgrade issues that depend on:
 - manual deletion or corruption of state
 
 Only report privileged-role findings when the program explicitly says that role abuse or missing role separation is in scope.
+
+## Mandatory Strengthening Pass
+
+Do not stop at the first low-severity version of a candidate. If a candidate looks real but weak, low impact, limited, grief-only, fee-only, or likely below the program reward bar, automatically try to strengthen it before asking the user or finalizing the verdict.
+
+Before labeling a candidate `NOT WORTH SUBMITTING`, low severity, weak impact, or low expected value, check whether the same root cause can become stronger through:
+
+- repetition, batching, compounding, or multi-block execution
+- combining with another protocol flow, callback, hook, stale state, oracle update, settlement path, liquidation path, or cross-chain/message path
+- turning a local accounting error into solvency loss, fund loss, fund lock, unauthorized mint/burn, bad debt, or invariant break
+- widening impact from one user/request/position to a pool, vault, market, bridge, queue, or whole protocol state machine
+- converting griefing or DoS into permanent lock, blocked withdrawals, blocked liquidations, frozen settlement, or consensus/liveness impact when the program rewards it
+- changing assumptions from privileged/offchain-only to a public or low-privileged reachable path
+- using boundary values such as zero, dust, max, first depositor, sole participant, empty queue, stale epoch, partially-settled batch, or repeated failed/reverted operations
+- proving that caps, pause checks, limits, nonces, deadlines, slippage checks, or accounting resets do not actually bound the damage
+
+For every serious candidate, explicitly ask:
+
+- What is the strongest version of this bug?
+- Can the attacker repeat it until impact becomes material?
+- Can the affected state be made larger before triggering it?
+- Can this be chained with another normal protocol action?
+- Is the apparent low impact only because the first PoC used small numbers?
+- What exact code path prevents escalation?
+
+If strengthening succeeds, continue with the stronger impact and validate it. If strengthening fails, say that a strengthening pass was attempted and name the concrete blocker: bounded amount, one-time path, no attacker control, no reachable state, no asset/security boundary impact, scope exclusion, duplicate risk, or intended design.
+
+Do not overclaim severity just to make a finding stronger. The strengthening pass is for discovering real higher-impact paths, not for stretching weak evidence.
 
 ## Untrusted Content
 
