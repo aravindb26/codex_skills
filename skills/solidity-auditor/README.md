@@ -18,16 +18,19 @@ _Portrayed below: finding multiple high-confidence vulnerabilities in a codebase
 
 ## Usage
 
-```
-Install https://github.com/pashov/skills/ and run solidity auditor on the codebase
-```
+```bash
+# Scan the full repo (default)
+/solidity-auditor
 
-```
-run solidity auditor on *specified files*
-```
+# Review specific file(s)
+/solidity-auditor src/Vault.sol
+/solidity-auditor src/Vault.sol src/Router.sol
 
-```
-update skill to latest version
+# Write report to a markdown file (terminal-only by default)
+/solidity-auditor --file-output
+
+# Persist all intermediate agent outputs for replay and iteration
+/solidity-auditor --log-output
 ```
 
 ## Tips
