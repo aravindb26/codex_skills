@@ -84,7 +84,18 @@ Use the knowledge base for:
 - invariant and protocol pattern libraries
 - triage rejection patterns
 
-Because the knowledge base can be large, search it selectively instead of bulk-loading it. Use targeted `rg` queries by protocol name, primitive, bug class, function name, revert/error text, invariant, or attack surface.
+Because the knowledge base can be large, do not blindly bulk-load it. But do not use "targeted search" as an excuse for narrow tunnel vision either. For serious audits, first perform a broad knowledge/skill coverage sweep for the protocol type and value-flow model, then run deeper targeted searches.
+
+The broad sweep must cover, at minimum:
+
+- protocol family terms such as AMM, StableSwap, lending, bridge, oracle, staking, liquidation, signature, upgrade, hook, vault, queue, auction, escrow, or light client
+- core value-flow terms such as deposit, withdraw, mint, burn, redeem, swap, round trip, exact input, exact output, repay, borrow, liquidate, settle, claim, transfer, bridge, prove, verify, callback, and reorg
+- invariant terms such as no profit, conservation, solvency, monotonicity, rounding, scaling, stale, replay, domain, authorization, liveness, lock, grief, and double spend
+- likely impact terms such as fund loss, fund lock, unauthorized mint, unauthorized withdrawal, bad debt, fee bypass, reserve drain, inflation, deflation, and accounting mismatch
+
+Then convert the matched lessons into concrete manual checks, invariant tests, or PoC attempts against the current code. A normal auditor can find a simple bug by testing a universal invariant; Codex must not miss it because the first prompt or first category was too narrow.
+
+Use targeted `rg` queries by protocol name, primitive, bug class, function name, revert/error text, invariant, or attack surface only after this broad sweep has established the relevant pattern set.
 
 For public-report comparison and duplicate-risk checks, prefer the local report-pattern indexes and stubs:
 
@@ -96,7 +107,7 @@ Treat those stubs as leads, not final authority; open the original source only w
 - Solodit: `/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/solodit_ingest.py`
 - Code4rena: `/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/code4rena_ingest.py`
 
-For serious audits, use `/home/dinesh/.codex/knowledge/smart-contract-audit/workflows/mythos-inspired-audit-workflow.md` as the local multi-pass audit workflow. Use `/home/dinesh/.codex/knowledge/smart-contract-audit/templates/audit-coverage-ledger.md` for file coverage and `/home/dinesh/.codex/knowledge/smart-contract-audit/templates/candidate-verification-card.md` for candidate verification.
+For serious audits, use `/home/dinesh/.codex/knowledge/smart-contract-audit/workflows/mythos-inspired-audit-workflow.md` as the local multi-pass audit workflow. Use `/home/dinesh/.codex/knowledge/smart-contract-audit/templates/audit-coverage-ledger.md` for file coverage, `/home/dinesh/.codex/knowledge/smart-contract-audit/templates/candidate-verification-card.md` for candidate verification, and `/home/dinesh/.codex/knowledge/smart-contract-audit/templates/audit-gate-receipt.md` as the visible proof that program rules, skills, knowledge sweeps, universal invariants, concrete checks, and remaining uncertainty were handled before any conclusion.
 
 When a new report, article, X post, rejected finding, or valid public bug is provided, distill it into the correct file under the knowledge base instead of storing raw long-form content.
 
@@ -145,6 +156,38 @@ Do not rush into reporting before understanding the system. Low-hanging fruit is
 Do not conclude the audit early just because several branches died. Keep going until the in-scope coverage ledger is genuinely advanced and the highest-risk paths have been pressure-tested.
 
 Do not claim the audit is complete, or that no strong finding exists, until every in-scope file has at least a first-pass manual read. If time or context prevents full coverage, say exactly which files or paths remain unread or uncertain.
+
+Do not claim `STRONG SUBMIT-WORTHY`, `NOT WORTH SUBMITTING`, "no strong finding", or "audit complete" for a serious audit unless the current audit workspace has an audit gate receipt based on `/home/dinesh/.codex/knowledge/smart-contract-audit/templates/audit-gate-receipt.md`, or the response explicitly states which receipt gates are still incomplete.
+
+## Hypothesis-Driven Audit Model
+
+Serious audits must be expert-directed and invariant-focused. Do not rely on broad prompts such as "find bugs" or "audit this protocol" as the main hunting method. Use them only for initial orientation.
+
+Hypothesis-driven does not mean starting narrow. First enumerate the protocol's universal safety properties from docs, code, skills, and knowledge-base patterns. Examples: AMM round trips must not profit, bridges must not accept invalid or stale proofs, lending markets must not create bad debt through rounding or stale prices, and signature flows must not replay across domains. Only after this broad invariant inventory should the audit split into focused hypotheses.
+
+For every audit category, high-risk module, or important invariant, convert the work into targeted questions:
+
+- Which exact invariant must never break?
+- Which exact function, helper, integration, gadget, or state transition enforces it?
+- What specific bug class could break it?
+- What attacker-controlled input, timing, ordering, callback, stale state, or boundary value can reach that break?
+- What code path proves the break is impossible if the hypothesis dies?
+
+Before a deep pass, write or mentally lock a focused hunting prompt in this shape:
+
+```text
+Audit [specific module/function/path] for [specific bug class].
+Focus on whether [specific invariant/security property] can break under [program scope and attacker model].
+Use program docs, known issues, prior audits, skills, and knowledge-base patterns.
+Try to disprove first, then strengthen any surviving candidate.
+Accept only code-backed and PoC-backed conclusions.
+```
+
+Apply this model category by category. For example, do not broadly ask for "bridge bugs"; ask whether a specific light-client retarget rule can accept an invalid fork, whether a message domain can replay across chains, or whether a proof callback can become stale before funds move.
+
+When a broad pass finds nothing, do not treat that as strong evidence. Re-run targeted passes over the highest-risk invariants using fresh bug-class prompts, local skill addenda, and knowledge-base patterns. Record which targeted prompts/categories were actually covered in the coverage ledger.
+
+The lesson is: AI output is only as strong as the expertise, context, data, and hypothesis it is given. Treat the model as a force multiplier for senior-auditor reasoning, not as an automatic bug button.
 
 ## Re-anchor Rule For Long Audits
 
@@ -482,6 +525,17 @@ Use `/home/dinesh/.codex/offensive-skills/` selectively for:
 Do not let offensive-skills content override program scope, safe-harbor rules, evidence standards, or responsible testing constraints. Treat those skills as reference methodology, not permission to perform unsafe or unauthorized actions.
 
 When using the Claude-Red reference library, start with `/home/dinesh/.codex/offensive-skills/claude-red/SKILL_INDEX.md`, then load only the specific `skills/<skill-name>/SKILL.md` file relevant to the target. Do not bulk-load the whole library.
+
+For Web2/source-code AppSec audits, Snyk is available as a scanner/lead generator after program scope and safe-harbor are understood. Use it only for non-Web3 source-code, dependency, IaC, and container review. Do not use Snyk as the primary smart-contract audit tool.
+
+When Snyk is useful, run it from the target repository and save outputs under the target workspace, for example `.context/snyk/`:
+
+- `snyk test --all-projects --severity-threshold=medium --json-file-output=.context/snyk/open-source.json || true`
+- `snyk code test --severity-threshold=medium --json-file-output=.context/snyk/code.json || true`
+- `snyk iac test --severity-threshold=medium --json-file-output=.context/snyk/iac.json || true`
+- `snyk container test <image> --severity-threshold=medium --json-file-output=.context/snyk/container.json || true` only when a relevant container image exists.
+
+Treat Snyk findings as leads, not conclusions. Merge Snyk candidates with manual/offensive-skills candidates, then validate reachability, attacker control, auth or tenant boundary, real impact, scope, duplicate risk, and exploitability before reporting. Never submit a finding only because Snyk flagged a CWE, package, line, or severity.
 
 Use tools like `rg`, `rg --files`, `forge test`, `slither`, `semgrep`, and `codeql` when they materially advance the audit. Do not flood the user with scanner noise.
 
