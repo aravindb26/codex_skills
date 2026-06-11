@@ -30,6 +30,42 @@ f. Bash `mktemp -d ./.audit-XXXXXX` → store as `{bundle_dir}`
 
 If the remote VERSION fetch succeeds and differs from local, print `⚠️ You are not using the latest version. Please upgrade for best security coverage. See https://github.com/pashov/skills`. If it fails, skip silently.
 
+**Turn 1b — Model selection (Claude Code only).** This turn applies ONLY when both `AskUserQuestion` and the `Agent` tool (with a `model` parameter) are available in your runtime — i.e., Claude Code. On Codex, Gemini, Cursor's native agent, or any runtime without these, SKIP this turn entirely, leave `{agent_model}` unset, and proceed to Turn 2. Do NOT emit the question as prose. Do NOT substitute any other mechanism.
+
+On Claude Code:
+
+1. Read your system prompt to detect your own model **family** (Opus, Sonnet, or Haiku). Ignore the version digits — the Agent tool's `model` parameter takes the family name (`"opus"` / `"sonnet"` / `"haiku"`), and the runtime resolves to the latest version in that family.
+2. Call `AskUserQuestion` with:
+   - Question: `"Which Claude model should the 12 audit agents use?"`
+   - Three single-select options. Mark the orchestrator's own family as `(Recommended)` and place it first.
+   - On each option, set the `description` field to `latest`.
+   - On each option, set the `preview` field verbatim (preserve all whitespace exactly — the box widths must stay equal across all three):
+
+   Opus preview:
+
+   ```
+   ┌──────────────────────────────────────────────────────────┐
+   │  opus  ·  highest reasoning  ·  most expensive           │
+   └──────────────────────────────────────────────────────────┘
+   ```
+
+   Sonnet preview:
+
+   ```
+   ┌──────────────────────────────────────────────────────────┐
+   │  sonnet  ·  balanced reasoning  ·  mid cost              │
+   └──────────────────────────────────────────────────────────┘
+   ```
+
+   Haiku preview:
+
+   ```
+   ┌──────────────────────────────────────────────────────────┐
+   │  haiku  ·  lowest reasoning  ·  cheapest                 │
+   └──────────────────────────────────────────────────────────┘
+   ```
+3. Store the runner's choice as `{agent_model}`. If no answer, default to the orchestrator's own model.
+
 **Turn 2 — Prepare.** In one message, make parallel tool calls: (a) Read `{resolved_path}/report-formatting.md`, (b) Read `{resolved_path}/judging.md`.
 
 Then build all bundles in a single Bash command using `cat` (not shell variables or heredocs):
@@ -56,7 +92,7 @@ Each bundle = source.md + SOP + specialty + shared-rules. Agents read the bundle
 
 Print line counts for every bundle and `source.md`. Do NOT inline source code into the Agent call prompt itself.
 
-**Turn 3a — Spawn all 12 agents.** In one message, spawn all 12 agents as **parallel BACKGROUND Agent calls** (`run_in_background=true`). The orchestrator will receive a notification when each agent completes — do NOT poll or sleep. Single phase, no later spawns. Proceed to Turn 3b only after all 12 have notified completion.
+**Turn 3a — Spawn all 12 agents.** In one message, spawn all 12 agents as **parallel BACKGROUND Agent calls** (`run_in_background=true`). If Turn 1b set `{agent_model}`, pass `model={agent_model}` on every Agent call. If `{agent_model}` is unset (Turn 1b skipped — Codex, Gemini, others), omit the `model` parameter entirely — do NOT substitute any default. The orchestrator will receive a notification when each agent completes — do NOT poll or sleep. Single phase, no later spawns. Proceed to Turn 3b only after all 12 have notified completion.
 
 Agents 1–9 use the **single-specialty prompt** (Turn 3a-i). Agents 10–12 use the **gap-hunter prompt** (Turn 3a-ii).
 

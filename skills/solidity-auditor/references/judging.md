@@ -25,6 +25,15 @@ Prove an unprivileged actor executes the attack.
 - Only trusted roles can trigger → **DEMOTE**
 - Unprivileged actor triggers profitably → **clears**, continue
 
+**Admin-action findings — reject unless an unprivileged amplifier is named.** This applies ONLY to actions performed by admin/owner, NOT to unprivileged attacker actions. If the harm requires the admin acting maliciously or against documented intent, **REJECT** — do not even emit as a LEAD (stricter than the DEMOTE above). The finding clears only when the body names a concrete unprivileged amplifier:
+
+- **race** — admin sets X mid-flow; an unprivileged user exploits the window before the update propagates.
+- **retroactive sweep** — an admin update rewrites a pending value already credited.
+- **asymmetric formula** — admin output chains into a formula an unprivileged actor profits from.
+- **access gap** — missing guard, tautological auth, or missing init guard (the access mechanism itself is the bug).
+
+No amplifier named → **REJECTED**. Amplifier named → judge it on that unprivileged path.
+
 ## Gate 4 — Impact
 
 Prove material harm to an identifiable victim.
