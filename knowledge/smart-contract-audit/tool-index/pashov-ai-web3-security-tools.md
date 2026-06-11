@@ -22,7 +22,7 @@ It does not contain direct `SKILL.md` files.
 The highest-trust/core entries were already present in this Codex setup before this review:
 
 - `pashov/skills`
-- `Cyfrin/solskill`
+- `Cyfrin/solskill` source, installed locally as the canonical `solidity` skill
 - `kadenzipfel/scv-scan`
 - `trailofbits/skills`
 - `forefy/.context` partial coverage
