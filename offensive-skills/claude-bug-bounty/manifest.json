@@ -1,0 +1,34 @@
+{
+  "name": "claude-bug-bounty",
+  "source": "https://github.com/shuvonsec/claude-bug-bounty",
+  "source_commit": "59a3c32cc9c222dd660f8475ab24b0318f8b7d2a",
+  "installed_at": "2026-06-11",
+  "install_type": "filtered-reference-only",
+  "target": "/home/dinesh/.codex/offensive-skills/claude-bug-bounty",
+  "active_codex_skill": false,
+  "default_for_web3": false,
+  "intended_use": [
+    "web2 bug bounty methodology",
+    "source-code AppSec audit methodology",
+    "web/API vulnerability-class references",
+    "finding validation",
+    "bug bounty report writing"
+  ],
+  "included_skills": [
+    "bb-methodology",
+    "web2-recon",
+    "web2-vuln-classes",
+    "security-arsenal",
+    "triage-validation",
+    "report-writing"
+  ],
+  "excluded_categories": [
+    "web3 and smart-contract audit content",
+    "meme-coin audit content",
+    "credential-spray methodology",
+    "active command runner files",
+    "tool scripts",
+    "MCP integrations",
+    "Claude hooks"
+  ]
+}
