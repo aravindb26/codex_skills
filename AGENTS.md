@@ -71,6 +71,7 @@ During serious audits, maintain a Program Memory for the whole session:
 - PoC/report format requirements
 - program-specific invariants and areas of concern
 - unresolved ambiguities or inaccessible sources
+- audit-specific downloads, cloned repos, generated tool outputs, and cache/temp directories created during the session
 
 Keep Program Memory compact but active. Revisit and update it whenever new program evidence appears. If a rule, exclusion, severity bar, or scope boundary affects a candidate, re-open the source and verify the exact wording instead of relying on memory.
 
@@ -158,6 +159,30 @@ Do not conclude the audit early just because several branches died. Keep going u
 Do not claim the audit is complete, or that no strong finding exists, until every in-scope file has at least a first-pass manual read. If time or context prevents full coverage, say exactly which files or paths remain unread or uncertain.
 
 Do not claim `STRONG SUBMIT-WORTHY`, `NOT WORTH SUBMITTING`, "no strong finding", or "audit complete" for a serious audit unless the current audit workspace has an audit gate receipt based on `/home/dinesh/.codex/knowledge/smart-contract-audit/templates/audit-gate-receipt.md`, or the response explicitly states which receipt gates are still incomplete.
+
+## Audit-End Cleanup
+
+When the user explicitly says an audit/program is finished, complete cleanup as a separate final phase.
+
+During each audit, prefer storing temporary downloads, cloned comparison repos, scanner outputs, generated logs, fuzz artifacts, and cache files under clearly audit-specific paths such as the current audit workspace, `.context/`, `.context/tmp/`, `.context/snyk/`, or `/home/dinesh/.cache/audit-<program-or-repo-slug>/`. Avoid scattering audit-specific temporary files across unrelated global directories.
+
+At cleanup time:
+
+- identify the exact audit root, target repo path, program slug, and any audit-specific cache/temp paths created during the audit
+- inspect `/home/dinesh/.cache/` only for entries clearly tied to the current audit by path, timestamp, repo/program name, or the session's recorded artifact ledger
+- prepare a concise delete plan listing exact paths and why each path is audit-specific
+- preserve final reports, submitted findings, useful PoCs, audit-debug notes, distilled knowledge-base lessons, and user-created files unless the user explicitly asks to remove them
+- never delete `/home/dinesh/.codex/skills/`, `/home/dinesh/.codex/knowledge/`, `/home/dinesh/.codex/offensive-skills/`, `/home/dinesh/.codex/AGENTS.md`, `/home/dinesh/codex_skills_backup/`, auth/config/token files, or unrelated shared caches
+- if a path is ambiguous, do not delete it; ask or leave it listed as "not removed"
+
+Only remove files after the user confirms the delete plan, unless the user already gave an explicit cleanup command with exact paths. Use targeted deletion of listed paths only. Do not use broad destructive patterns such as deleting all of `/home/dinesh/.cache/`, deleting parent workspaces, or globbing across unrelated audits.
+
+After cleanup, report:
+
+- deleted paths
+- preserved paths
+- ambiguous paths not removed
+- any follow-up manual action needed
 
 ## Hypothesis-Driven Audit Model
 
