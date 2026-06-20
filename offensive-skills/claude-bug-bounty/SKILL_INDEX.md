@@ -28,3 +28,5 @@ Reference-only filtered Web2/AppSec/source-code bounty skills. Do not use as the
 ## Boundary
 
 Excluded Web3, meme-coin, credential-spray, active command, agent, MCP, and tool-runner content is listed in `docs/FILTERED_INSTALL_NOTES.md`.
+
+Recent upstream updates reviewed but not directly copied are summarized in `docs/UPSTREAM_UPDATE_REVIEW_2026-06-20.md`.

@@ -2,6 +2,7 @@
   "name": "claude-bug-bounty",
   "source": "https://github.com/shuvonsec/claude-bug-bounty",
   "source_commit": "59a3c32cc9c222dd660f8475ab24b0318f8b7d2a",
+  "last_upstream_reviewed_commit": "2a64de3",
   "installed_at": "2026-06-11",
   "install_type": "filtered-reference-only",
   "target": "/home/dinesh/.codex/offensive-skills/claude-bug-bounty",

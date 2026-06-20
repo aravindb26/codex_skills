@@ -2,9 +2,9 @@
 
 Source: <https://github.com/pashov/ai-web3-security>
 
-Checked: 2026-06-03
+Checked: 2026-06-20
 
-Source commit checked: `c44ad3653bece52ab0ac60a9f29e7283a78ea172`
+Source commit checked: `ca69854090033ce9a9ba904da302268492d5cb6a`
 
 ## Classification
 
@@ -180,6 +180,10 @@ Reason:
 ## Intentionally Not Bulk Installed
 
 Several listed repos were not installed to avoid active-skill noise or because local coverage already exists.
+
+New since the previous check:
+
+- `RASHMOR1/dlt-auditor` was added to the hub as a multi-language DLT audit skill. It was recorded as a discovery lead only, not installed, because it needs separate quality review before entering the active Codex skill set.
 
 Skipped for now:
 
