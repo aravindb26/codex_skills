@@ -529,6 +529,7 @@ Common choices:
 - `fp-check` to kill weak or suspicious candidates
 - `differential-review` for commit/PR/regression review
 - `audit-oracle`, `oracle-flashloan-analysis`, `audit-reentrancy`, `audit-signature`, `audit-slippage`, `audit-lending`, `audit-liquidation`, and `proxy-upgrade-safety` for focused threat classes
+- `hackenproof-triage-marketplace`, `hackenproof-poc-grader`, `hackenproof-triage-mistakes`, `hackenproof-comment-templates`, `hackenproof-report-handoff`, `hackenproof-fix-verifier`, `hackenproof-bulk-triage`, and `hackenproof-all-reports-export` for HackenProof triage, evidence review, comments, handoff, fix verification, bulk review, and report export work
 
 ## External Offensive Skills Boundary
 
