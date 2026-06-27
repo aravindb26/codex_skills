@@ -160,6 +160,13 @@ Do not claim the audit is complete, or that no strong finding exists, until ever
 
 Do not claim `STRONG SUBMIT-WORTHY`, `NOT WORTH SUBMITTING`, "no strong finding", or "audit complete" for a serious audit unless the current audit workspace has an audit gate receipt based on `/home/dinesh/.codex/knowledge/smart-contract-audit/templates/audit-gate-receipt.md`, or the response explicitly states which receipt gates are still incomplete.
 
+Use the bounty-hunting loop: explore wide, exploit deep.
+
+- Explore wide across surfaces, invariants, trust boundaries, weird states, external dependencies, and docs/code mismatches.
+- Exploit deep only on promising leads by tracing attacker input to a broken invariant and concrete impact.
+- Maintain an adaptive lead bank: merge, rank, kill, deepen, or return leads to exploration.
+- Treat the lead bank as triage machinery, not proof; only evidence-backed candidates can become findings.
+
 ## Audit-End Cleanup
 
 When the user explicitly says an audit/program is finished, complete cleanup as a separate final phase.
