@@ -179,7 +179,7 @@ At cleanup time:
 - inspect `/home/dinesh/.cache/` only for entries clearly tied to the current audit by path, timestamp, repo/program name, or the session's recorded artifact ledger
 - prepare a concise delete plan listing exact paths and why each path is audit-specific
 - preserve final reports, submitted findings, useful PoCs, audit-debug notes, distilled knowledge-base lessons, and user-created files unless the user explicitly asks to remove them
-- never delete `/home/dinesh/.codex/skills/`, `/home/dinesh/.codex/knowledge/`, `/home/dinesh/.codex/offensive-skills/`, `/home/dinesh/.codex/AGENTS.md`, `/home/dinesh/codex_skills_backup/`, auth/config/token files, or unrelated shared caches
+- never delete `/home/dinesh/.codex/skills/`, `/home/dinesh/.codex/knowledge/`, `/home/dinesh/.codex/offensive-skills/`, `/home/dinesh/.codex/AGENTS.md`, auth/config/token files, or unrelated shared caches
 - if a path is ambiguous, do not delete it; ask or leave it listed as "not removed"
 
 Only remove files after the user confirms the delete plan, unless the user already gave an explicit cleanup command with exact paths. Use targeted deletion of listed paths only. Do not use broad destructive patterns such as deleting all of `/home/dinesh/.cache/`, deleting parent workspaces, or globbing across unrelated audits.
