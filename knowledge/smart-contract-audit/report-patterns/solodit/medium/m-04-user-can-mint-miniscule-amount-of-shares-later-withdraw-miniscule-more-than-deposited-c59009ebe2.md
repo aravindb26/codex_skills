@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-04] User can mint miniscule amount of shares, later withdraw miniscule more than deposited
 
 Source:
-- https://solodit.cyfrin.io/issues/m-04-user-can-mint-miniscule-amount-of-shares-later-withdraw-miniscule-more-than-deposited-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-04-user-can-mint-miniscule-amount-of-shares-later-withdraw-miniscule-more-than-deposited-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

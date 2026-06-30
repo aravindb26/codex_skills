@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Incorrect update of list
 
 Source:
-- https://solodit.cyfrin.io/issues/incorrect-update-of-list-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/incorrect-update-of-list-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

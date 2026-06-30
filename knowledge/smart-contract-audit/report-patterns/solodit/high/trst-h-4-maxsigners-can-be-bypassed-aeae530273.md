@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-4 maxSigners can be bypassed
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-4-maxsigners-can-be-bypassed-trust-security-none-hats-protocol-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-4-maxsigners-can-be-bypassed-trust-security-none-hats-protocol-markdown
 
 Imported:
 - 2026-05-23

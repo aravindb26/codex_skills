@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: `signatory` not checked
 
 Source:
-- https://solodit.cyfrin.io/issues/signatory-not-checked-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/signatory-not-checked-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

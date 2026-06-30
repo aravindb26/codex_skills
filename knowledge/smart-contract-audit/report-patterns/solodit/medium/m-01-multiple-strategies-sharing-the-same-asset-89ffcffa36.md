@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Multiple strategies sharing the same asset
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-multiple-strategies-sharing-the-same-asset-pashov-audit-group-none-adapterfinance-markdown_
+- https://solodit.cyfrin.io/issues/m-01-multiple-strategies-sharing-the-same-asset-pashov-audit-group-none-adapterfinance-markdown
 
 Imported:
 - 2026-05-23

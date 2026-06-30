@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] MEV risk in periods of high volatility
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-mev-risk-in-periods-of-high-volatility-zachobront-none-soundxyz-markdown_
+- https://solodit.cyfrin.io/issues/m-02-mev-risk-in-periods-of-high-volatility-zachobront-none-soundxyz-markdown
 
 Imported:
 - 2026-05-23

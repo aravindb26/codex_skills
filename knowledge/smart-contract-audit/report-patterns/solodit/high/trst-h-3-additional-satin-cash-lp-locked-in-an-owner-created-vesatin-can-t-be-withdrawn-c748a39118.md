@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-3 Additional Satin/$CASH LP locked in an owner-created veSatin can’t be withdrawn
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-3-additional-satincash-lp-locked-in-an-owner-created-vesatin-cant-be-withdrawn-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-3-additional-satincash-lp-locked-in-an-owner-created-vesatin-cant-be-withdrawn-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

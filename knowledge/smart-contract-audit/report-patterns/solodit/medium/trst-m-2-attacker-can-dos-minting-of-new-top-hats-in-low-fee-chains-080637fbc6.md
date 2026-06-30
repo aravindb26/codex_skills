@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-2 Attacker can DOS minting of new top hats in low-fee chains
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-2-attacker-can-dos-minting-of-new-top-hats-in-low-fee-chains-trust-security-none-hats-protocol-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-2-attacker-can-dos-minting-of-new-top-hats-in-low-fee-chains-trust-security-none-hats-protocol-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-02] If AMO becomes primary depositor of Silo, user can force withdrawals to get inflated interest rates
 
 Source:
-- https://solodit.cyfrin.io/issues/h-02-if-amo-becomes-primary-depositor-of-silo-user-can-force-withdrawals-to-get-inflated-interest-rates-zachobront-none-olympusdao-markdown_
+- https://solodit.cyfrin.io/issues/h-02-if-amo-becomes-primary-depositor-of-silo-user-can-force-withdrawals-to-get-inflated-interest-rates-zachobront-none-olympusdao-markdown
 
 Imported:
 - 2026-05-23

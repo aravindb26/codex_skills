@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-7 It’s possible to freely detach tokens from a gauge
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-7-its-possible-to-freely-detach-tokens-from-a-gauge-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-7-its-possible-to-freely-detach-tokens-from-a-gauge-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

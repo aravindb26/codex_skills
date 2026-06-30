@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [C-01] `RebaseReward` fails because of incorrect token handling
 
 Source:
-- https://solodit.cyfrin.io/issues/c-01-rebasereward-fails-because-of-incorrect-token-handling-pashov-audit-group-none-kittenswap_2025-06-12-markdown_
+- https://solodit.cyfrin.io/issues/c-01-rebasereward-fails-because-of-incorrect-token-handling-pashov-audit-group-none-kittenswap_2025-06-12-markdown
 
 Imported:
 - 2026-05-23

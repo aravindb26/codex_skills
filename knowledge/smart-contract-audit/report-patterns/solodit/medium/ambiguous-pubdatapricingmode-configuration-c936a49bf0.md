@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Ambiguous PubdataPricingMode Configuration
 
 Source:
-- https://solodit.cyfrin.io/issues/ambiguous-pubdatapricingmode-configuration-openzeppelin-none-zksync-state-transition-diff-audit-markdown_
+- https://solodit.cyfrin.io/issues/ambiguous-pubdatapricingmode-configuration-openzeppelin-none-zksync-state-transition-diff-audit-markdown
 
 Imported:
 - 2026-05-23

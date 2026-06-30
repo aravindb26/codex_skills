@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-2 Deviation from spec will result in dislocation of receiver delegate
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-2-deviation-from-spec-will-result-in-dislocation-of-receiver-delegate-trust-security-none-lukso-lsp-audit-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-2-deviation-from-spec-will-result-in-dislocation-of-receiver-delegate-trust-security-none-lukso-lsp-audit-markdown
 
 Imported:
 - 2026-05-23

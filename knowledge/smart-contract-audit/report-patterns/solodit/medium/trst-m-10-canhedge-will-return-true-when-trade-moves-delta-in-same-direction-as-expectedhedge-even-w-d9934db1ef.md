@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-10 canHedge will return true when trade moves delta in same direction as expectedHedge even when that leads to more risk
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-10-canhedge-will-return-true-when-trade-moves-delta-in-same-direction-as-expectedhedge-even-when-that-leads-to-more-risk-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-10-canhedge-will-return-true-when-trade-moves-delta-in-same-direction-as-expectedhedge-even-when-that-leads-to-more-risk-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

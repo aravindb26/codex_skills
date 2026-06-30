@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-3 Target signature threshold can be bypassed leading to minority TXs
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-3-target-signature-threshold-can-be-bypassed-leading-to-minority-txs-trust-security-none-hats-protocol-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-3-target-signature-threshold-can-be-bypassed-leading-to-minority-txs-trust-security-none-hats-protocol-markdown
 
 Imported:
 - 2026-05-23

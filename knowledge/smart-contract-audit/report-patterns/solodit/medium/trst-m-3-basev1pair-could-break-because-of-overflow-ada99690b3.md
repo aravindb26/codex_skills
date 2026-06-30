@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-3 BaseV1Pair could break because of overflow
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-3-basev1pair-could-break-because-of-overflow-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-3-basev1pair-could-break-because-of-overflow-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

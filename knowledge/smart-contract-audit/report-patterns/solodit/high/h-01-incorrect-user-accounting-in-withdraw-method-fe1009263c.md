@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] Incorrect user accounting in `withdraw` method
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-incorrect-user-accounting-in-withdraw-method-pashov-none-yield-ninja-markdown_
+- https://solodit.cyfrin.io/issues/h-01-incorrect-user-accounting-in-withdraw-method-pashov-none-yield-ninja-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-1 canHedge may return wrong result when there is a pending position request
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-1-canhedge-may-return-wrong-result-when-there-is-a-pending-position-request-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-1-canhedge-may-return-wrong-result-when-there-is-a-pending-position-request-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

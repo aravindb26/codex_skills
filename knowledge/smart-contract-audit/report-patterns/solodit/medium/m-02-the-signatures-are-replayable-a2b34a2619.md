@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] The signatures are replayable
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-the-signatures-are-replayable-code4rena-krystal-defi-krystal-defi-git_
+- https://solodit.cyfrin.io/issues/m-02-the-signatures-are-replayable-code4rena-krystal-defi-krystal-defi-git
 
 Imported:
 - 2026-05-23

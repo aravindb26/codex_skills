@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: `masterCreditAccount` remains uninitialized
 
 Source:
-- https://solodit.cyfrin.io/issues/mastercreditaccount-remains-uninitialized-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/mastercreditaccount-remains-uninitialized-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

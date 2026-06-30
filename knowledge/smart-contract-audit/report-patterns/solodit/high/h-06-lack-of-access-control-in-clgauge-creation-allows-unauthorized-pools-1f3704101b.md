@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-06] Lack of access control in `CLGauge` creation allows unauthorized `Pools`
 
 Source:
-- https://solodit.cyfrin.io/issues/h-06-lack-of-access-control-in-clgauge-creation-allows-unauthorized-pools-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/h-06-lack-of-access-control-in-clgauge-creation-allows-unauthorized-pools-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

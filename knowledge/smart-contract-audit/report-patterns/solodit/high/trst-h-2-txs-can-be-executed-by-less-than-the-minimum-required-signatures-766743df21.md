@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-2 TXs can be executed by less than the minimum required signatures
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-2-txs-can-be-executed-by-less-than-the-minimum-required-signatures-trust-security-none-hats-protocol-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-2-txs-can-be-executed-by-less-than-the-minimum-required-signatures-trust-security-none-hats-protocol-markdown
 
 Imported:
 - 2026-05-23

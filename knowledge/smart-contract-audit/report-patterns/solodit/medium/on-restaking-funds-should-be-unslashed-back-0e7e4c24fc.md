@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: On restaking, funds should be unslashed back
 
 Source:
-- https://solodit.cyfrin.io/issues/on-restaking-funds-should-be-unslashed-back-hans-none-meta-markdown_
+- https://solodit.cyfrin.io/issues/on-restaking-funds-should-be-unslashed-back-hans-none-meta-markdown
 
 Imported:
 - 2026-05-23

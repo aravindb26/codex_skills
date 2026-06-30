@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-10 updatePeriod() distributes the same amount of emissions regardless of the time passed from the last distribution
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-10-updateperiod-distributes-the-same-amount-of-emissions-regardless-of-the-time-passed-from-the-last-distribution-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-10-updateperiod-distributes-the-same-amount-of-emissions-regardless-of-the-time-passed-from-the-last-distribution-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

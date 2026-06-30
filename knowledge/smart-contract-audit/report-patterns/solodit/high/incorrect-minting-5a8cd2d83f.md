@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Incorrect minting
 
 Source:
-- https://solodit.cyfrin.io/issues/incorrect-minting-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/incorrect-minting-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

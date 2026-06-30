@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: `amount` must be > 1
 
 Source:
-- https://solodit.cyfrin.io/issues/amount-must-be-1-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/amount-must-be-1-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

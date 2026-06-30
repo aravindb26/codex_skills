@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-10] split() mints NFTs to msg.sender not the original owner
 
 Source:
-- https://solodit.cyfrin.io/issues/m-10-split-mints-nfts-to-msgsender-not-the-original-owner-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-10-split-mints-nfts-to-msgsender-not-the-original-owner-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

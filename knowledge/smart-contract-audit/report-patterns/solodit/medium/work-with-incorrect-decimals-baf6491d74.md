@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Work with incorrect decimals
 
 Source:
-- https://solodit.cyfrin.io/issues/work-with-incorrect-decimals-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/work-with-incorrect-decimals-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

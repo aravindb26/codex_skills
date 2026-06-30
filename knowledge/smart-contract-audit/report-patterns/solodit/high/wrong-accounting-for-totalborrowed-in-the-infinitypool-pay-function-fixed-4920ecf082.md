@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Wrong Accounting for totalBorrowed in the InfinityPool.pay Function ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/wrong-accounting-for-totalborrowed-in-the-infinitypoolpay-function-fixed-consensys-none-glif-filecoin-infinitypool-markdown_
+- https://solodit.cyfrin.io/issues/wrong-accounting-for-totalborrowed-in-the-infinitypoolpay-function-fixed-consensys-none-glif-filecoin-infinitypool-markdown
 
 Imported:
 - 2026-05-23

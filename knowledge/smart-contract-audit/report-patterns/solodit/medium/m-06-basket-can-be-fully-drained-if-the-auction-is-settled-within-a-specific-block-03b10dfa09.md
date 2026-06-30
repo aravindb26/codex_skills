@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-06] Basket can be fully drained if the auction is settled within a specific block
 
 Source:
-- https://solodit.cyfrin.io/issues/m-06-basket-can-be-fully-drained-if-the-auction-is-settled-within-a-specific-block-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-06-basket-can-be-fully-drained-if-the-auction-is-settled-within-a-specific-block-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

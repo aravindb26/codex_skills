@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: GDACurve does not validate new spot price
 
 Source:
-- https://solodit.cyfrin.io/issues/gdacurve-does-not-validate-new-spot-price-cyfrin-sudoswap-markdown_
+- https://solodit.cyfrin.io/issues/gdacurve-does-not-validate-new-spot-price-cyfrin-sudoswap-markdown
 
 Imported:
 - 2026-05-23

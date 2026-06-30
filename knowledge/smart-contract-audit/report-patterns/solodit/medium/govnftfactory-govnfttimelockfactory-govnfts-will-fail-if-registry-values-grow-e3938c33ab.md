@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: GovNFTFactory /GovNFTTImelockFactory.govNFTs() will fail if registry values grow.
 
 Source:
-- https://solodit.cyfrin.io/issues/govnftfactory-govnfttimelockfactorygovnfts-will-fail-if-registry-values-grow-cantina-none-govnft-pdf_
+- https://solodit.cyfrin.io/issues/govnftfactory-govnfttimelockfactorygovnfts-will-fail-if-registry-values-grow-cantina-none-govnft-pdf
 
 Imported:
 - 2026-05-23

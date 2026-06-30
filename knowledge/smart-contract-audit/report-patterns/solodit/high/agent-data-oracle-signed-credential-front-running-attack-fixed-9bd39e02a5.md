@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Agent Data Oracle Signed Credential Front-Running Attack ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/agent-data-oracle-signed-credential-front-running-attack-fixed-consensys-none-glif-filecoin-infinitypool-markdown_
+- https://solodit.cyfrin.io/issues/agent-data-oracle-signed-credential-front-running-attack-fixed-consensys-none-glif-filecoin-infinitypool-markdown
 
 Imported:
 - 2026-05-23

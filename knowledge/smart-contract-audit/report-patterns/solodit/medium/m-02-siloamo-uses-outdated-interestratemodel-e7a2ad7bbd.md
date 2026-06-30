@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] SiloAMO uses outdated InterestRateModel
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-siloamo-uses-outdated-interestratemodel-zachobront-none-olympusdao-markdown_
+- https://solodit.cyfrin.io/issues/m-02-siloamo-uses-outdated-interestratemodel-zachobront-none-olympusdao-markdown
 
 Imported:
 - 2026-05-23

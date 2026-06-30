@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-02] DoS: Blacklisted user may prevent withdrawExcessRewards()
 
 Source:
-- https://solodit.cyfrin.io/issues/h-02-dos-blacklisted-user-may-prevent-withdrawexcessrewards-code4rena-factorydao-factorydao-contest-git_
+- https://solodit.cyfrin.io/issues/h-02-dos-blacklisted-user-may-prevent-withdrawexcessrewards-code4rena-factorydao-factorydao-contest-git
 
 Imported:
 - 2026-05-23

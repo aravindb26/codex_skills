@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Bounty manager can set `maxRewardPerVote` to 1 after votes are locked, stealing free votes
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-bounty-manager-can-set-maxrewardpervote-to-1-after-votes-are-locked-stealing-free-votes-zachobront-none-stakedao-markdown_
+- https://solodit.cyfrin.io/issues/m-01-bounty-manager-can-set-maxrewardpervote-to-1-after-votes-are-locked-stealing-free-votes-zachobront-none-stakedao-markdown
 
 Imported:
 - 2026-05-23

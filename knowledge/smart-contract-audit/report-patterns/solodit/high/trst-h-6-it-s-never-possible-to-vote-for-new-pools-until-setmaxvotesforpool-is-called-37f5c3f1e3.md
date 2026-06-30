@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-6 It’s never possible to vote for new pools until setMaxVotesForPool() is called
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-6-its-never-possible-to-vote-for-new-pools-until-setmaxvotesforpool-is-called-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-6-its-never-possible-to-vote-for-new-pools-until-setmaxvotesforpool-is-called-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

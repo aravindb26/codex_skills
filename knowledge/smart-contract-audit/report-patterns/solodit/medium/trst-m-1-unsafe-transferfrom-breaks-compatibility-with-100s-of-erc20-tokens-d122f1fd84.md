@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-1 Unsafe transferFrom breaks compatibility with 100s of ERC20 tokens
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-1-unsafe-transferfrom-breaks-compatibility-with-100s-of-erc20-tokens-trust-security-none-ninja-yield-farming-v3-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-1-unsafe-transferfrom-breaks-compatibility-with-100s-of-erc20-tokens-trust-security-none-ninja-yield-farming-v3-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-5 Freezing of repaid debts can cause DoS when borrowing
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-5-freezing-of-repaid-debts-can-cause-dos-when-borrowing-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-5-freezing-of-repaid-debts-can-cause-dos-when-borrowing-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

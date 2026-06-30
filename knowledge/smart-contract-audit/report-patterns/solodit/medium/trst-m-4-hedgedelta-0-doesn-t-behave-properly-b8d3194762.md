@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-4 hedgeDelta(0) doesn’t behave properly
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-4-hedgedelta0-doesnt-behave-properly-trust-security-none-rysk-uniswapv3rangeorderreactor-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-4-hedgedelta0-doesnt-behave-properly-trust-security-none-rysk-uniswapv3rangeorderreactor-markdown
 
 Imported:
 - 2026-05-23

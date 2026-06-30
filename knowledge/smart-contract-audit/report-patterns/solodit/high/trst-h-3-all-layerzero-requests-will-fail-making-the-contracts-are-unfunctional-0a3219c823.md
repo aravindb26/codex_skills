@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-3 All LayerZero requests will fail, making the contracts are unfunctional
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-3-all-layerzero-requests-will-fail-making-the-contracts-are-unfunctional-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-3-all-layerzero-requests-will-fail-making-the-contracts-are-unfunctional-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

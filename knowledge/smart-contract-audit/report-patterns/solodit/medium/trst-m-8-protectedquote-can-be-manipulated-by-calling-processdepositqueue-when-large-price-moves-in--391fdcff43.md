@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-8 protectedQuote can be manipulated by calling processDepositQueue when large price moves in base asset occur
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-8-protectedquote-can-be-manipulated-by-calling-processdepositqueue-when-large-price-moves-in-base-asset-occur-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-8-protectedquote-can-be-manipulated-by-calling-processdepositqueue-when-large-price-moves-in-base-asset-occur-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

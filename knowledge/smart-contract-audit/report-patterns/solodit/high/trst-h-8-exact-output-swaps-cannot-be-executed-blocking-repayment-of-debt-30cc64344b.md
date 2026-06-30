@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-8 “Exact output” swaps cannot be executed, blocking repayment of debt
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-8-exact-output-swaps-cannot-be-executed-blocking-repayment-of-debt-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-8-exact-output-swaps-cannot-be-executed-blocking-repayment-of-debt-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

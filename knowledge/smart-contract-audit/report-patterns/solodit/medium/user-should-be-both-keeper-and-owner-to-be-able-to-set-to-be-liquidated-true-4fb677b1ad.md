@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: User should be both 'keeper` and 'owner` to be able to set `to_be_liquidated = true`
 
 Source:
-- https://solodit.cyfrin.io/issues/user-should-be-both-keeper-and-owner-to-be-able-to-set-to_be_liquidated-true-zokyo-none-vaultka-markdown_
+- https://solodit.cyfrin.io/issues/user-should-be-both-keeper-and-owner-to-be-able-to-set-to_be_liquidated-true-zokyo-none-vaultka-markdown
 
 Imported:
 - 2026-05-23

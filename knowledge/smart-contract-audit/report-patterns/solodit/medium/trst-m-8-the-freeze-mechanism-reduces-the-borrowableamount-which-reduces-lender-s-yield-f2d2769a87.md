@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-8 The freeze mechanism reduces the borrowableAmount, which reduces Lender's yield
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-8-the-freeze-mechanism-reduces-the-borrowableamount-which-reduces-lenders-yield-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-8-the-freeze-mechanism-reduces-the-borrowableamount-which-reduces-lenders-yield-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

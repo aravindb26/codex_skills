@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] `_deductFees()` is incompatible with tokens that revert on zero value transfers
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-_deductfees-is-incompatible-with-tokens-that-revert-on-zero-value-transfers-code4rena-krystal-defi-krystal-defi-git_
+- https://solodit.cyfrin.io/issues/m-03-_deductfees-is-incompatible-with-tokens-that-revert-on-zero-value-transfers-code4rena-krystal-defi-krystal-defi-git
 
 Imported:
 - 2026-05-23

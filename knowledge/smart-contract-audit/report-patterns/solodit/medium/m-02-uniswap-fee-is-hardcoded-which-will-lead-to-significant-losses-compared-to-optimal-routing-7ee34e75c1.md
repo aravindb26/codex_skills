@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] `UNISWAP_FEE` is hardcoded which will lead to significant losses compared to optimal routing
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-uniswap_fee-is-hardcoded-which-will-lead-to-significant-losses-compared-to-optimal-routing-code4rena-sturdy-sturdy-contest-git_
+- https://solodit.cyfrin.io/issues/m-02-uniswap_fee-is-hardcoded-which-will-lead-to-significant-losses-compared-to-optimal-routing-code4rena-sturdy-sturdy-contest-git
 
 Imported:
 - 2026-05-23

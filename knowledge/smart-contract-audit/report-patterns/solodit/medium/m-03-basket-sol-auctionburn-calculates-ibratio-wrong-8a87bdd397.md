@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] `Basket.sol#auctionBurn` calculates `ibRatio` wrong
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-basketsolauctionburn-calculates-ibratio-wrong-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-03-basketsolauctionburn-calculates-ibratio-wrong-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

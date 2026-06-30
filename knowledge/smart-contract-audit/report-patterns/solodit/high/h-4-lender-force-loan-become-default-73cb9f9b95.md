@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: H-4: Lender force Loan become default
 
 Source:
-- https://solodit.cyfrin.io/issues/h-4-lender-force-loan-become-default-sherlock-cooler-cooler-git_
+- https://solodit.cyfrin.io/issues/h-4-lender-force-loan-become-default-sherlock-cooler-cooler-git
 
 Imported:
 - 2026-05-23

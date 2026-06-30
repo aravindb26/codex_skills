@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-15] DOS attack by delegating tokens at MAX_DELEGATES = 1024
 
 Source:
-- https://solodit.cyfrin.io/issues/m-15-dos-attack-by-delegating-tokens-at-max_delegates-1024-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-15-dos-attack-by-delegating-tokens-at-max_delegates-1024-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

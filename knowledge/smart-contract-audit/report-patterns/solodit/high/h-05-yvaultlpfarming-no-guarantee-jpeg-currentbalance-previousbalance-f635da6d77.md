@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-05] `yVaultLPFarming`: No guarantee JPEG currentBalance > previousBalance
 
 Source:
-- https://solodit.cyfrin.io/issues/h-05-yvaultlpfarming-no-guarantee-jpeg-currentbalance-previousbalance-code4rena-jpegd-jpegd-contest-git_
+- https://solodit.cyfrin.io/issues/h-05-yvaultlpfarming-no-guarantee-jpeg-currentbalance-previousbalance-code4rena-jpegd-jpegd-contest-git
 
 Imported:
 - 2026-05-23

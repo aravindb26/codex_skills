@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Add condition
 
 Source:
-- https://solodit.cyfrin.io/issues/add-condition-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/add-condition-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

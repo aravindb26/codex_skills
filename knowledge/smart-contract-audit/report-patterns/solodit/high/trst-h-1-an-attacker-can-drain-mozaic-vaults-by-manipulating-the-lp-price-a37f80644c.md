@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-1 An attacker can drain Mozaic Vaults by manipulating the LP price
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-1-an-attacker-can-drain-mozaic-vaults-by-manipulating-the-lp-price-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-1-an-attacker-can-drain-mozaic-vaults-by-manipulating-the-lp-price-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

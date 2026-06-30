@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Possible loss of assets by mistake
 
 Source:
-- https://solodit.cyfrin.io/issues/possible-loss-of-assets-by-mistake-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/possible-loss-of-assets-by-mistake-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

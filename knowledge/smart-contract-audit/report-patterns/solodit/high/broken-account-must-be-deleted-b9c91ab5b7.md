@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Broken account must be deleted
 
 Source:
-- https://solodit.cyfrin.io/issues/broken-account-must-be-deleted-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/broken-account-must-be-deleted-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

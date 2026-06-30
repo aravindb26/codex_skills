@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-04] The Protocol breaks the Allowance Mechanism of the NFTs
 
 Source:
-- https://solodit.cyfrin.io/issues/m-04-the-protocol-breaks-the-allowance-mechanism-of-the-nfts-code4rena-krystal-defi-krystal-defi-git_
+- https://solodit.cyfrin.io/issues/m-04-the-protocol-breaks-the-allowance-mechanism-of-the-nfts-code4rena-krystal-defi-krystal-defi-git
 
 Imported:
 - 2026-05-23

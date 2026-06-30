@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: InfinityPool Contract Authorization Bypass Attack ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/infinitypool-contract-authorization-bypass-attack-fixed-consensys-none-glif-filecoin-infinitypool-markdown_
+- https://solodit.cyfrin.io/issues/infinitypool-contract-authorization-bypass-attack-fixed-consensys-none-glif-filecoin-infinitypool-markdown
 
 Imported:
 - 2026-05-23

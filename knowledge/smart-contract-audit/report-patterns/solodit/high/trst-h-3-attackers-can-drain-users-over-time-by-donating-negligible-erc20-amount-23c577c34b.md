@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-3 Attackers can drain users over time by donating negligible ERC20 amount
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-3-attackers-can-drain-users-over-time-by-donating-negligible-erc20-amount-trust-security-none-brahma-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-3-attackers-can-drain-users-over-time-by-donating-negligible-erc20-amount-trust-security-none-brahma-markdown
 
 Imported:
 - 2026-05-23

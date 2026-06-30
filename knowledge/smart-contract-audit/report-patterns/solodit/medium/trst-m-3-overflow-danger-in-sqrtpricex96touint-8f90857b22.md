@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-3 Overflow danger in _sqrtPriceX96ToUint
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-3-overflow-danger-in-_sqrtpricex96touint-trust-security-none-rysk-uniswapv3rangeorderreactor-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-3-overflow-danger-in-_sqrtpricex96touint-trust-security-none-rysk-uniswapv3rangeorderreactor-markdown
 
 Imported:
 - 2026-05-23

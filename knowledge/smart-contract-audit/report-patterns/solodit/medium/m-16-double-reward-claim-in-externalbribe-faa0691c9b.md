@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-16] Double reward claim in `ExternalBribe`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-16-double-reward-claim-in-externalbribe-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-16-double-reward-claim-in-externalbribe-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

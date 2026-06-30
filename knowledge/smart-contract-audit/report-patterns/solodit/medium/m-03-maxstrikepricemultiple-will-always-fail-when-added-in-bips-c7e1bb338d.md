@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] maxStrikePriceMultiple will always fail when added in bips
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-maxstrikepricemultiple-will-always-fail-when-added-in-bips-zachobront-none-hook-markdown_
+- https://solodit.cyfrin.io/issues/m-03-maxstrikepricemultiple-will-always-fail-when-added-in-bips-zachobront-none-hook-markdown
 
 Imported:
 - 2026-05-23

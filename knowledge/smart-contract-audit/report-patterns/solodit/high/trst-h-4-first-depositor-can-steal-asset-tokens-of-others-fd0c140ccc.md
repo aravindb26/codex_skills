@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-4 First depositor can steal asset tokens of others
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-4-first-depositor-can-steal-asset-tokens-of-others-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-4-first-depositor-can-steal-asset-tokens-of-others-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

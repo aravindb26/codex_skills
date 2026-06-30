@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Consider restricting users ' gas sponsorship usage
 
 Source:
-- https://solodit.cyfrin.io/issues/consider-restricting-users-gas-sponsorship-usage-cantina-none-clave-pdf_
+- https://solodit.cyfrin.io/issues/consider-restricting-users-gas-sponsorship-usage-cantina-none-clave-pdf
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-4 Deposits of fee-on-transfer tokens will favor later depositors, making earlier investors lose funds
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-4-deposits-of-fee-on-transfer-tokens-will-favor-later-depositors-making-earlier-investors-lose-funds-trust-security-none-orbital-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-4-deposits-of-fee-on-transfer-tokens-will-favor-later-depositors-making-earlier-investors-lose-funds-trust-security-none-orbital-finance-markdown
 
 Imported:
 - 2026-05-23

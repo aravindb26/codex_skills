@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] Ambiguous condition in fee handling for bribe rewards
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-ambiguous-condition-in-fee-handling-for-bribe-rewards-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-02-ambiguous-condition-in-fee-handling-for-bribe-rewards-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

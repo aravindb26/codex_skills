@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Each Well is responsible for ensuring that an `update` call cannot be made with a reserve of 0
 
 Source:
-- https://solodit.cyfrin.io/issues/each-well-is-responsible-for-ensuring-that-an-update-call-cannot-be-made-with-a-reserve-of-0-cyfrin-beanstalk-wells-markdown_
+- https://solodit.cyfrin.io/issues/each-well-is-responsible-for-ensuring-that-an-update-call-cannot-be-made-with-a-reserve-of-0-cyfrin-beanstalk-wells-markdown
 
 Imported:
 - 2026-05-23

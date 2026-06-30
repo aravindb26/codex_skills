@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Possible remove of necessary adapter
 
 Source:
-- https://solodit.cyfrin.io/issues/possible-remove-of-necessary-adapter-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/possible-remove-of-necessary-adapter-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

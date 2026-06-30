@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] ohmDeployed will become inaccurate if circulatingOhmBurned is used
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-ohmdeployed-will-become-inaccurate-if-circulatingohmburned-is-used-zachobront-none-olympusdao-markdown_
+- https://solodit.cyfrin.io/issues/m-01-ohmdeployed-will-become-inaccurate-if-circulatingohmburned-is-used-zachobront-none-olympusdao-markdown
 
 Imported:
 - 2026-05-23

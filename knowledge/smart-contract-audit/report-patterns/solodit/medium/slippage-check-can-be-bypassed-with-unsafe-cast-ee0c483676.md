@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Slippage Check Can Be Bypassed With Unsafe Cast
 
 Source:
-- https://solodit.cyfrin.io/issues/slippage-check-can-be-bypassed-with-unsafe-cast-openzeppelin-none-uniswap-v4-periphery-and-universal-router-audit-markdown_
+- https://solodit.cyfrin.io/issues/slippage-check-can-be-bypassed-with-unsafe-cast-openzeppelin-none-uniswap-v4-periphery-and-universal-router-audit-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-07] No minimum rate in the auction may break the protocol under network failure
 
 Source:
-- https://solodit.cyfrin.io/issues/m-07-no-minimum-rate-in-the-auction-may-break-the-protocol-under-network-failure-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-07-no-minimum-rate-in-the-auction-may-break-the-protocol-under-network-failure-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

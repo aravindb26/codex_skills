@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Both oracle signers can be set to address(0), which allows arbitrary data to be fraudulently signed
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-both-oracle-signers-can-be-set-to-address0-which-allows-arbitrary-data-to-be-fraudulently-signed-zachobront-none-hook-markdown_
+- https://solodit.cyfrin.io/issues/m-01-both-oracle-signers-can-be-set-to-address0-which-allows-arbitrary-data-to-be-fraudulently-signed-zachobront-none-hook-markdown
 
 Imported:
 - 2026-05-23

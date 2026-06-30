@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-7 attackers can delay or disrupt hedging activity by abusing mutual exclusion with updateCollateral()
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-7-attackers-can-delay-or-disrupt-hedging-activity-by-abusing-mutual-exclusion-with-updatecollateral-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-7-attackers-can-delay-or-disrupt-hedging-activity-by-abusing-mutual-exclusion-with-updatecollateral-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

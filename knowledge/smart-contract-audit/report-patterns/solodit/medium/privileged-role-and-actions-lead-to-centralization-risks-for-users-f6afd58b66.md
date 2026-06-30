@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Privileged role and actions lead to centralization risks for users
 
 Source:
-- https://solodit.cyfrin.io/issues/privileged-role-and-actions-lead-to-centralization-risks-for-users-cantina-none-sweep-n-flip-pdf_
+- https://solodit.cyfrin.io/issues/privileged-role-and-actions-lead-to-centralization-risks-for-users-cantina-none-sweep-n-flip-pdf
 
 Imported:
 - 2026-05-23

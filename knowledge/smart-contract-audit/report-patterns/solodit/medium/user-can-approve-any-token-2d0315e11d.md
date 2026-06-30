@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: User can approve any token
 
 Source:
-- https://solodit.cyfrin.io/issues/user-can-approve-any-token-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/user-can-approve-any-token-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

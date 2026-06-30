@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-2 Attacker can freeze deposits and withdrawals indefinitely by submitting a bad withdrawal
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-2-attacker-can-freeze-deposits-and-withdrawals-indefinitely-by-submitting-a-bad-withdrawal-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-2-attacker-can-freeze-deposits-and-withdrawals-indefinitely-by-submitting-a-bad-withdrawal-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

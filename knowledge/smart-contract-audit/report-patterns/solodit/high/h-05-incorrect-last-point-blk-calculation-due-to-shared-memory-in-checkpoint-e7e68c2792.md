@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-05] Incorrect `last_point.blk` calculation due to shared memory in `_checkpoint()`
 
 Source:
-- https://solodit.cyfrin.io/issues/h-05-incorrect-last_pointblk-calculation-due-to-shared-memory-in-_checkpoint-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/h-05-incorrect-last_pointblk-calculation-due-to-shared-memory-in-_checkpoint-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-1 Linear vesting users may not receive vested amount
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-1-linear-vesting-users-may-not-receive-vested-amount-trust-security-none-vagabond-token-transmuter-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-1-linear-vesting-users-may-not-receive-vested-amount-trust-security-none-vagabond-token-transmuter-markdown
 
 Imported:
 - 2026-05-23

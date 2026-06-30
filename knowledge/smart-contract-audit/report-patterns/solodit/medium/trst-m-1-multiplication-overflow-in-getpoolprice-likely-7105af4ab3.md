@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-1 multiplication overflow in getPoolPrice() likely
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-1-multiplication-overflow-in-getpoolprice-likely-trust-security-none-rysk-uniswapv3rangeorderreactor-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-1-multiplication-overflow-in-getpoolprice-likely-trust-security-none-rysk-uniswapv3rangeorderreactor-markdown
 
 Imported:
 - 2026-05-23

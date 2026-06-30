@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] Weight loss possible due to invalid pool votes in `_vote()`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-weight-loss-possible-due-to-invalid-pool-votes-in-_vote-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-03-weight-loss-possible-due-to-invalid-pool-votes-in-_vote-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

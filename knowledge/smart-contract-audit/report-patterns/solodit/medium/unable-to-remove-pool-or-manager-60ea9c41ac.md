@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Unable to remove pool or manager
 
 Source:
-- https://solodit.cyfrin.io/issues/unable-to-remove-pool-or-manager-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/unable-to-remove-pool-or-manager-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

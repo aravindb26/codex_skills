@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Protocol's invariants can be broken
 
 Source:
-- https://solodit.cyfrin.io/issues/protocols-invariants-can-be-broken-cyfrin-beanstalk-wells-markdown_
+- https://solodit.cyfrin.io/issues/protocols-invariants-can-be-broken-cyfrin-beanstalk-wells-markdown
 
 Imported:
 - 2026-05-23

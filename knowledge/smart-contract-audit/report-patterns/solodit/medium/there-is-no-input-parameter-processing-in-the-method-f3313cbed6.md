@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: There is no input parameter processing in the method
 
 Source:
-- https://solodit.cyfrin.io/issues/there-is-no-input-parameter-processing-in-the-method-mixbytes-none-yearn-finance-markdown_
+- https://solodit.cyfrin.io/issues/there-is-no-input-parameter-processing-in-the-method-mixbytes-none-yearn-finance-markdown
 
 Imported:
 - 2026-05-23

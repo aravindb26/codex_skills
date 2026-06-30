@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-1 User fee  token  balance  can  be  drained in  a  single  operation  by a  malicious bot
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-1-user-fee-token-balance-can-be-drained-in-a-single-operation-by-a-malicious-bot-trust-security-none-brahma-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-1-user-fee-token-balance-can-be-drained-in-a-single-operation-by-a-malicious-bot-trust-security-none-brahma-markdown
 
 Imported:
 - 2026-05-23

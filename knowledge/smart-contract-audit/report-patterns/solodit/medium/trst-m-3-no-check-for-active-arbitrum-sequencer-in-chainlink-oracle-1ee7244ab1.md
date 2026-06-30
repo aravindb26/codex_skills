@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-3 No check for active Arbitrum Sequencer in Chainlink Oracle
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-3-no-check-for-active-arbitrum-sequencer-in-chainlink-oracle-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-3-no-check-for-active-arbitrum-sequencer-in-chainlink-oracle-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

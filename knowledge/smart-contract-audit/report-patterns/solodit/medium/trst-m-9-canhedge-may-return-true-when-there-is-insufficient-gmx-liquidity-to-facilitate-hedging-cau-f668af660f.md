@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-9 canHedge may return true when there is insufficient GMX liquidity to facilitate hedging, causing insolvency risks
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-9-canhedge-may-return-true-when-there-is-insufficient-gmx-liquidity-to-facilitate-hedging-causing-insolvency-risks-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-9-canhedge-may-return-true-when-there-is-insufficient-gmx-liquidity-to-facilitate-hedging-causing-insolvency-risks-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

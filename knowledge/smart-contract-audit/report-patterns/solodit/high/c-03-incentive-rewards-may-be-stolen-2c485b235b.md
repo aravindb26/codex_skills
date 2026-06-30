@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [C-03] Incentive rewards may be stolen
 
 Source:
-- https://solodit.cyfrin.io/issues/c-03-incentive-rewards-may-be-stolen-pashov-audit-group-none-kittenswap_2025-06-12-markdown_
+- https://solodit.cyfrin.io/issues/c-03-incentive-rewards-may-be-stolen-pashov-audit-group-none-kittenswap_2025-06-12-markdown
 
 Imported:
 - 2026-05-23

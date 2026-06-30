@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-1 LSP20 verification library deviates from spec and will accept fail values
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-1-lsp20-verification-library-deviates-from-spec-and-will-accept-fail-values-trust-security-none-lukso-lsp-audit-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-1-lsp20-verification-library-deviates-from-spec-and-will-accept-fail-values-trust-security-none-lukso-lsp-audit-markdown
 
 Imported:
 - 2026-05-23

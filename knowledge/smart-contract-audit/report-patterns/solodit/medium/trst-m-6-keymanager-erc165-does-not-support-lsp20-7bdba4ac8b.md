@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-6 KeyManager ERC165 does not support LSP20
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-6-keymanager-erc165-does-not-support-lsp20-trust-security-none-lukso-lsp-audit-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-6-keymanager-erc165-does-not-support-lsp20-trust-security-none-lukso-lsp-audit-markdown
 
 Imported:
 - 2026-05-23

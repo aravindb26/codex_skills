@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] All funds can be stolen from the SAM contract
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-all-funds-can-be-stolen-from-the-sam-contract-zachobront-none-soundxyz-markdown_
+- https://solodit.cyfrin.io/issues/h-01-all-funds-can-be-stolen-from-the-sam-contract-zachobront-none-soundxyz-markdown
 
 Imported:
 - 2026-05-23

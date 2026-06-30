@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] replaceGovernanceContract is not reset
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-replacegovernancecontract-is-not-reset-pashov-audit-group-none-adapterfinance-markdown_
+- https://solodit.cyfrin.io/issues/m-03-replacegovernancecontract-is-not-reset-pashov-audit-group-none-adapterfinance-markdown
 
 Imported:
 - 2026-05-23

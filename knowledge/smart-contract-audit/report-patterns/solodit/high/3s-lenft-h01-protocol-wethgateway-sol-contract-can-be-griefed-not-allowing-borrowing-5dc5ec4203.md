@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: 3S-LENFT-H01 protocol/WETHGateway.sol: contract can be griefed not allowing borrowing
 
 Source:
-- https://solodit.cyfrin.io/issues/3s-lenft-h01-protocolwethgatewaysol-contract-can-be-griefed-not-allowing-borrowing-threesigma-none-lenft-markdown_
+- https://solodit.cyfrin.io/issues/3s-lenft-h01-protocolwethgatewaysol-contract-can-be-griefed-not-allowing-borrowing-threesigma-none-lenft-markdown
 
 Imported:
 - 2026-05-23

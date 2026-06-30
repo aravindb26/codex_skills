@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-4 truncation in reward calculation could cause leakage of rewards
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-4-truncation-in-reward-calculation-could-cause-leakage-of-rewards-trust-security-none-ninja-yield-farming-v3-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-4-truncation-in-reward-calculation-could-cause-leakage-of-rewards-trust-security-none-ninja-yield-farming-v3-markdown
 
 Imported:
 - 2026-05-23

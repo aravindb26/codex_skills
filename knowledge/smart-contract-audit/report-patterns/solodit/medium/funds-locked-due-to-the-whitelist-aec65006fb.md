@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Funds locked due to the whitelist
 
 Source:
-- https://solodit.cyfrin.io/issues/funds-locked-due-to-the-whitelist-mixbytes-none-resolv-markdown_
+- https://solodit.cyfrin.io/issues/funds-locked-due-to-the-whitelist-mixbytes-none-resolv-markdown
 
 Imported:
 - 2026-05-23

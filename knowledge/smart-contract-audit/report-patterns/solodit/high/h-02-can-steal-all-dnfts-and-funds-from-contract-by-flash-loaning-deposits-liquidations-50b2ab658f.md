@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-02] Can steal all dNFTs and funds from contract by flash loaning deposits & liquidations
 
 Source:
-- https://solodit.cyfrin.io/issues/h-02-can-steal-all-dnfts-and-funds-from-contract-by-flash-loaning-deposits-liquidations-zachobront-none-dyad-markdown_
+- https://solodit.cyfrin.io/issues/h-02-can-steal-all-dnfts-and-funds-from-contract-by-flash-loaning-deposits-liquidations-zachobront-none-dyad-markdown
 
 Imported:
 - 2026-05-23

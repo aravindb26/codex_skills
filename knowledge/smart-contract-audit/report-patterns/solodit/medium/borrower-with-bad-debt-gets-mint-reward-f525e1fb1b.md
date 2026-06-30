@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Borrower with bad debt gets mint reward
 
 Source:
-- https://solodit.cyfrin.io/issues/borrower-with-bad-debt-gets-mint-reward-hans-none-meta-markdown_
+- https://solodit.cyfrin.io/issues/borrower-with-bad-debt-gets-mint-reward-hans-none-meta-markdown
 
 Imported:
 - 2026-05-23

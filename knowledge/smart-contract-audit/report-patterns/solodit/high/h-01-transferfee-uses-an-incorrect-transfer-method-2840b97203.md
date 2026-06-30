@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] `transferFee()` uses an incorrect transfer method
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-transferfee-uses-an-incorrect-transfer-method-pashov-audit-group-none-resolv_2024-12-09-markdown_
+- https://solodit.cyfrin.io/issues/h-01-transferfee-uses-an-incorrect-transfer-method-pashov-audit-group-none-resolv_2024-12-09-markdown
 
 Imported:
 - 2026-05-23

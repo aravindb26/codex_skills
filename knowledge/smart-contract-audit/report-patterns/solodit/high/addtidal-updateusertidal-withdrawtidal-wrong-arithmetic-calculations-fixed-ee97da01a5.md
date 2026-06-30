@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: addTidal, _updateUserTidal, withdrawTidal – Wrong Arithmetic Calculations ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/addtidal-_updateusertidal-withdrawtidal-wrong-arithmetic-calculations-fixed-consensys-none-tidal-markdown_
+- https://solodit.cyfrin.io/issues/addtidal-_updateusertidal-withdrawtidal-wrong-arithmetic-calculations-fixed-consensys-none-tidal-markdown
 
 Imported:
 - 2026-05-23

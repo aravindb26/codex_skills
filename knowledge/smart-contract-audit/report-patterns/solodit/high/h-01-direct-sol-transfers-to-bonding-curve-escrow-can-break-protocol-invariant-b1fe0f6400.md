@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] Direct SOL transfers to bonding curve escrow can break protocol invariant
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-direct-sol-transfers-to-bonding-curve-escrow-can-break-protocol-invariant-pashov-audit-group-none-pumpscience_2024-12-24-markdown_
+- https://solodit.cyfrin.io/issues/h-01-direct-sol-transfers-to-bonding-curve-escrow-can-break-protocol-invariant-pashov-audit-group-none-pumpscience_2024-12-24-markdown
 
 Imported:
 - 2026-05-23

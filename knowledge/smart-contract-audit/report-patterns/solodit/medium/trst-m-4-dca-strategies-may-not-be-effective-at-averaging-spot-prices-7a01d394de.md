@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-4 DCA strategies may not be effective at averaging spot prices
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-4-dca-strategies-may-not-be-effective-at-averaging-spot-prices-trust-security-none-brahma-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-4-dca-strategies-may-not-be-effective-at-averaging-spot-prices-trust-security-none-brahma-markdown
 
 Imported:
 - 2026-05-23

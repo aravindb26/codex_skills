@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: addPolicy, setPolicy – Missing Input Validation ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/addpolicy-setpolicy-missing-input-validation-fixed-consensys-none-tidal-markdown_
+- https://solodit.cyfrin.io/issues/addpolicy-setpolicy-missing-input-validation-fixed-consensys-none-tidal-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Unnecessary list initialization
 
 Source:
-- https://solodit.cyfrin.io/issues/unnecessary-list-initialization-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/unnecessary-list-initialization-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-08] Auction bonder can steal user funds if bond block is high enough
 
 Source:
-- https://solodit.cyfrin.io/issues/m-08-auction-bonder-can-steal-user-funds-if-bond-block-is-high-enough-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-08-auction-bonder-can-steal-user-funds-if-bond-block-is-high-enough-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: fetchAllTicketCommentsCount()  Is Unoptimized, Overly Complex, and Lacks Untrusted Input Validation ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/fetchallticketcommentscount-is-unoptimized-overly-complex-and-lacks-untrusted-input-validation-fixed-consensys-none-web3-tickets-markdown_
+- https://solodit.cyfrin.io/issues/fetchallticketcommentscount-is-unoptimized-overly-complex-and-lacks-untrusted-input-validation-fixed-consensys-none-web3-tickets-markdown
 
 Imported:
 - 2026-05-23

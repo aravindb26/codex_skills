@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-10] Fee calculation is slightly off
 
 Source:
-- https://solodit.cyfrin.io/issues/m-10-fee-calculation-is-slightly-off-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-10-fee-calculation-is-slightly-off-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

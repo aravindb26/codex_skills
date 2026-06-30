@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] DOS of CreateBondingCurve
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-dos-of-createbondingcurve-pashov-audit-group-none-pumpscience_2024-12-24-markdown_
+- https://solodit.cyfrin.io/issues/m-02-dos-of-createbondingcurve-pashov-audit-group-none-pumpscience_2024-12-24-markdown
 
 Imported:
 - 2026-05-23

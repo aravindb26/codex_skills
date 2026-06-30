@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-9 Vault does not have a way to withdraw native tokens
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-9-vault-does-not-have-a-way-to-withdraw-native-tokens-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-9-vault-does-not-have-a-way-to-withdraw-native-tokens-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

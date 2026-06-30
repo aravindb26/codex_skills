@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] Fee on transfer tokens can lead to incorrect approval
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-fee-on-transfer-tokens-can-lead-to-incorrect-approval-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-02-fee-on-transfer-tokens-can-lead-to-incorrect-approval-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

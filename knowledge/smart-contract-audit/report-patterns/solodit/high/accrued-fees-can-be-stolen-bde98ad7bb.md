@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Accrued Fees Can Be Stolen
 
 Source:
-- https://solodit.cyfrin.io/issues/accrued-fees-can-be-stolen-openzeppelin-none-uniswap-v4-periphery-and-universal-router-audit-markdown_
+- https://solodit.cyfrin.io/issues/accrued-fees-can-be-stolen-openzeppelin-none-uniswap-v4-periphery-and-universal-router-audit-markdown
 
 Imported:
 - 2026-05-23

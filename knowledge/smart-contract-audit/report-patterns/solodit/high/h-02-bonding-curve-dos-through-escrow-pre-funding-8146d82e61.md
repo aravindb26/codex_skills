@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-02] Bonding Curve DOS through escrow pre-funding
 
 Source:
-- https://solodit.cyfrin.io/issues/h-02-bonding-curve-dos-through-escrow-pre-funding-pashov-audit-group-none-pumpscience_2024-12-24-markdown_
+- https://solodit.cyfrin.io/issues/h-02-bonding-curve-dos-through-escrow-pre-funding-pashov-audit-group-none-pumpscience_2024-12-24-markdown
 
 Imported:
 - 2026-05-23

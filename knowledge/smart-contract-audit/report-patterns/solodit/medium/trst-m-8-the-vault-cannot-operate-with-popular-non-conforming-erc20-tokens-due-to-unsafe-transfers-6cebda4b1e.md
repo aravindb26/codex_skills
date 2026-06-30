@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-8 The vault cannot operate with popular non-conforming ERC20 tokens due to unsafe transfers
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-8-the-vault-cannot-operate-with-popular-non-conforming-erc20-tokens-due-to-unsafe-transfers-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-8-the-vault-cannot-operate-with-popular-non-conforming-erc20-tokens-due-to-unsafe-transfers-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

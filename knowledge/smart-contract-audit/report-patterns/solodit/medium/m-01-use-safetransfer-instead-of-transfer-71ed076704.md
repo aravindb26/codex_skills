@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Use safeTransfer instead of transfer
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-use-safetransfer-instead-of-transfer-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-01-use-safetransfer-instead-of-transfer-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

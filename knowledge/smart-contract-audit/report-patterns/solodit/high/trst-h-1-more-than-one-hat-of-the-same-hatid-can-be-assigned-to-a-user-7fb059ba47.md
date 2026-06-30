@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-1 More than one hat of the same hatId can be assigned to a user
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-1-more-than-one-hat-of-the-same-hatid-can-be-assigned-to-a-user-trust-security-none-hats-protocol-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-1-more-than-one-hat-of-the-same-hatid-can-be-assigned-to-a-user-trust-security-none-hats-protocol-markdown
 
 Imported:
 - 2026-05-23

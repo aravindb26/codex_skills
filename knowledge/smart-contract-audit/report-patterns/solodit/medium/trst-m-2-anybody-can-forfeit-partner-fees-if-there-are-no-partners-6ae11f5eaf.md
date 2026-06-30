@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-2 Anybody can forfeit partner fees if there are no partners
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-2-anybody-can-forfeit-partner-fees-if-there-are-no-partners-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-2-anybody-can-forfeit-partner-fees-if-there-are-no-partners-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

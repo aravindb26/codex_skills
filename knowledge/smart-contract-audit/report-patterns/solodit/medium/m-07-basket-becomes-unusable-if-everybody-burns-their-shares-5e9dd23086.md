@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-07] Basket becomes unusable if everybody burns their shares
 
 Source:
-- https://solodit.cyfrin.io/issues/m-07-basket-becomes-unusable-if-everybody-burns-their-shares-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-07-basket-becomes-unusable-if-everybody-burns-their-shares-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-3 LSP0 allows delegate calls when LSP20 post-execution check is required
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-3-lsp0-allows-delegate-calls-when-lsp20-post-execution-check-is-required-trust-security-none-lukso-lsp-audit-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-3-lsp0-allows-delegate-calls-when-lsp20-post-execution-check-is-required-trust-security-none-lukso-lsp-audit-markdown
 
 Imported:
 - 2026-05-23

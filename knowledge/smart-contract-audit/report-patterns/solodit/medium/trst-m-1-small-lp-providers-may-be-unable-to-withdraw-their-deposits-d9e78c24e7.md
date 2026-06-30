@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-1 small LP providers may be unable to withdraw their deposits
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-1-small-lp-providers-may-be-unable-to-withdraw-their-deposits-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-1-small-lp-providers-may-be-unable-to-withdraw-their-deposits-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

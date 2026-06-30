@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] SiloAMO can be forced to fund reduced interest rates by manipulating utilization
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-siloamo-can-be-forced-to-fund-reduced-interest-rates-by-manipulating-utilization-zachobront-none-olympusdao-markdown_
+- https://solodit.cyfrin.io/issues/h-01-siloamo-can-be-forced-to-fund-reduced-interest-rates-by-manipulating-utilization-zachobront-none-olympusdao-markdown
 
 Imported:
 - 2026-05-23

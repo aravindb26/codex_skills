@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-2 Users will be unable to claim emissions from veSatin tokens if they withdraw it or merge it
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-2-users-will-be-unable-to-claim-emissions-from-vesatin-tokens-if-they-withdraw-it-or-merge-it-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-2-users-will-be-unable-to-claim-emissions-from-vesatin-tokens-if-they-withdraw-it-or-merge-it-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: An Agent Can Be Upgraded Even if There Is No New Implementation ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/an-agent-can-be-upgraded-even-if-there-is-no-new-implementation-fixed-consensys-none-glif-filecoin-infinitypool-markdown_
+- https://solodit.cyfrin.io/issues/an-agent-can-be-upgraded-even-if-there-is-no-new-implementation-fixed-consensys-none-glif-filecoin-infinitypool-markdown
 
 Imported:
 - 2026-05-23

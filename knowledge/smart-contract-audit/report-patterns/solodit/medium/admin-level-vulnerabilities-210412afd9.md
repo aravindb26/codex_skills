@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Admin level vulnerabilities
 
 Source:
-- https://solodit.cyfrin.io/issues/admin-level-vulnerabilities-hans-none-meta-markdown_
+- https://solodit.cyfrin.io/issues/admin-level-vulnerabilities-hans-none-meta-markdown
 
 Imported:
 - 2026-05-23

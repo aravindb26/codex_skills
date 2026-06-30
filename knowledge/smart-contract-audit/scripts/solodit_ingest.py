@@ -78,11 +78,17 @@ def result_items(payload: Any) -> list[dict[str, Any]]:
     return []
 
 
-def load_seen() -> tuple[set[str], set[str]]:
+def canonical_source_url(value: str) -> str:
+    # Solodit can return the same issue both with and without a trailing underscore.
+    return value.strip().rstrip("/_")
+
+
+def load_seen() -> tuple[set[str], set[str], set[str]]:
     ids: set[str] = set()
     fingerprints: set[str] = set()
+    source_urls: set[str] = set()
     if not INDEX_PATH.exists():
-        return ids, fingerprints
+        return ids, fingerprints, source_urls
     with INDEX_PATH.open("r", encoding="utf-8") as handle:
         for line in handle:
             line = line.strip()
@@ -96,7 +102,9 @@ def load_seen() -> tuple[set[str], set[str]]:
                 ids.add(row["dedupe_id"])
             if row.get("fingerprint"):
                 fingerprints.add(row["fingerprint"])
-    return ids, fingerprints
+            if row.get("source_url"):
+                source_urls.add(canonical_source_url(row["source_url"]))
+    return ids, fingerprints, source_urls
 
 
 def fingerprint_for(row: dict[str, str]) -> str:
@@ -114,9 +122,9 @@ def fingerprint_for(row: dict[str, str]) -> str:
 def finding_url(item: dict[str, Any], slug: str) -> str:
     direct = first_value(item, ["url", "link", "findingUrl", "sourceUrl", "reportUrl"])
     if direct:
-        return normalize_text(direct)
+        return canonical_source_url(normalize_text(direct))
     if slug:
-        return f"https://solodit.cyfrin.io/issues/{slug}"
+        return canonical_source_url(f"https://solodit.cyfrin.io/issues/{slug}")
     return ""
 
 
@@ -265,7 +273,7 @@ def main() -> int:
     parser.add_argument("--start-page", type=int, default=1)
     parser.add_argument("--max-pages", type=int, default=1)
     parser.add_argument("--page-size", type=int, default=100)
-    parser.add_argument("--sort", default="Quality")
+    parser.add_argument("--sort", choices=("Recency", "Rarity", "Quality"), default="Quality")
     parser.add_argument("--delay", type=float, default=3.2)
     parser.add_argument("--no-stubs", action="store_true")
     args = parser.parse_args()
@@ -275,7 +283,7 @@ def main() -> int:
         print("Missing CYFRIN_API_KEY, SOLODIT_API_KEY, or /home/dinesh/.codex/solodit.env.", file=sys.stderr)
         return 2
 
-    seen_ids, seen_fingerprints = load_seen()
+    seen_ids, seen_fingerprints, seen_source_urls = load_seen()
     imported: list[dict[str, str]] = []
     skipped = 0
 
@@ -303,8 +311,12 @@ def main() -> int:
             if row["fingerprint"] in seen_fingerprints:
                 skipped += 1
                 continue
+            if row["source_url"] and row["source_url"] in seen_source_urls:
+                skipped += 1
+                continue
             seen_ids.add(row["dedupe_id"])
             seen_fingerprints.add(row["fingerprint"])
+            seen_source_urls.add(row["source_url"])
             page_rows.append(row)
             if not args.no_stubs:
                 write_stub(row)

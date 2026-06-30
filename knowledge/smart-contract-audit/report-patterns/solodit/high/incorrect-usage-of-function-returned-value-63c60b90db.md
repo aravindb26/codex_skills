@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Incorrect usage of function returned value
 
 Source:
-- https://solodit.cyfrin.io/issues/incorrect-usage-of-function-returned-value-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/incorrect-usage-of-function-returned-value-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

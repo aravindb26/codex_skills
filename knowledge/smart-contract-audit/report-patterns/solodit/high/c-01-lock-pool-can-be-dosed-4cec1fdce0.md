@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [C-01] Lock pool can be DoSed
 
 Source:
-- https://solodit.cyfrin.io/issues/c-01-lock-pool-can-be-dosed-pashov-audit-group-none-pumpscience_2024-12-24-markdown_
+- https://solodit.cyfrin.io/issues/c-01-lock-pool-can-be-dosed-pashov-audit-group-none-pumpscience_2024-12-24-markdown
 
 Imported:
 - 2026-05-23

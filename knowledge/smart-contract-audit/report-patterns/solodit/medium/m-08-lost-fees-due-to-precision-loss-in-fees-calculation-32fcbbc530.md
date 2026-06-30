@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-08] Lost fees due to precision loss in fees calculation
 
 Source:
-- https://solodit.cyfrin.io/issues/m-08-lost-fees-due-to-precision-loss-in-fees-calculation-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-08-lost-fees-due-to-precision-loss-in-fees-calculation-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-7 Incorrect permission check due to confusion between empty call and the zero selector
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-7-incorrect-permission-check-due-to-confusion-between-empty-call-and-the-zero-selector-trust-security-none-lukso-lsp-audit-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-7-incorrect-permission-check-due-to-confusion-between-empty-call-and-the-zero-selector-trust-security-none-lukso-lsp-audit-markdown
 
 Imported:
 - 2026-05-23

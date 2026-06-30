@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-04] Traders can avoid the new liquidation configuration
 
 Source:
-- https://solodit.cyfrin.io/issues/m-04-traders-can-avoid-the-new-liquidation-configuration-pashov-audit-group-none-gainsnetwork-security-july2-markdown_
+- https://solodit.cyfrin.io/issues/m-04-traders-can-avoid-the-new-liquidation-configuration-pashov-audit-group-none-gainsnetwork-security-july2-markdown
 
 Imported:
 - 2026-05-23

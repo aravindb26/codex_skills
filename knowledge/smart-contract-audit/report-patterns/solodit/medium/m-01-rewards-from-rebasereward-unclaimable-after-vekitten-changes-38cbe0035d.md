@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Rewards from `RebaseReward` unclaimable after `veKITTEN` changes
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-rewards-from-rebasereward-unclaimable-after-vekitten-changes-pashov-audit-group-none-kittenswap_2025-06-12-markdown_
+- https://solodit.cyfrin.io/issues/m-01-rewards-from-rebasereward-unclaimable-after-vekitten-changes-pashov-audit-group-none-kittenswap_2025-06-12-markdown
 
 Imported:
 - 2026-05-23

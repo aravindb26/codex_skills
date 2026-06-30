@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-4 The swap when closing a position does not consider shareProfitAmts
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-4-the-swap-when-closing-a-position-does-not-consider-shareprofitamts-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-4-the-swap-when-closing-a-position-does-not-consider-shareprofitamts-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

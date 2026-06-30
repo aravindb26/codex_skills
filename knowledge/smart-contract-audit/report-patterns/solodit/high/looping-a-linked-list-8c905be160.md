@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Looping a linked list
 
 Source:
-- https://solodit.cyfrin.io/issues/looping-a-linked-list-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/looping-a-linked-list-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

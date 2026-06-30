@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Calculation can be incorrect
 
 Source:
-- https://solodit.cyfrin.io/issues/calculation-can-be-incorrect-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/calculation-can-be-incorrect-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Losses are not taken into account in the strategy
 
 Source:
-- https://solodit.cyfrin.io/issues/losses-are-not-taken-into-account-in-the-strategy-mixbytes-none-yearn-finance-markdown__
+- https://solodit.cyfrin.io/issues/losses-are-not-taken-into-account-in-the-strategy-mixbytes-none-yearn-finance-markdown
 
 Imported:
 - 2026-05-23

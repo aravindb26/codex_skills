@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-05] Rewards will be locked if user transfer directly to pool without using deposit function
 
 Source:
-- https://solodit.cyfrin.io/issues/m-05-rewards-will-be-locked-if-user-transfer-directly-to-pool-without-using-deposit-function-code4rena-jpegd-jpegd-contest-git_
+- https://solodit.cyfrin.io/issues/m-05-rewards-will-be-locked-if-user-transfer-directly-to-pool-without-using-deposit-function-code4rena-jpegd-jpegd-contest-git
 
 Imported:
 - 2026-05-23

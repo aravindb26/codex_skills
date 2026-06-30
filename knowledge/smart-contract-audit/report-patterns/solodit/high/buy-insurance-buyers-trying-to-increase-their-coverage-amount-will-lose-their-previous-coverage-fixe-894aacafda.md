@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: buy – Insurance Buyers Trying to Increase Their Coverage Amount Will Lose Their Previous Coverage ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/buy-insurance-buyers-trying-to-increase-their-coverage-amount-will-lose-their-previous-coverage-fixed-consensys-none-tidal-markdown_
+- https://solodit.cyfrin.io/issues/buy-insurance-buyers-trying-to-increase-their-coverage-amount-will-lose-their-previous-coverage-fixed-consensys-none-tidal-markdown
 
 Imported:
 - 2026-05-23

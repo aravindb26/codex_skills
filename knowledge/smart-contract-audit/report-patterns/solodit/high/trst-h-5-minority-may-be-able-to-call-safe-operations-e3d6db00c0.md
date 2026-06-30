@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-5 Minority may be able to call safe operations
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-5-minority-may-be-able-to-call-safe-operations-trust-security-none-hats-protocol-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-5-minority-may-be-able-to-call-safe-operations-trust-security-none-hats-protocol-markdown
 
 Imported:
 - 2026-05-23

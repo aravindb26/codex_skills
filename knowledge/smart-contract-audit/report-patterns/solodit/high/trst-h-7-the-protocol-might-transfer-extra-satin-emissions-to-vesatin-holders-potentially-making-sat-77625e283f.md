@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-7 The protocol might transfer extra SATIN emissions to veSatin holders potentially making SatinVoter.sol insolvent
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-7-the-protocol-might-transfer-extra-satin-emissions-to-vesatin-holders-potentially-making-satinvotersol-insolvent-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-7-the-protocol-might-transfer-extra-satin-emissions-to-vesatin-holders-potentially-making-satinvotersol-insolvent-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

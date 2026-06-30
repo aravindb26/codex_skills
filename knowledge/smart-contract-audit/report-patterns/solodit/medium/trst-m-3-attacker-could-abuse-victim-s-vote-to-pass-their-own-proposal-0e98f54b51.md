@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-3 Attacker could abuse victim's vote to pass their own proposal
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-3-attacker-could-abuse-victims-vote-to-pass-their-own-proposal-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-3-attacker-could-abuse-victims-vote-to-pass-their-own-proposal-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

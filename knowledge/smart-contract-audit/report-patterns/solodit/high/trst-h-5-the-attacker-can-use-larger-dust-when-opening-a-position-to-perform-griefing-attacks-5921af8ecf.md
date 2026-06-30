@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-5 The attacker can use larger dust when opening a position to perform griefing attacks
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-5-the-attacker-can-use-larger-dust-when-opening-a-position-to-perform-griefing-attacks-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-5-the-attacker-can-use-larger-dust-when-opening-a-position-to-perform-griefing-attacks-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

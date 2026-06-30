@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-6 option board will be settled with incorrect prices when settled after a delay
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-6-option-board-will-be-settled-with-incorrect-prices-when-settled-after-a-delay-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-6-option-board-will-be-settled-with-incorrect-prices-when-settled-after-a-delay-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

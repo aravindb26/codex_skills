@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-2 Lack of child rewarder reserves could lead to freeze of funds
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-2-lack-of-child-rewarder-reserves-could-lead-to-freeze-of-funds-trust-security-none-ninja-yield-farming-v3-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-2-lack-of-child-rewarder-reserves-could-lead-to-freeze-of-funds-trust-security-none-ninja-yield-farming-v3-markdown
 
 Imported:
 - 2026-05-23

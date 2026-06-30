@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Specified `minOutput` will remain locked in `LSSVMRouter::swapNFTsForSpecificNFTsThroughETH`
 
 Source:
-- https://solodit.cyfrin.io/issues/specified-minoutput-will-remain-locked-in-lssvmrouterswapnftsforspecificnftsthrougheth-cyfrin-sudoswap-markdown_
+- https://solodit.cyfrin.io/issues/specified-minoutput-will-remain-locked-in-lssvmrouterswapnftsforspecificnftsthrougheth-cyfrin-sudoswap-markdown
 
 Imported:
 - 2026-05-23

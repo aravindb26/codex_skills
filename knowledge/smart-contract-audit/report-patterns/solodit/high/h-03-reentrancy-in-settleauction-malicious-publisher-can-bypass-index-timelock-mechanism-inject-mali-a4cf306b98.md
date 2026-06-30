@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-03] Reentrancy in settleAuction(): malicious publisher can bypass index timelock mechanism, inject malicious index, and rug the basket
 
 Source:
-- https://solodit.cyfrin.io/issues/h-03-reentrancy-in-settleauction-malicious-publisher-can-bypass-index-timelock-mechanism-inject-malicious-index-and-rug-the-basket-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/h-03-reentrancy-in-settleauction-malicious-publisher-can-bypass-index-timelock-mechanism-inject-malicious-index-and-rug-the-basket-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

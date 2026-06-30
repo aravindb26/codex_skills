@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-07] Inconsistent rounding of lock time causes voting power errors
 
 Source:
-- https://solodit.cyfrin.io/issues/h-07-inconsistent-rounding-of-lock-time-causes-voting-power-errors-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/h-07-inconsistent-rounding-of-lock-time-causes-voting-power-errors-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

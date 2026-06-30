@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [C-02] Function `rebase()` apply wrong APR in RivusTAO
 
 Source:
-- https://solodit.cyfrin.io/issues/c-02-function-rebase-apply-wrong-apr-in-rivustao-pashov-audit-group-none-rivus-markdown_
+- https://solodit.cyfrin.io/issues/c-02-function-rebase-apply-wrong-apr-in-rivustao-pashov-audit-group-none-rivus-markdown
 
 Imported:
 - 2026-05-23

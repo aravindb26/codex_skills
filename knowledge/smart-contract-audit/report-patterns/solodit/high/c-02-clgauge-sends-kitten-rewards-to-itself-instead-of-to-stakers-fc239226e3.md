@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [C-02] CLGauge sends KITTEN rewards to itself instead of to stakers
 
 Source:
-- https://solodit.cyfrin.io/issues/c-02-clgauge-sends-kitten-rewards-to-itself-instead-of-to-stakers-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/c-02-clgauge-sends-kitten-rewards-to-itself-instead-of-to-stakers-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-02] uint(-1) index for not found
 
 Source:
-- https://solodit.cyfrin.io/issues/h-02-uint-1-index-for-not-found-code4rena-based-loans-based-loans-contest-git_
+- https://solodit.cyfrin.io/issues/h-02-uint-1-index-for-not-found-code4rena-based-loans-based-loans-contest-git
 
 Imported:
 - 2026-05-23

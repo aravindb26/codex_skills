@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Affiliate payment are skipped if incorrect or empty proof is accidentally submitted
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-affiliate-payment-are-skipped-if-incorrect-or-empty-proof-is-accidentally-submitted-zachobront-none-soundxyz-markdown_
+- https://solodit.cyfrin.io/issues/m-01-affiliate-payment-are-skipped-if-incorrect-or-empty-proof-is-accidentally-submitted-zachobront-none-soundxyz-markdown
 
 Imported:
 - 2026-05-23

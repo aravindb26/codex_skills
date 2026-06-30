@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-11 Decreasing a losing hedge position could make it overly-leveraged
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-11-decreasing-a-losing-hedge-position-could-make-it-overly-leveraged-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-11-decreasing-a-losing-hedge-position-could-make-it-overly-leveraged-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

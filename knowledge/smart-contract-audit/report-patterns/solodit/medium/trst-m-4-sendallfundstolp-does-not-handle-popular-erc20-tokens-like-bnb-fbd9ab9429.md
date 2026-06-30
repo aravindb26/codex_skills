@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-4 sendAllFundsToLP() does not handle popular ERC20 tokens like BNB
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-4-sendallfundstolp-does-not-handle-popular-erc20-tokens-like-bnb-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-4-sendallfundstolp-does-not-handle-popular-erc20-tokens-like-bnb-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

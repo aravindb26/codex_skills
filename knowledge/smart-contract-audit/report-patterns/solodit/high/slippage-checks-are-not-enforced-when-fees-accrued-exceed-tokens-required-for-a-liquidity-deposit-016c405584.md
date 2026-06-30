@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Slippage Checks Are Not Enforced When Fees Accrued Exceed Tokens Required for a Liquidity Deposit
 
 Source:
-- https://solodit.cyfrin.io/issues/slippage-checks-are-not-enforced-when-fees-accrued-exceed-tokens-required-for-a-liquidity-deposit-openzeppelin-none-uniswap-v4-periphery-and-universal-router-audit-markdown_
+- https://solodit.cyfrin.io/issues/slippage-checks-are-not-enforced-when-fees-accrued-exceed-tokens-required-for-a-liquidity-deposit-openzeppelin-none-uniswap-v4-periphery-and-universal-router-audit-markdown
 
 Imported:
 - 2026-05-23

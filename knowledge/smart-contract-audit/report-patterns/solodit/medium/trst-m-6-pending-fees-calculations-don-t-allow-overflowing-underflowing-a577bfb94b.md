@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-6 Pending fees calculations don’t allow overflowing/underflowing
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-6-pending-fees-calculations-dont-allow-overflowingunderflowing-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-6-pending-fees-calculations-dont-allow-overflowingunderflowing-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

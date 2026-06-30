@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] Failure of USDT token support
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-failure-of-usdt-token-support-pashov-audit-group-none-tangent_2025-10-30-markdown_
+- https://solodit.cyfrin.io/issues/m-03-failure-of-usdt-token-support-pashov-audit-group-none-tangent_2025-10-30-markdown
 
 Imported:
 - 2026-05-23

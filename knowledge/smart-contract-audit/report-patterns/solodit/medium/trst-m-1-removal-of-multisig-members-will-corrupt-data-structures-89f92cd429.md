@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-1 Removal of Multisig members will corrupt data structures
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-1-removal-of-multisig-members-will-corrupt-data-structures-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-1-removal-of-multisig-members-will-corrupt-data-structures-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

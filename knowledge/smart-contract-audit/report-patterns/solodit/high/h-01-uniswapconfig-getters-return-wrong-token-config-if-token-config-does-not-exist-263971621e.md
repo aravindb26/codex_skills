@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] UniswapConfig getters return wrong token config if token config does not exist
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-uniswapconfig-getters-return-wrong-token-config-if-token-config-does-not-exist-code4rena-based-loans-based-loans-contest-git_
+- https://solodit.cyfrin.io/issues/h-01-uniswapconfig-getters-return-wrong-token-config-if-token-config-does-not-exist-code4rena-based-loans-based-loans-contest-git
 
 Imported:
 - 2026-05-23

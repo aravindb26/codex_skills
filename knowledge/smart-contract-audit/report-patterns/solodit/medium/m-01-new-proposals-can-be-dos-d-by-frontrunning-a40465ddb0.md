@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] New proposals can be DOS'd by frontrunning
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-new-proposals-can-be-dosd-by-frontrunning-zachobront-none-optimismgovernormd-markdown_
+- https://solodit.cyfrin.io/issues/m-01-new-proposals-can-be-dosd-by-frontrunning-zachobront-none-optimismgovernormd-markdown
 
 Imported:
 - 2026-05-23

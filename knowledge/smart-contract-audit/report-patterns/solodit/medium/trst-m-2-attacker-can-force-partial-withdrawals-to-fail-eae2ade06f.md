@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-2 Attacker can force partial withdrawals to fail
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-2-attacker-can-force-partial-withdrawals-to-fail-trust-security-none-ninja-yield-farming-v3-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-2-attacker-can-force-partial-withdrawals-to-fail-trust-security-none-ninja-yield-farming-v3-markdown
 
 Imported:
 - 2026-05-23

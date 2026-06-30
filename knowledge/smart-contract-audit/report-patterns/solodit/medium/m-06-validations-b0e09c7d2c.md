@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-06] Validations
 
 Source:
-- https://solodit.cyfrin.io/issues/m-06-validations-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-06-validations-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

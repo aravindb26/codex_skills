@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-05] createBasket re-entrancy
 
 Source:
-- https://solodit.cyfrin.io/issues/m-05-createbasket-re-entrancy-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-05-createbasket-re-entrancy-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

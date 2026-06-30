@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-9 Users have to lock Satin/$CASH LP in Ve.sol to vote, but they lose on fees while doing so
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-9-users-have-to-lock-satincash-lp-in-vesol-to-vote-but-they-lose-on-fees-while-doing-so-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-9-users-have-to-lock-satincash-lp-in-vesol-to-vote-but-they-lose-on-fees-while-doing-so-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

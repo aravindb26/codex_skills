@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-03] Using oracle provided price for deposits and redemptions allows user to steal funds
 
 Source:
-- https://solodit.cyfrin.io/issues/h-03-using-oracle-provided-price-for-deposits-and-redemptions-allows-user-to-steal-funds-zachobront-none-dyad-markdown_
+- https://solodit.cyfrin.io/issues/h-03-using-oracle-provided-price-for-deposits-and-redemptions-allows-user-to-steal-funds-zachobront-none-dyad-markdown
 
 Imported:
 - 2026-05-23

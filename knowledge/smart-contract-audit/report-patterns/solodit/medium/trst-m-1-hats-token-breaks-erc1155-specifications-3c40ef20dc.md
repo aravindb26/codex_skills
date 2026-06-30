@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-1 Hats token breaks ERC1155 specifications
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-1-hats-token-breaks-erc1155-specifications-trust-security-none-hats-protocol-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-1-hats-token-breaks-erc1155-specifications-trust-security-none-hats-protocol-markdown
 
 Imported:
 - 2026-05-23

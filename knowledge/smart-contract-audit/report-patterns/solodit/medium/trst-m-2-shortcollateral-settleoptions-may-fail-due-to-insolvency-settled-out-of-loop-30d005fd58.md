@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-2 ShortCollateral settleOptions may fail due to insolvency settled out of loop
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-2-shortcollateral-settleoptions-may-fail-due-to-insolvency-settled-out-of-loop-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-2-shortcollateral-settleoptions-may-fail-due-to-insolvency-settled-out-of-loop-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-1 Division by 0 can freeze emissions claims for veSatin holders
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-1-division-by-0-can-freeze-emissions-claims-for-vesatin-holders-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-1-division-by-0-can-freeze-emissions-claims-for-vesatin-holders-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

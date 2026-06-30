@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-12] Merging or withdrawing VotingEscrow burns tokens without rewards
 
 Source:
-- https://solodit.cyfrin.io/issues/m-12-merging-or-withdrawing-votingescrow-burns-tokens-without-rewards-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-12-merging-or-withdrawing-votingescrow-burns-tokens-without-rewards-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

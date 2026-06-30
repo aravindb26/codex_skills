@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] Setting `Factory.bondPercentDiv` to zero cause Denial of Service in `Auction.bondForRebalance()`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-setting-factorybondpercentdiv-to-zero-cause-denial-of-service-in-auctionbondforrebalance-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-03-setting-factorybondpercentdiv-to-zero-cause-denial-of-service-in-auctionbondforrebalance-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

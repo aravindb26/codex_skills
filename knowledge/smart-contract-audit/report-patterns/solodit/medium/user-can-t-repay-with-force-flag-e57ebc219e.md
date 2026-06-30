@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: User can't repay with force flag
 
 Source:
-- https://solodit.cyfrin.io/issues/user-cant-repay-with-force-flag-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/user-cant-repay-with-force-flag-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

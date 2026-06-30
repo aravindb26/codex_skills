@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-1 _calculateClaim() does not distribute boost emissions correctly
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-1-_calculateclaim-does-not-distribute-boost-emissions-correctly-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-1-_calculateclaim-does-not-distribute-boost-emissions-correctly-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

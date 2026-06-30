@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-2 Users can drain Gelato deposit at little cost
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-2users-can-drain-gelato-deposit-at-little-cost-trust-security-none-brahma-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-2users-can-drain-gelato-deposit-at-little-cost-trust-security-none-brahma-markdown
 
 Imported:
 - 2026-05-23

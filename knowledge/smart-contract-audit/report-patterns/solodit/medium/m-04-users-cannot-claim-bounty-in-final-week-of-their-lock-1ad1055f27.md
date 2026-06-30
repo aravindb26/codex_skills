@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-04] Users cannot claim bounty in final week of their lock
 
 Source:
-- https://solodit.cyfrin.io/issues/m-04-users-cannot-claim-bounty-in-final-week-of-their-lock-zachobront-none-stakedao-markdown_
+- https://solodit.cyfrin.io/issues/m-04-users-cannot-claim-bounty-in-final-week-of-their-lock-zachobront-none-stakedao-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Possible transfer of bad account
 
 Source:
-- https://solodit.cyfrin.io/issues/possible-transfer-of-bad-account-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/possible-transfer-of-bad-account-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

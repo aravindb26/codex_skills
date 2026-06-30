@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-2 canHedge will return true when hedging requirement would be above the defined hedgeCap
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-2-canhedge-will-return-true-when-hedging-requirement-would-be-above-the-defined-hedgecap-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-2-canhedge-will-return-true-when-hedging-requirement-would-be-above-the-defined-hedgecap-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

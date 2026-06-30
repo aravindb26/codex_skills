@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-2 hedgeDelta() priceToUse is calculated wrong, which causes bad hedges
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-2-hedgedelta-pricetouse-is-calculated-wrong-which-causes-bad-hedges-trust-security-none-rysk-uniswapv3rangeorderreactor-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-2-hedgedelta-pricetouse-is-calculated-wrong-which-causes-bad-hedges-trust-security-none-rysk-uniswapv3rangeorderreactor-markdown
 
 Imported:
 - 2026-05-23

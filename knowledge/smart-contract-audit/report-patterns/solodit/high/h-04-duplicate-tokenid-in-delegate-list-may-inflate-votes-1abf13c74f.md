@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-04] Duplicate `tokenId` in delegate list may inflate votes
 
 Source:
-- https://solodit.cyfrin.io/issues/h-04-duplicate-tokenid-in-delegate-list-may-inflate-votes-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/h-04-duplicate-tokenid-in-delegate-list-may-inflate-votes-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

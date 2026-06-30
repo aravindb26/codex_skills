@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Impossible liquidation of broken account
 
 Source:
-- https://solodit.cyfrin.io/issues/impossible-liquidation-of-broken-account-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/impossible-liquidation-of-broken-account-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

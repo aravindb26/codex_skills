@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [C-01] Unlimited token transfer
 
 Source:
-- https://solodit.cyfrin.io/issues/c-01-unlimited-token-transfer-pashov-audit-group-none-rivus-markdown_
+- https://solodit.cyfrin.io/issues/c-01-unlimited-token-transfer-pashov-audit-group-none-rivus-markdown
 
 Imported:
 - 2026-05-23

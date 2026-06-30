@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-6 An attacker can increase liquidity to the position's UniswapNFT to prevent the position from being closed
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-6-an-attacker-can-increase-liquidity-to-the-positions-uniswapnft-to-prevent-the-position-from-being-closed-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-6-an-attacker-can-increase-liquidity-to-the-positions-uniswapnft-to-prevent-the-position-from-being-closed-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

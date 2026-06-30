@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-14] Incorrect check inside `CLGauge.claimFees`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-14-incorrect-check-inside-clgaugeclaimfees-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-14-incorrect-check-inside-clgaugeclaimfees-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

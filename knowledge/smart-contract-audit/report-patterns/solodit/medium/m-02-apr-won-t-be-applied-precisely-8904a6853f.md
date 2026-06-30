@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] APR won't be applied precisely
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-apr-wont-be-applied-precisely-pashov-audit-group-none-rivus-markdown_
+- https://solodit.cyfrin.io/issues/m-02-apr-wont-be-applied-precisely-pashov-audit-group-none-rivus-markdown
 
 Imported:
 - 2026-05-23

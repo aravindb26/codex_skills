@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-09] Desync lets bribes be received without emissions
 
 Source:
-- https://solodit.cyfrin.io/issues/m-09-desync-lets-bribes-be-received-without-emissions-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-09-desync-lets-bribes-be-received-without-emissions-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

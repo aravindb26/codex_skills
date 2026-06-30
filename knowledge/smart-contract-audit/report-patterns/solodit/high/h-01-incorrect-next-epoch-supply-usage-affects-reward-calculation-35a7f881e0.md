@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] Incorrect next epoch supply usage affects reward calculation
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-incorrect-next-epoch-supply-usage-affects-reward-calculation-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/h-01-incorrect-next-epoch-supply-usage-affects-reward-calculation-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

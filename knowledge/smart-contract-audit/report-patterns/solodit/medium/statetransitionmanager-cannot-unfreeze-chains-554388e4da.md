@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: StateTransitionManager Cannot Unfreeze Chains
 
 Source:
-- https://solodit.cyfrin.io/issues/statetransitionmanager-cannot-unfreeze-chains-openzeppelin-none-zksync-state-transition-diff-audit-markdown_
+- https://solodit.cyfrin.io/issues/statetransitionmanager-cannot-unfreeze-chains-openzeppelin-none-zksync-state-transition-diff-audit-markdown
 
 Imported:
 - 2026-05-23

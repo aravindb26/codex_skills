@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] Bonding mechanism allows malicious user to DOS auctions
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-bonding-mechanism-allows-malicious-user-to-dos-auctions-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/h-01-bonding-mechanism-allows-malicious-user-to-dos-auctions-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

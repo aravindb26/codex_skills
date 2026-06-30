@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-3 User deposits can fail despite using the correct method for calculation of deposit amounts
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-3-user-deposits-can-fail-despite-using-the-correct-method-for-calculation-of-deposit-amounts-trust-security-none-orbital-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-3-user-deposits-can-fail-despite-using-the-correct-method-for-calculation-of-deposit-amounts-trust-security-none-orbital-finance-markdown
 
 Imported:
 - 2026-05-23

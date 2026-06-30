@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Pool.buy– Users May End Up Paying More Than Intended Due to Changes in policy.weeklyPremium ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/poolbuy-users-may-end-up-paying-more-than-intended-due-to-changes-in-policyweeklypremium-fixed-consensys-none-tidal-markdown_
+- https://solodit.cyfrin.io/issues/poolbuy-users-may-end-up-paying-more-than-intended-due-to-changes-in-policyweeklypremium-fixed-consensys-none-tidal-markdown
 
 Imported:
 - 2026-05-23

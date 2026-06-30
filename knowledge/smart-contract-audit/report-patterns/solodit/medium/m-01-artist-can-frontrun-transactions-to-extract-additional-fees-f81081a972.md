@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Artist can frontrun transactions to extract additional fees
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-artist-can-frontrun-transactions-to-extract-additional-fees-zachobront-none-soundxyz-markdown_
+- https://solodit.cyfrin.io/issues/m-01-artist-can-frontrun-transactions-to-extract-additional-fees-zachobront-none-soundxyz-markdown
 
 Imported:
 - 2026-05-23

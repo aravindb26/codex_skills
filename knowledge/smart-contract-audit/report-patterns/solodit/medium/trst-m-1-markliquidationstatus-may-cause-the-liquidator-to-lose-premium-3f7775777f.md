@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-1 markLiquidationStatus() may cause the liquidator to lose premium
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-1-markliquidationstatus-may-cause-the-liquidator-to-lose-premium-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-1-markliquidationstatus-may-cause-the-liquidator-to-lose-premium-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-7 Changing liquidation vault or token makes liquidations impossible
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-7-changing-liquidation-vault-or-token-makes-liquidations-impossible-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-7-changing-liquidation-vault-or-token-makes-liquidations-impossible-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

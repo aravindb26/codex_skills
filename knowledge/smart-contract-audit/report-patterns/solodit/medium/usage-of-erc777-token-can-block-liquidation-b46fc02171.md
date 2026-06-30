@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Usage of ERC777 token can block liquidation
 
 Source:
-- https://solodit.cyfrin.io/issues/usage-of-erc777-token-can-block-liquidation-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/usage-of-erc777-token-can-block-liquidation-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

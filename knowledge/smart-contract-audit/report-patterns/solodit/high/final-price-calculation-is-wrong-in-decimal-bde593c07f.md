@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Final price calculation is wrong in decimal
 
 Source:
-- https://solodit.cyfrin.io/issues/final-price-calculation-is-wrong-in-decimal-hans-none-meta-markdown_
+- https://solodit.cyfrin.io/issues/final-price-calculation-is-wrong-in-decimal-hans-none-meta-markdown
 
 Imported:
 - 2026-05-23

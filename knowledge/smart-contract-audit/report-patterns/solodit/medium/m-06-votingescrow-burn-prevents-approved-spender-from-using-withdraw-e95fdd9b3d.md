@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-06] `VotingEscrow._burn` prevents approved spender from using `withdraw()`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-06-votingescrow_burn-prevents-approved-spender-from-using-withdraw-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-06-votingescrow_burn-prevents-approved-spender-from-using-withdraw-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

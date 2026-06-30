@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Possible underflow
 
 Source:
-- https://solodit.cyfrin.io/issues/possible-underflow-mixbytes-none-lido-markdown_
+- https://solodit.cyfrin.io/issues/possible-underflow-mixbytes-none-lido-markdown
 
 Imported:
 - 2026-05-23

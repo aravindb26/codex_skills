@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-8 Calculation of the new emissions amount is not 75%/25%/5%
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-8-calculation-of-the-new-emissions-amount-is-not-75255-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-8-calculation-of-the-new-emissions-amount-is-not-75255-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

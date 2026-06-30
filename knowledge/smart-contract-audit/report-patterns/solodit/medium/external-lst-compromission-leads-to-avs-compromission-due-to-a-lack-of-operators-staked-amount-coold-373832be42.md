@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: External LST compromission leads to avs compromission due to a lack of operators ' staked amount cooldown
 
 Source:
-- https://solodit.cyfrin.io/issues/external-lst-compromission-leads-to-avs-compromission-due-to-a-lack-of-operators-staked-amount-cooldown-cantina-none-eigenlayer-pdf_
+- https://solodit.cyfrin.io/issues/external-lst-compromission-leads-to-avs-compromission-due-to-a-lack-of-operators-staked-amount-cooldown-cantina-none-eigenlayer-pdf
 
 Imported:
 - 2026-05-23

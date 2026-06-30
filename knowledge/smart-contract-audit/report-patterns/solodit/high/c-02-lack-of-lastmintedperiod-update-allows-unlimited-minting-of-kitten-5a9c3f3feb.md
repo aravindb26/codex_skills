@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [C-02] Lack of `lastMintedPeriod` update allows unlimited minting of Kitten
 
 Source:
-- https://solodit.cyfrin.io/issues/c-02-lack-of-lastmintedperiod-update-allows-unlimited-minting-of-kitten-pashov-audit-group-none-kittenswap_2025-06-12-markdown_
+- https://solodit.cyfrin.io/issues/c-02-lack-of-lastmintedperiod-update-allows-unlimited-minting-of-kitten-pashov-audit-group-none-kittenswap_2025-06-12-markdown
 
 Imported:
 - 2026-05-23

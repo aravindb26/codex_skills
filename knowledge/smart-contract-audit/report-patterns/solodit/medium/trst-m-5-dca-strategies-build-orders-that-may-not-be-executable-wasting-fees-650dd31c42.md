@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-5 DCA Strategies build orders that may not be executable, wasting fees
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-5-dca-strategies-build-orders-that-may-not-be-executable-wasting-fees-trust-security-none-brahma-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-5-dca-strategies-build-orders-that-may-not-be-executable-wasting-fees-trust-security-none-brahma-markdown
 
 Imported:
 - 2026-05-23

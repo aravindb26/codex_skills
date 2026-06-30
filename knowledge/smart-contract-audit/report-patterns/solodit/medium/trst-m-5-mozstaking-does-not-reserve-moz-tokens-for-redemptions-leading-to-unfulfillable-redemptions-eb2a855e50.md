@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-5 MozStaking does not reserve Moz tokens for redemptions, leading to unfulfillable redemptions.
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-5-mozstaking-does-not-reserve-moz-tokens-for-redemptions-leading-to-unfulfillable-redemptions-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-5-mozstaking-does-not-reserve-moz-tokens-for-redemptions-leading-to-unfulfillable-redemptions-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

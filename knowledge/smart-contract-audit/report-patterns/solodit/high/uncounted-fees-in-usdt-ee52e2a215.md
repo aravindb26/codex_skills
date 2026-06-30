@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Uncounted fees in USDT
 
 Source:
-- https://solodit.cyfrin.io/issues/uncounted-fees-in-usdt-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/uncounted-fees-in-usdt-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

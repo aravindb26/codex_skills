@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] `onlyOwner` Role Can Unintentionally Influence `settleAuction()`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-onlyowner-role-can-unintentionally-influence-settleauction-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-03-onlyowner-role-can-unintentionally-influence-settleauction-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

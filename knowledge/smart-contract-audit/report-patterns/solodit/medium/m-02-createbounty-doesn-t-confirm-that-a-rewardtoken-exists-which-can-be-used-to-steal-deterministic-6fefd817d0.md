@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] `createBounty()` doesn't confirm that a `rewardToken` exists, which can be used to steal deterministic tokens
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-createbounty-doesnt-confirm-that-a-rewardtoken-exists-which-can-be-used-to-steal-deterministic-tokens-zachobront-none-stakedao-markdown_
+- https://solodit.cyfrin.io/issues/m-02-createbounty-doesnt-confirm-that-a-rewardtoken-exists-which-can-be-used-to-steal-deterministic-tokens-zachobront-none-stakedao-markdown
 
 Imported:
 - 2026-05-23

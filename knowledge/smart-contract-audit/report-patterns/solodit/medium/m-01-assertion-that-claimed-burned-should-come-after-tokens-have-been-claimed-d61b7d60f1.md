@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Assertion that claimed <= burned should come after tokens have been claimed
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-assertion-that-claimed-burned-should-come-after-tokens-have-been-claimed-zachobront-none-dhedge-markdown_
+- https://solodit.cyfrin.io/issues/m-01-assertion-that-claimed-burned-should-come-after-tokens-have-been-claimed-zachobront-none-dhedge-markdown
 
 Imported:
 - 2026-05-23

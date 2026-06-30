@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: `head` can't be taken out
 
 Source:
-- https://solodit.cyfrin.io/issues/head-cant-be-taken-out-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/head-cant-be-taken-out-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

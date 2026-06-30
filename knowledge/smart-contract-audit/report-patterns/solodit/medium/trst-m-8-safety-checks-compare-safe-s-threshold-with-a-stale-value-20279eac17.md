@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-8 Safety checks compare safe's threshold with a stale value
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-8-safety-checks-compare-safes-threshold-with-a-stale-value-trust-security-none-hats-protocol-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-8-safety-checks-compare-safes-threshold-with-a-stale-value-trust-security-none-hats-protocol-markdown
 
 Imported:
 - 2026-05-23

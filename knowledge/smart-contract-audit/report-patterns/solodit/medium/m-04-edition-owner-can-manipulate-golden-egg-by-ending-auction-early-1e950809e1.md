@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-04] Edition owner can manipulate Golden Egg by ending auction early
 
 Source:
-- https://solodit.cyfrin.io/issues/m-04-edition-owner-can-manipulate-golden-egg-by-ending-auction-early-zachobront-none-soundxyz-markdown_
+- https://solodit.cyfrin.io/issues/m-04-edition-owner-can-manipulate-golden-egg-by-ending-auction-early-zachobront-none-soundxyz-markdown
 
 Imported:
 - 2026-05-23

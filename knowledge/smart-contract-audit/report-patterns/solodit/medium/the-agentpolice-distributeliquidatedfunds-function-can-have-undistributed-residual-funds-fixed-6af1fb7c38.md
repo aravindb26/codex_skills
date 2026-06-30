@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: The AgentPolice.distributeLiquidatedFunds() Function Can Have Undistributed Residual Funds ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/the-agentpolicedistributeliquidatedfunds-function-can-have-undistributed-residual-funds-fixed-consensys-none-glif-filecoin-infinitypool-markdown_
+- https://solodit.cyfrin.io/issues/the-agentpolicedistributeliquidatedfunds-function-can-have-undistributed-residual-funds-fixed-consensys-none-glif-filecoin-infinitypool-markdown
 
 Imported:
 - 2026-05-23

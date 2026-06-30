@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: refund – Attacker Can Lock Insurance Holder’s Refunds by Calling refund Before a Refund Was Allocated ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/refund-attacker-can-lock-insurance-holders-refunds-by-calling-refund-before-a-refund-was-allocated-fixed-consensys-none-tidal-markdown_
+- https://solodit.cyfrin.io/issues/refund-attacker-can-lock-insurance-holders-refunds-by-calling-refund-before-a-refund-was-allocated-fixed-consensys-none-tidal-markdown
 
 Imported:
 - 2026-05-23

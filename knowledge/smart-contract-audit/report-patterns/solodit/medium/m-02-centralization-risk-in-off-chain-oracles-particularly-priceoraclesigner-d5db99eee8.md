@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] Centralization risk in off chain oracles (particularly priceOracleSigner)
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-centralization-risk-in-off-chain-oracles-particularly-priceoraclesigner-zachobront-none-hook-markdown_
+- https://solodit.cyfrin.io/issues/m-02-centralization-risk-in-off-chain-oracles-particularly-priceoraclesigner-zachobront-none-hook-markdown
 
 Imported:
 - 2026-05-23

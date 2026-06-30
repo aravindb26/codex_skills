@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-03] Yield cannot be harvested because wrong token is passed to Incentives Controller
 
 Source:
-- https://solodit.cyfrin.io/issues/h-03-yield-cannot-be-harvested-because-wrong-token-is-passed-to-incentives-controller-zachobront-none-olympusdao-markdown_
+- https://solodit.cyfrin.io/issues/h-03-yield-cannot-be-harvested-because-wrong-token-is-passed-to-incentives-controller-zachobront-none-olympusdao-markdown
 
 Imported:
 - 2026-05-23

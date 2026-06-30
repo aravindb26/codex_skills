@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-11] User can prevent poke() from updating voting power
 
 Source:
-- https://solodit.cyfrin.io/issues/m-11-user-can-prevent-poke-from-updating-voting-power-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-11-user-can-prevent-poke-from-updating-voting-power-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

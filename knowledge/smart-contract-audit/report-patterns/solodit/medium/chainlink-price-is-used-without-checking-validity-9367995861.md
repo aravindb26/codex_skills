@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Chainlink price is used without checking validity
 
 Source:
-- https://solodit.cyfrin.io/issues/chainlink-price-is-used-without-checking-validity-hans-none-meta-markdown_
+- https://solodit.cyfrin.io/issues/chainlink-price-is-used-without-checking-validity-hans-none-meta-markdown
 
 Imported:
 - 2026-05-23

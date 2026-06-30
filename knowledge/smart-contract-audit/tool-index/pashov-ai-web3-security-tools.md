@@ -2,9 +2,9 @@
 
 Source: <https://github.com/pashov/ai-web3-security>
 
-Checked: 2026-06-20
+Checked: 2026-06-30
 
-Source commit checked: `ca69854090033ce9a9ba904da302268492d5cb6a`
+Source commit checked: `e2b4db57a24e62023af65c2cb415e9c435d7f442`
 
 ## Classification
 
@@ -181,9 +181,10 @@ Reason:
 
 Several listed repos were not installed to avoid active-skill noise or because local coverage already exists.
 
-New since the previous check:
+Reviewed since the previous check:
 
-- `RASHMOR1/dlt-auditor` was added to the hub as a multi-language DLT audit skill. It was recorded as a discovery lead only, not installed, because it needs separate quality review before entering the active Codex skill set.
+- `RASHMOR1/dlt-auditor` was reviewed at `017d80f70ad55f95366d1dcbe8849d30eebb421a`. It was not installed because it is a large benchmark/runtime framework with thousands of corpus and design files, substantial overlap with the local audit workflow, and a high operational-noise cost.
+- `exvulsec/sui-move-skill` was reviewed at `54daba3c0d3621c46bb875245539e734bc410038`. It was not installed because the existing `smart-contract-audit` skill already has richer Sui/Move coverage, while this candidate contains a broken reference and defaults to retaining Low/Informational findings in conflict with the local submit-worthy finding gate.
 
 Skipped for now:
 

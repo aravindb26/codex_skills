@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Possible overflow
 
 Source:
-- https://solodit.cyfrin.io/issues/possible-overflow-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/possible-overflow-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

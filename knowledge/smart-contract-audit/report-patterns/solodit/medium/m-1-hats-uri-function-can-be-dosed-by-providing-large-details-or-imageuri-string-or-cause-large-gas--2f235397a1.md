@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: M-1: Hats.uri function can be DOSed by providing large details or imageURI string or cause large gas fees
 
 Source:
-- https://solodit.cyfrin.io/issues/m-1-hatsuri-function-can-be-dosed-by-providing-large-details-or-imageuri-string-or-cause-large-gas-fees-sherlock-hats-hats-git_
+- https://solodit.cyfrin.io/issues/m-1-hatsuri-function-can-be-dosed-by-providing-large-details-or-imageuri-string-or-cause-large-gas-fees-sherlock-hats-hats-git
 
 Imported:
 - 2026-05-23

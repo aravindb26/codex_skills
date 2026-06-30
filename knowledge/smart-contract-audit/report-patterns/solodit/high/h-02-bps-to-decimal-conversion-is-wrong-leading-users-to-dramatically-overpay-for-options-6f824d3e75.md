@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-02] BPS_TO_DECIMAL conversion is wrong, leading users to dramatically overpay for options
 
 Source:
-- https://solodit.cyfrin.io/issues/h-02-bps_to_decimal-conversion-is-wrong-leading-users-to-dramatically-overpay-for-options-zachobront-none-hook-markdown_
+- https://solodit.cyfrin.io/issues/h-02-bps_to_decimal-conversion-is-wrong-leading-users-to-dramatically-overpay-for-options-zachobront-none-hook-markdown
 
 Imported:
 - 2026-05-23

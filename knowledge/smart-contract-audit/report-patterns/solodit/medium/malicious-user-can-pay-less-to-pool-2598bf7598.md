@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Malicious user can pay less to pool
 
 Source:
-- https://solodit.cyfrin.io/issues/malicious-user-can-pay-less-to-pool-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/malicious-user-can-pay-less-to-pool-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

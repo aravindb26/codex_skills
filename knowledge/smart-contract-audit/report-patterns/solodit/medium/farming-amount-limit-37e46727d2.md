@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Farming Amount Limit
 
 Source:
-- https://solodit.cyfrin.io/issues/farming-amount-limit-sigmaprime-none-1inch-pdf_
+- https://solodit.cyfrin.io/issues/farming-amount-limit-sigmaprime-none-1inch-pdf
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] Proposals supported only by a small fraction of the community can be passed using the Approval Module
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-proposals-supported-only-by-a-small-fraction-of-the-community-can-be-passed-using-the-approval-module-zachobront-none-optimismgovernormd-markdown_
+- https://solodit.cyfrin.io/issues/h-01-proposals-supported-only-by-a-small-fraction-of-the-community-can-be-passed-using-the-approval-module-zachobront-none-optimismgovernormd-markdown
 
 Imported:
 - 2026-05-23

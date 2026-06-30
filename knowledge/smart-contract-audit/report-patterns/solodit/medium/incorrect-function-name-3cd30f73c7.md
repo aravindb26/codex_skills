@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Incorrect function name
 
 Source:
-- https://solodit.cyfrin.io/issues/incorrect-function-name-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/incorrect-function-name-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

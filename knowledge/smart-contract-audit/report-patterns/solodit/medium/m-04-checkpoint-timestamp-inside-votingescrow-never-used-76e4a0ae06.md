@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-04] `checkpoint.timestamp` inside `VotingEscrow` never used
 
 Source:
-- https://solodit.cyfrin.io/issues/m-04-checkpointtimestamp-inside-votingescrow-never-used-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-04-checkpointtimestamp-inside-votingescrow-never-used-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

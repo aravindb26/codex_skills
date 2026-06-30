@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] `getLiqPnlThresholdP` could revert
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-getliqpnlthresholdp-could-revert-pashov-audit-group-none-gainsnetwork-security-july2-markdown_
+- https://solodit.cyfrin.io/issues/m-02-getliqpnlthresholdp-could-revert-pashov-audit-group-none-gainsnetwork-security-july2-markdown
 
 Imported:
 - 2026-05-23

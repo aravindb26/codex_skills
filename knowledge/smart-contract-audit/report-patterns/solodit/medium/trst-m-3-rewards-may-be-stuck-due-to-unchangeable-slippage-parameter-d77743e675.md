@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-3 Rewards may be stuck due to unchangeable slippage parameter
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-3-rewards-may-be-stuck-due-to-unchangeable-slippage-parameter-trust-security-none-ninja-yield-farming-v3-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-3-rewards-may-be-stuck-due-to-unchangeable-slippage-parameter-trust-security-none-ninja-yield-farming-v3-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Lack of slippage protection on trade closures
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-lack-of-slippage-protection-on-trade-closures-pashov-audit-group-none-gainsnetwork-security-july2-markdown_
+- https://solodit.cyfrin.io/issues/m-01-lack-of-slippage-protection-on-trade-closures-pashov-audit-group-none-gainsnetwork-security-july2-markdown
 
 Imported:
 - 2026-05-23

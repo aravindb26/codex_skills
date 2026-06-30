@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Missing Validation Checks in execute ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/missing-validation-checks-in-execute-fixed-consensys-none-tidal-markdown_
+- https://solodit.cyfrin.io/issues/missing-validation-checks-in-execute-fixed-consensys-none-tidal-markdown
 
 Imported:
 - 2026-05-23

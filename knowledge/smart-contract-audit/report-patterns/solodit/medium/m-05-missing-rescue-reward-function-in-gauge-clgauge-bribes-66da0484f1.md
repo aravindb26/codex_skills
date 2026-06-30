@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-05] Missing rescue reward function in `Gauge`, `CLGauge`, `Bribes`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-05-missing-rescue-reward-function-in-gauge-clgauge-bribes-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-05-missing-rescue-reward-function-in-gauge-clgauge-bribes-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] reward will be locked in the farm if no LP join the pool at epoch.startBlock
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-reward-will-be-locked-in-the-farm-if-no-lp-join-the-pool-at-epochstartblock-code4rena-jpegd-jpegd-contest-git_
+- https://solodit.cyfrin.io/issues/m-03-reward-will-be-locked-in-the-farm-if-no-lp-join-the-pool-at-epochstartblock-code4rena-jpegd-jpegd-contest-git
 
 Imported:
 - 2026-05-23

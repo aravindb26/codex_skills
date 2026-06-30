@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Universal Router Does Not Forward Native Tokens to V4 Position Manager
 
 Source:
-- https://solodit.cyfrin.io/issues/universal-router-does-not-forward-native-tokens-to-v4-position-manager-openzeppelin-none-uniswap-v4-periphery-and-universal-router-audit-markdown_
+- https://solodit.cyfrin.io/issues/universal-router-does-not-forward-native-tokens-to-v4-position-manager-openzeppelin-none-uniswap-v4-periphery-and-universal-router-audit-markdown
 
 Imported:
 - 2026-05-23

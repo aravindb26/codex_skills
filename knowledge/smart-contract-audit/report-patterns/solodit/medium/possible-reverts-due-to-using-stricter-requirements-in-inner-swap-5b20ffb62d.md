@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Possible reverts due to using stricter requirements in inner swap
 
 Source:
-- https://solodit.cyfrin.io/issues/possible-reverts-due-to-using-stricter-requirements-in-inner-swap-cyfrin-sudoswap-markdown_
+- https://solodit.cyfrin.io/issues/possible-reverts-due-to-using-stricter-requirements-in-inner-swap-cyfrin-sudoswap-markdown
 
 Imported:
 - 2026-05-23

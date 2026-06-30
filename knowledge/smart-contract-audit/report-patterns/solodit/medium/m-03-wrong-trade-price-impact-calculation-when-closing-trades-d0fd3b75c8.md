@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] Wrong trade price impact calculation when closing trades
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-wrong-trade-price-impact-calculation-when-closing-trades-pashov-audit-group-none-gainsnetwork-security-july2-markdown_
+- https://solodit.cyfrin.io/issues/m-03-wrong-trade-price-impact-calculation-when-closing-trades-pashov-audit-group-none-gainsnetwork-security-july2-markdown
 
 Imported:
 - 2026-05-23

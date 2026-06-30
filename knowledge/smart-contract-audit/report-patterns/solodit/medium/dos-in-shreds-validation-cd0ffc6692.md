@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: DoS in shreds validation
 
 Source:
-- https://solodit.cyfrin.io/issues/dos-in-shreds-validation-immunefi-firedancer-v01-git_
+- https://solodit.cyfrin.io/issues/dos-in-shreds-validation-immunefi-firedancer-v01-git
 
 Imported:
 - 2026-05-23

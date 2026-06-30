@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: ERC5115Form::withdraw /deposit strict checks can cause stETH (and other rebasing tokens) to revert
 
 Source:
-- https://solodit.cyfrin.io/issues/erc5115formwithdraw-deposit-strict-checks-can-cause-steth-and-other-rebasing-tokens-to-revert-cantina-none-superform-pdf_
+- https://solodit.cyfrin.io/issues/erc5115formwithdraw-deposit-strict-checks-can-cause-steth-and-other-rebasing-tokens-to-revert-cantina-none-superform-pdf
 
 Imported:
 - 2026-05-23

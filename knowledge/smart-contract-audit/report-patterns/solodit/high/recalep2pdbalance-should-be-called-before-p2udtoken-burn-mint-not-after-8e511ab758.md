@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: _recalep2pdbalance should be called before p2udtoken.burn /mint , not after
 
 Source:
-- https://solodit.cyfrin.io/issues/recalep2pdbalance-should-be-called-before-p2udtokenburn-mint-not-after-cantina-none-goat-tech-pdf_
+- https://solodit.cyfrin.io/issues/recalep2pdbalance-should-be-called-before-p2udtokenburn-mint-not-after-cantina-none-goat-tech-pdf
 
 Imported:
 - 2026-05-23

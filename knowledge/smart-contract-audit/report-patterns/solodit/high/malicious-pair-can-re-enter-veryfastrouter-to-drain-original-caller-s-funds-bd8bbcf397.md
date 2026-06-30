@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Malicious pair can re-enter `VeryFastRouter` to drain original caller's funds
 
 Source:
-- https://solodit.cyfrin.io/issues/malicious-pair-can-re-enter-veryfastrouter-to-drain-original-callers-funds-cyfrin-sudoswap-markdown_
+- https://solodit.cyfrin.io/issues/malicious-pair-can-re-enter-veryfastrouter-to-drain-original-callers-funds-cyfrin-sudoswap-markdown
 
 Imported:
 - 2026-05-23

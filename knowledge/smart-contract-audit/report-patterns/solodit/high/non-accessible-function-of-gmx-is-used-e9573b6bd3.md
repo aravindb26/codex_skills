@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Non-accessible function of GMX is used
 
 Source:
-- https://solodit.cyfrin.io/issues/non-accessible-function-of-gmx-is-used-hans-none-meta-markdown_
+- https://solodit.cyfrin.io/issues/non-accessible-function-of-gmx-is-used-hans-none-meta-markdown
 
 Imported:
 - 2026-05-23

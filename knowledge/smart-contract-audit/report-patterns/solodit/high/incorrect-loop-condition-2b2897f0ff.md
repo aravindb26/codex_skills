@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Incorrect loop condition.
 
 Source:
-- https://solodit.cyfrin.io/issues/incorrect-loop-condition-zokyo-none-propchain-markdown_
+- https://solodit.cyfrin.io/issues/incorrect-loop-condition-zokyo-none-propchain-markdown
 
 Imported:
 - 2026-05-23

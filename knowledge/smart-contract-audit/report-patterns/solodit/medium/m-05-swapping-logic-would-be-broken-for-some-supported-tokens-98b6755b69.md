@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-05] Swapping logic would be broken for some supported tokens
 
 Source:
-- https://solodit.cyfrin.io/issues/m-05-swapping-logic-would-be-broken-for-some-supported-tokens-code4rena-krystal-defi-krystal-defi-git_
+- https://solodit.cyfrin.io/issues/m-05-swapping-logic-would-be-broken-for-some-supported-tokens-code4rena-krystal-defi-krystal-defi-git
 
 Imported:
 - 2026-05-23

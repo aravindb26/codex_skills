@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: 3S-LENFT-M01 protocol/Gauges/GaugeController.sol: incorrect getRewardsCeiling() logic
 
 Source:
-- https://solodit.cyfrin.io/issues/3s-lenft-m01-protocolgaugesgaugecontrollersol-incorrect-getrewardsceiling-logic-threesigma-none-lenft-markdown_
+- https://solodit.cyfrin.io/issues/3s-lenft-m01-protocolgaugesgaugecontrollersol-incorrect-getrewardsceiling-logic-threesigma-none-lenft-markdown
 
 Imported:
 - 2026-05-23

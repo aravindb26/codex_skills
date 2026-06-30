@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Possible incorrect setting value for `maxLeverageFactor`
 
 Source:
-- https://solodit.cyfrin.io/issues/possible-incorrect-setting-value-for-maxleveragefactor-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/possible-incorrect-setting-value-for-maxleveragefactor-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

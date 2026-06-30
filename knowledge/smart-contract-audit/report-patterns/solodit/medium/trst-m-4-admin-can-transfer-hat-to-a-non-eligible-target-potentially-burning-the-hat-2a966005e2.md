@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-4 Admin can transfer hat to a non-eligible target, potentially burning the hat
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-4-admin-can-transfer-hat-to-a-non-eligible-target-potentially-burning-the-hat-trust-security-none-hats-protocol-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-4-admin-can-transfer-hat-to-a-non-eligible-target-potentially-burning-the-hat-trust-security-none-hats-protocol-markdown
 
 Imported:
 - 2026-05-23

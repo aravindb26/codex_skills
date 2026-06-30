@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-8 It’s possible to drain all the funds from ExternalBribe
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-8-its-possible-to-drain-all-the-funds-from-externalbribe-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-8-its-possible-to-drain-all-the-funds-from-externalbribe-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [C-01] `split` can be abused to create `locked` data with an arbitrary `amount`
 
 Source:
-- https://solodit.cyfrin.io/issues/c-01-split-can-be-abused-to-create-locked-data-with-an-arbitrary-amount-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/c-01-split-can-be-abused-to-create-locked-data-with-an-arbitrary-amount-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

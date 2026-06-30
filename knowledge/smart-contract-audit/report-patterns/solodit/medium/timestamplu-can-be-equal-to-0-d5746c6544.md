@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: `_timestampLU` can be equal to 0
 
 Source:
-- https://solodit.cyfrin.io/issues/timestamplu-can-be-equal-to-0-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/timestamplu-can-be-equal-to-0-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: `removeLiquidity` logic is not correct for generalized Well functions other than ConstantProduct
 
 Source:
-- https://solodit.cyfrin.io/issues/removeliquidity-logic-is-not-correct-for-generalized-well-functions-other-than-constantproduct-cyfrin-beanstalk-wells-markdown_
+- https://solodit.cyfrin.io/issues/removeliquidity-logic-is-not-correct-for-generalized-well-functions-other-than-constantproduct-cyfrin-beanstalk-wells-markdown
 
 Imported:
 - 2026-05-23

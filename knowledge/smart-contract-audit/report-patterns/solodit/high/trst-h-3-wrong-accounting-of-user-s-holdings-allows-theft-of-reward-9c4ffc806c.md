@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-3 Wrong accounting of user's holdings allows theft of reward
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-3-wrong-accounting-of-users-holdings-allows-theft-of-reward-trust-security-none-ninja-yield-farming-v3-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-3-wrong-accounting-of-users-holdings-allows-theft-of-reward-trust-security-none-ninja-yield-farming-v3-markdown
 
 Imported:
 - 2026-05-23

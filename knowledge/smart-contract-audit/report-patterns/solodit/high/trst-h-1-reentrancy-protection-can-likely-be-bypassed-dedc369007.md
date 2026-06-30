@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-1 Reentrancy protection can likely be bypassed
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-1-reentrancy-protection-can-likely-be-bypassed-trust-security-none-lukso-lsp-audit-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-1-reentrancy-protection-can-likely-be-bypassed-trust-security-none-lukso-lsp-audit-markdown
 
 Imported:
 - 2026-05-23

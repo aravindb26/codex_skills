@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] Losses in extreme scenarios due to missing collateral check
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-losses-in-extreme-scenarios-due-to-missing-collateral-check-pashov-audit-group-none-tangent_2025-10-30-markdown_
+- https://solodit.cyfrin.io/issues/m-02-losses-in-extreme-scenarios-due-to-missing-collateral-check-pashov-audit-group-none-tangent_2025-10-30-markdown
 
 Imported:
 - 2026-05-23

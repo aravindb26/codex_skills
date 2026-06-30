@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Complete shutdown of the transaction processing...
 
 Source:
-- https://solodit.cyfrin.io/issues/complete-shutdown-of-the-transaction-processing-immunefi-shardeum-core-git_
+- https://solodit.cyfrin.io/issues/complete-shutdown-of-the-transaction-processing-immunefi-shardeum-core-git
 
 Imported:
 - 2026-05-23

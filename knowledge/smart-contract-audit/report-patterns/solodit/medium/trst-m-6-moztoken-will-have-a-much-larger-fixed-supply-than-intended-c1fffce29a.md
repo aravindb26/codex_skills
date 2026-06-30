@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-6 MozToken will have a much larger fixed supply than intended.
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-6-moztoken-will-have-a-much-larger-fixed-supply-than-intended-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-6-moztoken-will-have-a-much-larger-fixed-supply-than-intended-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

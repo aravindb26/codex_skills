@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-02] First vault depositor can steal subsequent depositors’ tokens
 
 Source:
-- https://solodit.cyfrin.io/issues/h-02-first-vault-depositor-can-steal-subsequent-depositors-tokens-pashov-none-yield-ninja-markdown_
+- https://solodit.cyfrin.io/issues/h-02-first-vault-depositor-can-steal-subsequent-depositors-tokens-pashov-none-yield-ninja-markdown
 
 Imported:
 - 2026-05-23

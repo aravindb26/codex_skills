@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-04] `setDebtInterestApr` should accrue debt first
 
 Source:
-- https://solodit.cyfrin.io/issues/m-04-setdebtinterestapr-should-accrue-debt-first-code4rena-jpegd-jpegd-contest-git_
+- https://solodit.cyfrin.io/issues/m-04-setdebtinterestapr-should-accrue-debt-first-code4rena-jpegd-jpegd-contest-git
 
 Imported:
 - 2026-05-23

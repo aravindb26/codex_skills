@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] All fees accrue to minters, which can be forked to use platform without fees
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-all-fees-accrue-to-minters-which-can-be-forked-to-use-platform-without-fees-zachobront-none-soundxyz-markdown_
+- https://solodit.cyfrin.io/issues/m-02-all-fees-accrue-to-minters-which-can-be-forked-to-use-platform-without-fees-zachobront-none-soundxyz-markdown
 
 Imported:
 - 2026-05-23

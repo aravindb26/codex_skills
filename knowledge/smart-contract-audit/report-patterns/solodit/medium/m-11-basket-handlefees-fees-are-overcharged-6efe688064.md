@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-11] `Basket:handleFees():` fees are overcharged
 
 Source:
-- https://solodit.cyfrin.io/issues/m-11-baskethandlefees-fees-are-overcharged-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-11-baskethandlefees-fees-are-overcharged-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

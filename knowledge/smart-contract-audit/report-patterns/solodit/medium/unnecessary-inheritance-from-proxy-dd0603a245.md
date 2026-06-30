@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Unnecessary inheritance from `Proxy`
 
 Source:
-- https://solodit.cyfrin.io/issues/unnecessary-inheritance-from-proxy-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/unnecessary-inheritance-from-proxy-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-2 SwapHelper.getCalldata should check whitelistedRouters[_router]
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-2-swaphelpergetcalldata-should-check-whitelistedrouters_router-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-2-swaphelpergetcalldata-should-check-whitelistedrouters_router-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

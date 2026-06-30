@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-3 Linking of hat trees can freeze hat operations
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-3-linking-of-hat-trees-can-freeze-hat-operations-trust-security-none-hats-protocol-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-3-linking-of-hat-trees-can-freeze-hat-operations-trust-security-none-hats-protocol-markdown
 
 Imported:
 - 2026-05-23

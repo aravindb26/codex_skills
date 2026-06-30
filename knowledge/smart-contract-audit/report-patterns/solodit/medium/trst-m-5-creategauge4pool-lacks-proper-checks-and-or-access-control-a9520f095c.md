@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-5 createGauge4Pool() lacks proper checks and/or access control
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-5-creategauge4pool-lacks-proper-checks-andor-access-control-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-5-creategauge4pool-lacks-proper-checks-andor-access-control-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

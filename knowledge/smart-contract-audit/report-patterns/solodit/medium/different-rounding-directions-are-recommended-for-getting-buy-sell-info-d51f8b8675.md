@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Different rounding directions are recommended for getting buy/sell info
 
 Source:
-- https://solodit.cyfrin.io/issues/different-rounding-directions-are-recommended-for-getting-buysell-info-cyfrin-sudoswap-markdown_
+- https://solodit.cyfrin.io/issues/different-rounding-directions-are-recommended-for-getting-buysell-info-cyfrin-sudoswap-markdown
 
 Imported:
 - 2026-05-23

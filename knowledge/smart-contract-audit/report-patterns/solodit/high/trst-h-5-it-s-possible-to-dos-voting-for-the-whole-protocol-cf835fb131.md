@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-5 It’s possible to DOS voting for the whole protocol
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-5-its-possible-to-dos-voting-for-the-whole-protocol-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-5-its-possible-to-dos-voting-for-the-whole-protocol-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

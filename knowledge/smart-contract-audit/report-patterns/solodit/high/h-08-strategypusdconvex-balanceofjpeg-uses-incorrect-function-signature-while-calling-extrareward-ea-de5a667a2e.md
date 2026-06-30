@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-08] `StrategyPUSDConvex.balanceOfJPEG` uses incorrect function signature while calling `extraReward.earned`, causing the function to unexpectedly revert everytime
 
 Source:
-- https://solodit.cyfrin.io/issues/h-08-strategypusdconvexbalanceofjpeg-uses-incorrect-function-signature-while-calling-extrarewardearned-causing-the-function-to-unexpectedly-revert-everytime-code4rena-jpegd-jpegd-contest-git_
+- https://solodit.cyfrin.io/issues/h-08-strategypusdconvexbalanceofjpeg-uses-incorrect-function-signature-while-calling-extrarewardearned-causing-the-function-to-unexpectedly-revert-everytime-code4rena-jpegd-jpegd-contest-git
 
 Imported:
 - 2026-05-23

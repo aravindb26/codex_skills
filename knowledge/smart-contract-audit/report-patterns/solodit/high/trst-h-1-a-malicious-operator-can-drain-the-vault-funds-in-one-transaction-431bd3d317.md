@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-1 A malicious operator can drain the vault funds in one transaction
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-1-a-malicious-operator-can-drain-the-vault-funds-in-one-transaction-trust-security-none-orbital-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-1-a-malicious-operator-can-drain-the-vault-funds-in-one-transaction-trust-security-none-orbital-finance-markdown
 
 Imported:
 - 2026-05-23

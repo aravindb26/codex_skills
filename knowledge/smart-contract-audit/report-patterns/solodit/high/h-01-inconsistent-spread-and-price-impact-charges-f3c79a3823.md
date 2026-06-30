@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] Inconsistent spread and price impact charges
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-inconsistent-spread-and-price-impact-charges-pashov-audit-group-none-gainsnetwork-security-july2-markdown_
+- https://solodit.cyfrin.io/issues/h-01-inconsistent-spread-and-price-impact-charges-pashov-audit-group-none-gainsnetwork-security-july2-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: addPremium – A Back Runner May Cause an Insurance Holder to Lose Their Refunds by Calling addPremium Right After the Original Call ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/addpremium-a-back-runner-may-cause-an-insurance-holder-to-lose-their-refunds-by-calling-addpremium-right-after-the-original-call-fixed-consensys-none-tidal-markdown_
+- https://solodit.cyfrin.io/issues/addpremium-a-back-runner-may-cause-an-insurance-holder-to-lose-their-refunds-by-calling-addpremium-right-after-the-original-call-fixed-consensys-none-tidal-markdown
 
 Imported:
 - 2026-05-23

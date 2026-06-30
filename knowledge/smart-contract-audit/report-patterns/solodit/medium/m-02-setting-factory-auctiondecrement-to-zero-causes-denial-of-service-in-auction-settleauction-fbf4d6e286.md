@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] Setting `Factory.auctionDecrement` to zero causes Denial of Service in `Auction.settleAuction()`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-setting-factoryauctiondecrement-to-zero-causes-denial-of-service-in-auctionsettleauction-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-02-setting-factoryauctiondecrement-to-zero-causes-denial-of-service-in-auctionsettleauction-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

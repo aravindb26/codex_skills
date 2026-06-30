@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Account can be opened for zero address
 
 Source:
-- https://solodit.cyfrin.io/issues/account-can-be-opened-for-zero-address-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/account-can-be-opened-for-zero-address-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

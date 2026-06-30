@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-04] Send 0 fees to the previous proposer when the proposer is changed
 
 Source:
-- https://solodit.cyfrin.io/issues/m-04-send-0-fees-to-the-previous-proposer-when-the-proposer-is-changed-pashov-audit-group-none-adapterfinance-markdown_
+- https://solodit.cyfrin.io/issues/m-04-send-0-fees-to-the-previous-proposer-when-the-proposer-is-changed-pashov-audit-group-none-adapterfinance-markdown
 
 Imported:
 - 2026-05-23

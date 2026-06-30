@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Exchange owner might steal users’ funds using reentrancy
 
 Source:
-- https://solodit.cyfrin.io/issues/exchange-owner-might-steal-users-funds-using-reentrancy-consensys-growthdefi-wheat-markdown_
+- https://solodit.cyfrin.io/issues/exchange-owner-might-steal-users-funds-using-reentrancy-consensys-growthdefi-wheat-markdown
 
 Imported:
 - 2026-05-23

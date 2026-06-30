@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-02] `Basket.sol#auctionBurn()` A failed auction will freeze part of the funds
 
 Source:
-- https://solodit.cyfrin.io/issues/h-02-basketsolauctionburn-a-failed-auction-will-freeze-part-of-the-funds-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/h-02-basketsolauctionburn-a-failed-auction-will-freeze-part-of-the-funds-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

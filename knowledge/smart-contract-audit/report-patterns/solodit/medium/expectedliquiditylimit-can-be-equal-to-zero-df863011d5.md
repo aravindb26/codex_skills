@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: `expectedLiquidityLimit` can be equal to zero
 
 Source:
-- https://solodit.cyfrin.io/issues/expectedliquiditylimit-can-be-equal-to-zero-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/expectedliquiditylimit-can-be-equal-to-zero-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-11 No slippage protection for cross-chain swaps in StargatePlugin
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-11-no-slippage-protection-for-cross-chain-swaps-in-stargateplugin-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-11-no-slippage-protection-for-cross-chain-swaps-in-stargateplugin-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

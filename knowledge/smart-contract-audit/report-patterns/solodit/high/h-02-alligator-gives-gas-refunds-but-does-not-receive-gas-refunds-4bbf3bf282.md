@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-02] Alligator gives gas refunds but does not receive gas refunds
 
 Source:
-- https://solodit.cyfrin.io/issues/h-02-alligator-gives-gas-refunds-but-does-not-receive-gas-refunds-zachobront-none-alligator-markdown_
+- https://solodit.cyfrin.io/issues/h-02-alligator-gives-gas-refunds-but-does-not-receive-gas-refunds-zachobront-none-alligator-markdown
 
 Imported:
 - 2026-05-23

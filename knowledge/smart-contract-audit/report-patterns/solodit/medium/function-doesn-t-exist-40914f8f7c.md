@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Function doesn't exist
 
 Source:
-- https://solodit.cyfrin.io/issues/function-doesnt-exist-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/function-doesnt-exist-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

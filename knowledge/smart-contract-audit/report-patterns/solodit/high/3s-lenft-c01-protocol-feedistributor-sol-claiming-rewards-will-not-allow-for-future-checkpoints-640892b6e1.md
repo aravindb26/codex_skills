@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: 3S-LENFT-C01 protocol/FeeDistributor.sol: claiming rewards will not allow for future checkpoints
 
 Source:
-- https://solodit.cyfrin.io/issues/3s-lenft-c01-protocolfeedistributorsol-claiming-rewards-will-not-allow-for-future-checkpoints-threesigma-none-lenft-markdown_
+- https://solodit.cyfrin.io/issues/3s-lenft-c01-protocolfeedistributorsol-claiming-rewards-will-not-allow-for-future-checkpoints-threesigma-none-lenft-markdown
 
 Imported:
 - 2026-05-23

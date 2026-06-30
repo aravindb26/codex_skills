@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-9 Anybody can withdraw the admin fees in the 4pool for themselves
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-9-anybody-can-withdraw-the-admin-fees-in-the-4pool-for-themselves-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-9-anybody-can-withdraw-the-admin-fees-in-the-4pool-for-themselves-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

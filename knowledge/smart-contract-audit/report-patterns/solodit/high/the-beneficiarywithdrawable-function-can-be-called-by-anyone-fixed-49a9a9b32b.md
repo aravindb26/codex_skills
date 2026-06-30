@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: The beneficiaryWithdrawable Function Can Be Called by Anyone ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/the-beneficiarywithdrawable-function-can-be-called-by-anyone-fixed-consensys-none-glif-filecoin-infinitypool-markdown_
+- https://solodit.cyfrin.io/issues/the-beneficiarywithdrawable-function-can-be-called-by-anyone-fixed-consensys-none-glif-filecoin-infinitypool-markdown
 
 Imported:
 - 2026-05-23

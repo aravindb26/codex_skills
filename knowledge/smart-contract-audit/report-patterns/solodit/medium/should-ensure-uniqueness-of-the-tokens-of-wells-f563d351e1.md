@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Should ensure uniqueness of the tokens of Wells
 
 Source:
-- https://solodit.cyfrin.io/issues/should-ensure-uniqueness-of-the-tokens-of-wells-cyfrin-beanstalk-wells-markdown_
+- https://solodit.cyfrin.io/issues/should-ensure-uniqueness-of-the-tokens-of-wells-cyfrin-beanstalk-wells-markdown
 
 Imported:
 - 2026-05-23

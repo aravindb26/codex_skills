@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Inconsistent `VotingEscrow` implementation in `balanceOfNFT()` methods
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-inconsistent-votingescrow-implementation-in-balanceofnft-methods-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-01-inconsistent-votingescrow-implementation-in-balanceofnft-methods-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

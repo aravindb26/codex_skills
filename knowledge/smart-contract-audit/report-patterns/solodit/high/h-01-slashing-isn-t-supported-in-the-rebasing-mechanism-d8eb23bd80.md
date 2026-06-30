@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] Slashing isn't supported in the rebasing mechanism
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-slashing-isnt-supported-in-the-rebasing-mechanism-pashov-audit-group-none-rivus-markdown_
+- https://solodit.cyfrin.io/issues/h-01-slashing-isnt-supported-in-the-rebasing-mechanism-pashov-audit-group-none-rivus-markdown
 
 Imported:
 - 2026-05-23

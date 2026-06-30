@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Start slot validation allows past slots
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-start-slot-validation-allows-past-slots-pashov-audit-group-none-pumpscience_2024-12-24-markdown_
+- https://solodit.cyfrin.io/issues/m-01-start-slot-validation-allows-past-slots-pashov-audit-group-none-pumpscience_2024-12-24-markdown
 
 Imported:
 - 2026-05-23

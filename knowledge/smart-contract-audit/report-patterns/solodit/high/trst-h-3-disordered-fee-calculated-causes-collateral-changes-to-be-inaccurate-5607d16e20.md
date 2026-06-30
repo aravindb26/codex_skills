@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-3 disordered fee calculated causes collateral changes to be inaccurate
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-3-disordered-fee-calculated-causes-collateral-changes-to-be-inaccurate-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-3-disordered-fee-calculated-causes-collateral-changes-to-be-inaccurate-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

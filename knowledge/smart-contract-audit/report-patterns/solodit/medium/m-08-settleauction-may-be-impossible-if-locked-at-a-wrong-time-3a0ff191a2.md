@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-08]  settleAuction may be impossible if locked at a wrong time.
 
 Source:
-- https://solodit.cyfrin.io/issues/m-08-settleauction-may-be-impossible-if-locked-at-a-wrong-time-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-08-settleauction-may-be-impossible-if-locked-at-a-wrong-time-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

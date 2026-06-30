@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-1 When FeePayer is subsidizing, users can steal gas
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-1-when-feepayer-is-subsidizing-users-can-steal-gas-trust-security-none-brahma-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-1-when-feepayer-is-subsidizing-users-can-steal-gas-trust-security-none-brahma-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Incorrect change of state
 
 Source:
-- https://solodit.cyfrin.io/issues/incorrect-change-of-state-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/incorrect-change-of-state-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Attacker can abuse swapLiquidity function to drain users’ funds ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/attacker-can-abuse-swapliquidity-function-to-drain-users-funds-fixed-consensys-aave-protocol-v2-markdown_
+- https://solodit.cyfrin.io/issues/attacker-can-abuse-swapliquidity-function-to-drain-users-funds-fixed-consensys-aave-protocol-v2-markdown
 
 Imported:
 - 2026-05-23

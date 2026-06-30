@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Wrong logic in `AUTO_COMPOUND` doesn't allow for swap to token1
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-wrong-logic-in-auto_compound-doesnt-allow-for-swap-to-token1-code4rena-krystal-defi-krystal-defi-git_
+- https://solodit.cyfrin.io/issues/m-01-wrong-logic-in-auto_compound-doesnt-allow-for-swap-to-token1-code4rena-krystal-defi-krystal-defi-git
 
 Imported:
 - 2026-05-23

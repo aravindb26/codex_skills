@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] `Basket.sol#mint()` Malfunction due to extra `nonReentrant` modifier
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-basketsolmint-malfunction-due-to-extra-nonreentrant-modifier-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-01-basketsolmint-malfunction-due-to-extra-nonreentrant-modifier-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

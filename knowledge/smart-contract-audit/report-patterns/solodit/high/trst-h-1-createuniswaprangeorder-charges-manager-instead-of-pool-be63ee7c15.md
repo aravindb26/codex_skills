@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-1 createUniswapRangeOrder() charges manager instead of pool
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-1-createuniswaprangeorder-charges-manager-instead-of-pool-trust-security-none-rysk-uniswapv3rangeorderreactor-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-1-createuniswaprangeorder-charges-manager-instead-of-pool-trust-security-none-rysk-uniswapv3rangeorderreactor-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-03] `ExternalBribe.earned` skips rewards before the last `tokenId` checkpoint
 
 Source:
-- https://solodit.cyfrin.io/issues/h-03-externalbribeearned-skips-rewards-before-the-last-tokenid-checkpoint-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/h-03-externalbribeearned-skips-rewards-before-the-last-tokenid-checkpoint-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

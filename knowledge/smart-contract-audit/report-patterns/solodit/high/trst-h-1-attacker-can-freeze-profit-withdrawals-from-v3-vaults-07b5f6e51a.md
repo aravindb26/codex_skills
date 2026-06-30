@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-1 Attacker can freeze profit withdrawals from V3 vaults
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-1-attacker-can-freeze-profit-withdrawals-from-v3-vaults-trust-security-none-ninja-yield-farming-v3-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-1-attacker-can-freeze-profit-withdrawals-from-v3-vaults-trust-security-none-ninja-yield-farming-v3-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-4 It’s possible to DOS the distribution of weekly emissions, and as a consequence the whole protocol
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-4-its-possible-to-dos-the-distribution-of-weekly-emissions-and-as-a-consequence-the-whole-protocol-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-4-its-possible-to-dos-the-distribution-of-weekly-emissions-and-as-a-consequence-the-whole-protocol-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

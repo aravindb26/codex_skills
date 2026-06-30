@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-13] Potential revert in earned() when checkpoint supply is zero
 
 Source:
-- https://solodit.cyfrin.io/issues/m-13-potential-revert-in-earned-when-checkpoint-supply-is-zero-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/m-13-potential-revert-in-earned-when-checkpoint-supply-is-zero-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

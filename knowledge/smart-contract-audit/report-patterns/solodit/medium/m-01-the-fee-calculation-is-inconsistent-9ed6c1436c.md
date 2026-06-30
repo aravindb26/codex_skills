@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] The fee calculation is inconsistent
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-the-fee-calculation-is-inconsistent-pashov-audit-group-none-rivus-markdown_
+- https://solodit.cyfrin.io/issues/m-01-the-fee-calculation-is-inconsistent-pashov-audit-group-none-rivus-markdown
 
 Imported:
 - 2026-05-23

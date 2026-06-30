@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-05] Current liquidation mechanism is ineffective and dangerous
 
 Source:
-- https://solodit.cyfrin.io/issues/h-05-current-liquidation-mechanism-is-ineffective-and-dangerous-zachobront-none-dyad-markdown_
+- https://solodit.cyfrin.io/issues/h-05-current-liquidation-mechanism-is-ineffective-and-dangerous-zachobront-none-dyad-markdown
 
 Imported:
 - 2026-05-23

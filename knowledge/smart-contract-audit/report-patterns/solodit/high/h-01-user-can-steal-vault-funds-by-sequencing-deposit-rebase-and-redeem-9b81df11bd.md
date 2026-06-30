@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] User can steal vault funds by sequencing deposit, rebase, and redeem
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-user-can-steal-vault-funds-by-sequencing-deposit-rebase-and-redeem-zachobront-none-dyad-markdown_
+- https://solodit.cyfrin.io/issues/h-01-user-can-steal-vault-funds-by-sequencing-deposit-rebase-and-redeem-zachobront-none-dyad-markdown
 
 Imported:
 - 2026-05-23

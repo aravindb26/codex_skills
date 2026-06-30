@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-10 MozBridge underestimates gas for sending of Moz messages
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-10-mozbridge-underestimates-gas-for-sending-of-moz-messages-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-10-mozbridge-underestimates-gas-for-sending-of-moz-messages-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

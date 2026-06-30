@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] `submitStrategy()` DOS
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-submitstrategy-dos-pashov-audit-group-none-adapterfinance-markdown_
+- https://solodit.cyfrin.io/issues/m-02-submitstrategy-dos-pashov-audit-group-none-adapterfinance-markdown
 
 Imported:
 - 2026-05-23

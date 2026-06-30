@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] Hardcoded swap path might not be the most optimal/liquid one
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-hardcoded-swap-path-might-not-be-the-most-optimalliquid-one-pashov-none-yield-ninja-markdown_
+- https://solodit.cyfrin.io/issues/m-02-hardcoded-swap-path-might-not-be-the-most-optimalliquid-one-pashov-none-yield-ninja-markdown
 
 Imported:
 - 2026-05-23

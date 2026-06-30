@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Incorrect taking out of `tail` account
 
 Source:
-- https://solodit.cyfrin.io/issues/incorrect-taking-out-of-tail-account-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/incorrect-taking-out-of-tail-account-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

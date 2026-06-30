@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-05] Change in `auctionMultiplier/auctionDecrement` change profitability of auctions and factory can steal all tokens from a basket abusing it
 
 Source:
-- https://solodit.cyfrin.io/issues/m-05-change-in-auctionmultiplierauctiondecrement-change-profitability-of-auctions-and-factory-can-steal-all-tokens-from-a-basket-abusing-it-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-05-change-in-auctionmultiplierauctiondecrement-change-profitability-of-auctions-and-factory-can-steal-all-tokens-from-a-basket-abusing-it-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

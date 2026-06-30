@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-3 Anyone can make creating strategies extremely expensive for the user
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-3-anyone-can-make-creating-strategies-extremely-expensive-for-the-user-trust-security-none-brahma-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-3-anyone-can-make-creating-strategies-extremely-expensive-for-the-user-trust-security-none-brahma-markdown
 
 Imported:
 - 2026-05-23

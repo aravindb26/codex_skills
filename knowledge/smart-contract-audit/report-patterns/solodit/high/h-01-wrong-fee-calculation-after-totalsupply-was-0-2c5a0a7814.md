@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] Wrong fee calculation after `totalSupply` was 0
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-wrong-fee-calculation-after-totalsupply-was-0-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/h-01-wrong-fee-calculation-after-totalsupply-was-0-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

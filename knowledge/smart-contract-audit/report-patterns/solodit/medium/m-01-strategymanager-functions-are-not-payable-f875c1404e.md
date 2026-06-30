@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] StrategyManager functions are not `payable`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-strategymanager-functions-are-not-payable-pashov-audit-group-none-hyperlend_2025-01-11-markdown_
+- https://solodit.cyfrin.io/issues/m-01-strategymanager-functions-are-not-payable-pashov-audit-group-none-hyperlend_2025-01-11-markdown
 
 Imported:
 - 2026-05-23

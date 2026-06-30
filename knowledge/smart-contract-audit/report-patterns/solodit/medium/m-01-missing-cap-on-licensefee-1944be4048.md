@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Missing cap on `LicenseFee`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-missing-cap-on-licensefee-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-01-missing-cap-on-licensefee-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

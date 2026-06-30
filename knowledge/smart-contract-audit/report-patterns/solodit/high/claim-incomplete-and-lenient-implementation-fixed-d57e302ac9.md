@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: claim – Incomplete and Lenient Implementation ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/claim-incomplete-and-lenient-implementation-fixed-consensys-none-tidal-markdown_
+- https://solodit.cyfrin.io/issues/claim-incomplete-and-lenient-implementation-fixed-consensys-none-tidal-markdown
 
 Imported:
 - 2026-05-23

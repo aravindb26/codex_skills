@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-1 Vesting end time is not enforced
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-1-vesting-end-time-is-not-enforced-trust-security-none-vagabond-token-transmuter-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-1-vesting-end-time-is-not-enforced-trust-security-none-vagabond-token-transmuter-markdown
 
 Imported:
 - 2026-05-23

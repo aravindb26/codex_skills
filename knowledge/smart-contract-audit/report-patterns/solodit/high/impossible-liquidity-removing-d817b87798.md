@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Impossible liquidity removing
 
 Source:
-- https://solodit.cyfrin.io/issues/impossible-liquidity-removing-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/impossible-liquidity-removing-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

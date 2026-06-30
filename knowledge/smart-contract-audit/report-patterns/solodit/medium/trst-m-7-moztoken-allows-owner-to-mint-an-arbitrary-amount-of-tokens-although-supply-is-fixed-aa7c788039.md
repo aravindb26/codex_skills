@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-7 MozToken allows owner to mint an arbitrary amount of tokens, although supply is fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-7-moztoken-allows-owner-to-mint-an-arbitrary-amount-of-tokens-although-supply-is-fixed-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-7-moztoken-allows-owner-to-mint-an-arbitrary-amount-of-tokens-although-supply-is-fixed-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

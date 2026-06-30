@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-1 Removing a trade path in router will cause serious data corruption
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-1-removing-a-trade-path-in-router-will-cause-serious-data-corruption-trust-security-none-orbital-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-1-removing-a-trade-path-in-router-will-cause-serious-data-corruption-trust-security-none-orbital-finance-markdown
 
 Imported:
 - 2026-05-23

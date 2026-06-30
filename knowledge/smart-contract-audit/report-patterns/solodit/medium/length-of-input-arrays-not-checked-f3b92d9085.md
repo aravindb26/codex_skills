@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Length of input arrays not checked
 
 Source:
-- https://solodit.cyfrin.io/issues/length-of-input-arrays-not-checked-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/length-of-input-arrays-not-checked-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

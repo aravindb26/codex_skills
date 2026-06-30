@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] Malicious user can have Proxy sign arbitrary data
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-malicious-user-can-have-proxy-sign-arbitrary-data-zachobront-none-alligator-markdown_
+- https://solodit.cyfrin.io/issues/h-01-malicious-user-can-have-proxy-sign-arbitrary-data-zachobront-none-alligator-markdown
 
 Imported:
 - 2026-05-23

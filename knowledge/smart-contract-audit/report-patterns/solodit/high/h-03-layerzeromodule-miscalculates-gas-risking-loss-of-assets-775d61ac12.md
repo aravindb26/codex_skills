@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-03]  LayerZeroModule miscalculates gas, risking loss of assets
 
 Source:
-- https://solodit.cyfrin.io/issues/h-03-layerzeromodule-miscalculates-gas-risking-loss-of-assets-code4rena-holograph-holograph-contest-git_
+- https://solodit.cyfrin.io/issues/h-03-layerzeromodule-miscalculates-gas-risking-loss-of-assets-code4rena-holograph-holograph-contest-git
 
 Imported:
 - 2026-05-23

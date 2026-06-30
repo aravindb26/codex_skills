@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] MEV can sandwich every harvest due to missing slippage tolerance value
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-mev-can-sandwich-every-harvest-due-to-missing-slippage-tolerance-value-pashov-none-yield-ninja-markdown_
+- https://solodit.cyfrin.io/issues/m-01-mev-can-sandwich-every-harvest-due-to-missing-slippage-tolerance-value-pashov-none-yield-ninja-markdown
 
 Imported:
 - 2026-05-23

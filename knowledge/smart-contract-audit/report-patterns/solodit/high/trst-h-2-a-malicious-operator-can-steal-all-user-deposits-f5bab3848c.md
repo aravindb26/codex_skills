@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-2 A malicious operator can steal all user deposits
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-2-a-malicious-operator-can-steal-all-user-deposits-trust-security-none-orbital-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-2-a-malicious-operator-can-steal-all-user-deposits-trust-security-none-orbital-finance-markdown
 
 Imported:
 - 2026-05-23

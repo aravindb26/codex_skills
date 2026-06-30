@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-01] Users with open bids can have wallets emptied due to insufficient parameter validation
 
 Source:
-- https://solodit.cyfrin.io/issues/h-01-users-with-open-bids-can-have-wallets-emptied-due-to-insufficient-parameter-validation-zachobront-none-hook-markdown_
+- https://solodit.cyfrin.io/issues/h-01-users-with-open-bids-can-have-wallets-emptied-due-to-insufficient-parameter-validation-zachobront-none-hook-markdown
 
 Imported:
 - 2026-05-23

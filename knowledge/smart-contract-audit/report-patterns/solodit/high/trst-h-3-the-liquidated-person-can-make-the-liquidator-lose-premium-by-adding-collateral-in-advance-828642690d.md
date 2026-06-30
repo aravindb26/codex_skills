@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-3 The liquidated person can make the liquidator lose premium by adding collateral in advance
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-3-the-liquidated-person-can-make-the-liquidator-lose-premium-by-adding-collateral-in-advance-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-3-the-liquidated-person-can-make-the-liquidator-lose-premium-by-adding-collateral-in-advance-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

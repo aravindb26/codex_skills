@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: `MetaManager.unclaimedRewards` should work with shares instead of asset amounts.
 
 Source:
-- https://solodit.cyfrin.io/issues/metamanagerunclaimedrewards-should-work-with-shares-instead-of-asset-amounts-hans-none-meta-markdown_
+- https://solodit.cyfrin.io/issues/metamanagerunclaimedrewards-should-work-with-shares-instead-of-asset-amounts-hans-none-meta-markdown
 
 Imported:
 - 2026-05-23

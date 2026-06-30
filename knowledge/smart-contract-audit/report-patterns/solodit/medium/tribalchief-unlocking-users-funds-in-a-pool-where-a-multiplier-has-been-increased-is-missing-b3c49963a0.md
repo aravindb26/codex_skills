@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TribalChief - Unlocking users’ funds in a pool where a multiplier has been increased is missing
 
 Source:
-- https://solodit.cyfrin.io/issues/tribalchief-unlocking-users-funds-in-a-pool-where-a-multiplier-has-been-increased-is-missing-consensys-fei-tribechief-markdown_
+- https://solodit.cyfrin.io/issues/tribalchief-unlocking-users-funds-in-a-pool-where-a-multiplier-has-been-increased-is-missing-consensys-fei-tribechief-markdown
 
 Imported:
 - 2026-05-23

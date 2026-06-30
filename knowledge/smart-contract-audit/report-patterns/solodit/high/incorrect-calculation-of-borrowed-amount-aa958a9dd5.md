@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Incorrect calculation of borrowed amount
 
 Source:
-- https://solodit.cyfrin.io/issues/incorrect-calculation-of-borrowed-amount-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/incorrect-calculation-of-borrowed-amount-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: AssetChangeComponent Displays  a Change With Value 0 if fiatValue < 0.005
 
 Source:
-- https://solodit.cyfrin.io/issues/assetchangecomponent-displays-a-change-with-value-0-if-fiatvalue-0005-consensys-none-wallet-guard-markdown_
+- https://solodit.cyfrin.io/issues/assetchangecomponent-displays-a-change-with-value-0-if-fiatvalue-0005-consensys-none-wallet-guard-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Transfer of 0 funds
 
 Source:
-- https://solodit.cyfrin.io/issues/transfer-of-0-funds-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/transfer-of-0-funds-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

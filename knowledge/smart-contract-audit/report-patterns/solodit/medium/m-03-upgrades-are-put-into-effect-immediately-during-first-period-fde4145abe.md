@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] Upgrades are put into effect immediately during first period
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-upgrades-are-put-into-effect-immediately-during-first-period-zachobront-none-stakedao-markdown_
+- https://solodit.cyfrin.io/issues/m-03-upgrades-are-put-into-effect-immediately-during-first-period-zachobront-none-stakedao-markdown
 
 Imported:
 - 2026-05-23

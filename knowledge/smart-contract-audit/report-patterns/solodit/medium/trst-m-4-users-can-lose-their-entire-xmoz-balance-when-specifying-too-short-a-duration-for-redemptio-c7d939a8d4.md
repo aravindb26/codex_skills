@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-4 Users can lose their entire xMoz balance when specifying too short a duration for redemption
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-4-users-can-lose-their-entire-xmoz-balance-when-specifying-too-short-a-duration-for-redemption-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-4-users-can-lose-their-entire-xmoz-balance-when-specifying-too-short-a-duration-for-redemption-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

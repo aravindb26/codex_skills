@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Rounding error in unstaking esMeta
 
 Source:
-- https://solodit.cyfrin.io/issues/rounding-error-in-unstaking-esmeta-hans-none-meta-markdown_
+- https://solodit.cyfrin.io/issues/rounding-error-in-unstaking-esmeta-hans-none-meta-markdown
 
 Imported:
 - 2026-05-23

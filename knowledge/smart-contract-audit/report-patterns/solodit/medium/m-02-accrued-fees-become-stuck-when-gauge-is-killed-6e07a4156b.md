@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] Accrued fees become stuck when gauge is killed
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-accrued-fees-become-stuck-when-gauge-is-killed-pashov-audit-group-none-kittenswap_2025-06-12-markdown_
+- https://solodit.cyfrin.io/issues/m-02-accrued-fees-become-stuck-when-gauge-is-killed-pashov-audit-group-none-kittenswap_2025-06-12-markdown
 
 Imported:
 - 2026-05-23

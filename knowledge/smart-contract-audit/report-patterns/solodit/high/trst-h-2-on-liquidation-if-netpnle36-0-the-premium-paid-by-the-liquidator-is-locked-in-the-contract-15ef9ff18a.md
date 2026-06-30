@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-H-2 On liquidation, if netPnLE36 <= 0, the premium paid by the liquidator is locked in the contract.
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-h-2-on-liquidation-if-netpnle36-0-the-premium-paid-by-the-liquidator-is-locked-in-the-contract-trust-security-none-stella-markdown_
+- https://solodit.cyfrin.io/issues/trst-h-2-on-liquidation-if-netpnle36-0-the-premium-paid-by-the-liquidator-is-locked-in-the-contract-trust-security-none-stella-markdown
 
 Imported:
 - 2026-05-23

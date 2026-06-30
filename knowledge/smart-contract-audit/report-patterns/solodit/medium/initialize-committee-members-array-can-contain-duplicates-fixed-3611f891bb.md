@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: initialize – Committee Members Array Can Contain Duplicates ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/initialize-committee-members-array-can-contain-duplicates-fixed-consensys-none-tidal-markdown_
+- https://solodit.cyfrin.io/issues/initialize-committee-members-array-can-contain-duplicates-fixed-consensys-none-tidal-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: `Boost.setLockStatus()` should update the caller's rewards first.
 
 Source:
-- https://solodit.cyfrin.io/issues/boostsetlockstatus-should-update-the-callers-rewards-first-hans-none-meta-markdown_
+- https://solodit.cyfrin.io/issues/boostsetlockstatus-should-update-the-callers-rewards-first-hans-none-meta-markdown
 
 Imported:
 - 2026-05-23

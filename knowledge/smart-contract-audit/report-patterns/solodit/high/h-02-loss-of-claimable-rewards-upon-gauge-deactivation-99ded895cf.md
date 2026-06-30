@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-02] Loss of claimable rewards upon gauge deactivation
 
 Source:
-- https://solodit.cyfrin.io/issues/h-02-loss-of-claimable-rewards-upon-gauge-deactivation-pashov-audit-group-none-kittenswap_2025-05-07-markdown_
+- https://solodit.cyfrin.io/issues/h-02-loss-of-claimable-rewards-upon-gauge-deactivation-pashov-audit-group-none-kittenswap_2025-05-07-markdown
 
 Imported:
 - 2026-05-23

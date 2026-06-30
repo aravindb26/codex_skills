@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: `delegatee` not checked
 
 Source:
-- https://solodit.cyfrin.io/issues/delegatee-not-checked-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/delegatee-not-checked-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

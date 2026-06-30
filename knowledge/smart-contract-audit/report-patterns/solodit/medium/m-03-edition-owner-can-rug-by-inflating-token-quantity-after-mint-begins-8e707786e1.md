@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] Edition owner can rug by inflating token quantity after mint begins
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-edition-owner-can-rug-by-inflating-token-quantity-after-mint-begins-zachobront-none-soundxyz-markdown_
+- https://solodit.cyfrin.io/issues/m-03-edition-owner-can-rug-by-inflating-token-quantity-after-mint-begins-zachobront-none-soundxyz-markdown
 
 Imported:
 - 2026-05-23

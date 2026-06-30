@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: An Agent Can Borrow Even With Existing Debt in Interest Payments ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/an-agent-can-borrow-even-with-existing-debt-in-interest-payments-fixed-consensys-none-glif-filecoin-infinitypool-markdown_
+- https://solodit.cyfrin.io/issues/an-agent-can-borrow-even-with-existing-debt-in-interest-payments-fixed-consensys-none-glif-filecoin-infinitypool-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Account remains connected to previous credit manager
 
 Source:
-- https://solodit.cyfrin.io/issues/account-remains-connected-to-previous-credit-manager-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/account-remains-connected-to-previous-credit-manager-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

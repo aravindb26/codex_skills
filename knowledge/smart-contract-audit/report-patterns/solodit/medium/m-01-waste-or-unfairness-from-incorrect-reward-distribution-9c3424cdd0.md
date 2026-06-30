@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-01] Waste or unfairness from incorrect reward distribution
 
 Source:
-- https://solodit.cyfrin.io/issues/m-01-waste-or-unfairness-from-incorrect-reward-distribution-pashov-audit-group-none-tangent_2025-10-30-markdown_
+- https://solodit.cyfrin.io/issues/m-01-waste-or-unfairness-from-incorrect-reward-distribution-pashov-audit-group-none-tangent_2025-10-30-markdown
 
 Imported:
 - 2026-05-23

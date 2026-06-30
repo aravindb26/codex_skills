@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Some constants wouldn't work as expected.
 
 Source:
-- https://solodit.cyfrin.io/issues/some-constants-wouldnt-work-as-expected-hans-none-meta-markdown_
+- https://solodit.cyfrin.io/issues/some-constants-wouldnt-work-as-expected-hans-none-meta-markdown
 
 Imported:
 - 2026-05-23

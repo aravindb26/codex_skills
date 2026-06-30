@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-2 Attacker can DOS deposit transactions due to strict verifications
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-2-attacker-can-dos-deposit-transactions-due-to-strict-verifications-trust-security-none-orbital-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-2-attacker-can-dos-deposit-transactions-due-to-strict-verifications-trust-security-none-orbital-finance-markdown
 
 Imported:
 - 2026-05-23

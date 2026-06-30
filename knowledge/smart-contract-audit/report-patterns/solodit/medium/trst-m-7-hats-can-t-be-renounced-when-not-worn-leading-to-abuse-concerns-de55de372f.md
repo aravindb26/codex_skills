@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-7 Hats can't be renounced when not worn, leading to abuse concerns
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-7-hats-cant-be-renounced-when-not-worn-leading-to-abuse-concerns-trust-security-none-hats-protocol-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-7-hats-cant-be-renounced-when-not-worn-leading-to-abuse-concerns-trust-security-none-hats-protocol-markdown
 
 Imported:
 - 2026-05-23

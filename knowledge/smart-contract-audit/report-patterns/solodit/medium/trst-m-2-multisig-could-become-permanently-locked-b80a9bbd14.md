@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-2 Multisig could become permanently locked
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-2-multisig-could-become-permanently-locked-trust-security-none-mozaic-archimedes-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-2-multisig-could-become-permanently-locked-trust-security-none-mozaic-archimedes-markdown
 
 Imported:
 - 2026-05-23

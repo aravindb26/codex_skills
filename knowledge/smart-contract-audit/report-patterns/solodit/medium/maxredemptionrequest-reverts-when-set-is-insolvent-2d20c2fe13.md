@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: _maxRedemptionRequest() reverts when set is insolvent
 
 Source:
-- https://solodit.cyfrin.io/issues/maxredemptionrequest-reverts-when-set-is-insolvent-cantina-none-cozy-finance-pdf_____
+- https://solodit.cyfrin.io/issues/maxredemptionrequest-reverts-when-set-is-insolvent-cantina-none-cozy-finance-pdf
 
 Imported:
 - 2026-05-23

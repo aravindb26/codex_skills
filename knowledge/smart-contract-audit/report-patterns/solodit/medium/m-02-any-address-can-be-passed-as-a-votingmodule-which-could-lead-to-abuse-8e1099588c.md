@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] Any address can be passed as a VotingModule, which could lead to abuse
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-any-address-can-be-passed-as-a-votingmodule-which-could-lead-to-abuse-zachobront-none-optimismgovernormd-markdown_
+- https://solodit.cyfrin.io/issues/m-02-any-address-can-be-passed-as-a-votingmodule-which-could-lead-to-abuse-zachobront-none-optimismgovernormd-markdown
 
 Imported:
 - 2026-05-23

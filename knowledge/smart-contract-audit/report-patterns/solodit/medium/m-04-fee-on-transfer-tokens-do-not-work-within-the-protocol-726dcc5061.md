@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-04] Fee on transfer tokens do not work within the protocol
 
 Source:
-- https://solodit.cyfrin.io/issues/m-04-fee-on-transfer-tokens-do-not-work-within-the-protocol-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-04-fee-on-transfer-tokens-do-not-work-within-the-protocol-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

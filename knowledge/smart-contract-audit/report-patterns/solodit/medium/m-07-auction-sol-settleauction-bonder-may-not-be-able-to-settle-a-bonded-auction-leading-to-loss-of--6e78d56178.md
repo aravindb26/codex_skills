@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-07] `Auction.sol#settleAuction()` Bonder may not be able to settle a bonded auction, leading to loss of funds
 
 Source:
-- https://solodit.cyfrin.io/issues/m-07-auctionsolsettleauction-bonder-may-not-be-able-to-settle-a-bonded-auction-leading-to-loss-of-funds-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-07-auctionsolsettleauction-bonder-may-not-be-able-to-settle-a-bonded-auction-leading-to-loss-of-funds-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

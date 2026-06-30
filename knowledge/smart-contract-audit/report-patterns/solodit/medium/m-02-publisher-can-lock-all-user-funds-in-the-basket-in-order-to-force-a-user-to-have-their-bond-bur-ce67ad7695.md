@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] Publisher can lock all user funds in the `Basket` in order to force a user to have their bond burned
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-publisher-can-lock-all-user-funds-in-the-basket-in-order-to-force-a-user-to-have-their-bond-burned-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-02-publisher-can-lock-all-user-funds-in-the-basket-in-order-to-force-a-user-to-have-their-bond-burned-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

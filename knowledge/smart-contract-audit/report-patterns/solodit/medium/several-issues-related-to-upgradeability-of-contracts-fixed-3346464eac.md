@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Several Issues Related to Upgradeability of Contracts ✓ Fixed
 
 Source:
-- https://solodit.cyfrin.io/issues/several-issues-related-to-upgradeability-of-contracts-fixed-consensys-none-tidal-markdown_
+- https://solodit.cyfrin.io/issues/several-issues-related-to-upgradeability-of-contracts-fixed-consensys-none-tidal-markdown
 
 Imported:
 - 2026-05-23

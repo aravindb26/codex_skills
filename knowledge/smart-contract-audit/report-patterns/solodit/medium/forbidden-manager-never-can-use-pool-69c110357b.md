@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Forbidden manager never can use pool
 
 Source:
-- https://solodit.cyfrin.io/issues/forbidden-manager-never-can-use-pool-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/forbidden-manager-never-can-use-pool-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

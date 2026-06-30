@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-5 renounceOwnership will accidentally be one-step in a certain time period
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-5-renounceownership-will-accidentally-be-one-step-in-a-certain-time-period-trust-security-none-lukso-lsp-audit-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-5-renounceownership-will-accidentally-be-one-step-in-a-certain-time-period-trust-security-none-lukso-lsp-audit-markdown
 
 Imported:
 - 2026-05-23

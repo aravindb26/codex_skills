@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-4 It’s possible to dilute rewards per second in Gauge and Internal bribes
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-4-its-possible-to-dilute-rewards-per-second-in-gauge-and-internal-bribes-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-4-its-possible-to-dilute-rewards-per-second-in-gauge-and-internal-bribes-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [H-04] If insider deposits and unlocks in quick succession, attacker can steal their NFT and their deposit funds
 
 Source:
-- https://solodit.cyfrin.io/issues/h-04-if-insider-deposits-and-unlocks-in-quick-succession-attacker-can-steal-their-nft-and-their-deposit-funds-zachobront-none-dyad-markdown_
+- https://solodit.cyfrin.io/issues/h-04-if-insider-deposits-and-unlocks-in-quick-succession-attacker-can-steal-their-nft-and-their-deposit-funds-zachobront-none-dyad-markdown
 
 Imported:
 - 2026-05-23

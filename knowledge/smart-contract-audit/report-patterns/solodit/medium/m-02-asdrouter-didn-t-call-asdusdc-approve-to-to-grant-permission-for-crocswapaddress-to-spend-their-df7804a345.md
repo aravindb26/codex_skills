@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-02] `ASDRouter` didn’t call `ASDUSDC.approve()` to to grant permission for `crocSwapAddress` to spend their `ASDUSDC`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-02-asdrouter-didnt-call-asdusdcapprove-to-to-grant-permission-for-crocswapaddress-to-spend-their-asdusdc-code4rena-canto-canto-git_
+- https://solodit.cyfrin.io/issues/m-02-asdrouter-didnt-call-asdusdcapprove-to-to-grant-permission-for-crocswapaddress-to-spend-their-asdusdc-code4rena-canto-canto-git
 
 Imported:
 - 2026-05-23

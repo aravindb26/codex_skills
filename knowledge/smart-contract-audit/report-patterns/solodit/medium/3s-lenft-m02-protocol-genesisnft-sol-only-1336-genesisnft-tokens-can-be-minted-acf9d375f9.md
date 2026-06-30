@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: 3S-LENFT-M02 protocol/GenesisNFT.sol: Only 1336 GenesisNFT tokens can be minted
 
 Source:
-- https://solodit.cyfrin.io/issues/3s-lenft-m02-protocolgenesisnftsol-only-1336-genesisnft-tokens-can-be-minted-threesigma-none-lenft-markdown_
+- https://solodit.cyfrin.io/issues/3s-lenft-m02-protocolgenesisnftsol-only-1336-genesisnft-tokens-can-be-minted-threesigma-none-lenft-markdown
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-03] `openPosition()` DoS when `_initialAmount` is `_yieldAsset`
 
 Source:
-- https://solodit.cyfrin.io/issues/m-03-openposition-dos-when-_initialamount-is-_yieldasset-pashov-audit-group-none-hyperlend_2025-01-11-markdown_
+- https://solodit.cyfrin.io/issues/m-03-openposition-dos-when-_initialamount-is-_yieldasset-pashov-audit-group-none-hyperlend_2025-01-11-markdown
 
 Imported:
 - 2026-05-23

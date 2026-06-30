@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-6 _vote() doesn’t check the pool a user is voting for has a valid gauge
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-6-_vote-doesnt-check-the-pool-a-user-is-voting-for-has-a-valid-gauge-trust-security-none-satinexchange-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-6-_vote-doesnt-check-the-pool-a-user-is-voting-for-has-a-valid-gauge-trust-security-none-satinexchange-markdown
 
 Imported:
 - 2026-05-23

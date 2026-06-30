@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: TRST-M-3 base to quote swaps trust GMX-provided minPrice and maxPrice to be correct, which may be manipulated
 
 Source:
-- https://solodit.cyfrin.io/issues/trst-m-3-base-to-quote-swaps-trust-gmx-provided-minprice-and-maxprice-to-be-correct-which-may-be-manipulated-trust-security-none-lyra-finance-markdown_
+- https://solodit.cyfrin.io/issues/trst-m-3-base-to-quote-swaps-trust-gmx-provided-minprice-and-maxprice-to-be-correct-which-may-be-manipulated-trust-security-none-lyra-finance-markdown
 
 Imported:
 - 2026-05-23

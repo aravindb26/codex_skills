@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: [M-09] `Basket:handleFees` fee calculation is wrong
 
 Source:
-- https://solodit.cyfrin.io/issues/m-09-baskethandlefees-fee-calculation-is-wrong-code4rena-kuiper-kuiper-contest-git_
+- https://solodit.cyfrin.io/issues/m-09-baskethandlefees-fee-calculation-is-wrong-code4rena-kuiper-kuiper-contest-git
 
 Imported:
 - 2026-05-23

@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: Transfer to zero address
 
 Source:
-- https://solodit.cyfrin.io/issues/transfer-to-zero-address-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/transfer-to-zero-address-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23

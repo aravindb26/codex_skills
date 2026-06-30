@@ -1,7 +1,7 @@
 # Solodit Pattern Stub: No checking of element properties when returning it to the list
 
 Source:
-- https://solodit.cyfrin.io/issues/no-checking-of-element-properties-when-returning-it-to-the-list-mixbytes-none-gearbox-protocol-markdown_
+- https://solodit.cyfrin.io/issues/no-checking-of-element-properties-when-returning-it-to-the-list-mixbytes-none-gearbox-protocol-markdown
 
 Imported:
 - 2026-05-23
