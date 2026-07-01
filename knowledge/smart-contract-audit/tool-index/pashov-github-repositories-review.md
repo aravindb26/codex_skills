@@ -50,8 +50,15 @@ Observed structure:
 Decision:
 
 - Useful as a knowledge source, not as an active Codex skill.
-- Best future integration is a lightweight importer that extracts High/Medium findings from the markdown reports into `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/pashov-audits/`.
+- A guarded importer now extracts only manually reviewed, non-duplicate High/Medium findings into `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/pashov-audits/`.
+- Initial import at the checked commit parsed 1,289 High/Medium findings: 1,260 were already present by normalized title in Solodit, 16 more were rejected as semantic duplicates or low-signal noise, and 13 distinct patterns were imported (4 High, 9 Medium).
+- The importer refuses to add new upstream findings until each has an explicit reviewed decision, and it deduplicates report content and distilled core ideas.
 - Do not clone/store the full PDF-heavy repository permanently by default because it is large and would add storage cost.
+
+Importer:
+
+- `/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/pashov_audits_ingest.py`
+- `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/pashov-audits/indexes/reviewed-decisions.jsonl`
 
 Use:
 
