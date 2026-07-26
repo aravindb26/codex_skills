@@ -1,6 +1,6 @@
 # Claude Bug Bounty Skill Index
 
-Source commit: `59a3c32cc9c222dd660f8475ab24b0318f8b7d2a`
+Reviewed through commit: `200959489fe5e0c8f70c7a72b7267cd446815617`
 
 Reference-only filtered Web2/AppSec/source-code bounty skills. Do not use as the default smart-contract audit toolbox.
 
@@ -24,6 +24,10 @@ Reference-only filtered Web2/AppSec/source-code bounty skills. Do not use as the
 
 - `triage-validation`: Pre-report validation gates. Use before writing a report to kill weak, out-of-scope, theoretical, or duplicate-prone findings.
 - `report-writing`: Bug bounty report-writing templates and impact-first reporting guidance. For Web3 reports, prefer the dedicated smart-contract audit report standards in the active knowledge base.
+
+## Helper Tools
+
+- `tools/lead_board.py`: Persistent Web2 recon lead ledger. Use after authorized recon to ingest observations, preserve statuses, pick next leads, and avoid forgetting attack surfaces during long Web2/source-code bounty work. Do not use for smart-contract audit lead tracking.
 
 ## Boundary
 

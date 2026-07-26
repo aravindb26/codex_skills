@@ -1,6 +1,6 @@
 # Tracked Upstream Sources
 
-Last reviewed: 2026-07-01
+Last reviewed: 2026-07-26
 
 This is the canonical URL registry for Codex audit tooling, knowledge feeds, and reference libraries maintained in this workspace. It intentionally excludes incidental article/report links already stored with their individual knowledge cards.
 
@@ -79,6 +79,9 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 |---|---|---|
 | Rust Recon skill | <https://github.com/NVN404/rust-recon> | Runbook currently references the wrong installer repository and performs unsafe setup assumptions. |
 | Rust Recon extractor | <https://github.com/NVN404/rust-recon-tool> | Cleanup can remove user-owned root files; revisit only after upstream safety fixes. |
+| Digger | <https://github.com/digger-determsec/digger> | Beta EVM/Solana scanner and MCP skill; reviewed but not installed because it requires maintaining Rust binaries and overlaps as a lead generator. |
+| Open Kritt | <https://github.com/Kritt-ai/open-kritt> | Full self-hosted AI audit platform; reviewed but not installed because Docker/root job containers and orchestration overlap would add operational noise. |
+| One Dollar Audit | <https://www.onedollaraudit.com/> | Paid/closed-source scanner link from pashov hub; tracked only as discovery, not installed. |
 | Pashov Solidity examples | <https://github.com/pashov/solidity> | Educational Solidity examples; not useful enough to track as an active audit skill source. |
 | Pashov data-structures coursework | <https://github.com/pashov/Data-Structures-And-Algorithms> | Low relevance to audit workflow; retained only as reviewed source inventory. |
 | Pashov virtual-machines coursework | <https://github.com/pashov/Virtual-machines> | Low relevance to audit workflow; retained only as reviewed source inventory. |

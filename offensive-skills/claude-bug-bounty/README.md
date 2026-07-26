@@ -2,7 +2,7 @@
 
 Source: https://github.com/shuvonsec/claude-bug-bounty
 
-Installed from commit: `59a3c32cc9c222dd660f8475ab24b0318f8b7d2a`
+Reviewed through commit: `200959489fe5e0c8f70c7a72b7267cd446815617`
 
 This is a filtered, reference-only install for Web2/AppSec and source-code bug bounty work. It is intentionally stored outside `/home/dinesh/.codex/skills/` so it does not auto-load during smart-contract audits.
 
@@ -35,12 +35,17 @@ Included Web2/AppSec reference skills:
 - `triage-validation`
 - `report-writing`
 
+Included helper tools:
+
+- `tools/lead_board.py`: persistent Web2 recon lead ledger for tracking, ranking, and status-updating leads so promising surfaces are not forgotten during long hunts.
+
 Excluded upstream pieces are documented in `docs/FILTERED_INSTALL_NOTES.md`.
 
 ## Layout
 
 - `skills/<skill-name>/SKILL.md`: filtered reference skills
 - `rules/`: upstream hunting/reporting rules
+- `tools/`: filtered helper tools retained only when they reduce lost leads without adding noisy active scanning
 - `docs/`: upstream README/FAQ/terms/changelog plus local install notes
 - `manifest.json`: local install manifest
 

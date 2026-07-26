@@ -2,7 +2,7 @@
   "name": "claude-bug-bounty",
   "source": "https://github.com/shuvonsec/claude-bug-bounty",
   "source_commit": "59a3c32cc9c222dd660f8475ab24b0318f8b7d2a",
-  "last_upstream_reviewed_commit": "b2e9eb7a8e1c7a2e470b3c66069b72fedc60baa2",
+  "last_upstream_reviewed_commit": "200959489fe5e0c8f70c7a72b7267cd446815617",
   "installed_at": "2026-06-11",
   "install_type": "filtered-reference-only",
   "target": "/home/dinesh/.codex/offensive-skills/claude-bug-bounty",
@@ -23,12 +23,15 @@
     "triage-validation",
     "report-writing"
   ],
+  "included_tools": [
+    "lead_board.py"
+  ],
   "excluded_categories": [
     "web3 and smart-contract audit content",
     "meme-coin audit content",
     "credential-spray methodology",
     "active command runner files",
-    "tool scripts",
+    "active scanner tool scripts",
     "MCP integrations",
     "Claude hooks"
   ]

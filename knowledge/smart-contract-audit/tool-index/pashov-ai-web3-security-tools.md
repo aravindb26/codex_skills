@@ -2,9 +2,9 @@
 
 Source: <https://github.com/pashov/ai-web3-security>
 
-Checked: 2026-06-30
+Checked: 2026-07-26
 
-Source commit checked: `e2b4db57a24e62023af65c2cb415e9c435d7f442`
+Source commit checked: `8bf4757f39054b63584185ddb824ae253775e227`
 
 ## Classification
 
@@ -72,30 +72,35 @@ Reason:
 
 Source: <https://github.com/OpenZeppelin/openzeppelin-skills>
 
-Commit: `d72005b53b6d8c937dd1b76262a3e2ebbace2edb`
+Commit: `6f215af60eb60017ab1a933ce9d22a479cd42b26`
 
 Installed:
 
 - `develop-secure-contracts`
+- `setup-sui-contracts`
+- `review-sui-contracts`
 - `upgrade-solidity-contracts`
 
 Reason:
 
-- Adds official OpenZeppelin secure-development and upgradeability workflow guidance.
+- Adds official OpenZeppelin secure-development and upgradeability workflow guidance, including Sui Move setup and OpenZeppelin Contracts for Sui integration review.
 
 ### Forefy Context
 
 Source: <https://github.com/forefy/.context>
 
-Commit: `fcf76d9b8b123073ddb8b046bbd480547e7e4718`
+Commit: `a7a8713754f1307676acb11e737cd2ee89f1daf2`
 
 Installed:
 
 - `foundry-poc`
+- `audit-scope`
+- `safe-hunt`
+- `endpoint-threat-hunt`
 
 Reason:
 
-- Adds Foundry PoC workflow coverage complementary to local validation and report work.
+- Adds Foundry PoC workflow coverage, engagement scoping, read-only Safe multisig governance hunting, and endpoint threat-hunting support. `safe-hunt` was patched to use Codex paths instead of Claude paths.
 
 ### Nemesis Auditor
 
@@ -183,6 +188,9 @@ Several listed repos were not installed to avoid active-skill noise or because l
 
 Reviewed since the previous check:
 
+- `digger-determsec/digger` was reviewed at `be8ad8368e97b5ac022eac32fe091bf2e640e4b3`. It was not installed because it is a beta scanner/MCP tool requiring local Rust binaries, and its current value is as an optional lead generator rather than a default Codex audit skill.
+- `Kritt-ai/open-kritt` was reviewed at `dabd3d5f82e759bf783955ecc245fea3a984cd38`. It was not installed because it is a full self-hosted AI audit platform with Docker/root job containers, not a lightweight Codex skill; using it by default would add operational noise and overlap.
+- `One Dollar Audit` was newly listed as a paid/closed-source Solidity/EVM scanner and was recorded only as a discovery link.
 - `RASHMOR1/dlt-auditor` was reviewed at `017d80f70ad55f95366d1dcbe8849d30eebb421a`. It was not installed because it is a large benchmark/runtime framework with thousands of corpus and design files, substantial overlap with the local audit workflow, and a high operational-noise cost.
 - `exvulsec/sui-move-skill` was reviewed at `54daba3c0d3621c46bb875245539e734bc410038`. It was not installed because the existing `smart-contract-audit` skill already has richer Sui/Move coverage, while this candidate contains a broken reference and defaults to retaining Low/Informational findings in conflict with the local submit-worthy finding gate.
 

@@ -2,11 +2,11 @@
 
 Source: <https://github.com/pashov?tab=repositories>
 
-Checked: 2026-06-30
+Checked: 2026-07-26
 
 ## Account-Level Result
 
-The `pashov` account has 12 public repositories. Only the following are useful for the local audit setup:
+The `pashov` account still has 12 public repositories. Only the following are useful for the local audit setup:
 
 - `pashov/skills`
 - `pashov/audits`
@@ -22,13 +22,13 @@ The other repositories are old coursework, sample projects, or a Solidity compil
 
 URL: <https://github.com/pashov/skills>
 
-Checked commit: `605665fe88d5afac2cf3ba208fc3edf7fbc00e1f`
+Checked commit: `c577eb7799c349de0acb187ba00ca98e14e436fd`
 
 Decision:
 
 - Keep tracking.
 - Active local coverage already exists through `solidity-auditor` and `x-ray`.
-- `fizz` is not installed because it does not improve the local smart-contract bounty workflow enough to justify active-skill noise.
+- Latest change only clarified the public `solidity-auditor` description and touched `fizz`; preserve local private V3 and do not install `fizz` because it does not improve the local smart-contract bounty workflow enough to justify active-skill noise.
 
 Use:
 
@@ -38,7 +38,7 @@ Use:
 
 URL: <https://github.com/pashov/audits>
 
-Checked commit: `b60fc16f80b1291d36bd09a443e90f39bcb5d660`
+Checked commit: `b22301b6ed03e099842cc32dffad811f432ecebd`
 
 Observed structure:
 
@@ -52,6 +52,7 @@ Decision:
 - Useful as a knowledge source, not as an active Codex skill.
 - A guarded importer now extracts only manually reviewed, non-duplicate High/Medium findings into `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/pashov-audits/`.
 - Initial import at the checked commit parsed 1,289 High/Medium findings: 1,260 were already present by normalized title in Solodit, 16 more were rejected as semantic duplicates or low-signal noise, and 13 distinct patterns were imported (4 High, 9 Medium).
+- 2026-07-26 refresh found no new importable High/Medium findings: 13 already imported, 1,260 existing-title duplicates, 16 reviewed skips, and 0 unreviewed.
 - The importer refuses to add new upstream findings until each has an explicit reviewed decision, and it deduplicates report content and distilled core ideas.
 - Do not clone/store the full PDF-heavy repository permanently by default because it is large and would add storage cost.
 
@@ -70,7 +71,7 @@ Use:
 
 URL: <https://github.com/pashov/ai-web3-security>
 
-Checked commit: `e2b4db57a24e62023af65c2cb415e9c435d7f442`
+Checked commit: `8bf4757f39054b63584185ddb824ae253775e227`
 
 Decision:
 
