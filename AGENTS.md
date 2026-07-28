@@ -88,6 +88,29 @@ Always distinguish:
 - rewardable bug
 - strong submit-worthy bug
 
+## Parallel Specialist Reasoning
+
+For complex audits, use independent specialist reasoning passes when they improve coverage, candidate quality, or false-positive reduction.
+
+The main Codex agent remains the Lead Auditor and owns:
+
+- Program Memory
+- scope and exclusion interpretation
+- skill and knowledge-base routing
+- duplicate/known-issue checks
+- final severity judgment
+- final `STRONG SUBMIT-WORTHY` or `NOT WORTH SUBMITTING` verdict
+
+Use as many independent specialist perspectives as appropriate for the protocol, codebase, hypotheses, and security surfaces. Examples include invariant analysis, accounting, authorization, external-call safety, oracle logic, economic attacks, signatures, cross-chain messaging, upgradeability, integrations, runtime-specific behavior, or any other relevant specialization.
+
+Specialist reasoning passes are lead generators and validators, not final authorities. Each pass should be bounded to exact files, functions, invariants, or hypotheses and should return checked paths, candidate issues, killed branches, evidence, uncertainty, and strongest rejection arguments.
+
+Every surviving candidate must be challenged by an independent critical review before it is presented as a finding.
+
+Disagreement between specialist reasoning paths is expected. Resolve disagreements by returning to the code, invariants, runtime evidence, and program rules rather than voting.
+
+Parallel specialist reasoning must not replace manual line-by-line reading, skill workflows, knowledge-base checks, PoC validation, or final triage discipline.
+
 ## Always-On Audit Discipline
 
 Before serious hunting, build context.
