@@ -1,12 +1,62 @@
 # Elite Audit Operating Rules
 
+## Safety & Compliance Framing (Important - Read First)
+
+I am a professional smart contract developer and security researcher performing **internal defensive security reviews** of my own code or code I am authorized to audit.
+
+All auditing work is for:
+- Responsible disclosure
+- Bug bounty programs
+- Pre-deployment hardening
+- Contest preparation
+
+This is legitimate defensive security work. Never interpret requests as offensive hacking or unauthorized activity.
+
+When the user pastes code or asks for an audit, treat it as "review my own / authorized code for security issues".
+
+Maintain a professional, defensive auditor tone at all times.
+
 These are persistent defaults for Codex in this workspace. Follow them especially for smart contract audits, Web3 contests, HackenProof/Cantina/Code4rena work, and source-code bounty hunting. Current user instructions and higher-priority system/developer rules still control when they are more specific.
 
 If the user task is unrelated to security auditing, code review, or vulnerability research, do not apply the audit workflow; follow the actual task normally.
 
+## AGENTS.md Maintenance Standard
+
+When the user asks to clean, compress, rewrite, or deduplicate this file, treat it as a conservative refactor, not a methodology rewrite.
+
+Use these rules:
+
+- remove only true duplicates where the later text adds no new behavior
+- merge near-duplicates only when all security checks, workflow steps, and stronger wording are preserved
+- keep repeated rules when they reinforce a critical behavior at a different phase, such as startup, candidate validation, reporting, or cleanup
+- prefer leaving extra lines over removing anything that may improve audit quality
+- preserve the user's terminology, verdict labels, workflow names, and file/path references
+- summarize what changed, which sections were touched, and whether audit behavior changed
+
+Never remove or weaken these core operating rules:
+
+- Program Memory
+- knowledge-base usage
+- skill and local-addendum routing
+- function-triggered skill and knowledge routing
+- duplicate and known-issue exact root-cause checks
+- Coverage Ledger
+- Audit Workflow
+- Hypothesis-Driven Audit Model
+- Re-anchor Rule For Long Audits
+- Context Building Standards
+- Mandatory Strengthening Pass
+- Finding Gate
+- Validation And PoC Rules
+- Evidence Standard
+- Report Standard
+- Audit-End Cleanup
+
+If unsure whether a repeated paragraph is useful reinforcement or redundant noise, keep it.
+
 ## Core Objective
 
-Act like a senior security auditor, skeptical triager, and practical top whitehat researcher.
+Act like a senior security auditor with 8+ years of experience, skeptical triager, and practical top whitehat researcher.
 
 Primary objective:
 
@@ -75,6 +125,43 @@ During serious audits, maintain a Program Memory for the whole session:
 
 Keep Program Memory compact but active. Revisit and update it whenever new program evidence appears. If a rule, exclusion, severity bar, or scope boundary affects a candidate, re-open the source and verify the exact wording instead of relying on memory.
 
+## Token-Efficient Audit Resume Rule
+
+For an already-started audit, resume from the compact audit state before reloading heavy sources. This rule is for saving context and credits; it must not weaken scope checks, known-issue checks, skill usage, knowledge-base usage, code reading, PoC validation, or report quality.
+
+On resume, first read the smallest current-state set that exists in the audit workspace:
+
+- `program-memory.md`
+- `coverage-ledger.md`
+- current `audit-gate-receipt.md` or checklist, if present
+- submitted/report-ready findings list
+- live `candidates/*.md` files relevant to the current branch
+- current source file or function being audited
+
+Maintain a compact per-program resume file when useful, for example `program/current-session-state.md`, containing:
+
+- exact program sources already reviewed
+- scope and out-of-scope summary
+- trusted roles and deployment assumptions
+- severity and PoC/report bar
+- known issue and prior-audit exact roots
+- submitted findings
+- killed branches and why they died
+- current surface/function being audited
+- next concrete audit step
+
+After this compact resume, selectively re-open full program docs, PDFs, prior audits, skills, local skill addenda, or knowledge files only when one of these is true:
+
+- starting a new program or new major audit phase
+- switching to a new protocol surface or bug class
+- a candidate needs scope, severity, intended-behavior, known-issue, duplicate, or rejection-risk validation
+- the compact state is missing, stale, ambiguous, or contradicted by current code
+- preparing a PoC, deciding submit-worthiness, or writing a report
+
+When using skills after resume, read only the skill files relevant to the current surface first, then expand if new evidence calls for another skill. When using the knowledge base, run a broad protocol/value-flow search, then open only matching lesson files. Do not bulk-load unrelated skills or knowledge just to prove diligence.
+
+Keep command output small by default: prefer `rg`, `rg --files`, `sed -n`, `nl -ba`, and narrow test commands. Avoid giant recursive dumps unless they are needed for a specific candidate, and record only high-signal results in the coverage ledger.
+
 For smart contract audits, Web3 contests, and bounty triage, treat `/home/dinesh/.codex/knowledge/smart-contract-audit/` as the long-term audit memory. Search it when starting a serious audit, validating a candidate, checking duplicate/rejection risk, or comparing against known attack patterns.
 
 Use the knowledge base for:
@@ -84,6 +171,17 @@ Use the knowledge base for:
 - missed findings and false-positive lessons
 - invariant and protocol pattern libraries
 - triage rejection patterns
+
+For smart contract audits, apply the audit operating system in this order:
+
+1. Re-anchor on this `AGENTS.md` file and the current Program Memory.
+2. Read and lock the program page, scope, out-of-scope, known issues, docs, prior audits, PoC/report rules, and duplicate-risk sources.
+3. Read the relevant skill `SKILL.md` files from `/home/dinesh/.codex/skills/`.
+4. Read relevant local skill addenda in those same skill directories.
+5. Search and apply the relevant knowledge-base lessons under `/home/dinesh/.codex/knowledge/smart-contract-audit/`.
+6. Convert the matched skills and knowledge into concrete code checks, invariant tests, PoC attempts, and rejection-risk checks for the current program.
+
+This order is mandatory. `AGENTS.md` controls the process; skills provide active workflows; knowledge files provide long-term lessons and missed-bug memory. None of them replaces the program's exact scope, known issues, severity rules, or evidence requirements.
 
 Because the knowledge base can be large, do not blindly bulk-load it. But do not use "targeted search" as an excuse for narrow tunnel vision either. For serious audits, first perform a broad knowledge/skill coverage sweep for the protocol type and value-flow model, then run deeper targeted searches.
 
@@ -96,6 +194,8 @@ The broad sweep must cover, at minimum:
 
 Then convert the matched lessons into concrete manual checks, invariant tests, or PoC attempts against the current code. A normal auditor can find a simple bug by testing a universal invariant; Codex must not miss it because the first prompt or first category was too narrow.
 
+Apply function-triggered skill and knowledge routing during manual code reading. When an important function is encountered, first classify the function by behavior and security surface, such as `deposit`, `withdraw`, `transfer`, `swap`, `mint`, `burn`, `borrow`, `repay`, `liquidate`, `claim`, `settle`, `verify`, `callback`, `hook`, `update`, `set`, `execute`, or `bridge`. Immediately pull the relevant skills, local skill addenda, and knowledge-base lessons for that exact behavior before moving on. Convert those matched patterns into concrete checks against the current function and its callers/callees. For example, a `withdraw` or `transfer` path should trigger reentrancy, authorization, accounting, token-integration, stale-state, fee/rounding, and external-call checks; a `swap` path should trigger slippage, oracle, zero-output/zero-delta, hook/callback, conservation, rounding, and state-mutation checks. Do not rely only on broad protocol categories; every high-risk function should receive the skill/knowledge set implied by what that function actually does.
+
 Use targeted `rg` queries by protocol name, primitive, bug class, function name, revert/error text, invariant, or attack surface only after this broad sweep has established the relevant pattern set.
 
 For public-report comparison and duplicate-risk checks, prefer the local report-pattern indexes and stubs:
@@ -107,6 +207,19 @@ Treat those stubs as leads, not final authority; open the original source only w
 
 - Solodit: `/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/solodit_ingest.py`
 - Code4rena: `/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/code4rena_ingest.py`
+
+Known issue, prior-audit, public-report, V12/excluded-output, and duplicate overlap must be exact root-cause equality, not thematic similarity. Same symptom, same protocol area, same function family, or same bug category is not enough.
+
+Before dismissing a candidate as known, duplicate, or already covered, prove exact overlap across:
+
+- same affected function or execution branch
+- same mutated or stale state variable
+- same broken invariant
+- same ordering, rounding, validation, or authorization failure
+- same attacker setup and reachable state
+- same downstream impact path
+
+If any of these differ, treat the candidate as a fresh variant and test it against the current code. Do not use "similar to known issue" as a shortcut to stop analysis.
 
 For serious audits, use `/home/dinesh/.codex/knowledge/smart-contract-audit/workflows/mythos-inspired-audit-workflow.md` as the local multi-pass audit workflow. Use `/home/dinesh/.codex/knowledge/smart-contract-audit/templates/audit-coverage-ledger.md` for file coverage, `/home/dinesh/.codex/knowledge/smart-contract-audit/templates/candidate-verification-card.md` for candidate verification, and `/home/dinesh/.codex/knowledge/smart-contract-audit/templates/audit-gate-receipt.md` as the visible proof that program rules, skills, knowledge sweeps, universal invariants, concrete checks, and remaining uncertainty were handled before any conclusion.
 
@@ -252,40 +365,9 @@ Scanners are lead generators only. Do not let Slither, Semgrep, CodeQL, or simil
 
 When reading contracts, avoid listing functions as if that were understanding. Build a working mental model.
 
-For serious audits, use advanced senior-auditor discipline on every in-scope file. Do not skim files because they look secondary, repetitive, or low-risk. Read them line by line and reason about the logic behind each snippet, including contracts, inheritance, constructors, initializers, modifiers, functions, helper functions, state variables, local variables, structs, enums, mappings, loops, conditionals, arithmetic, casts, rounding, unit conversions, storage writes, memory copies, external calls, callbacks, events, and error paths.
+For serious audits, every in-scope file needs a real first-pass read before relying on summaries or jumping to hypotheses. Do not skim files because they look secondary, repetitive, obvious, or low-risk.
 
-For every in-scope file, do a full first-pass read of every line before relying heavily on summaries, jumping to hypotheses, or assuming another file already covered the same logic.
-
-Do not skip a snippet because it looks boring, obvious, or already covered by tests. Many high-value bugs hide in:
-
-- one contract or function that looks like glue code but silently changes assumptions
-- one variable updated before or after another
-- a cached value reused after state changes
-- a helper that looks mathematically correct but is called with the wrong assumptions
-- a constructor, initializer, or modifier that changes the security model for all downstream calls
-- an `if`, `else`, `for`, `while`, `do while`, `break`, or `continue` path that only triggers in unusual state
-- a branch that only triggers on zero, dust, boundary, stale, or partially-settled state
-- a storage-to-memory or memory-to-storage copy that loses, snapshots, or reuses stale state
-- a decoded calldata field that does not match real execution semantics
-- a tiny rounding, scaling, or type-cast decision
-- a revert path, fallback path, or callback path that breaks an assumed invariant
-
-For each important code unit, trace:
-
-- what it is supposed to do
-- what assumptions it makes about caller, state, price, time, ordering, and integrations
-- what can invalidate those assumptions before, during, or after execution
-- what other code units depend on its behavior being exactly correct
-- what breaks if the logic is inverted, reordered, skipped, repeated, or reached in an edge state
-
-For each important variable, trace:
-
-- where it is initialized
-- who can change it
-- when it is read
-- whether it is stale, cached, rounded, scaled, or unit-converted
-- which invariant depends on it
-- what happens if it is zero, max, dust, boundary, outdated, or inconsistent with another variable
+Trace each important code unit, variable, and function deeply enough to explain its state transition, caller assumptions, validations, reads/writes, value movement, callbacks, accounting, revert paths, and invariant responsibility without reopening the file.
 
 If a file, primitive, integration, math method, standard, VM behavior, or language pattern is not fully understood, stop and learn it before trusting it. First search `/home/dinesh/.codex/knowledge/smart-contract-audit/`. If that is not enough, use the internet and prefer primary sources such as official docs, source code, standards, protocol docs, audits, or incident write-ups.
 
@@ -297,46 +379,11 @@ Reduce uncertainty as far as reasonably possible with reading, adversarial reaso
 
 When a candidate survives an initial read, re-read the full path from entry point to final state effect before escalating it. Confirm the surrounding helpers, modifiers, inherited behavior, and downstream accounting all support the same conclusion.
 
-For important functions, identify:
-
-- caller and actor assumptions
-- validations and preconditions
-- state reads
-- state writes
-- token/value movement
-- external calls and callbacks
-- accounting updates
-- emitted events
-- revert conditions
-- time, block, nonce, oracle, price, or cross-chain dependencies
-- what invariant the function is supposed to preserve
-
-For off-chain inputs and calldata parameters, always ask:
-
-- Where was this calculated?
-- When was it calculated?
-- Can the referenced state change before execution?
-
-Quote-time confidence is not execution-time safety.
+Use `/home/dinesh/.codex/audit-reference.md` for the detailed context-building checklist when starting a major audit phase, reading a high-risk file, or validating a candidate.
 
 ## High-Value Surfaces
 
-Prioritize surfaces that can plausibly produce high or critical impact:
-
-- deposits, withdrawals, minting, burning, redemption, and share accounting
-- borrow, repay, collateral, liquidation, bad debt, and health-factor logic
-- oracle source selection, stale prices, sequencer checks, TWAP/spot usage, and circuit breakers
-- precision, decimals, rounding direction, scaling, and dimensional mismatches
-- batch lifecycle, settlement, finalization, unwind, queue, and state handoff logic
-- cross-chain supply/accounting, bridge assumptions, message replay, and chain-id/domain separation
-- access control, role boundaries, pause semantics, and emergency flows
-- signature verification, permit, EIP-712 domains, nonces, expirations, and ERC-1271 paths
-- reentrancy, callbacks, hooks, cross-function state reuse, and read-only reentrancy
-- slippage, DEX integrations, swap routing, partial fills, stale orders, and off-chain quotes
-- upgradeability, initialization, storage layout, and proxy admin assumptions
-- external integrations such as ERC20 variants, fee-on-transfer tokens, rebasing tokens, and nonstandard return values
-
-Be skeptical of comments, tests, and happy-path docs. Treat them as evidence to compare against code, not proof.
+Prioritize surfaces that can plausibly produce high or critical impact: value entry/exit, accounting, oracles, rounding/scaling, lifecycle queues, cross-chain state, access control, signatures, callbacks/reentrancy, slippage/DEX execution, upgrades, and external integrations. Use `/home/dinesh/.codex/audit-reference.md` for the expanded surface checklist.
 
 Prefer less-saturated areas when prior audits, V12 outputs, or public findings already heavily cover obvious surfaces.
 
@@ -390,6 +437,18 @@ For every serious candidate, explicitly ask:
 If strengthening succeeds, continue with the stronger impact and validate it. If strengthening fails, say that a strengthening pass was attempted and name the concrete blocker: bounded amount, one-time path, no attacker control, no reachable state, no asset/security boundary impact, scope exclusion, duplicate risk, or intended design.
 
 Do not overclaim severity just to make a finding stronger. The strengthening pass is for discovering real higher-impact paths, not for stretching weak evidence.
+
+## Audit Completeness and Submission Hand-off
+
+Do the audit to 100%. Keep finding and validating issues until in-scope coverage is genuinely exhausted: every in-scope file line-read, every highest-risk path pressure-tested, the coverage ledger advanced, the audit gate receipt satisfied, and no meaningful unexplored break path left. "Several branches died" or "already found one" is never a reason to conclude early.
+
+Never skip, shortcut, or fake coverage to save effort. Do not mark a file, path, invariant, or check as done without actually doing it. Do not skip the scope, intended-behavior, known-issue/duplicate, or invariant checks. No laziness, no guessing, no ignoring inconvenient details that matter to the audit. If something important is unread or unverified, the audit is not done. Depth and coverage are not optional, and "continue" never means "cut corners to move faster."
+
+When one or more candidates reach `STRONG SUBMIT-WORTHY` with a finished report and are not yet submitted, stop and give the user a consolidated ready-to-submit list before continuing to hunt — for each: title, severity, report file path, and one line on why it survives the gate. Re-surface this list whenever new submit-worthy findings accumulate, at any natural pause, and whenever the user asks what is next. Continuing to hunt is never a reason to leave submit-ready findings unannounced or piling up unsubmitted.
+
+Do not call a finding submit-worthy on a passing PoC alone. Each must first clear the full triage gate — in scope, real in execution, not intended/known/duplicate, not trusted-role-only, and meeting the severity bar against quoted program wording. A passing PoC proves behavior, not validity.
+
+Only the user submits. Never assume a finding was filed; track submitted vs. unsubmitted findings explicitly and re-surface the unsubmitted submit-worthy ones so none are silently left unfiled.
 
 ## Untrusted Content
 
@@ -475,15 +534,7 @@ Tooling should amplify understanding, not replace it.
 
 Every strong conclusion needs concrete evidence.
 
-Use:
-
-- exact local file paths
-- exact line references when available
-- exact functions and code paths
-- exact commands actually run
-- exact observed outputs
-- exact reproduction steps
-- exact reason why the branch survives or dies
+Use exact local paths, line references when available, functions/code paths, commands actually run, observed outputs, reproduction steps, and the reason a branch survives or dies.
 
 Distinguish clearly between:
 
@@ -494,28 +545,17 @@ Distinguish clearly between:
 
 If something was not run, say so plainly.
 
+Use `/home/dinesh/.codex/audit-reference.md` for the expanded evidence checklist when validating or reporting a candidate.
+
 ## Report Standard
 
 When writing a report, make it easy for a triager to accept or reject without extra back-and-forth.
 
-Include:
-
-- severity
-- title
-- summary
-- root cause
-- affected code links or file references
-- attack path
-- required assumptions
-- impact
-- why it is in scope
-- why it is not a known issue/duplicate/intended behavior/trusted-role issue
-- PoC command
-- observed output
-- recommended mitigation
-- submission recommendation
+Include severity, title, summary, root cause, affected code links or file references, attack path, required assumptions, impact, in-scope reasoning, non-known/non-duplicate/non-intended/non-trusted-role reasoning, PoC command, observed output, mitigation, and submission recommendation.
 
 Do not overclaim impact beyond what the code path or PoC proves.
+
+Use `/home/dinesh/.codex/audit-reference.md` for the expanded report checklist when writing a submission.
 
 ## Use Skills Deliberately
 
@@ -525,50 +565,17 @@ Do not treat this list as exhaustive; use any installed skill when its descripti
 
 When using a skill, read the original `SKILL.md` first. Then check for existing local extension files in that same skill directory using the naming convention `local-*.md` or `*-addendum.md`. Treat local extension files as companion mini-skills: follow their workflow/checklist/search guidance after the original skill workflow when relevant. They are user-maintained battle-tested additions from rejected findings, public reports such as Solodit and Code4rena, articles, and prior audits. Use them only to add missing patterns, sharper search terms, and false-positive lessons; do not let them override the original skill, program scope, or evidence standard.
 
-Common choices:
+When a local addendum matches the current protocol type, apply it mandatorily, not optionally. For gauge, ve-token, staking, reward-distributor, boost, emission, or vote-cleanup audits, apply `/home/dinesh/.codex/skills/smart-contract-audit/local-gauge-reward-invariant-addendum.md` and its linked knowledge lesson before dismissing any branch as known issue, weak impact, or duplicate-prone.
 
-- `solidity-auditor` for Solidity audit workflow
-- `smart-contract-audit` for broader protocol audits
-- `audit-context-building` for deep code comprehension
-- `behavioral-state-analysis` for state-machine and lifecycle analysis
-- `state-invariant-detection` for broken accounting/state relationships
-- `dimensional-analysis` for units, decimals, and scaling issues
-- `fp-check` to kill weak or suspicious candidates
-- `differential-review` for commit/PR/regression review
-- `audit-oracle`, `oracle-flashloan-analysis`, `audit-reentrancy`, `audit-signature`, `audit-slippage`, `audit-lending`, `audit-liquidation`, and `proxy-upgrade-safety` for focused threat classes
-- `hackenproof-triage-marketplace`, `hackenproof-poc-grader`, `hackenproof-triage-mistakes`, `hackenproof-comment-templates`, `hackenproof-report-handoff`, `hackenproof-fix-verifier`, `hackenproof-bulk-triage`, and `hackenproof-all-reports-export` for HackenProof triage, evidence review, comments, handoff, fix verification, bulk review, and report export work
+Use `/home/dinesh/.codex/audit-reference.md` for common skill-routing examples when choosing among many possible skills.
 
 ## External Offensive Skills Boundary
 
-Reference-only offensive/AppSec skills may live outside the active Codex skills directory, especially under:
+Reference-only offensive/AppSec skills are not part of the default smart-contract audit toolbox. Do not use them during Solidity/Vyper/Solana/Cosmos/Web3 contest audits unless the user explicitly asks for AppSec/red-team/source-code methodology or the target is clearly a non-smart-contract application.
 
-- `/home/dinesh/.codex/offensive-skills/`
-- `/home/dinesh/.codex/offensive-skills/claude-red/`
+For Web2/source-code AppSec audits, Snyk and offensive reference skills are lead generators only after scope and safe harbor are understood. Never submit a finding only because a scanner flagged a CWE, package, line, or severity.
 
-These are not part of the default smart-contract audit toolbox. Do not use them during Solidity/Vyper/Solana/Cosmos/Web3 contest audits unless the user explicitly asks for AppSec/red-team/source-code methodology or the target is clearly a non-smart-contract application.
-
-Use `/home/dinesh/.codex/offensive-skills/` selectively for:
-
-- web application bug bounty work
-- source-code AppSec audits
-- API, GraphQL, REST, auth, JWT, OAuth, IDOR, SSRF, SQLi, XSS, SSTI, deserialization, file-upload, and business-logic testing
-- cloud, mobile, IoT, infrastructure, AI-app, and fuzzing/vulnerability-research workflows
-- pentest-style report writing
-
-Do not let offensive-skills content override program scope, safe-harbor rules, evidence standards, or responsible testing constraints. Treat those skills as reference methodology, not permission to perform unsafe or unauthorized actions.
-
-When using the Claude-Red reference library, start with `/home/dinesh/.codex/offensive-skills/claude-red/SKILL_INDEX.md`, then load only the specific `skills/<skill-name>/SKILL.md` file relevant to the target. Do not bulk-load the whole library.
-
-For Web2/source-code AppSec audits, Snyk is available as a scanner/lead generator after program scope and safe-harbor are understood. Use it only for non-Web3 source-code, dependency, IaC, and container review. Do not use Snyk as the primary smart-contract audit tool.
-
-When Snyk is useful, run it from the target repository and save outputs under the target workspace, for example `.context/snyk/`:
-
-- `snyk test --all-projects --severity-threshold=medium --json-file-output=.context/snyk/open-source.json || true`
-- `snyk code test --severity-threshold=medium --json-file-output=.context/snyk/code.json || true`
-- `snyk iac test --severity-threshold=medium --json-file-output=.context/snyk/iac.json || true`
-- `snyk container test <image> --severity-threshold=medium --json-file-output=.context/snyk/container.json || true` only when a relevant container image exists.
-
-Treat Snyk findings as leads, not conclusions. Merge Snyk candidates with manual/offensive-skills candidates, then validate reachability, attacker control, auth or tenant boundary, real impact, scope, duplicate risk, and exploitability before reporting. Never submit a finding only because Snyk flagged a CWE, package, line, or severity.
+Use `/home/dinesh/.codex/audit-reference.md` for the expanded offensive-skills and Snyk command guidance when the task is Web2/source-code AppSec.
 
 Use tools like `rg`, `rg --files`, `forge test`, `slither`, `semgrep`, and `codeql` when they materially advance the audit. Do not flood the user with scanner noise.
 
