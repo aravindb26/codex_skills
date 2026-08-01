@@ -226,6 +226,8 @@ For public-report comparison and duplicate-risk checks, prefer the local report-
 - Solodit: `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/solodit/`
 - Code4rena: `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/code4rena/`
 
+For protocol-family bug-class prioritization, use the AuditVault sector checklists under `/home/dinesh/.codex/knowledge/smart-contract-audit/bug-patterns/auditvault-sector-checklists/` as a compact lead source. These checklists are not duplicate authority; exact duplicate and known-issue decisions still require original sources and exact root-cause matching.
+
 Treat those stubs as leads, not final authority; open the original source only when needed. If the user asks to refresh imported public reports, use the matching importer and rely on its dedupe index:
 
 - Solodit: `/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/solodit_ingest.py`

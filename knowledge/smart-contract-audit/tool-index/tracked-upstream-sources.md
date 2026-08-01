@@ -66,6 +66,8 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 | Code4rena reports | <https://code4rena.com/reports> | Import useful Medium/High report patterns without copying duplicate report bodies. |
 | Code4rena report sitemap | <https://code4rena.com/sitemap.xml> | Discovery feed used by the local Code4rena importer. |
 | Pashov audits | <https://github.com/pashov/audits> | Import distinct public audit patterns and retain original report links. |
+| Crypto Training Hacks | <https://crypto.training/hacks/> | Track reproduced on-chain exploit walkthroughs and Foundry PoC references; use as a live external pattern source without bulk import until a deduping importer exists. |
+| AuditVault | <https://github.com/Auditware/AuditVault> | Import only low-noise generated sector checklists; do not bulk-import full findings/hacks because they overlap local Solodit/Code4rena/rekt-derived knowledge. |
 
 ## Discovery And Reference Sources
 

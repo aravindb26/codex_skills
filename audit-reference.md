@@ -81,6 +81,19 @@ Be skeptical of comments, tests, and happy-path docs. Treat them as evidence to 
 
 Prefer less-saturated areas when prior audits, V12 outputs, or public findings already heavily cover obvious surfaces.
 
+## Web3 Exploit Knowledge Feeds
+
+Use local public-report and incident knowledge as lead sources, not proof:
+
+- Solodit stubs: `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/solodit/`
+- Code4rena stubs: `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/code4rena/`
+- AuditVault sector checklists: `/home/dinesh/.codex/knowledge/smart-contract-audit/bug-patterns/auditvault-sector-checklists/`
+- Feed notes: `/home/dinesh/.codex/knowledge/smart-contract-audit/tool-index/web3-exploit-reference-feeds.md`
+
+Use AuditVault checklists when starting or re-anchoring a protocol-family audit, such as lending, DEX, bridge, oracle, staking, vault, governance, NFT, perpetuals, or zk. Convert checklist items into concrete invariant checks against the current code.
+
+Do not treat checklist frequency as severity or proof. Exact duplicate, known-issue, intended-behavior, and reportability decisions still require program documents, original reports, current code, and exact root-cause comparison.
+
 ## Evidence And Report Checklist
 
 Every strong conclusion needs concrete evidence:
