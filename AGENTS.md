@@ -596,9 +596,9 @@ Use `/home/dinesh/.codex/audit-reference.md` for common skill-routing examples w
 
 Reference-only offensive/AppSec skills are not part of the default smart-contract audit toolbox. Do not use them during Solidity/Vyper/Solana/Cosmos/Web3 contest audits unless the user explicitly asks for AppSec/red-team/source-code methodology or the target is clearly a non-smart-contract application.
 
-For Web2/source-code AppSec audits, Snyk and offensive reference skills are lead generators only after scope and safe harbor are understood. Never submit a finding only because a scanner flagged a CWE, package, line, or severity.
+For Web2/source-code AppSec audits, Snyk, Codex Security, and offensive reference skills are lead generators only after scope and safe harbor are understood. Never submit a finding only because a scanner flagged a CWE, package, line, or severity.
 
-Use `/home/dinesh/.codex/audit-reference.md` for the expanded offensive-skills and Snyk command guidance when the task is Web2/source-code AppSec.
+Use `/home/dinesh/.codex/audit-reference.md` for the expanded offensive-skills, Snyk, and Codex Security command guidance when the task is Web2/source-code AppSec.
 
 Use tools like `rg`, `rg --files`, `forge test`, `slither`, `semgrep`, and `codeql` when they materially advance the audit. Do not flood the user with scanner noise.
 

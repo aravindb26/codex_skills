@@ -56,6 +56,7 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 | Recon Skills | <https://github.com/uphiago/recon-skills> | Filtered reference-only Web2/AppSec recon pack under `offensive-skills/recon-skills-filtered`; exclude generic Web3 and mass-recon noise. |
 | Anthropic Cybersecurity Skills | <https://github.com/mukul975/Anthropic-Cybersecurity-Skills> | Filtered reference-only Web2/source-code/SCA/API/mobile/supply-chain pack under `offensive-skills/anthropic-cybersecurity-filtered`; exclude SOC/DFIR/generic cyber and weaker smart-contract overlap. |
 | Snyk | <https://snyk.io/> | Web2/source-code scanner and lead generator, never proof by itself. |
+| OpenAI Codex Security | <https://github.com/openai/codex-security> | Official OpenAI CLI/SDK for authorized source-code security scans, validation, exports, patch suggestions, scan comparison, and false-positive tracking; keep as a Web2/source-code lead generator, not default Web3 audit context. |
 
 ## Knowledge And Report Feeds
 

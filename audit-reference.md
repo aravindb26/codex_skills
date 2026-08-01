@@ -170,3 +170,16 @@ For Web2/source-code AppSec audits, Snyk is available as a scanner/lead generato
 - `snyk container test <image> --severity-threshold=medium --json-file-output=.context/snyk/container.json || true`
 
 Treat Snyk findings as leads, not conclusions. Merge Snyk candidates with manual/offensive-skills candidates, then validate reachability, attacker control, auth or tenant boundary, real impact, scope, duplicate risk, and exploitability before reporting.
+
+Codex Security is also available as an official OpenAI scanner/validator for authorized Web2/source-code audits. It is useful for repository-wide security scanning, diff scanning, finding validation, patch suggestions, exports, scan comparison, and tracking false-positive feedback. It is not a substitute for manual audit, offensive reference workflows, or program-specific scope checks.
+
+Use Codex Security only on repositories the user owns or is authorized to assess. Keep output/state outside the scanned repository:
+
+- `mkdir -p /home/dinesh/.cache/codex-security/<program-slug> && chmod 700 /home/dinesh/.cache/codex-security/<program-slug>`
+- `codex-security scan /path/to/repo --dry-run --output-dir /home/dinesh/.cache/codex-security/<program-slug>`
+- `codex-security scan /path/to/repo --path src --output-dir /home/dinesh/.cache/codex-security/<program-slug>/results --archive-existing`
+- `codex-security scan /path/to/repo --diff origin/main --output-dir /home/dinesh/.cache/codex-security/<program-slug>/diff-results --archive-existing`
+- `codex-security export /home/dinesh/.cache/codex-security/<program-slug>/results --export-format json --output /home/dinesh/.cache/codex-security/<program-slug>/findings.json`
+- `codex-security validate /home/dinesh/.cache/codex-security/<program-slug>/findings.json "<candidate title or exact issue text>"`
+
+Treat Codex Security findings exactly like Snyk findings: leads first, proof only after manual reachability, attacker-control, impact, duplicate, and scope validation. Do not run broad Codex Security scans on smart-contract contest repos unless the program includes non-contract source-code/AppSec targets or the user explicitly asks for that scanner.
