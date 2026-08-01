@@ -1,6 +1,6 @@
 # Tracked Upstream Sources
 
-Last reviewed: 2026-07-26
+Last reviewed: 2026-08-01
 
 This is the canonical URL registry for Codex audit tooling, knowledge feeds, and reference libraries maintained in this workspace. It intentionally excludes incidental article/report links already stored with their individual knowledge cards.
 
@@ -37,6 +37,7 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 | Solana Token Extensions Security | <https://github.com/zzzuhaibmohd/solana-token-extensions-security> | Track Token-2022-specific Solana audit patterns. |
 | Solidity Auditor Private V3 | <https://github.com/0xfirefistt/solidity-auditor-private> | Private upstream for the active V3 Solidity auditor. |
 | Dark Navy Web3 Skills | <https://github.com/DarkNavySecurity/web3-skills> | Source for `client-auditor`; use for blockchain nodes and clients, not ordinary contract audits. |
+| DeFi Builder Skills | <https://github.com/melanke/defi-builder-skills> | Track greenfield DeFi protocol discovery and spec-driven development workflows; not default audit hunting. |
 
 ## Pinned Review Snapshots
 
@@ -82,6 +83,7 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 | Digger | <https://github.com/digger-determsec/digger> | Beta EVM/Solana scanner and MCP skill; reviewed but not installed because it requires maintaining Rust binaries and overlaps as a lead generator. |
 | Open Kritt | <https://github.com/Kritt-ai/open-kritt> | Full self-hosted AI audit platform; reviewed but not installed because Docker/root job containers and orchestration overlap would add operational noise. |
 | One Dollar Audit | <https://www.onedollaraudit.com/> | Paid/closed-source scanner link from pashov hub; tracked only as discovery, not installed. |
+| CertiK AI Auditor | <https://aiauditor.certik.com/> | Paid/closed-source scanner link from pashov hub; tracked only as discovery, not installed. |
 | Pashov Solidity examples | <https://github.com/pashov/solidity> | Educational Solidity examples; not useful enough to track as an active audit skill source. |
 | Pashov data-structures coursework | <https://github.com/pashov/Data-Structures-And-Algorithms> | Low relevance to audit workflow; retained only as reviewed source inventory. |
 | Pashov virtual-machines coursework | <https://github.com/pashov/Virtual-machines> | Low relevance to audit workflow; retained only as reviewed source inventory. |

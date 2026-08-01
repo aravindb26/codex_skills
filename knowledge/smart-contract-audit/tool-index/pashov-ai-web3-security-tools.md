@@ -2,9 +2,9 @@
 
 Source: <https://github.com/pashov/ai-web3-security>
 
-Checked: 2026-07-26
+Checked: 2026-08-01
 
-Source commit checked: `8bf4757f39054b63584185ddb824ae253775e227`
+Source commit checked: `05c9772c135c88edafec1cf490811f5e0c4ea777`
 
 ## Classification
 
@@ -182,6 +182,22 @@ Reason:
 
 - Adds focused Solana Token-2022 extension audit coverage.
 
+### DeFi Builder Skills
+
+Source: <https://github.com/melanke/defi-builder-skills>
+
+Commit: `fa24571dba27768d73f9c52a95ebfbf26acb894c`
+
+Installed:
+
+- `defi-spec-driven`
+- `defi-protocol-discovery`
+
+Reason:
+
+- Adds narrow greenfield DeFi protocol discovery and spec-driven development workflows with explicit economic design, invariants, threat modeling, interface/storage specification, and test-spec phases.
+- These are not default audit-hunting skills, but their triggers are specific enough that they should not disturb serious audit sessions.
+
 ## Intentionally Not Bulk Installed
 
 Several listed repos were not installed to avoid active-skill noise or because local coverage already exists.
@@ -189,8 +205,9 @@ Several listed repos were not installed to avoid active-skill noise or because l
 Reviewed since the previous check:
 
 - `digger-determsec/digger` was reviewed at `be8ad8368e97b5ac022eac32fe091bf2e640e4b3`. It was not installed because it is a beta scanner/MCP tool requiring local Rust binaries, and its current value is as an optional lead generator rather than a default Codex audit skill.
-- `Kritt-ai/open-kritt` was reviewed at `dabd3d5f82e759bf783955ecc245fea3a984cd38`. It was not installed because it is a full self-hosted AI audit platform with Docker/root job containers, not a lightweight Codex skill; using it by default would add operational noise and overlap.
+- `Kritt-ai/open-kritt` was reviewed again at `266a969eef0221075b4a182ddc2f7006eeed7509`. It was not installed because it is still a full self-hosted AI audit platform with Docker/root job containers, not a lightweight Codex skill; using it by default would add operational noise and overlap.
 - `One Dollar Audit` was newly listed as a paid/closed-source Solidity/EVM scanner and was recorded only as a discovery link.
+- `CertiK AI Auditor` was newly listed as a paid/closed-source multi-language scanner and was recorded only as a discovery link.
 - `RASHMOR1/dlt-auditor` was reviewed at `017d80f70ad55f95366d1dcbe8849d30eebb421a`. It was not installed because it is a large benchmark/runtime framework with thousands of corpus and design files, substantial overlap with the local audit workflow, and a high operational-noise cost.
 - `exvulsec/sui-move-skill` was reviewed at `54daba3c0d3621c46bb875245539e734bc410038`. It was not installed because the existing `smart-contract-audit` skill already has richer Sui/Move coverage, while this candidate contains a broken reference and defaults to retaining Low/Informational findings in conflict with the local submit-worthy finding gate.
 

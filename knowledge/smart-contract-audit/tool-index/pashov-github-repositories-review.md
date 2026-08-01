@@ -2,7 +2,7 @@
 
 Source: <https://github.com/pashov?tab=repositories>
 
-Checked: 2026-07-26
+Checked: 2026-08-01
 
 ## Account-Level Result
 
@@ -71,7 +71,7 @@ Use:
 
 URL: <https://github.com/pashov/ai-web3-security>
 
-Checked commit: `8bf4757f39054b63584185ddb824ae253775e227`
+Checked commit: `05c9772c135c88edafec1cf490811f5e0c4ea777`
 
 Decision:
 
