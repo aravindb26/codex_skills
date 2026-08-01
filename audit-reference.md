@@ -89,9 +89,10 @@ Use local public-report and incident knowledge as lead sources, not proof:
 - Code4rena stubs: `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/code4rena/`
 - Crypto Training hack stubs: `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/crypto-training-hacks/`
 - AuditVault sector checklists: `/home/dinesh/.codex/knowledge/smart-contract-audit/bug-patterns/auditvault-sector-checklists/`
+- Weird ERC20 token checklist: `/home/dinesh/.codex/knowledge/smart-contract-audit/bug-patterns/weird-erc20-token-integration-checklist.md`
 - Feed notes: `/home/dinesh/.codex/knowledge/smart-contract-audit/tool-index/web3-exploit-reference-feeds.md`
 
-Use Crypto Training hack stubs when a current function, invariant, or value flow resembles a reproduced real exploit. Use AuditVault checklists when starting or re-anchoring a protocol-family audit, such as lending, DEX, bridge, oracle, staking, vault, governance, NFT, perpetuals, or zk. Convert matched items into concrete invariant checks against the current code.
+Use Crypto Training hack stubs when a current function, invariant, or value flow resembles a reproduced real exploit. Use AuditVault checklists when starting or re-anchoring a protocol-family audit, such as lending, DEX, bridge, oracle, staking, vault, governance, NFT, perpetuals, or zk. Use the Weird ERC20 checklist when a protocol accepts, transfers, prices, escrows, lends, swaps, bridges, or distributes ERC20 tokens. Convert matched items into concrete invariant checks against the current code.
 
 Do not treat incident/checklist frequency as severity or proof. Exact duplicate, known-issue, intended-behavior, and reportability decisions still require program documents, original reports, current code, and exact root-cause comparison.
 

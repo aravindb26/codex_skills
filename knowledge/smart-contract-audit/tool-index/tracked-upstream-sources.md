@@ -77,7 +77,7 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 | Forefy benchmarks | <https://forefy.com/benchmarks> | Treat benchmark scores as leads, not proof that a workflow is safe or superior. |
 | Pashov repository index | <https://github.com/pashov?tab=repositories> | Discover new Pashov repositories for manual review. |
 | SCSVS | <https://github.com/pashov/SCSVS> | Reference checklist; use selectively rather than duplicating active skills. |
-| Weird ERC20 | <https://github.com/pashov/weird-erc20> | Reference for nonstandard token behavior and integration assumptions. |
+| Weird ERC20 | <https://github.com/d-xo/weird-erc20> | Canonical reference for nonstandard token behavior and integration assumptions; distilled into the local token-integration addendum. |
 
 ## Reviewed But Not Installed
 
