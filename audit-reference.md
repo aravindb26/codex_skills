@@ -143,7 +143,8 @@ Reference-only offensive/AppSec skills may live outside the active Codex skills 
 - `/home/dinesh/.codex/offensive-skills/`
 - `/home/dinesh/.codex/offensive-skills/claude-red/`
 - `/home/dinesh/.codex/offensive-skills/claude-bug-bounty/`
-- `/home/dinesh/.codex/offensive-skills/selected-security-addenda/`
+- `/home/dinesh/.codex/offensive-skills/recon-skills-filtered/`
+- `/home/dinesh/.codex/offensive-skills/anthropic-cybersecurity-filtered/`
 
 These are not part of the default smart-contract audit toolbox. Do not use them during Solidity/Vyper/Solana/Cosmos/Web3 contest audits unless the user explicitly asks for AppSec/red-team/source-code methodology or the target is clearly a non-smart-contract application.
 
@@ -157,7 +158,9 @@ Use `/home/dinesh/.codex/offensive-skills/` selectively for:
 
 When using the Claude-Red reference library, start with `/home/dinesh/.codex/offensive-skills/claude-red/SKILL_INDEX.md`, then load only the specific `skills/<skill-name>/SKILL.md` file relevant to the target. Do not bulk-load the whole library.
 
-When using selected addenda from reviewed third-party repos, start with `/home/dinesh/.codex/offensive-skills/selected-security-addenda/SKILL_INDEX.md`, then open only the exact note matching the current Web2/source-code task. These addenda are distilled to avoid duplicate Web3 noise and do not include upstream scripts.
+When using the filtered recon pack, start with `/home/dinesh/.codex/offensive-skills/recon-skills-filtered/SKILL_INDEX.md`, then open only the exact `skills/<skill-name>/SKILL.md` file and directly referenced files matching the current Web2/source-code/recon task.
+
+When using the filtered Anthropic cybersecurity pack, start with `/home/dinesh/.codex/offensive-skills/anthropic-cybersecurity-filtered/SKILL_INDEX.md`, then open only the exact `skills/<skill-name>/SKILL.md` file and directly referenced files matching the current Web2/source-code/SCA/API/mobile/supply-chain task.
 
 For Web2/source-code AppSec audits, Snyk is available as a scanner/lead generator after program scope and safe-harbor are understood. Use it only for non-Web3 source-code, dependency, IaC, and container review. Save outputs under the target workspace, for example `.context/snyk/`:
 
