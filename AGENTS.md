@@ -225,13 +225,15 @@ For public-report comparison and duplicate-risk checks, prefer the local report-
 
 - Solodit: `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/solodit/`
 - Code4rena: `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/code4rena/`
+- Crypto Training hacks: `/home/dinesh/.codex/knowledge/smart-contract-audit/report-patterns/crypto-training-hacks/`
 
-For protocol-family bug-class prioritization, use the AuditVault sector checklists under `/home/dinesh/.codex/knowledge/smart-contract-audit/bug-patterns/auditvault-sector-checklists/` as a compact lead source. These checklists are not duplicate authority; exact duplicate and known-issue decisions still require original sources and exact root-cause matching.
+For exploit-pattern and protocol-family bug-class prioritization, use Crypto Training hack stubs and AuditVault sector checklists as compact lead sources. These stubs/checklists are not duplicate authority; exact duplicate and known-issue decisions still require original sources and exact root-cause matching.
 
 Treat those stubs as leads, not final authority; open the original source only when needed. If the user asks to refresh imported public reports, use the matching importer and rely on its dedupe index:
 
 - Solodit: `/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/solodit_ingest.py`
 - Code4rena: `/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/code4rena_ingest.py`
+- Crypto Training hacks: `/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/crypto_training_hacks_ingest.py`
 
 Known issue, prior-audit, public-report, V12/excluded-output, and duplicate overlap must be exact root-cause equality, not thematic similarity. Same symptom, same protocol area, same function family, or same bug category is not enough.
 
