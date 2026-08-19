@@ -2,7 +2,7 @@
   "name": "claude-bug-bounty",
   "source": "https://github.com/shuvonsec/claude-bug-bounty",
   "source_commit": "59a3c32cc9c222dd660f8475ab24b0318f8b7d2a",
-  "last_upstream_reviewed_commit": "200959489fe5e0c8f70c7a72b7267cd446815617",
+  "last_upstream_reviewed_commit": "e363fa09f003d77a0420abcd081628cdbe7f8ed4",
   "installed_at": "2026-06-11",
   "install_type": "filtered-reference-only",
   "target": "/home/dinesh/.codex/offensive-skills/claude-bug-bounty",
@@ -24,14 +24,27 @@
     "report-writing"
   ],
   "included_tools": [
-    "lead_board.py"
+    "lead_board.py",
+    "bypass_403.sh",
+    "cicd_scanner.sh",
+    "cloud_recon.sh",
+    "eol_check.py",
+    "graphql_audit.sh",
+    "hunt.py",
+    "multipart_mutator.py",
+    "param_discovery.sh",
+    "secrets_hunter.sh",
+    "takeover_scanner.sh",
+    "waf_encoder.py",
+    "waf_response_analyzer.py",
+    "wordlist_engine.sh"
   ],
   "excluded_categories": [
     "web3 and smart-contract audit content",
     "meme-coin audit content",
     "credential-spray methodology",
-    "active command runner files",
-    "active scanner tool scripts",
+    "broad active command runner files",
+    "broad active scanner tool scripts",
     "MCP integrations",
     "Claude hooks"
   ]

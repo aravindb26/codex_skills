@@ -1,6 +1,6 @@
 # Resource Link Registry
 
-Last updated: 2026-08-01
+Last updated: 2026-08-19
 
 Purpose:
 - Preserve useful URLs discussed while building this Codex audit setup.
@@ -44,7 +44,7 @@ Purpose:
 | K.I.T | <https://github.com/J4X-Security/K.I.T> | Known-issue deduplication/triage workflow. |
 | Foundry mainnet-fork PoC | <https://github.com/cholakovvv/foundry-poc-mainnet-fork> | Foundry exploit-reproduction guidance. |
 | Solana token extensions security | <https://github.com/zzzuhaibmohd/solana-token-extensions-security> | Token-2022 Solana audit patterns. |
-| Dark Navy Web3 skills | <https://github.com/DarkNavySecurity/web3-skills> | Blockchain node/client auditing reference. |
+| Dark Navy Web3 skills | <https://github.com/DarkNavySecurity/web3-skills> | Blockchain node/client auditing and incident-analysis reference. |
 | DeFi Builder Skills | <https://github.com/melanke/defi-builder-skills> | DeFi protocol discovery/spec-driven workflows. |
 | Weird ERC20 | <https://github.com/d-xo/weird-erc20> | Canonical weird-token integration reference. |
 | SCSVS | <https://github.com/pashov/SCSVS> | Reference checklist, use selectively. |
@@ -70,7 +70,7 @@ Purpose:
 | Claude Bug Bounty | <https://github.com/shuvonsec/claude-bug-bounty> | Filtered Web2/source-code bounty reference. |
 | Recon Skills | <https://github.com/uphiago/recon-skills> | Filtered Web2/AppSec recon reference. |
 | Anthropic Cybersecurity Skills | <https://github.com/mukul975/Anthropic-Cybersecurity-Skills> | Filtered Web2/source-code/SCA/API/mobile/supply-chain reference. |
-| OpenAI Codex Security | <https://github.com/openai/codex-security> | Web2/source-code scanner and lead generator. |
+| OpenAI Codex Security | <https://github.com/openai/codex-security> | Web2/source-code scanner/reference and lead generator. |
 | Snyk | <https://snyk.io/> | Web2/source-code scanner and lead generator. |
 | Bugcrowd RL environments article | <https://www.prnewswire.com/news-releases/bugcrowd-launches-reinforcement-learning-environments-to-help-ai-models-learn-real-world-security-skills-302778829.html> | Security AI training environment reference. |
 
@@ -115,4 +115,3 @@ Purpose:
 | KiiChain audit target | <https://github.com/KiiChain/kiichain/tree/f632e7faf979ceb6822be087585798e18db32a3b> | Historical rejected-finding lesson source. |
 | KiiChain testnet genesis | <https://raw.githubusercontent.com/KiiChain/testnets/refs/heads/main/testnet_oro/genesis.json> | Historical validation context for KiiChain reports. |
 | Dexalot contracts | <https://github.com/Dexalot/contracts> | Historical audit target reference. |
-

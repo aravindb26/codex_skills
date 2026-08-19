@@ -129,6 +129,14 @@ For every new program or repo, first look for and read what exists locally:
 
 For every new bounty/contest/program, read the program details completely before hunting. Treat scope, exclusions, safe harbor, severity definitions, reward rules, duplicate rules, PoC requirements, known issues, trusted-role assumptions, deployment notes, and examples as first-class audit inputs. Do not skim them, summarize from memory, or skip wording that looks boilerplate.
 
+Before serious hunting on a repo or product, lock the target version model from program wording and current upstream state:
+
+- identify whether the program wants the latest version, a supported release line, a deployed hosted version, a specific tagged version, or another explicitly scoped build
+- record the exact repo revision, tag, release, package version, product build, or hosted deployment version being audited
+- if the program scopes only particular versions or excludes outdated versions, follow that wording exactly and do not hunt or report against the wrong target
+- if latest-version relevance matters, check upstream before calling a candidate submit-worthy and again before final report handoff if the branch was hunted over multiple sessions
+- if a candidate is proven only on an older revision, mark that clearly and do not treat it as submit-worthy until the scoped/latest target is rechecked
+
 If these materials are missing or inaccessible, say that clearly. Do not pretend to have read program pages, docs, or reports.
 
 If a program page is inaccessible, JS-rendered, partially extracted, ambiguous, or missing attachments, ask for pasted text, screenshots, exports, or local files. Until the exact wording is available, mark the affected rule/scope point as uncertain and do not rely on it for a submission decision.
@@ -136,6 +144,7 @@ If a program page is inaccessible, JS-rendered, partially extracted, ambiguous, 
 During serious audits, maintain a Program Memory for the whole session:
 
 - exact source documents/pages/files reviewed
+- exact scoped product/repo/version target and why that target applies
 - scope and out-of-scope boundaries
 - safe-harbor and testing constraints
 - severity and reward bar
@@ -497,6 +506,7 @@ A candidate is worth surfacing only if it is:
 
 - real in actual execution, not just a pattern match
 - in scope
+- confirmed against the program-scoped version target, not only on an older or unscoped revision
 - reproducible or strongly demonstrable
 - tied to a meaningful security boundary or asset impact
 - distinct in root cause

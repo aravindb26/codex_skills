@@ -1,0 +1,47 @@
+# Code4rena Pattern Stub: Fees can be any amount
+
+Source:
+- https://code4rena.com/reports/2022-02-redacted-cartel#m-15-fees-can-be-any-amount
+
+Imported:
+- 2026-08-19
+
+Status:
+- needs distillation
+
+Severity:
+- MEDIUM
+
+Report:
+- Redacted Cartel contest
+
+Report date:
+- 2022-05-11
+
+Source platform:
+- Code4rena
+
+Dedupe:
+- id: `2022-02-redacted-cartel#m-15-fees-can-be-any-amount`
+- fingerprint: `be7aed8b0d08819e99b5ba06e77f6226c2640192e23c575ed7e4742c15f55bde`
+
+Core idea:
+- TODO: Distill the reusable attack pattern from the source.
+
+Broken invariant:
+- TODO
+
+Where to look in code:
+- TODO
+
+Attack path:
+1. TODO
+
+False-positive checks:
+- TODO
+
+PoC shape:
+- TODO
+
+Triage notes:
+- TODO

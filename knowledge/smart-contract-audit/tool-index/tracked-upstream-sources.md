@@ -1,6 +1,6 @@
 # Tracked Upstream Sources
 
-Last reviewed: 2026-08-01
+Last reviewed: 2026-08-19
 
 This is the canonical URL registry for Codex audit tooling, knowledge feeds, and reference libraries maintained in this workspace. It intentionally excludes incidental article/report links already stored with their individual knowledge cards.
 
@@ -36,7 +36,7 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 | Foundry mainnet-fork PoC | <https://github.com/cholakovvv/foundry-poc-mainnet-fork> | Track focused Foundry exploit-reproduction guidance. |
 | Solana Token Extensions Security | <https://github.com/zzzuhaibmohd/solana-token-extensions-security> | Track Token-2022-specific Solana audit patterns. |
 | Solidity Auditor Private V3 | <https://github.com/0xfirefistt/solidity-auditor-private> | Private upstream for the active V3 Solidity auditor. |
-| Dark Navy Web3 Skills | <https://github.com/DarkNavySecurity/web3-skills> | Source for `client-auditor`; use for blockchain nodes and clients, not ordinary contract audits. |
+| Dark Navy Web3 Skills | <https://github.com/DarkNavySecurity/web3-skills> | Source for `client-auditor` and `exploit-investigator`; use for blockchain nodes, clients, and incident analysis, not ordinary contract-audit default routing. |
 | DeFi Builder Skills | <https://github.com/melanke/defi-builder-skills> | Track greenfield DeFi protocol discovery and spec-driven development workflows; not default audit hunting. |
 
 ## Pinned Review Snapshots
@@ -52,11 +52,11 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 | Source | URL | Local policy |
 |---|---|---|
 | Claude-Red | <https://github.com/SnailSploit/Claude-Red> | Reference-only Web2/AppSec library under `offensive-skills`; never bulk-load for Web3 audits. |
-| Claude Bug Bounty | <https://github.com/shuvonsec/claude-bug-bounty> | Filtered Web2/source-code bounty reference; exclude overlapping Web3 and noisy scanner wrappers. |
+| Claude Bug Bounty | <https://github.com/shuvonsec/claude-bug-bounty> | Filtered Web2/source-code bounty reference; exclude overlapping Web3, credential-spray, broad runners, and noisy scanner wrappers. |
 | Recon Skills | <https://github.com/uphiago/recon-skills> | Filtered reference-only Web2/AppSec recon pack under `offensive-skills/recon-skills-filtered`; exclude generic Web3 and mass-recon noise. |
 | Anthropic Cybersecurity Skills | <https://github.com/mukul975/Anthropic-Cybersecurity-Skills> | Filtered reference-only Web2/source-code/SCA/API/mobile/supply-chain pack under `offensive-skills/anthropic-cybersecurity-filtered`; exclude SOC/DFIR/generic cyber and weaker smart-contract overlap. |
 | Snyk | <https://snyk.io/> | Web2/source-code scanner and lead generator, never proof by itself. |
-| OpenAI Codex Security | <https://github.com/openai/codex-security> | Official OpenAI CLI/SDK for authorized source-code security scans, validation, exports, patch suggestions, scan comparison, and false-positive tracking; keep as a Web2/source-code lead generator, not default Web3 audit context. |
+| OpenAI Codex Security | <https://github.com/openai/codex-security> | Official OpenAI CLI/SDK for authorized source-code security scans, validation, exports, patch suggestions, scan comparison, and false-positive tracking; local reference copy lives under `offensive-skills/codex-security-reference`; not default Web3 audit context. |
 
 ## Knowledge And Report Feeds
 

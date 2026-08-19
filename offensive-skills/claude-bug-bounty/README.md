@@ -2,7 +2,7 @@
 
 Source: https://github.com/shuvonsec/claude-bug-bounty
 
-Reviewed through commit: `200959489fe5e0c8f70c7a72b7267cd446815617`
+Reviewed through commit: `e363fa09f003d77a0420abcd081628cdbe7f8ed4`
 
 This is a filtered, reference-only install for Web2/AppSec and source-code bug bounty work. It is intentionally stored outside `/home/dinesh/.codex/skills/` so it does not auto-load during smart-contract audits.
 
@@ -38,6 +38,9 @@ Included Web2/AppSec reference skills:
 Included helper tools:
 
 - `tools/lead_board.py`: persistent Web2 recon lead ledger for tracking, ranking, and status-updating leads so promising surfaces are not forgotten during long hunts.
+- Selected helper scripts directly referenced by the retained Web2 skills, such as `bypass_403.sh`, `graphql_audit.sh`, `multipart_mutator.py`, `param_discovery.sh`, `secrets_hunter.sh`, `takeover_scanner.sh`, and WAF helper scripts.
+
+Inspect helper scripts before running them. They are not default audit steps and must stay within the target program's written scope and safe-harbor rules.
 
 Excluded upstream pieces are documented in `docs/FILTERED_INSTALL_NOTES.md`.
 

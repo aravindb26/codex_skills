@@ -1,0 +1,34 @@
+# Crypto Training Exploit Pattern Stub: KittenSwap: `votingReward` not set on `Gauge` traps all swap fees
+
+Source:
+- https://crypto.training/hacks/58208-h-01-votingreward-not-set-on-gauge-pashov-audit-group-none-k/
+
+Imported:
+- 2026-08-19
+
+Status:
+- compact index-derived exploit-pattern lead
+
+Incident date:
+- Jan 1970
+
+Chain:
+- Other
+
+Loss / impact summary:
+- unknown
+
+Tags:
+- unknown
+
+Dedupe:
+- id: `58208-h-01-votingreward-not-set-on-gauge-pashov-audit-group-none-k`
+- fingerprint: `6664b25343441fe42ae427f1605943f139aee2d35c13f58164d818634ac49482`
+
+Core exploit idea:
+- Open the source link and distill the reusable exploit mechanism before applying this to a live audit.
+
+Audit usage:
+- Use this as a searchable lead when the current code has similar tags, value-flow, function behavior, or invariant shape.
+- Do not treat this card as duplicate authority. For duplicate checks, compare exact root cause, affected function/path, broken invariant, attacker setup, and impact against original program sources.
+- Do not submit a finding because it resembles this exploit. Re-read the current code path and validate the candidate with source evidence and PoC/runtime evidence where feasible.

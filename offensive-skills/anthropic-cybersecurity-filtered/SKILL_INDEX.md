@@ -2,7 +2,7 @@
 
 Filtered source: <https://github.com/mukul975/Anthropic-Cybersecurity-Skills>
 
-Reviewed snapshot: `673da1f3b0b7be34ffc9624ef3858fe45f1c3bed`
+Reviewed snapshot: `4c0b700ac5d280ba46695062077f0fe922ce3602`
 
 Purpose: advanced reference-only workflows for authorized Web2/source-code AppSec, API security, SCA/SBOM, mobile, thick-client, and supply-chain review. These complement Snyk and manual offensive methodology; they do not replace triage or exploit validation.
 

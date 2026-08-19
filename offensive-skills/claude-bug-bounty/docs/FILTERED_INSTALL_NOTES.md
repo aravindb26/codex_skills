@@ -5,7 +5,7 @@ This install intentionally keeps only the Web2/AppSec/source-code bounty pieces 
 ## Source
 
 - Repository: https://github.com/shuvonsec/claude-bug-bounty
-- Commit: `59a3c32cc9c222dd660f8475ab24b0318f8b7d2a`
+- Commit reviewed for current filtered refresh: `e363fa09f003d77a0420abcd081628cdbe7f8ed4`
 - Install target: `/home/dinesh/.codex/offensive-skills/claude-bug-bounty/`
 
 ## Included
@@ -18,6 +18,7 @@ This install intentionally keeps only the Web2/AppSec/source-code bounty pieces 
 - `skills/report-writing/`
 - `rules/hunting.md`
 - `rules/reporting.md`
+- selected `tools/` helpers directly referenced by retained Web2 skills
 - upstream LICENSE
 
 ## Excluded To Avoid Web3 Noise
@@ -49,7 +50,7 @@ These upstream paths are intentionally not installed because they can encourage 
 - `commands/takeover.md`
 - `commands/token-scan.md`
 - `commands/param-discover.md`
-- `tools/`
+- unreferenced `tools/` helpers, especially credential spray, broad active runners, OOB/listener, scanner wrappers, and zero-day fuzzing scripts
 - `scripts/`
 - `agents/`
 - `mcp/`

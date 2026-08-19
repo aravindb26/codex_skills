@@ -25,7 +25,7 @@ GitHub stars list — high-signal repos curated by working bounty hunters.
 | `devanshbatham/Awesome-Bugbounty-Writeups` | Categorised writeups by vuln class |
 | `ngalongc/bug-bounty-reference` | Same idea, older but exhaustive |
 | `B3nac/Android-Reports-and-Resources` | Big list of Android H1 disclosures |
-| `arkadiyt/bounty-targets-data` | Hourly dump of public web bounty scopes across common platforms |
+| `arkadiyt/bounty-targets-data` | Hourly dump of every public scope (H1/Bugcrowd/Intigriti/YWH/Immunefi) |
 
 ## Tool catalogues
 

@@ -1,6 +1,6 @@
 # Claude Bug Bounty Skill Index
 
-Reviewed through commit: `200959489fe5e0c8f70c7a72b7267cd446815617`
+Reviewed through commit: `e363fa09f003d77a0420abcd081628cdbe7f8ed4`
 
 Reference-only filtered Web2/AppSec/source-code bounty skills. Do not use as the default smart-contract audit toolbox.
 
@@ -28,9 +28,10 @@ Reference-only filtered Web2/AppSec/source-code bounty skills. Do not use as the
 ## Helper Tools
 
 - `tools/lead_board.py`: Persistent Web2 recon lead ledger. Use after authorized recon to ingest observations, preserve statuses, pick next leads, and avoid forgetting attack surfaces during long Web2/source-code bounty work. Do not use for smart-contract audit lead tracking.
+- Selected helper scripts referenced by the retained Web2 skills: 403 bypass confirmation, GraphQL audit, multipart mutation, parameter discovery, secret hunting, takeover checks, WAF encoding/response analysis, and wordlist support. Inspect before use and run only when the program scope permits it.
 
 ## Boundary
 
 Excluded Web3, meme-coin, credential-spray, active command, agent, MCP, and tool-runner content is listed in `docs/FILTERED_INSTALL_NOTES.md`.
 
-Recent upstream updates reviewed but not directly copied are summarized in `docs/UPSTREAM_UPDATE_REVIEW_2026-06-20.md`.
+Recent upstream updates reviewed but not directly copied are summarized in `docs/UPSTREAM_UPDATE_REVIEW_*.md`.

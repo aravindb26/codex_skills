@@ -1,0 +1,47 @@
+# Code4rena Pattern Stub: Uninitialized or Incorrectly set auctionInterval may lead to liquidation engine livelock
+
+Source:
+- https://code4rena.com/reports/2021-05-yield#m-05-uninitialized-or-incorrectly-set-auctioninterval-may-lead-to-liquidation-engine-livelock
+
+Imported:
+- 2026-08-19
+
+Status:
+- needs distillation
+
+Severity:
+- MEDIUM
+
+Report:
+- Yield
+
+Report date:
+- 2021-07-23
+
+Source platform:
+- Code4rena
+
+Dedupe:
+- id: `2021-05-yield#m-05-uninitialized-or-incorrectly-set-auctioninterval-may-lead-to-liquidation-engine-livelock`
+- fingerprint: `be1521ca34747071d7ea6900207f9ae0c42863e348b70894710671745e9a53b6`
+
+Core idea:
+- TODO: Distill the reusable attack pattern from the source.
+
+Broken invariant:
+- TODO
+
+Where to look in code:
+- TODO
+
+Attack path:
+1. TODO
+
+False-positive checks:
+- TODO
+
+PoC shape:
+- TODO
+
+Triage notes:
+- TODO

@@ -3,7 +3,7 @@
 Reference-only Web2/source-code security skills selected from:
 
 - Source: <https://github.com/mukul975/Anthropic-Cybersecurity-Skills>
-- Reviewed snapshot: `673da1f3b0b7be34ffc9624ef3858fe45f1c3bed`
+- Reviewed snapshot: `4c0b700ac5d280ba46695062077f0fe922ce3602`
 
 This pack is intentionally outside `/home/dinesh/.codex/skills/` so it does not pollute default smart-contract audit skill routing.
 

@@ -1,0 +1,47 @@
+# Code4rena Pattern Stub: Merkle-tree-related contracts vulnerable to cross-chain-replay attacks
+
+Source:
+- https://code4rena.com/reports/2022-05-factorydao#m-14-merkle-tree-related-contracts-vulnerable-to-cross-chain-replay-attacks
+
+Imported:
+- 2026-08-19
+
+Status:
+- needs distillation
+
+Severity:
+- MEDIUM
+
+Report:
+- FactoryDAO contest
+
+Report date:
+- 2022-08-02
+
+Source platform:
+- Code4rena
+
+Dedupe:
+- id: `2022-05-factorydao#m-14-merkle-tree-related-contracts-vulnerable-to-cross-chain-replay-attacks`
+- fingerprint: `557d951927a23b7fc85593fda8c5c804dc7b915dfbdd07cc905d055a3466bd8b`
+
+Core idea:
+- TODO: Distill the reusable attack pattern from the source.
+
+Broken invariant:
+- TODO
+
+Where to look in code:
+- TODO
+
+Attack path:
+1. TODO
+
+False-positive checks:
+- TODO
+
+PoC shape:
+- TODO
+
+Triage notes:
+- TODO
