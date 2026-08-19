@@ -196,6 +196,8 @@ Keep command output small by default: prefer `rg`, `rg --files`, `sed -n`, `nl -
 
 For smart contract audits, Web3 contests, and bounty triage, treat `/home/dinesh/.codex/knowledge/smart-contract-audit/` as the long-term audit memory. Search it when starting a serious audit, validating a candidate, checking duplicate/rejection risk, or comparing against known attack patterns.
 
+For Web2, OSS, native-code, parser, API, and general source-code audits, treat `/home/dinesh/.codex/knowledge/source-code-audit/` as the source-code audit memory. Search it when the target includes parsers, import/export logic, generated reports, auth flows, admin dashboards, update systems, package metadata, unsafe memory handling, or other matching source-code bug classes.
+
 Use the knowledge base for:
 
 - bug patterns and report patterns
@@ -611,6 +613,8 @@ Use `/home/dinesh/.codex/audit-reference.md` for common skill-routing examples w
 Reference-only offensive/AppSec skills are not part of the default smart-contract audit toolbox. Do not use them during Solidity/Vyper/Solana/Cosmos/Web3 contest audits unless the user explicitly asks for AppSec/red-team/source-code methodology or the target is clearly a non-smart-contract application.
 
 For Web2/source-code AppSec audits, Snyk, Codex Security, and offensive reference skills are lead generators only after scope and safe harbor are understood. Never submit a finding only because a scanner flagged a CWE, package, line, or severity.
+
+For Web2/source-code audits, search `/home/dinesh/.codex/knowledge/source-code-audit/` before killing or reporting candidates in matching bug classes.
 
 Use `/home/dinesh/.codex/audit-reference.md` for the expanded offensive-skills, Snyk, and Codex Security command guidance when the task is Web2/source-code AppSec.
 
