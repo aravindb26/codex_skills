@@ -50,6 +50,7 @@ Purpose:
 | SCSVS | <https://github.com/pashov/SCSVS> | Reference checklist, use selectively. |
 | AuditVault | <https://github.com/Auditware/AuditVault> | Imported low-noise sector checklists. |
 | Crypto Training hacks | <https://crypto.training/hacks/> | Imported compact exploit-pattern stubs. |
+| JohnnyTime / Blockchain Sec Academy | <https://johnnytime.xyz/dashboard/> | Web3 smart-contract hacking training/reference; use only as user-authorized learning context and distill personal notes, do not import private course content. |
 
 ## Public Report And Exploit Feeds
 
