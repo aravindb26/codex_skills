@@ -72,6 +72,7 @@ Purpose:
 | Anthropic Cybersecurity Skills | <https://github.com/mukul975/Anthropic-Cybersecurity-Skills> | Filtered Web2/source-code/SCA/API/mobile/supply-chain reference. |
 | OpenAI Codex Security | <https://github.com/openai/codex-security> | Web2/source-code scanner/reference and lead generator. |
 | Snyk | <https://snyk.io/> | Web2/source-code scanner and lead generator. |
+| Arcanum AI Security Resource Hub | <https://arcanum-sec.github.io/ai-sec-resources/> | AI/LLM AppSec reference for prompt injection, agent/RAG/MCP security, and AI bounty/lab discovery; reference only, not a default Web3 audit skill. |
 | Bugcrowd RL environments article | <https://www.prnewswire.com/news-releases/bugcrowd-launches-reinforcement-learning-environments-to-help-ai-models-learn-real-world-security-skills-302778829.html> | Security AI training environment reference. |
 
 ## AI Audit And Research References
