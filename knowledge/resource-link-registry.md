@@ -61,6 +61,7 @@ Purpose:
 | Rekt News Yearn article | <https://rekt.news/yearn-rekt3> | Incident lesson source. |
 | KyberSwap post-mortem | <https://100proof.org/kyberswap-post-mortem.html> | CLMM/math exploit lesson source. |
 | Raydium bug fix review | <https://immunefi.com/blog/all/raydium-liquidity-drain-bug-fix-review/> | Solana/LP minting lesson source. |
+| Z.ai CVD Ledger | <https://cvd.z.ai/> | OSS/Web2/source-code vulnerability disclosure ledger; reference only, useful when auditing matching projects or bug classes. |
 
 ## Web2, Source-Code, And Offensive Reference
 
