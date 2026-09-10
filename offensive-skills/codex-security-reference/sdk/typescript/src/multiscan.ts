@@ -1,10 +1,12 @@
 import { execFile as execFileCallback } from "node:child_process";
 import { randomUUID } from "node:crypto";
+import { realpathSync } from "node:fs";
 import {
   lstat,
   mkdir,
   open,
   readFile,
+  readdir,
   realpath,
   rename,
   rm,
@@ -20,10 +22,15 @@ import Papa from "papaparse";
 import type { CodexSecurity } from "./api.js";
 import type { CodexSecurityConfig } from "./config.js";
 import type { ScanCost } from "./cost.js";
-import { safeErrorMessage, ScanCostLimitExceededError } from "./errors.js";
+import {
+  OutputDirectoryNotEmptyError,
+  safeErrorMessage,
+  ScanCostLimitExceededError,
+} from "./errors.js";
 import type { CoverageDocument } from "./models.js";
-import { requireSecureOutputAncestry } from "./runtime.js";
+import { requireSecureOutputAncestry, validateOutputDir } from "./runtime.js";
 import type { ScanMode } from "./targets.js";
+import type { ScanResult } from "./result.js";
 import { resolveTrustedExecutable } from "./trusted-executable.js";
 
 const execFile = promisify(execFileCallback);
@@ -35,6 +42,8 @@ const REQUIRED_ARTIFACTS = [
 ];
 const LOCK_LEASE_MS = 30_000;
 const LOCK_HEARTBEAT_MS = 5_000;
+const WINDOWS_DEVICE_PATH_NAME =
+  /^(?:con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/iu;
 
 interface MultiscanTask {
   id: string;
@@ -63,8 +72,12 @@ export interface MultiscanOptions {
   workers: number;
   mode: ScanMode;
   maxAttempts: number;
+  recoverScan?(
+    scanDir: string,
+  ): Promise<Pick<ScanResult, "coverage" | "cost"> | undefined>;
   maxCostUsd?: number;
   scanPrompt?: string;
+  validationPrompt?: string;
   postScanPrompt?: string;
   config: CodexSecurityConfig;
   createSecurity(
@@ -108,7 +121,23 @@ export async function runMultiscan(
     dirname(resolve(options.inputPath)),
     options.mode,
   );
+  if (
+    options.validationPrompt !== undefined &&
+    tasks.some((task) => task.mode === "deep")
+  ) {
+    throw new Error("Custom validation is not supported for Deep scans.");
+  }
   const requestedOutput = resolve(options.outputDir);
+  if (options.recoverScan !== undefined) {
+    const manifest = await lstat(join(requestedOutput, "manifest.json")).catch(
+      (error: NodeJS.ErrnoException) => {
+        if (error.code !== "ENOENT") throw error;
+        return undefined;
+      },
+    );
+    if (!manifest?.isFile())
+      throw new Error("Bulk recovery requires an existing campaign manifest.");
+  }
   const output = await ensureOutputDirectory(requestedOutput);
   await requireSecureOutputAncestry(output);
   const unlock = await acquireLock(output);
@@ -131,13 +160,29 @@ async function runCampaign(
   await ensureOutputDirectory(join(output, "checkouts"));
   await ensureOutputDirectory(join(output, "artifacts"));
   await ensureManifest(join(output, "manifest.json"), tasks, options);
-  const receipts = await readReceipts(ledger);
+  const receipts = await readReceipts(
+    ledger,
+    options.recoverScan !== undefined,
+  );
   const pending: MultiscanTask[] = [];
   let completed = 0;
   let incomplete = 0;
+  let untouched = 0;
   for (const task of tasks) {
     const receipt = receipts.get(task.id.toLowerCase());
     if (receipt === undefined) {
+      if (options.recoverScan !== undefined) {
+        const attempts = await readdir(
+          join(output, "artifacts", task.id),
+        ).catch((error: NodeJS.ErrnoException) => {
+          if (error.code !== "ENOENT") throw error;
+          return [];
+        });
+        if (!attempts.some((name) => /^attempt-[1-9][0-9]*$/u.test(name))) {
+          untouched += 1;
+          continue;
+        }
+      }
       pending.push(task);
       continue;
     }
@@ -182,7 +227,7 @@ async function runCampaign(
     }
     pending.push(task);
   }
-  const skipped = completed + incomplete;
+  const skipped = completed + incomplete + untouched;
   if (pending.length === 0) {
     return {
       total: tasks.length,
@@ -204,69 +249,123 @@ async function runCampaign(
       const task = pending[next++];
       if (task === undefined) return;
       let attempt = receipts.get(task.id.toLowerCase())?.attempt ?? 0;
+      const artifactRoot = join(output, "artifacts", task.id);
+      if (options.recoverScan !== undefined) {
+        await ensureOutputDirectory(artifactRoot);
+        for (const name of await readdir(artifactRoot)) {
+          const match = /^attempt-([1-9][0-9]*)$/u.exec(name);
+          if (match && Number.isSafeInteger(Number(match[1])))
+            attempt = Math.max(attempt, Number(match[1]));
+        }
+      }
       for (let retry = 0; retry < options.maxAttempts; retry += 1) {
         options.signal?.throwIfAborted();
-        attempt += 1;
-        const checkout = join(output, "checkouts", task.id);
-        const scanDir = join(
-          output,
-          "artifacts",
-          task.id,
-          `attempt-${attempt}`,
-        );
-        const progress = { repository: task.id, attempt };
-        notifyProgress(options, { ...progress, status: "started" });
+        if (options.recoverScan === undefined) attempt += 1;
+        let scanDir = join(artifactRoot, `attempt-${attempt}`);
+        let checkout: string | undefined;
+        let attemptedResume = false;
         let failure: string | undefined;
         let warning: string | undefined;
         let coverage: CoverageDocument["completeness"] | undefined;
         let cost: Readonly<ScanCost> | null = null;
         let exhaustedBudget = false;
+        let requiresRecovery = false;
         try {
-          await ensureOutputDirectory(dirname(scanDir));
-          await rm(checkout, { recursive: true, force: true });
-          await mkdir(checkout, { mode: 0o700 });
-          await checkoutRevision(
-            task,
-            checkout,
-            options.signal,
-            options.githubHost,
-          );
-          if (task.scope !== undefined) {
-            const scoped = await realpath(join(checkout, task.scope));
-            const outside = relative(await realpath(checkout), scoped);
-            if (
-              outside === ".." ||
-              outside.startsWith(`..${sep}`) ||
-              isAbsolute(outside)
-            ) {
-              throw new Error("Multiscan scope escapes its repository.");
+          await ensureOutputDirectory(artifactRoot);
+          let result: Pick<ScanResult, "coverage" | "cost"> | undefined;
+          if (options.recoverScan !== undefined && retry === 0 && attempt > 0) {
+            const existing = await lstat(scanDir).catch(
+              (error: NodeJS.ErrnoException) => {
+                if (error.code !== "ENOENT") throw error;
+                return undefined;
+              },
+            );
+            if (existing !== undefined) {
+              await ensureOutputDirectory(scanDir);
+              attemptedResume = true;
+              notifyProgress(options, {
+                repository: task.id,
+                attempt,
+                status: "started",
+              });
+              result = await options.recoverScan(scanDir);
+              attemptedResume = result !== undefined;
             }
           }
-          const scanPrompt = [options.scanPrompt?.trim(), task.prompt]
-            .filter(Boolean)
-            .join("\n\n");
-          const result = await security.run(checkout, {
-            ...(task.scope === undefined ? {} : { target: [task.scope] }),
-            ...(options.knowledgeBasePaths?.length
-              ? { knowledgeBasePaths: options.knowledgeBasePaths }
-              : {}),
-            mode: task.mode,
-            outputDir: scanDir,
-            ...(scanPrompt ? { scanPrompt } : {}),
-            ...(options.postScanPrompt === undefined
-              ? {}
-              : { postScanPrompt: options.postScanPrompt }),
-            ...(options.maxCostUsd === undefined
-              ? {}
-              : { maxCostUsd: options.maxCostUsd }),
-            onWarning: (warning) =>
-              notifyProgress(options, {
-                ...progress,
-                status: "started",
-                warning,
-              }),
-            ...(options.signal === undefined ? {} : { signal: options.signal }),
-          });
+          if (result === undefined) {
+            if (options.recoverScan !== undefined) attempt += 1;
+            scanDir = join(artifactRoot, `attempt-${attempt}`);
+            notifyProgress(options, {
+              repository: task.id,
+              attempt,
+              status: "started",
+            });
+            if (options.recoverScan !== undefined) {
+              const checkoutRoot = await ensureOutputDirectory(
+                join(output, "recovery-checkouts"),
+              );
+              const taskRoot = await ensureOutputDirectory(
+                join(checkoutRoot, task.id),
+              );
+              checkout = join(taskRoot, `attempt-${attempt}`);
+              // Reserve both paths before starting work. An interrupted attempt is never replaced.
+              await mkdir(scanDir, { mode: 0o700 });
+              await mkdir(checkout, { mode: 0o700 });
+            } else {
+              await validateOutputDir(scanDir);
+              checkout = join(output, "checkouts", task.id);
+              await rm(checkout, { recursive: true, force: true });
+              await mkdir(checkout, { mode: 0o700 });
+            }
+            await checkoutRevision(
+              task,
+              checkout,
+              options.signal,
+              options.githubHost,
+            );
+            if (task.scope !== undefined) {
+              const scoped = await realpath(join(checkout, task.scope));
+              const outside = relative(await realpath(checkout), scoped);
+              if (
+                outside === ".." ||
+                outside.startsWith(`..${sep}`) ||
+                isAbsolute(outside)
+              ) {
+                throw new Error("Multiscan scope escapes its repository.");
+              }
+            }
+            const scanPrompt = [options.scanPrompt?.trim(), task.prompt]
+              .filter(Boolean)
+              .join("\n\n");
+            result = await security.run(checkout, {
+              ...(task.scope === undefined ? {} : { target: [task.scope] }),
+              ...(options.knowledgeBasePaths?.length
+                ? { knowledgeBasePaths: options.knowledgeBasePaths }
+                : {}),
+              mode: task.mode,
+              outputDir: scanDir,
+              ...(scanPrompt ? { scanPrompt } : {}),
+              ...(options.validationPrompt === undefined
+                ? {}
+                : { validationPrompt: options.validationPrompt }),
+              ...(options.postScanPrompt === undefined
+                ? {}
+                : { postScanPrompt: options.postScanPrompt }),
+              ...(options.maxCostUsd === undefined
+                ? {}
+                : { maxCostUsd: options.maxCostUsd }),
+              onWarning: (warning) =>
+                notifyProgress(options, {
+                  repository: task.id,
+                  attempt,
+                  status: "started",
+                  warning,
+                }),
+              ...(options.signal === undefined
+                ? {}
+                : { signal: options.signal }),
+            });
+          }
           cost = result.cost;
           coverage = result.coverage.completeness;
           if (coverage !== "complete") {
@@ -283,9 +382,16 @@ async function runCampaign(
             cost = error.cost;
             exhaustedBudget = true;
           }
-          failure = safeErrorMessage(error);
+          requiresRecovery = error instanceof OutputDirectoryNotEmptyError;
+          failure = requiresRecovery
+            ? safeErrorMessage(
+                `Bulk attempt directory is not empty: ${scanDir}. Existing artifacts and checkout were preserved. Run the same bulk-scan command with --recover to recover interrupted scans or retry failed scans in new attempt directories.`,
+              )
+            : safeErrorMessage(error);
         } finally {
-          await rm(checkout, { recursive: true, force: true });
+          if (options.recoverScan === undefined && checkout !== undefined) {
+            await rm(checkout, { recursive: true, force: true });
+          }
         }
         const status =
           failure !== undefined
@@ -306,8 +412,16 @@ async function runCampaign(
             ...(warning === undefined ? {} : { warning }),
           })}\n`,
         );
+        if (
+          options.recoverScan !== undefined &&
+          failure === undefined &&
+          checkout !== undefined
+        ) {
+          await rm(checkout, { recursive: true, force: true });
+        }
         notifyProgress(options, {
-          ...progress,
+          repository: task.id,
+          attempt,
           status,
           ...(failure === undefined ? {} : { error: failure }),
           ...(warning === undefined ? {} : { warning }),
@@ -317,7 +431,7 @@ async function runCampaign(
           else incomplete += 1;
           break;
         }
-        if (exhaustedBudget) {
+        if (exhaustedBudget || attemptedResume || requiresRecovery) {
           failed += 1;
           break;
         }
@@ -369,8 +483,18 @@ async function ensureOutputDirectory(path: string): Promise<string> {
   if (metadata?.isSymbolicLink()) {
     throw new Error("Multiscan output directories must not be symbolic links.");
   }
-  await mkdir(path, { recursive: true, mode: 0o700 });
-  const canonical = await realpath(path);
+  if (metadata !== undefined && !metadata.isDirectory()) {
+    throw new Error("Multiscan output paths must be directories.");
+  }
+  let prepared = path;
+  if (metadata === undefined) {
+    prepared =
+      process.platform === "win32"
+        ? await canonicalWindowsCreationPath(path)
+        : path;
+    await mkdir(prepared, { recursive: true, mode: 0o700 });
+  }
+  const canonical = await realpath(prepared);
   const directory = await lstat(canonical, { bigint: true });
   if (
     metadata !== undefined &&
@@ -391,6 +515,20 @@ async function ensureOutputDirectory(path: string): Promise<string> {
     );
   }
   return canonical;
+}
+
+async function canonicalWindowsCreationPath(path: string): Promise<string> {
+  let ancestor = dirname(path);
+  for (;;) {
+    try {
+      return resolve(await realpath(ancestor), relative(ancestor, path));
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+      const parent = dirname(ancestor);
+      if (parent === ancestor) throw error;
+      ancestor = parent;
+    }
+  }
 }
 
 async function appendReceipt(path: string, receipt: string): Promise<void> {
@@ -594,7 +732,7 @@ async function ensureManifest(
   tasks: MultiscanTask[],
   options: Pick<
     MultiscanOptions,
-    "scanPrompt" | "postScanPrompt" | "maxCostUsd"
+    "scanPrompt" | "validationPrompt" | "postScanPrompt" | "maxCostUsd"
   >,
 ): Promise<void> {
   const expected = `${JSON.stringify(
@@ -604,6 +742,9 @@ async function ensureManifest(
       ...(options.scanPrompt === undefined
         ? {}
         : { scanPrompt: options.scanPrompt }),
+      ...(options.validationPrompt === undefined
+        ? {}
+        : { validationPrompt: options.validationPrompt }),
       ...(options.postScanPrompt === undefined
         ? {}
         : { postScanPrompt: options.postScanPrompt }),
@@ -628,6 +769,7 @@ async function ensureManifest(
 
 async function readReceipts(
   path: string,
+  preserveInterrupted = false,
 ): Promise<Map<string, MultiscanReceipt>> {
   let contents: string;
   try {
@@ -639,6 +781,12 @@ async function readReceipts(
   const lines = contents.split("\n");
   if (!contents.endsWith("\n")) {
     const partial = lines.pop()!;
+    if (preserveInterrupted) {
+      await writeFile(`${path}.interrupted-${randomUUID()}`, partial, {
+        flag: "wx",
+        mode: 0o600,
+      });
+    }
     await truncate(
       path,
       Buffer.byteLength(contents) - Buffer.byteLength(partial),
@@ -721,7 +869,7 @@ function parseInventory(
     if (
       !/^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$/u.test(id) ||
       id.endsWith(".") ||
-      /^(?:con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/iu.test(id)
+      WINDOWS_DEVICE_PATH_NAME.test(id)
     ) {
       throw new Error("Multiscan task IDs must be safe, unique path names.");
     }
@@ -743,6 +891,7 @@ function parseInventory(
       (isAbsolute(scope) ||
         scope.includes("\\") ||
         scope.split("/").includes("..") ||
+        (process.platform === "win32" && scope.includes(":")) ||
         scope.includes("\0"))
     ) {
       throw new Error("Multiscan scope must stay inside its repository.");
@@ -765,7 +914,15 @@ function normalizeRepository(repository: string, directory: string): string {
     );
   }
   if (/^[^@\s/:]+@[^:\s/]+:.+$/u.test(repository)) return repository;
-  if (!repository.includes("://")) return resolve(directory, repository);
+  if (!repository.includes("://")) {
+    const path = resolve(directory, repository);
+    if (process.platform !== "win32") return path;
+    try {
+      return realpathSync.native(path);
+    } catch {
+      return path;
+    }
+  }
   let url: URL;
   try {
     url = new URL(repository);

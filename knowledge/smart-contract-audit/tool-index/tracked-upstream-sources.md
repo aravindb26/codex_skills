@@ -1,6 +1,6 @@
 # Tracked Upstream Sources
 
-Last reviewed: 2026-08-19
+Last reviewed: 2026-09-10
 
 This is the canonical URL registry for Codex audit tooling, knowledge feeds, and reference libraries maintained in this workspace. It intentionally excludes incidental article/report links already stored with their individual knowledge cards.
 

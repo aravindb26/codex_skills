@@ -1,4 +1,4 @@
-import { formatUsd, type ScanCost } from "./cost.js";
+import { formatUsd, type ScanCost } from "./cost-model.js";
 
 /** Returns the original error message without altering its contents. */
 export function errorMessage(error: unknown): string {
@@ -28,6 +28,32 @@ export class CodexSecurityError extends Error {
   public constructor(message: string, options?: ErrorOptions) {
     super(message, options);
     this.name = new.target.name;
+  }
+}
+
+export type DeduplicationReviewStage = "screening" | "pair-review";
+export type DeduplicationReviewFailureCategory =
+  | "validation"
+  | "no-submission"
+  | "model"
+  | "transport";
+
+export interface DeduplicationReviewFailureMetadata {
+  stage: DeduplicationReviewStage;
+  model: string;
+  category: DeduplicationReviewFailureCategory;
+  attempts: number;
+  reason: string;
+}
+
+export class DeduplicationReviewError extends CodexSecurityError {
+  public constructor(
+    public readonly metadata: Readonly<DeduplicationReviewFailureMetadata>,
+    displayReason: string = metadata.reason,
+  ) {
+    super(
+      `Codex did not complete a validated deduplication review. Findings are unchanged; retry the command. Reason: ${displayReason}`,
+    );
   }
 }
 

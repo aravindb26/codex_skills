@@ -1,8 +1,14 @@
 import { createReadStream } from "node:fs";
-import { basename, dirname, isAbsolute, join, relative, sep } from "node:path";
+import { basename, dirname, join, relative } from "node:path";
 import { createInterface } from "node:readline";
 import { sessionFiles } from "./cost.js";
 import { CodexSecurityError } from "./errors.js";
+import type { JsonObject } from "./config.js";
+import {
+  isScanArtifactDirectory,
+  sessionParentThreadId,
+  sessionStartedAt,
+} from "./scan-sessions.js";
 
 interface ScanLogOptions {
   scanId: string;
@@ -10,6 +16,37 @@ interface ScanLogOptions {
   codexHome: string;
   scanDirectory?: string;
   completedAt?: string | null;
+}
+
+export type ScanLogSource = JsonObject & {
+  scanId: string;
+  continuationThreadId?: string;
+  mode?: string;
+  scanDir?: string;
+  progress?: { status?: string; updatedAt?: string };
+};
+
+export function readSavedScanLogs(scan: ScanLogSource, codexHome: string) {
+  const threadId = scan.continuationThreadId;
+  if (!threadId) {
+    throw new CodexSecurityError(
+      `No session is associated with scan ${scan.scanId}.`,
+    );
+  }
+  return readScanLogs({
+    scanId: scan.scanId,
+    threadId,
+    codexHome,
+    scanDirectory: scan.mode === "deep" ? scan.scanDir : undefined,
+    completedAt:
+      scan.progress?.status === "running"
+        ? null
+        : scan.progress?.status === "complete" ||
+            scan.progress?.status === "failed" ||
+            scan.progress?.status === "canceled"
+          ? scan.progress.updatedAt ?? ""
+          : "",
+  });
 }
 
 interface SessionLog {
@@ -20,9 +57,8 @@ interface SessionLog {
   path: string;
 }
 
-export async function readScanLogs(options: ScanLogOptions) {
-  const logs = new Map<string, SessionLog>();
-  for await (const path of sessionFiles(join(options.codexHome, "sessions"))) {
+async function* scanSessions(codexHome: string): AsyncGenerator<SessionLog> {
+  for await (const path of sessionFiles(join(codexHome, "sessions"))) {
     for await (const first of sessionEvents(path)) {
       if (first["type"] !== "session_meta" || !isRecord(first["payload"])) {
         break;
@@ -30,26 +66,33 @@ export async function readScanLogs(options: ScanLogOptions) {
       const metadata = first["payload"];
       const threadId = metadata["id"];
       if (typeof threadId !== "string") break;
-      const source = metadata["source"];
-      const subagent = isRecord(source) ? source["subagent"] : undefined;
-      const spawn = isRecord(subagent) ? subagent["thread_spawn"] : undefined;
-      const parent =
-        metadata["parent_thread_id"] ??
-        (isRecord(spawn) ? spawn["parent_thread_id"] : undefined);
-      const startedAt =
-        typeof metadata["timestamp"] === "string"
-          ? Date.parse(metadata["timestamp"])
-          : Number.NaN;
-      logs.set(threadId, {
+      yield {
         threadId,
-        parentThreadId: typeof parent === "string" ? parent : null,
-        startedAt: Number.isFinite(startedAt) ? startedAt : null,
+        parentThreadId: sessionParentThreadId(metadata),
+        startedAt: sessionStartedAt(metadata["timestamp"]),
         workingDirectory:
           typeof metadata["cwd"] === "string" ? metadata["cwd"] : null,
         path,
-      });
+      };
       break;
     }
+  }
+}
+
+export async function findScanSession(
+  codexHome: string,
+  threadId: string,
+): Promise<SessionLog | null> {
+  for await (const session of scanSessions(codexHome)) {
+    if (session.threadId === threadId) return session;
+  }
+  return null;
+}
+
+export async function readScanLogs(options: ScanLogOptions) {
+  const logs = new Map<string, SessionLog>();
+  for await (const session of scanSessions(options.codexHome)) {
+    logs.set(session.threadId, session);
   }
 
   const root = logs.get(options.threadId);
@@ -149,20 +192,7 @@ function belongsToScan(
   }
 
   for (const directoryRoot of roots) {
-    const artifacts = join(directoryRoot, "artifacts");
-    if (relative(artifacts, session.workingDirectory) === "") return true;
-    const workers = join(artifacts, "deep_discovery", "workers");
-    const directory = relative(workers, session.workingDirectory);
-    const components = directory.split(sep);
-    if (
-      !isAbsolute(directory) &&
-      components.length === 2 &&
-      components[0] !== ".." &&
-      relative(
-        join(workers, components[0]!, "output"),
-        session.workingDirectory,
-      ) === ""
-    ) {
+    if (isScanArtifactDirectory(directoryRoot, session.workingDirectory)) {
       return true;
     }
   }
