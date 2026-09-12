@@ -1,6 +1,6 @@
 # Tracked Upstream Sources
 
-Last reviewed: 2026-09-10
+Last reviewed: 2026-09-13
 
 This is the canonical URL registry for Codex audit tooling, knowledge feeds, and reference libraries maintained in this workspace. It intentionally excludes incidental article/report links already stored with their individual knowledge cards.
 
@@ -38,6 +38,13 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 | Solidity Auditor Private V3 | <https://github.com/0xfirefistt/solidity-auditor-private> | Private upstream for the active V3 Solidity auditor. |
 | Dark Navy Web3 Skills | <https://github.com/DarkNavySecurity/web3-skills> | Source for `client-auditor` and `exploit-investigator`; use for blockchain nodes, clients, and incident analysis, not ordinary contract-audit default routing. |
 | DeFi Builder Skills | <https://github.com/melanke/defi-builder-skills> | Track greenfield DeFi protocol discovery and spec-driven development workflows; not default audit hunting. |
+
+## Arsen Workflow References
+
+| Source | URL | Local policy |
+|---|---|---|
+| 0xSimao attack lenses | <https://github.com/0xsimao/0xsimao-ai/tree/3f81e5803174182a7db07eca87849d2b3d571113/references/attack-lenses> | Conditional reference for Solidity/EVM attacker lenses; use only distinct lenses not already covered locally. |
+| PantherAudits Move DeFi patterns | <https://github.com/pantheraudits/move-auditor/tree/6e61bdbba66bbc46b00ae0c0d3cba67dfbb7d519/defi> | Conditional reference for Move/Sui/Aptos DeFi audits; do not load for Solidity/EVM audits or duplicate local patterns. |
 
 ## Pinned Review Snapshots
 

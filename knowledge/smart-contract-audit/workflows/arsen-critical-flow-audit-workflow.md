@@ -77,6 +77,11 @@ Only after the system map and critical-flow understanding exist:
 - Analyze one bounded module, flow, or hypothesis at a time rather than feeding the whole repository into one prompt.
 - Use AI for navigation, decomposition, pattern generation, and tooling suggestions; verify every material claim against source code and runtime evidence.
 
+Reference bug databases and attacker lenses:
+- For Solidity/EVM audits, consult the pinned [0xSimao attack lenses](https://github.com/0xsimao/0xsimao-ai/tree/3f81e5803174182a7db07eca87849d2b3d571113/references/attack-lenses), especially for accounting desynchronization, share/exchange-rate errors, temporal cohorts, liquidation solvency, cross-chain state, rounding, ordering, access trust, integrations, edge states, and flow completeness.
+- For Move, Sui, or Aptos DeFi audits, consult the pinned [PantherAudits DeFi patterns](https://github.com/pantheraudits/move-auditor/tree/6e61bdbba66bbc46b00ae0c0d3cba67dfbb7d519/defi) for lending, liquidation, math precision, oracles, signatures, slippage, staking, and auction checks.
+- Use these repositories as conditional hypothesis and attacker-lens references. Do not bulk-load them, treat them as final authority, or duplicate patterns already covered by local skills and knowledge files.
+
 The quality of the attack-pattern database and the order of the passes affect coverage. Running scanners or broad AI hunting before understanding the critical flows creates validation noise and can hide the important paths.
 
 ## Stage 5: Protocol-Specific Deep Pass
