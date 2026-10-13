@@ -99,6 +99,10 @@ After resolving `scope_subpath`, set `finding_scope_root="${scope_subpath:-.}"`.
 
 **Entry:** Phase 0 complete. **Exit:** `has_unsafe`, `has_ffi`, `has_concurrency`, `has_async`, `has_packed_repr`, `has_fs_io` flags determined. Abort with a clear message if no `*.rs` files exist under `${finding_scope_root}`.
 
+First confirm `uv` is present (`command -v uv`). The helper scripts in later phases run through
+it; if it is unavailable, abort and tell the user to install `uv` rather than running an
+unreproducible fallback.
+
 Probe within `${finding_scope_root:-.}` with the `Bash` commands below (non-empty output ⇒ flag true). The dedicated `Grep`/`Glob` tools are unavailable to this orchestrator because it holds `Bash` — use `grep`/`rg`/`find` via `Bash`. (The probe regexes use `\s`/`\b`; if your `grep` lacks GNU `\s` support, run them with `rg -uu` — which honors `\s` and still searches ignored files — or, if `rg` is not installed either, replace `\s`→`[[:space:]]` and drop `\b`. Widening is safe here: a false-positive capability flag only adds a harmless extra worker, whereas a missed match would skip a whole pass.)
 
 ```bash
@@ -168,7 +172,7 @@ Write `${output_dir}/context.md` with: YAML frontmatter (`threat_model`, `severi
 Selection, filtering, path resolution, and spawn-prompt rendering are **delegated to the script** to keep spawn prompts complete and consistent:
 
 ```bash
-python3 "${RUST_REVIEW_PLUGIN_ROOT}/scripts/build_run_plan.py" \
+uv run --no-project "${RUST_REVIEW_PLUGIN_ROOT}/scripts/build_run_plan.py" \
   --plugin-root "${RUST_REVIEW_PLUGIN_ROOT}" --output-dir "${output_dir}" \
   --threat-model "${threat_model}" --severity-filter "${severity_filter}" \
   --scope-subpath "${finding_scope_root:-.}" --context-roots "${context_roots:-.}" \
@@ -275,18 +279,18 @@ Then re-spawn each `pending` retryable with `attempt <= 2` in one parallel block
 For every provisional `complete:` cluster, validate the worker-owned shard, coverage file, coverage rows, filed IDs, and claimed finding count against `plan.json` before marking the task completed. Run one command per completed worker, or validate multiple workers in one command. Both claimed-count forms below are valid; do not pass bare `worker-N=N` values without either grouping them after a `--claimed-count` flag or repeating the flag.
 
 ```bash
-python3 "${RUST_REVIEW_PLUGIN_ROOT}/scripts/validate_artifacts.py" "${output_dir}/plan.json" \
+uv run --no-project "${RUST_REVIEW_PLUGIN_ROOT}/scripts/validate_artifacts.py" "${output_dir}/plan.json" \
   --worker worker-N --claimed-count worker-N=<claimed_count_from_complete_line>
 ```
 
 ```bash
-python3 "${RUST_REVIEW_PLUGIN_ROOT}/scripts/validate_artifacts.py" "${output_dir}/plan.json" \
+uv run --no-project "${RUST_REVIEW_PLUGIN_ROOT}/scripts/validate_artifacts.py" "${output_dir}/plan.json" \
   --worker worker-1 --worker worker-2 \
   --claimed-count worker-1=0 worker-2=3
 ```
 
 ```bash
-python3 "${RUST_REVIEW_PLUGIN_ROOT}/scripts/validate_artifacts.py" "${output_dir}/plan.json" \
+uv run --no-project "${RUST_REVIEW_PLUGIN_ROOT}/scripts/validate_artifacts.py" "${output_dir}/plan.json" \
   --worker worker-1 --worker worker-2 \
   --claimed-count worker-1=0 --claimed-count worker-2=3
 ```
@@ -354,7 +358,7 @@ Each judge's full protocol is its system prompt (`agents/rust-review-{dedup,fp}-
 **Entry:** fp-judge returned, or the run aborted early. **Exit:** `${output_dir}/REPORT.sarif` and `${output_dir}/REPORT.md` both exist.
 
 ```bash
-test -d "${output_dir}/findings" && python3 "${RUST_REVIEW_PLUGIN_ROOT}/scripts/generate_sarif.py" "${output_dir}"
+test -d "${output_dir}/findings" && uv run --no-project "${RUST_REVIEW_PLUGIN_ROOT}/scripts/generate_sarif.py" "${output_dir}"
 ```
 
 Run the SARIF generator unconditionally whenever `findings/` exists — it is idempotent (full overwrite), emits `results: []` for zero-survivor runs, and handles partial runs (findings without `fp_verdict` are emitted as `LIKELY_TP`, **exempt from the `severity_filter`** since their severity was never judge-validated, and marked `unjudged: true` / `severity_validated: false` with an `[UNVALIDATED SEVERITY — not judged]` message prefix — so an inferred severity guess can never silently drop them under a `medium`/`high` filter). Always overwriting protects against an fp-judge that crashed mid-write and left a corrupt `REPORT.sarif` on disk.

@@ -7,6 +7,7 @@ This directory is passive knowledge, not an active skill pack. Search it when a 
 ## Directory Guide
 
 - `bug-patterns/`: reusable vulnerability patterns distilled from public reports, incidents, rejected findings, and audit lessons.
+- `reporting/`: reusable triager-facing report-writing and reproduction guidance.
 
 ## Usage Rule
 
@@ -17,6 +18,8 @@ Do not bulk-load every file. During a source-code audit:
 - open only the matching notes
 - convert each matched note into concrete checks against the current code
 - treat these notes as lead generators, not proof
+
+Before drafting a bounty submission, read the matching `reporting/` guidance and compare it with the program's form and any triager feedback. Program-specific requirements take precedence.
 
 ## Promotion Rule
 

@@ -191,11 +191,11 @@ selection itself matters and you want to see and edit the list first.
 
 ```bash
 # run-all
-uv run {baseDir}/scripts/merge_sarif.py "$OUTPUT_DIR/raw" "$OUTPUT_DIR/results/results.sarif" \
+uv run --no-project {baseDir}/scripts/merge_sarif.py "$OUTPUT_DIR/raw" "$OUTPUT_DIR/results/results.sarif" \
   --scans "$OUTPUT_DIR/scans.json"
 
 # important-only, once the JSON post-filter has run over every file in raw/
-uv run {baseDir}/scripts/merge_sarif.py "$OUTPUT_DIR/raw" "$OUTPUT_DIR/results/results.sarif" \
+uv run --no-project {baseDir}/scripts/merge_sarif.py "$OUTPUT_DIR/raw" "$OUTPUT_DIR/results/results.sarif" \
   --important --scans "$OUTPUT_DIR/scans.json"
 ```
 
@@ -259,12 +259,13 @@ read from the processes and the JSON they wrote.
 - [ ] User explicitly approved the scan plan (Step 3 gate passed)
 - [ ] `run-scans.sh` exited 0 and wrote `$OUTPUT_DIR/scans.json`
 - [ ] `failed` and `skipped` from `scans.json` are empty, or listed in the report
+- [ ] Scans marked `partial` in `scans.json` are none, or listed in the report — they ran with some of their rules failing to compile
 - [ ] Every `semgrep` command used `--metrics=off`
 - [ ] Approved plan written to `$OUTPUT_DIR/rulesets.json` at the Step 3 gate, and passed to
       the scanner unchanged
 - [ ] `coveredNothing` from `scans.json` is empty, or listed in the report
-- [ ] `oversized` from `scans.json` is empty, or listed in the report; files above
-      `maxTargetBytes` were not opened and are coverage gaps, not clean results
+- [ ] `oversized` from `scans.json` is empty, or listed in the report — those files exceed
+      `--max-target-bytes` and no ruleset opened them
 - [ ] Raw per-scan outputs stored in `$OUTPUT_DIR/raw/`
 - [ ] `results.sarif` exists in `$OUTPUT_DIR/results/` and is valid JSON
 - [ ] Important-only mode: post-filter applied before merge, merge run with `--important`, unfiltered results preserved in `raw/`

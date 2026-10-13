@@ -1,6 +1,6 @@
 # Resource Link Registry
 
-Last updated: 2026-08-19
+Last updated: 2026-10-13
 
 Purpose:
 - Preserve useful URLs discussed while building this Codex audit setup.
@@ -44,6 +44,7 @@ Purpose:
 | K.I.T | <https://github.com/J4X-Security/K.I.T> | Known-issue deduplication/triage workflow. |
 | Foundry mainnet-fork PoC | <https://github.com/cholakovvv/foundry-poc-mainnet-fork> | Foundry exploit-reproduction guidance. |
 | Solana token extensions security | <https://github.com/zzzuhaibmohd/solana-token-extensions-security> | Token-2022 Solana audit patterns. |
+| zkSecurity ZK Skills | <https://github.com/zksecurity/zk-skills> | Conditional Circom/ZK circuit audit skill. |
 | Dark Navy Web3 skills | <https://github.com/DarkNavySecurity/web3-skills> | Blockchain node/client auditing and incident-analysis reference. |
 | DeFi Builder Skills | <https://github.com/melanke/defi-builder-skills> | DeFi protocol discovery/spec-driven workflows. |
 | Weird ERC20 | <https://github.com/d-xo/weird-erc20> | Canonical weird-token integration reference. |

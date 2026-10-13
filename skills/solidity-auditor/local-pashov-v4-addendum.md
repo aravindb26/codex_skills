@@ -56,3 +56,8 @@ source-only lead into a confirmed finding.
 The upstream shell assembler, Claude-specific agent protocol, ToolSearch calls, and AskUserQuestion
 interface are not copied here. Use the Codex coverage ledger, candidate-verification card, audit-gate
 receipt, and normal `apply_patch`/terminal workflow as the equivalent controls.
+
+The upstream default-discovery exclusions never override the current program's explicit scope.
+If interfaces, deployment scripts, mocks, fixtures, tests, generated bindings, or another file
+class is in scope, include it in the coverage ledger and read it; exclude only what the program
+actually excludes or what the current workflow proves is out of scope.

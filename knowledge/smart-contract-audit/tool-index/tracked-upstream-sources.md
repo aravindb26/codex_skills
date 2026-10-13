@@ -35,6 +35,7 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 | K.I.T | <https://github.com/J4X-Security/K.I.T> | Track known-issue deduplication and triage workflow. |
 | Foundry mainnet-fork PoC | <https://github.com/cholakovvv/foundry-poc-mainnet-fork> | Track focused Foundry exploit-reproduction guidance. |
 | Solana Token Extensions Security | <https://github.com/zzzuhaibmohd/solana-token-extensions-security> | Track Token-2022-specific Solana audit patterns. |
+| zkSecurity ZK Skills | <https://github.com/zksecurity/zk-skills> | Conditional Circom/ZK circuit audit skill; route only for Circom targets. |
 | Chase | <https://github.com/0xCyrildev/Chase> | Conditional Sui/Move transaction-trace and post-deployment invariant analysis; not default Solidity routing. |
 | Solidity Auditor Private V3 | <https://github.com/0xfirefistt/solidity-auditor-private> | Private upstream for the active V3 Solidity auditor. |
 | Dark Navy Web3 Skills | <https://github.com/DarkNavySecurity/web3-skills> | Source for `client-auditor` and `exploit-investigator`; use for blockchain nodes, clients, and incident analysis, not ordinary contract-audit default routing. |
@@ -71,7 +72,7 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 
 | Source | URL | Local policy |
 |---|---|---|
-| Solodit | <https://solodit.cyfrin.io/> | Import High/Medium findings with the local deduplicating importer. |
+| Solodit | <https://solodit.cyfrin.io/> | Import High/Medium findings with the local deduplicating importer; public retrieval is the default, protected API retrieval is explicit only. |
 | Code4rena reports | <https://code4rena.com/reports> | Import useful Medium/High report patterns without copying duplicate report bodies. |
 | Code4rena report sitemap | <https://code4rena.com/sitemap.xml> | Discovery feed used by the local Code4rena importer. |
 | Pashov audits | <https://github.com/pashov/audits> | Import distinct public audit patterns and retain original report links. |
@@ -117,3 +118,7 @@ When the user asks for updates:
 5. Keep Web3 skills separate from Web2/offensive reference libraries.
 6. Update this registry when a source is added, replaced, retired, or changes status.
 7. Sync approved local changes to the private backup and push them.
+
+Record each refresh's checked commit, content decision, dedupe result, and installed/merged paths
+in `source-refresh-YYYY-MM-DD*.md` beside this registry. Do not treat a changed commit or new
+folder name as sufficient evidence that an update should be installed.

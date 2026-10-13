@@ -2,9 +2,9 @@
 
 Source: <https://github.com/pashov/ai-web3-security>
 
-Checked: 2026-08-01
+Checked: 2026-10-13
 
-Source commit checked: `05c9772c135c88edafec1cf490811f5e0c4ea777`
+Source commit checked: `9cdfb337b1bbf80110577bd4734ffc84edc7c3fa`
 
 ## Classification
 
@@ -16,6 +16,9 @@ It contains:
 - `CONTRIBUTING.md`
 
 It does not contain direct `SKILL.md` files.
+
+The hub is a discovery index. Each linked repository was compared independently against the
+active Codex skills and knowledge base; being listed here is not a recommendation to install it.
 
 ## Already Covered Locally
 
@@ -198,6 +201,22 @@ Reason:
 - Adds narrow greenfield DeFi protocol discovery and spec-driven development workflows with explicit economic design, invariants, threat modeling, interface/storage specification, and test-spec phases.
 - These are not default audit-hunting skills, but their triggers are specific enough that they should not disturb serious audit sessions.
 
+### ZK / Circom Skills
+
+Source: <https://github.com/zksecurity/zk-skills>
+
+Commit: `f56ed630f15b7782885342cc55dacbe5692a7b9`
+
+Installed:
+
+- `circom-auditor`
+
+Reason:
+
+- Adds distinct Circom constraint-soundness, completeness, privacy, malicious-witness, and
+  verifier-acceptance checks. It is conditional and only routes when the target contains Circom
+  circuits, so it does not add noise to Solidity, Move, Solana, or Web2 audits.
+
 ## Intentionally Not Bulk Installed
 
 Several listed repos were not installed to avoid active-skill noise or because local coverage already exists.
@@ -210,6 +229,23 @@ Reviewed since the previous check:
 - `CertiK AI Auditor` was newly listed as a paid/closed-source multi-language scanner and was recorded only as a discovery link.
 - `RASHMOR1/dlt-auditor` was reviewed at `017d80f70ad55f95366d1dcbe8849d30eebb421a`. It was not installed because it is a large benchmark/runtime framework with thousands of corpus and design files, substantial overlap with the local audit workflow, and a high operational-noise cost.
 - `exvulsec/sui-move-skill` was reviewed at `54daba3c0d3621c46bb875245539e734bc410038`. It was not installed because the existing `smart-contract-audit` skill already has richer Sui/Move coverage, while this candidate contains a broken reference and defaults to retaining Low/Informational findings in conflict with the local submit-worthy finding gate.
+- `monad-developers/ultrafuzz` was reviewed at the hub's current listing. It is an isolated-VM,
+  skip-permissions fuzzing orchestrator in active development, not a safe workstation skill;
+  keep it as a reference only.
+- `TarasBrilian/gebug-audit` was reviewed from the current hub listing. Its two-phase EVM review,
+  validity gate, and PoC discipline overlap the local Pashov/Arsen/AGENTS workflow; do not install
+  the Claude-specific orchestrator unchanged.
+- `aeonfun/aeon`, `Gabson0x/bountyforge`, and `itsdarktoday/auditcode` were reviewed as full
+  agent platforms. Their orchestration, provider setup, scanners, and persistent state overlap
+  the active Codex workflow and would add noise rather than a distinct skill.
+- `adshao/flounder` was reviewed as a full sandbox/daemon/dashboard audit system, not a portable
+  Codex skill. Keep it as an optional reference only.
+- `CDSecurity/cdsecurity-skills` was reviewed as audit-preparation guidance, not a bug-finding
+  workflow; local context-building and scope skills already cover the useful parts.
+- `Frankcastleauditor/safe-solana-builder` was reviewed as secure-development guidance rather
+  than an audit/hunting skill; existing Solana audit skills cover the review path.
+- `GPTScan/GPTScan` was reviewed as a scanner/tool, not a `SKILL.md` package; keep scanners as
+  lead generators under the existing evidence rules.
 
 Skipped for now:
 

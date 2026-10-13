@@ -1,0 +1,7 @@
+interface:
+  display_name: "Circom Auditor"
+  short_description: "Audit Circom circuits for constraint bugs"
+  default_prompt: "Use $circom-auditor to audit the Circom circuits in this repo for soundness and privacy bugs."
+
+policy:
+  allow_implicit_invocation: true
