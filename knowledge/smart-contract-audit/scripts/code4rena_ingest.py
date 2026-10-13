@@ -29,6 +29,15 @@ REPORTS_BASE_URL = "https://code4rena.com/reports"
 ROOT = Path("/home/dinesh/.codex/knowledge/smart-contract-audit")
 CODE4RENA_ROOT = ROOT / "report-patterns" / "code4rena"
 INDEX_PATH = CODE4RENA_ROOT / "indexes" / "code4rena-findings-index.jsonl"
+GENERIC_STATUS_TITLES = {
+    "unmitigated",
+    "mitigated",
+    "duplicate",
+    "invalid",
+    "informational",
+    "known issue",
+    "disputed",
+}
 
 
 def slugify(value: str, fallback: str) -> str:
@@ -386,6 +395,9 @@ def main() -> int:
         page_rows: list[dict[str, str]] = []
 
         for row in rows:
+            if row["title"].strip().lower() in GENERIC_STATUS_TITLES:
+                skipped += 1
+                continue
             if row["dedupe_id"] in seen_ids or row["fingerprint"] in seen_fingerprints:
                 skipped += 1
                 continue

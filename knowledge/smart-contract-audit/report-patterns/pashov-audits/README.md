@@ -30,3 +30,9 @@ python3 /home/dinesh/.codex/knowledge/smart-contract-audit/scripts/pashov_audits
 
 Review every reported `Unreviewed finding`, add a decision, then rerun without
 `--dry-run`. A clean second run must import zero findings.
+
+## Upstream PDF Review
+
+The selected Medium findings from the 2026-09 and 2026-10 upstream PDF reviews
+are recorded in `docs/UPSTREAM_PDF_REVIEW-2026-10-13.md`. The local cards are
+compact, manually reviewed pattern notes; the full PDFs remain upstream.

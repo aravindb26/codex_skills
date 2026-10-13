@@ -263,6 +263,8 @@ read from the processes and the JSON they wrote.
 - [ ] Approved plan written to `$OUTPUT_DIR/rulesets.json` at the Step 3 gate, and passed to
       the scanner unchanged
 - [ ] `coveredNothing` from `scans.json` is empty, or listed in the report
+- [ ] `oversized` from `scans.json` is empty, or listed in the report; files above
+      `maxTargetBytes` were not opened and are coverage gaps, not clean results
 - [ ] Raw per-scan outputs stored in `$OUTPUT_DIR/raw/`
 - [ ] `results.sarif` exists in `$OUTPUT_DIR/results/` and is valid JSON
 - [ ] Important-only mode: post-filter applied before merge, merge run with `--important`, unfiltered results preserved in `raw/`

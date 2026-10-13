@@ -1,0 +1,11 @@
+{
+  "name": "chase-sui-trace-analysis",
+  "source": "https://github.com/0xCyrildev/Chase",
+  "source_commit": "c8c4f18999024119ddb6cbf7f29dbf9e996f9016",
+  "upstream_skill_path": "skill/chase",
+  "installed_at": "2026-10-13",
+  "scope": "Sui/Move transaction-trace and post-deployment validation",
+  "active_for_default_solidity_audits": false,
+  "runtime_package_installed": false,
+  "selection_rule": "Use only for Sui/Move runtime traces, transaction digests, deployed-package monitoring, or incident analysis."
+}

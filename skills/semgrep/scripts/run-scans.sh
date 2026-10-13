@@ -11,6 +11,9 @@ readonly METRICS_OFF="--metrics=off"
 # references/scan-modes.md, not here.
 SEVERITY_FLAGS=(--severity WARNING --severity ERROR)
 readonly DEFAULT_JOBS=4
+# Semgrep silently omits files larger than --max-target-bytes. Make the limit explicit and record
+# files that remain outside coverage instead of presenting them as clean.
+readonly DEFAULT_MAX_TARGET_BYTES=20000000
 
 usage() {
   cat <<'USAGE'
@@ -22,11 +25,13 @@ Usage: run-scans.sh --target DIR --output-dir DIR --mode MODE --rulesets FILE [o
   --rulesets FILE    JSON: {"baseline":[...], "<language>":[...], "third_party":["https://..."]}
   --pro              add --pro to every command (Semgrep Pro engine)
   --jobs N           concurrent semgrep processes (default 4)
+  --max-target-bytes N
+                     skip files larger than N bytes; 0 means no limit (default 20000000)
   --dry-run          print the commands that would run, then exit; clones nothing
 
 Writes OUTPUT_DIR/scans.json:
   {scans:[{lang,ruleset,json,sarif,findings}], failed:[...], skipped:[...],
-   unscoped:[lang], alsoShared:["lang/ruleset"]}
+   unscoped:[lang], alsoShared:["lang/ruleset"], maxTargetBytes:N, oversized:[path]}
 USAGE
 }
 
@@ -115,6 +120,7 @@ repo_dir_name() {
 
 TARGET="" OUTPUT_DIR="" MODE="" RULESETS_FILE="" PRO="" DRY_RUN=""
 JOBS=$DEFAULT_JOBS
+MAX_TARGET_BYTES=$DEFAULT_MAX_TARGET_BYTES
 while [ $# -gt 0 ]; do
   case "$1" in
     --target)
@@ -135,6 +141,10 @@ while [ $# -gt 0 ]; do
       ;;
     --jobs)
       JOBS=${2:-}
+      shift 2
+      ;;
+    --max-target-bytes)
+      MAX_TARGET_BYTES=${2:-}
       shift 2
       ;;
     --pro)
@@ -168,6 +178,9 @@ fi
 jq -e . "$RULESETS_FILE" >/dev/null 2>&1 || die "--rulesets is not valid JSON: $RULESETS_FILE"
 case "$JOBS" in '' | *[!0-9]*) die "--jobs must be a positive integer, got '${JOBS}'" ;; esac
 [ "$JOBS" -ge 1 ] || die "--jobs must be at least 1"
+case "$MAX_TARGET_BYTES" in
+  '' | *[!0-9]*) die "--max-target-bytes must be a whole number of bytes, got '${MAX_TARGET_BYTES}'" ;;
+esac
 
 # Both paths resolve the same way before being compared. Resolving only one makes the equality
 # and inside-the-target checks miss on any symlinked path (every /var path on macOS), and the
@@ -264,11 +277,13 @@ UNSCOPED="$WORK/unscoped.txt"
 # exactly like p/gosec would have. semgrep counts what it opened in .paths.scanned, so the two
 # can be told apart and the ones that covered nothing named.
 COVERED_NOTHING="$WORK/covered-nothing.txt"
+OVERSIZED="$WORK/oversized.txt"
 : >"$SCAN_LIST"
 : >"$SKIPPED"
 : >"$ALSO_SHARED"
 : >"$UNSCOPED"
 : >"$COVERED_NOTHING"
+: >"$OVERSIZED"
 
 # Stems are the filename half of every output path and the key results are matched on, so a
 # collision would let one scan's result be read as another's.
@@ -457,6 +472,7 @@ build_argv() {
   ARGV=(semgrep)
   [ -z "$PRO" ] || ARGV+=(--pro)
   ARGV+=("$METRICS_OFF")
+  ARGV+=(--max-target-bytes "$MAX_TARGET_BYTES")
   [ "$MODE" != "important-only" ] || ARGV+=("${SEVERITY_FLAGS[@]}")
   # Unquoted on purpose: includes is a space-separated glob list and must word-split here.
   # shellcheck disable=SC2086
@@ -487,6 +503,45 @@ if [ -n "$DRY_RUN" ]; then
     printf '\n'
   done <"$SCAN_LIST"
   exit 0
+fi
+
+# Semgrep does not report files rejected by --max-target-bytes in its JSON. Enumerate files
+# selected by this run's --include globs so an omitted file is reported as a coverage gap rather
+# than mistaken for a clean file. Cross-language unscoped rulesets remain bounded by the recorded
+# maxTargetBytes value, but their parser-specific selection cannot be enumerated here.
+scoped_globs() {
+  cut -f5 "$SCAN_LIST" | tr ' ' '\n' | grep -v '^$' | sort -u | tr '\n' ' '
+}
+
+find_oversized() {
+  local limit=$1 globs=$2 g f
+  local nameargs=()
+  [ "$limit" -gt 0 ] || return 0
+  [ -n "$(printf '%s' "$globs" | tr -d ' ')" ] || return 0
+  for g in $globs; do
+    if [ ${#nameargs[@]} -eq 0 ]; then
+      nameargs=(-name "$g")
+    else
+      nameargs+=(-o -name "$g")
+    fi
+  done
+  [ ${#nameargs[@]} -gt 0 ] || return 0
+  if [ -n "$EXCLUDE_PATTERN" ]; then
+    find "$TARGET" -name "$EXCLUDE_PATTERN" -prune -o -type f -size +"${limit}"c \
+      \( "${nameargs[@]}" \) -print 2>/dev/null
+  else
+    find "$TARGET" -type f -size +"${limit}"c \
+      \( "${nameargs[@]}" \) -print 2>/dev/null
+  fi | while IFS= read -r f; do
+    printf '%s\n' "${f#"$TARGET/"}"
+  done | sort
+}
+
+OVERSIZED_LIST=$(find_oversized "$MAX_TARGET_BYTES" "$(scoped_globs)")
+printf '%s\n' "$OVERSIZED_LIST" >"$OVERSIZED"
+if [ -n "$OVERSIZED_LIST" ]; then
+  echo "note: $(count_lines "$OVERSIZED_LIST") file(s) exceed --max-target-bytes ($MAX_TARGET_BYTES)" >&2
+  echo "      semgrep will not open them; see oversized in scans.json." >&2
 fi
 
 # ------------------------------------------------------------------- run the scans
@@ -582,15 +637,18 @@ jq -n \
   --rawfile alsoSharedRaw "$ALSO_SHARED" \
   --rawfile unscopedRaw "$UNSCOPED" \
   --rawfile coveredNothingRaw "$COVERED_NOTHING" \
+  --rawfile oversizedRaw "$OVERSIZED" \
+  --argjson maxTargetBytes "$MAX_TARGET_BYTES" \
   '{
      outputDir: $outputDir, rawDir: $rawDir, reposPath: $reposPath, mode: $mode, pro: $pro,
-     excludePattern: $excludePattern,
+     excludePattern: $excludePattern, maxTargetBytes: $maxTargetBytes,
      scans: $scans, failed: $failed,
      skipped: ($skippedRaw | split("\n") | map(select(length > 0)) | map(split("\t"))
                | map({ruleset: .[0], reason: (.[1] // "clone failed")})),
      alsoShared: ($alsoSharedRaw | split("\n") | map(select(length > 0)) | unique),
      unscoped: ($unscopedRaw | split("\n") | map(select(length > 0)) | unique),
-     coveredNothing: ($coveredNothingRaw | split("\n") | map(select(length > 0)) | unique)
+     coveredNothing: ($coveredNothingRaw | split("\n") | map(select(length > 0)) | unique),
+     oversized: ($oversizedRaw | split("\n") | map(select(length > 0)) | unique)
    }' >"$OUTPUT_ROOT/scans.json"
 
 n_ok=$(jq '.scans | length' "$OUTPUT_ROOT/scans.json")

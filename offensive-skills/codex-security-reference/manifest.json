@@ -1,0 +1,19 @@
+{
+  "name": "codex-security-reference",
+  "source": "https://github.com/openai/codex-security",
+  "source_commit": "8c85943cd222b76ccb75317b4b17d9ac3ba1647d",
+  "installed_at": "2026-10-13",
+  "install_type": "reference-only-refresh",
+  "target": "/home/dinesh/.codex/offensive-skills/codex-security-reference",
+  "active_codex_skill": false,
+  "default_for_web3": false,
+  "intended_use": [
+    "authorized Web2/source-code AppSec scanning",
+    "scope-aware deep-scan workflow reference",
+    "finding validation, normalization, recovery, and cost-accounting reference"
+  ],
+  "preserved_local_files": [
+    ".env.example",
+    "LOCAL_README.md"
+  ]
+}

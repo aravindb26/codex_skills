@@ -293,6 +293,8 @@ and the severity flags are all its job, not yours. It writes `$OUTPUT_DIR/scans.
 | `unscoped` | Languages with no `--include` globs, which ran against every file |
 | `alsoShared` | Rulesets dropped from a language because the same ruleset is already running unscoped over the whole target. Coverage is unaffected; report them so a per-ruleset accounting adds up |
 | `excludePattern` | Set when the output directory sits inside the target: the pattern passed as `--exclude` to every scan, or `""`. semgrep matches it anywhere in the tree, so `out` also drops `src/out/`. **Must be shown when non-empty.** |
+| `maxTargetBytes` | The explicit `--max-target-bytes` used for every scan. Semgrep does not open larger files. |
+| `oversized` | Files selected by an include glob that exceed `maxTargetBytes`. They were not opened and must be reported as coverage gaps. |
 | `reposPath` | The clone directory Step 5 deletes |
 
 **A non-zero exit means no scan succeeded.** The script exits 1 when `scans` is empty, so a run

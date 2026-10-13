@@ -1,12 +1,9 @@
 import { basename, relative } from "node:path";
+import stringWidth from "string-width";
 import type { JsonObject } from "./config.js";
 
 export type HistoryCommand =
-  | "list"
-  | "show"
-  | "findings"
-  | "compare"
-  | "match-all";
+  "list" | "show" | "findings" | "compare" | "match-all";
 type RendererOptions = {
   columns?: number;
   color?: boolean;
@@ -17,6 +14,9 @@ type RendererOptions = {
 };
 
 const STALE_SCAN_MILLISECONDS = 24 * 60 * 60 * 1_000;
+const GRAPHEME_SEGMENTER = new Intl.Segmenter(undefined, {
+  granularity: "grapheme",
+});
 
 const STATUS_STYLES: Record<string, { color: number; icon: string }> = {
   resolved: { color: 32, icon: "✓" },
@@ -83,18 +83,32 @@ export function renderScanHistory(
   const wrap = (value: string, indent: number, prefix?: string): void => {
     const available = width - indent - 2;
     let line = "";
-    let first = true;
+    let lineWidth = 0;
     for (const word of clean(value).split(/\s+/)) {
-      if (line.length > 0 && line.length + word.length + 1 > available) {
-        lines.push(`${first && prefix ? prefix : " ".repeat(indent)}${line}`);
-        first = false;
-        line = word;
-      } else {
-        line = line.length > 0 ? `${line} ${word}` : word;
+      if (line.length > 0 && lineWidth + stringWidth(word) + 1 > available) {
+        lines.push(`${prefix || " ".repeat(indent)}${line}`);
+        prefix = undefined;
+        line = "";
+        lineWidth = 0;
+      }
+      if (line.length > 0) {
+        line += " ";
+        lineWidth += 1;
+      }
+      for (const { segment } of GRAPHEME_SEGMENTER.segment(word)) {
+        const segmentWidth = stringWidth(segment);
+        if (lineWidth + segmentWidth > available) {
+          lines.push(`${prefix || " ".repeat(indent)}${line}`);
+          prefix = undefined;
+          line = "";
+          lineWidth = 0;
+        }
+        line += segment;
+        lineWidth += segmentWidth;
       }
     }
     if (line.length > 0) {
-      lines.push(`${first && prefix ? prefix : " ".repeat(indent)}${line}`);
+      lines.push(`${prefix || " ".repeat(indent)}${line}`);
     }
   };
 
@@ -107,7 +121,7 @@ export function renderScanHistory(
     const after = entry["afterOccurrenceIds"] as string[] | undefined;
     const grouped =
       before?.length || after?.length
-        ? `  ${accent("·")}  ${before?.length ?? 1} → ${after?.length ?? 1}`
+        ? `  ${accent("·")}  ${before?.length ?? (entry["beforeOccurrenceId"] ? 1 : 0)} → ${after?.length ?? (entry["afterOccurrenceId"] ? 1 : 0)}`
         : "";
     const matches = entry["matches"] as JsonObject[] | undefined;
     const related = entry["related"] as JsonObject[] | undefined;
@@ -246,6 +260,11 @@ export function renderScanHistory(
       `  ${strong(clean(basename(result["targetPath"] as string)))}  ${accent("·")}  ${clean(result["scanId"])}`,
       `  ${paint(`${status === "complete" ? "✓" : "●"} ${status.toUpperCase()}`, statusColor)}  ${accent("·")}  ${clean(result["mode"])}`,
     );
+    if (typeof result["startedAt"] === "string") {
+      lines.push(`  ${strong("STARTED")}  ${clean(result["startedAt"])}`);
+    } else if (typeof result["updatedAt"] === "string") {
+      lines.push(`  ${strong("UPDATED")}  ${clean(result["updatedAt"])}`);
+    }
     if (result["failureMessage"]) {
       wrap(String(result["failureMessage"]), 11, `  ${paint("ERROR", 31)}  `);
     }
@@ -267,6 +286,11 @@ export function renderScanHistory(
       lines.push(
         `  ${Object.entries(summary)
           .filter(([, count]) => count)
+          .sort(
+            ([left], [right]) =>
+              Object.keys(SEVERITY_COLORS).indexOf(left.toUpperCase()) -
+              Object.keys(SEVERITY_COLORS).indexOf(right.toUpperCase()),
+          )
           .map(([severity, count]) => {
             const label = severity.toUpperCase();
             return paint(
@@ -278,21 +302,28 @@ export function renderScanHistory(
       );
     }
     const recipe = result["recipe"] as JsonObject | undefined;
+    const target = recipe?.["target"] as JsonObject | undefined;
+    if (target) {
+      lines.push(`  ${strong("SCOPE")}  ${clean(JSON.stringify(target))}`);
+    }
+    const deepScan = recipe?.["deepScan"] as JsonObject | undefined;
+    if (deepScan) {
+      lines.push(
+        `  ${strong("DEEP SCAN")}  ${clean(JSON.stringify(deepScan))}`,
+      );
+    }
     const config = recipe?.["config"] as JsonObject | undefined;
     if (config && Object.keys(config).length > 0) {
       lines.push(
         `  ${strong("CONFIGURATION")}  ${Object.entries(config)
           .map(([key, value]) => {
-            const rendered =
-              typeof value === "object" ? JSON.stringify(value) : value;
-            return `${clean(key)}=${clean(rendered)}`;
+            return `${clean(key)}=${clean(typeof value === "object" ? JSON.stringify(value) : value)}`;
           })
           .join(`  ${accent("·")}  `)}`,
       );
     }
     const coverage = (result["progress"] as JsonObject)["coverage"] as
-      | JsonObject
-      | undefined;
+      JsonObject | undefined;
     if (coverage) {
       const parts = [
         ...(coverage["worklistRows"] == null
@@ -311,12 +342,28 @@ export function renderScanHistory(
       }
     }
     const knowledgeBase = recipe?.["knowledgeBasePaths"] as
-      | string[]
-      | undefined;
+      string[] | undefined;
     if (knowledgeBase?.length) {
       lines.push(
         `  ${strong("KNOWLEDGE BASE")}  ${knowledgeBase.map((path) => dim(clean(path))).join(", ")}`,
       );
+    }
+    const inputs = recipe?.["scanInputs"] as JsonObject | undefined;
+    if (inputs) {
+      lines.push(
+        `  ${strong("SCAN INSTRUCTIONS")}  ${inputs["scanPromptSha256"] ? `sha256:${clean(inputs["scanPromptSha256"])}` : "none"}`,
+      );
+      const knowledge = inputs["knowledgeBase"] as JsonObject | null;
+      if (knowledge) {
+        lines.push(
+          `  ${strong("KNOWLEDGE SNAPSHOT")}  sha256:${clean(knowledge["sha256"])}`,
+        );
+        for (const document of knowledge["documents"] as JsonObject[]) {
+          lines.push(
+            `    ${clean(document["name"])}  sha256:${clean(document["sha256"])}`,
+          );
+        }
+      }
     }
     const artifacts = result["artifacts"] as JsonObject | undefined;
     if (artifacts && Object.keys(artifacts).length > 0) {

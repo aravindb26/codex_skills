@@ -2,7 +2,7 @@
 
 Source: https://github.com/shuvonsec/claude-bug-bounty
 
-Reviewed through commit: `e363fa09f003d77a0420abcd081628cdbe7f8ed4`
+Reviewed through commit: `40b03eeea639ef930123924aa316a89566d5180b`
 
 This is a filtered, reference-only install for Web2/AppSec and source-code bug bounty work. It is intentionally stored outside `/home/dinesh/.codex/skills/` so it does not auto-load during smart-contract audits.
 
@@ -14,6 +14,7 @@ Use selectively for authorized Web2/AppSec/source-code bounty work:
 - web/API attack-surface mapping
 - IDOR, auth bypass, XSS, SSRF, SQLi, XXE, GraphQL, OAuth/OIDC, JWT, file upload, race, cache, request smuggling, cloud/infra, and business-logic testing
 - finding validation and report writing
+- AI-agent, MCP-server, and LLM application security reviews when those are the actual target
 
 ## When Not To Use
 
@@ -34,6 +35,18 @@ Included Web2/AppSec reference skills:
 - `security-arsenal`
 - `triage-validation`
 - `report-writing`
+- `agentic-app-audit` (deployed AI-agent black-box boundary checks)
+- `mcp-server-audit` (MCP tool, scope, sink, approval, and transport checks)
+- `llm-redteam` (LLM application validation with concrete canary/action requirements)
+
+The new skills are still reference-only. They are selected only for matching Web2/AI application
+targets, never for smart-contract audits.
+
+The `docs/phase2-scope-hardening.md`, `phase3-evidence-provenance.md`,
+`phase6-investigation-loop.md`, `phase8-target-resume-card.md`, `phase9-compounding-memory.md`,
+and `phase10-validation-report.md` documents preserve the upstream lessons on scope gates,
+evidence provenance, resume state, memory isolation, and finding validation. They are guidance,
+not proof that a target was tested.
 
 Included helper tools:
 

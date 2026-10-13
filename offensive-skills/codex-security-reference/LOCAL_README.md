@@ -1,14 +1,17 @@
-# Codex Security Reference
+# Codex Security Reference Boundary
 
 Source: <https://github.com/openai/codex-security>
 
-Reviewed snapshot: `613469a79f6d73a7f9ccf43295e0cd7afdc5fc1b`
+Reviewed snapshot: `8c85943cd222b76ccb75317b4b17d9ac3ba1647d` on 2026-10-13.
 
-Purpose: local reference copy of OpenAI Codex Security workflows for authorized Web2/source-code security scans, finding validation, tracking, attack-path analysis, and writeups.
+This directory is a reference copy for authorized Web2/source-code AppSec work. It is not an
+active default Codex skill and must not be routed into Solidity, Vyper, Solana, Cosmos, Move, or
+other Web3 contest audits.
 
-Use rules:
+Use the current upstream deep-scan, scope-preservation, finding-normalization, recovery, and cost
+accounting code only when the Codex Security CLI/plugin is explicitly being used. Scanner output is
+a lead source, not a confirmed finding. Apply the program's scope, safe harbor, manual source
+review, evidence, duplicate, and validation gates before reporting anything.
 
-- Treat this as reference-only unless the Codex Security plugin/tooling is explicitly installed and invoked.
-- Use for source-code AppSec, not as default smart-contract audit context.
-- Scanner output is a lead source only; validate manually against scope, exploitability, impact, and false-positive risk.
-- Keep any scan artifacts in an audit-specific workspace or `.context/` path so they can be cleaned up at audit end.
+The local `.env.example` is preserved as a user configuration template. Never place real API keys,
+tokens, or credentials in this directory or in the private skills backup.

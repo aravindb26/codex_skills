@@ -140,7 +140,20 @@ set would drop real findings from the primary deliverable with nothing downstrea
 
 - **Run all**: no severity flags
 - **Important only**: `--severity WARNING --severity ERROR`
+- **Both**: `--max-target-bytes 20000000` is passed explicitly to every scan.
 
 That pre-filter is applied by semgrep at scan time, before the metadata post-filter above. A
 rule shipping with CLI severity INFO is dropped by the flag and never reaches the filter that
 would have kept it.
+
+### File Size Limit
+
+Semgrep skips files larger than `--max-target-bytes` without adding them to `paths.skipped` or
+raising an error. The scanner passes an explicit 20,000,000-byte default and records the effective
+value as `maxTargetBytes` in `scans.json`. Use `--max-target-bytes N` for larger source trees or
+`--max-target-bytes 0` to remove the limit.
+
+Files selected by an `--include` glob that exceed the limit are listed in `oversized`. They are
+coverage gaps, not clean results. Re-run with a higher limit or name them explicitly in the report.
+Unscoped cross-language rulesets still expose `maxTargetBytes`, but their parser-specific file
+selection cannot be enumerated by the runner.

@@ -1,0 +1,21 @@
+{
+  "name": "nuclei-suggest-reference",
+  "source": "https://github.com/forefy/.context",
+  "source_path": "skills/hunter-utils/nuclei-suggest",
+  "source_commit": "c8ff161fccdeef9a0416df6230636eb2dfde4a8b",
+  "installed_at": "2026-10-13",
+  "install_type": "filtered-reference-only",
+  "target": "/home/dinesh/.codex/offensive-skills/nuclei-suggest-reference",
+  "active_codex_skill": false,
+  "default_for_web3": false,
+  "intended_use": [
+    "authorized Web2 bug-bounty template selection",
+    "scope-aware Nuclei execution planning",
+    "evidence-preserving Web2 validation"
+  ],
+  "excluded": [
+    "automatic target scanning",
+    "intrusive, brute-force, fuzz, unsafe, or interactsh templates without explicit approval",
+    "Web3 and smart-contract audit routing"
+  ]
+}
