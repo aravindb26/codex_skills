@@ -20,6 +20,9 @@ import pytest
 PLUGIN_ROOT = Path(__file__).resolve().parent.parent
 CLUSTERS = PLUGIN_ROOT / "prompts" / "clusters"
 SKILL = PLUGIN_ROOT / "skills" / "rust-review" / "SKILL.md"
+if not SKILL.is_file():
+    # Codex installs this skill in a flattened directory layout.
+    SKILL = PLUGIN_ROOT / "SKILL.md"
 
 PROMPT_PATTERN_RE = re.compile(r'rg seed: "((?:[^"\\]|\\.)*)"')
 GREP_E_RE = re.compile(r"grep -rlE '([^']*)'")
