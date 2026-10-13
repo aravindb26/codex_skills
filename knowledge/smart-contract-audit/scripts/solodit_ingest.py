@@ -20,9 +20,11 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 
 API_URL = "https://solodit.cyfrin.io/api/v1/solodit/findings"
+PUBLIC_TRPC_URL = "https://solodit.cyfrin.io/api/trpc/findings.get"
 ROOT = Path("/home/dinesh/.codex/knowledge/smart-contract-audit")
 SOLODIT_ROOT = ROOT / "report-patterns" / "solodit"
 INDEX_PATH = SOLODIT_ROOT / "indexes" / "solodit-findings-index.jsonl"
@@ -51,6 +53,198 @@ def normalize_text(value: Any) -> str:
     if isinstance(value, dict):
         return json.dumps(value, sort_keys=True, ensure_ascii=True)
     return str(value).strip()
+
+
+class JavaScriptLiteralParser:
+    """Parse the data literal returned by Solodit's public tRPC route."""
+
+    def __init__(self, text: str, references: list[Any] | None = None):
+        self.text = text
+        self.position = 0
+        self.references = references or []
+
+    def parse(self) -> Any:
+        value = self.parse_value()
+        self.skip_whitespace()
+        if self.position != len(self.text):
+            raise ValueError("unexpected data after public tRPC response")
+        return value
+
+    def skip_whitespace(self) -> None:
+        while self.position < len(self.text) and self.text[self.position].isspace():
+            self.position += 1
+
+    def parse_value(self) -> Any:
+        self.skip_whitespace()
+        if self.position >= len(self.text):
+            raise ValueError("unexpected end of public tRPC response")
+
+        char = self.text[self.position]
+        if char in {'"', "'"}:
+            return self.parse_string()
+        if char == "{":
+            return self.parse_object()
+        if char == "[":
+            return self.parse_array()
+        if self.text.startswith("new Date", self.position):
+            return self.parse_date()
+        if char in "-+0123456789.":
+            return self.parse_number()
+
+        identifier = self.parse_identifier()
+        if identifier == "true":
+            return True
+        if identifier == "false":
+            return False
+        if identifier == "null":
+            return None
+        if identifier == "undefined":
+            return None
+        if identifier == "a":
+            self.skip_whitespace()
+            if self.position >= len(self.text) or self.text[self.position] != "[":
+                return self.references
+            self.position += 1
+            reference_index = self.parse_number()
+            self.skip_whitespace()
+            if self.position >= len(self.text) or self.text[self.position] != "]":
+                raise ValueError("invalid reference in public tRPC response")
+            self.position += 1
+            if not isinstance(reference_index, int) or reference_index >= len(self.references):
+                raise ValueError("unknown reference in public tRPC response")
+            return self.references[reference_index]
+        raise ValueError(f"unsupported public tRPC literal: {identifier}")
+
+    def parse_string(self) -> str:
+        quote_char = self.text[self.position]
+        self.position += 1
+        result: list[str] = []
+        escapes = {
+            "b": "\b",
+            "f": "\f",
+            "n": "\n",
+            "r": "\r",
+            "t": "\t",
+            "v": "\v",
+        }
+        while self.position < len(self.text):
+            char = self.text[self.position]
+            self.position += 1
+            if char == quote_char:
+                return "".join(result)
+            if char != "\\":
+                result.append(char)
+                continue
+
+            if self.position >= len(self.text):
+                raise ValueError("unterminated string in public tRPC response")
+            escaped = self.text[self.position]
+            self.position += 1
+            if escaped in escapes:
+                result.append(escapes[escaped])
+            elif escaped == "u":
+                code = self.text[self.position : self.position + 4]
+                if len(code) != 4 or not re.fullmatch(r"[0-9a-fA-F]{4}", code):
+                    raise ValueError("invalid Unicode escape in public tRPC response")
+                result.append(chr(int(code, 16)))
+                self.position += 4
+            elif escaped in {"\\", "\"", "'", "/"}:
+                result.append(escaped)
+            elif escaped == "\n":
+                continue
+            else:
+                result.append(escaped)
+        raise ValueError("unterminated string in public tRPC response")
+
+    def parse_identifier(self) -> str:
+        start = self.position
+        while self.position < len(self.text):
+            char = self.text[self.position]
+            if not (char.isalnum() or char in "_$"):
+                break
+            self.position += 1
+        if start == self.position:
+            raise ValueError("expected identifier in public tRPC response")
+        return self.text[start : self.position]
+
+    def parse_number(self) -> int | float:
+        start = self.position
+        if self.text[self.position] in "+-":
+            self.position += 1
+        while self.position < len(self.text) and self.text[self.position].isdigit():
+            self.position += 1
+        if self.position < len(self.text) and self.text[self.position] == ".":
+            self.position += 1
+            while self.position < len(self.text) and self.text[self.position].isdigit():
+                self.position += 1
+        if self.position < len(self.text) and self.text[self.position] in "eE":
+            self.position += 1
+            if self.position < len(self.text) and self.text[self.position] in "+-":
+                self.position += 1
+            while self.position < len(self.text) and self.text[self.position].isdigit():
+                self.position += 1
+        is_bigint = self.position < len(self.text) and self.text[self.position] == "n"
+        if is_bigint:
+            self.position += 1
+        raw = self.text[start : self.position].removesuffix("n")
+        return int(raw) if is_bigint or all(char not in raw for char in ".eE") else float(raw)
+
+    def parse_array(self) -> list[Any]:
+        self.position += 1
+        values: list[Any] = []
+        self.skip_whitespace()
+        if self.position < len(self.text) and self.text[self.position] == "]":
+            self.position += 1
+            return values
+        while True:
+            values.append(self.parse_value())
+            self.skip_whitespace()
+            if self.position >= len(self.text):
+                raise ValueError("unterminated array in public tRPC response")
+            if self.text[self.position] == "]":
+                self.position += 1
+                return values
+            if self.text[self.position] != ",":
+                raise ValueError("expected array separator in public tRPC response")
+            self.position += 1
+
+    def parse_object(self) -> dict[str, Any]:
+        self.position += 1
+        values: dict[str, Any] = {}
+        self.skip_whitespace()
+        if self.position < len(self.text) and self.text[self.position] == "}":
+            self.position += 1
+            return values
+        while True:
+            self.skip_whitespace()
+            key = self.parse_string() if self.text[self.position] in {'"', "'"} else self.parse_identifier()
+            self.skip_whitespace()
+            if self.position >= len(self.text) or self.text[self.position] != ":":
+                raise ValueError("expected object separator in public tRPC response")
+            self.position += 1
+            values[key] = self.parse_value()
+            self.skip_whitespace()
+            if self.position >= len(self.text):
+                raise ValueError("unterminated object in public tRPC response")
+            if self.text[self.position] == "}":
+                self.position += 1
+                return values
+            if self.text[self.position] != ",":
+                raise ValueError("expected object separator in public tRPC response")
+            self.position += 1
+
+    def parse_date(self) -> int | None:
+        self.position += len("new Date")
+        self.skip_whitespace()
+        if self.position >= len(self.text) or self.text[self.position] != "(":
+            raise ValueError("invalid Date literal in public tRPC response")
+        self.position += 1
+        value = self.parse_number()
+        self.skip_whitespace()
+        if self.position >= len(self.text) or self.text[self.position] != ")":
+            raise ValueError("invalid Date literal in public tRPC response")
+        self.position += 1
+        return int(value)
 
 
 def normalize_impact(value: Any) -> str:
@@ -120,7 +314,7 @@ def fingerprint_for(row: dict[str, str]) -> str:
 
 
 def finding_url(item: dict[str, Any], slug: str) -> str:
-    direct = first_value(item, ["url", "link", "findingUrl", "sourceUrl", "reportUrl"])
+    direct = first_value(item, ["url", "link", "findingUrl", "soloditUrl", "issueUrl", "sourceUrl", "reportUrl"])
     if direct:
         return canonical_source_url(normalize_text(direct))
     if slug:
@@ -133,8 +327,8 @@ def normalize_item(item: dict[str, Any]) -> dict[str, str]:
     impact = normalize_impact(first_value(item, ["impact", "severity", "risk", "level"]))
     slug = normalize_text(first_value(item, ["slug", "issueSlug", "findingSlug"]))
     item_id = normalize_text(first_value(item, ["id", "_id", "uuid", "findingId", "issueId"]))
-    protocol = normalize_text(first_value(item, ["protocol", "protocolName", "project", "projectName"]))
-    source = normalize_text(first_value(item, ["source", "firm", "auditFirm", "provider"]))
+    protocol = normalize_text(first_value(item, ["protocol", "protocolName", "protocol_name", "project", "projectName"]))
+    source = normalize_text(first_value(item, ["source", "firm", "firm_name", "auditFirm", "provider"]))
     tags = normalize_text(first_value(item, ["tags", "reportTags", "categories", "vulnerabilityTags"]))
     source_url = finding_url(item, slug)
     dedupe_id = item_id or slug or source_url
@@ -151,6 +345,105 @@ def normalize_item(item: dict[str, Any]) -> dict[str, str]:
     }
     row["fingerprint"] = fingerprint_for(row)
     return row
+
+
+def public_query_input(page: int) -> str:
+    """Build the website's public findings.get query without an account token."""
+    page_reference = 14 if page == 1 else 19
+    table: list[Any] = [
+        {"filters": 1, "page": page_reference},
+        {
+            "keywords": 2,
+            "firms": 3,
+            "tags": 4,
+            "forked": 5,
+            "impact": 6,
+            "user": -1,
+            "protocol": -1,
+            "reported": 9,
+            "reportedAfter": -1,
+            "protocolCategory": 12,
+            "languages": 13,
+            "minFinders": 2,
+            "maxFinders": 2,
+            "rarityScore": 14,
+            "qualityScore": 14,
+            "bookmarked": 15,
+            "read": 16,
+            "unread": 16,
+            "sortField": 17,
+            "sortDirection": 18,
+        },
+        "",
+        [],
+        [],
+        [],
+        [7, 8],
+        "HIGH",
+        "MEDIUM",
+        {"label": 10, "value": 11},
+        "All time",
+        "alltime",
+        [],
+        [],
+        1,
+        False,
+        True,
+        "Recency",
+        "Desc",
+    ]
+    if page != 1:
+        table.append(page)
+    # The public client sends the serialized table as a JSON string parameter.
+    return quote(json.dumps(json.dumps(table, separators=(",", ":")), separators=(",", ":")), safe="")
+
+
+def request_public_page(page: int) -> Any:
+    request = urllib.request.Request(
+        f"{PUBLIC_TRPC_URL}?input={public_query_input(page)}",
+        headers={
+            "Accept": "application/json",
+            "Origin": "https://solodit.cyfrin.io",
+            "Referer": "https://solodit.cyfrin.io/",
+            "User-Agent": "codex-solodit-ingest/1.0",
+        },
+        method="GET",
+    )
+    with urllib.request.urlopen(request, timeout=60) as response:
+        outer = json.loads(response.read().decode("utf-8"))
+    data = outer.get("result", {}).get("data")
+    if not isinstance(data, str):
+        raise ValueError("public Solodit response did not contain a data literal")
+    if data.startswith("(function(a){"):
+        parser = JavaScriptLiteralParser(data[len("(function(a){") :], references=[])
+        while True:
+            parser.skip_whitespace()
+            if parser.text.startswith("return ", parser.position):
+                parser.position += len("return ")
+                return parser.parse_value()
+            if not parser.text.startswith("a[", parser.position):
+                raise ValueError("unsupported public tRPC reference wrapper")
+            parser.position += 2
+            reference_index = parser.parse_number()
+            parser.skip_whitespace()
+            if parser.position >= len(parser.text) or parser.text[parser.position] != "]":
+                raise ValueError("invalid public tRPC reference assignment")
+            parser.position += 1
+            parser.skip_whitespace()
+            if parser.position >= len(parser.text) or parser.text[parser.position] != "=":
+                raise ValueError("invalid public tRPC reference assignment")
+            parser.position += 1
+            value = parser.parse_value()
+            if not isinstance(reference_index, int):
+                raise ValueError("invalid public tRPC reference index")
+            while len(parser.references) <= reference_index:
+                parser.references.append(None)
+            parser.references[reference_index] = value
+            parser.skip_whitespace()
+            if parser.position >= len(parser.text) or parser.text[parser.position] != ";":
+                raise ValueError("invalid public tRPC reference terminator")
+            parser.position += 1
+    return JavaScriptLiteralParser(data).parse()
 
 
 def request_page(api_key: str, page: int, page_size: int, sort: str) -> Any:
@@ -270,6 +563,7 @@ def append_index(rows: list[dict[str, str]]) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--source", choices=("api", "public"), default="api")
     parser.add_argument("--start-page", type=int, default=1)
     parser.add_argument("--max-pages", type=int, default=1)
     parser.add_argument("--page-size", type=int, default=100)
@@ -278,8 +572,8 @@ def main() -> int:
     parser.add_argument("--no-stubs", action="store_true")
     args = parser.parse_args()
 
-    api_key = load_api_key()
-    if not api_key:
+    api_key = load_api_key() if args.source == "api" else ""
+    if args.source == "api" and not api_key:
         print("Missing CYFRIN_API_KEY, SOLODIT_API_KEY, or /home/dinesh/.codex/solodit.env.", file=sys.stderr)
         return 2
 
@@ -290,10 +584,17 @@ def main() -> int:
     end_page = args.start_page + args.max_pages - 1
     for page in range(args.start_page, end_page + 1):
         try:
-            payload = request_page(api_key, page, args.page_size, args.sort)
+            payload = (
+                request_page(api_key, page, args.page_size, args.sort)
+                if args.source == "api"
+                else request_public_page(page)
+            )
         except urllib.error.HTTPError as exc:
-            print(f"Solodit API error on page {page}: HTTP {exc.code}", file=sys.stderr)
+            print(f"Solodit {args.source} error on page {page}: HTTP {exc.code}", file=sys.stderr)
             print(exc.read().decode("utf-8", errors="replace"), file=sys.stderr)
+            return 1
+        except (json.JSONDecodeError, ValueError) as exc:
+            print(f"Solodit {args.source} response error on page {page}: {exc}", file=sys.stderr)
             return 1
 
         items = result_items(payload)
@@ -325,7 +626,8 @@ def main() -> int:
         imported.extend(page_rows)
         print(f"page={page} items={len(items)} imported={len(page_rows)} skipped={skipped}", flush=True)
 
-        if len(items) < args.page_size:
+        source_page_size = args.page_size if args.source == "api" else 10
+        if len(items) < source_page_size:
             break
         if page != end_page:
             time.sleep(args.delay)

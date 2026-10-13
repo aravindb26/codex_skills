@@ -18,7 +18,7 @@ addenda were preserved.
 
 ## Feed results
 
-- Solodit: refresh was blocked by HTTP 401 `Invalid API key`; no unauthenticated import was attempted.
+- Solodit protected API refresh returned HTTP 401 `Invalid API key`. The public website `findings.get` route was verified separately, so the importer now supports a throttled `--source public` fallback that stores only compact High/Medium stubs. Thirty recent public pages were examined (300 rows), 298 new rows were imported, 12 were skipped by the existing dedupe index, and no duplicate IDs, fingerprints, or canonical URLs were introduced. The protected API remains preferred when a valid key is available.
 - Pashov Markdown audits: no unreviewed High/Medium Markdown findings remained after deduplication.
 - Crypto Training hacks: the refresh identified 41 URL-distinct cards not present in the local index; they are imported by the matching deduplicating importer.
 - Code4rena: 100 current report pages were fetched with 0 failures; 26 URL/content-distinct High/Medium candidates were found, 2 new generic `Unmitigated` status stubs were removed as noise, 7 older generic status stubs were also cleaned, 24 substantive new cards were retained, and 1,080 existing findings were skipped.

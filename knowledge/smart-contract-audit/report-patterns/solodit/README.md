@@ -43,6 +43,14 @@ Import several pages while respecting the documented 20 requests/minute rate lim
 /home/dinesh/.codex/knowledge/smart-contract-audit/scripts/solodit_ingest.py --max-pages 10 --delay 3.2
 ```
 
+If the protected API key is unavailable, use the public website query path:
+
+```bash
+/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/solodit_ingest.py --source public --max-pages 10 --delay 3.2
+```
+
+The public route returns ten High/Medium findings per page and is intentionally throttled. It stores the same compact stubs and uses the same dedupe index; it does not bypass login-protected data or store full report bodies. The public website query format may change, so use the API source when a valid key is available.
+
 ## Dedupe
 
 The importer skips duplicates using:
