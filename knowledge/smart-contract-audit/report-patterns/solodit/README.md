@@ -4,9 +4,10 @@ This folder stores Solodit High and Medium severity findings as compact pattern 
 
 Do not store full raw report bodies here by default. Keep links to Solodit/source reports and distill useful findings into reusable pattern cards.
 
-## API Key
+## Optional API Key
 
-Solodit requires a Cyfrin API key.
+The default importer uses Solodit's public website query path and does not require an API key.
+The protected API is optional and requires a valid Cyfrin API key.
 
 Set one of:
 
@@ -31,25 +32,25 @@ or raw key text.
 
 ## Import
 
-Import one page of High/Medium findings:
+Import one public page of High/Medium findings:
 
 ```bash
 /home/dinesh/.codex/knowledge/smart-contract-audit/scripts/solodit_ingest.py --max-pages 1
 ```
 
-Import several pages while respecting the documented 20 requests/minute rate limit:
+Import several public pages while respecting the documented 20 requests/minute rate limit:
 
 ```bash
 /home/dinesh/.codex/knowledge/smart-contract-audit/scripts/solodit_ingest.py --max-pages 10 --delay 3.2
 ```
 
-If the protected API key is unavailable, use the public website query path:
+Use the protected API only explicitly when a valid key is available:
 
 ```bash
-/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/solodit_ingest.py --source public --max-pages 10 --delay 3.2
+/home/dinesh/.codex/knowledge/smart-contract-audit/scripts/solodit_ingest.py --source api --max-pages 10 --delay 3.2
 ```
 
-The public route returns ten High/Medium findings per page and is intentionally throttled. It stores the same compact stubs and uses the same dedupe index; it does not bypass login-protected data or store full report bodies. The public website query format may change, so use the API source when a valid key is available.
+The public route returns ten High/Medium findings per page and is intentionally throttled. It stores the same compact stubs and uses the same dedupe index; it does not bypass login-protected data or store full report bodies. The public website query format may change, so use the protected API explicitly only when needed.
 
 ## Dedupe
 

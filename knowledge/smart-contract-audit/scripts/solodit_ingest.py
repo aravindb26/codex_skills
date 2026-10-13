@@ -563,7 +563,12 @@ def append_index(rows: list[dict[str, str]]) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--source", choices=("api", "public"), default="api")
+    parser.add_argument(
+        "--source",
+        choices=("api", "public"),
+        default="public",
+        help="Data source (default: public website route; use api explicitly for protected API access)",
+    )
     parser.add_argument("--start-page", type=int, default=1)
     parser.add_argument("--max-pages", type=int, default=1)
     parser.add_argument("--page-size", type=int, default=100)
