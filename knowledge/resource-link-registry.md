@@ -111,6 +111,7 @@ Purpose:
 | Rust Recon extractor | <https://github.com/NVN404/rust-recon-tool> | Reviewed but not installed due cleanup safety concern. |
 | Digger | <https://github.com/digger-determsec/digger> | Reviewed but not installed; scanner/MCP overlap and binary maintenance noise. |
 | Open Kritt | <https://github.com/Kritt-ai/open-kritt> | Reviewed but not installed; self-hosted orchestration/Docker noise. |
+| HexStrike AI | <https://github.com/0x4m4/hexstrike-ai> | Reviewed, not installed: broad active-testing MCP with many external dependencies; source spot-check found shell-command construction and wildcard-bind risks, so it is unsuitable for the regular audit workstation. |
 | One Dollar Audit | <https://www.onedollaraudit.com/> | Paid/closed source; discovery only. |
 | CertiK AI Auditor | <https://aiauditor.certik.com/> | Paid/closed source; discovery only. |
 
