@@ -1,6 +1,6 @@
 # Resource Link Registry
 
-Last updated: 2026-10-13
+Last updated: 2026-10-16
 
 Purpose:
 - Preserve useful URLs discussed while building this Codex audit setup.
@@ -51,6 +51,9 @@ Purpose:
 | SCSVS | <https://github.com/pashov/SCSVS> | Reference checklist, use selectively. |
 | AuditVault | <https://github.com/Auditware/AuditVault> | Imported low-noise sector checklists. |
 | Crypto Training hacks | <https://crypto.training/hacks/> | Imported compact exploit-pattern stubs. |
+| Asymmetric Research Crucible | <https://github.com/asymmetric-research/crucible> | Stateful, coverage-guided Solana program fuzzer; consider for Solana targets with a suitable invariant harness. |
+| Monad Ultrafuzz | <https://github.com/monad-developers/ultrafuzz> | Agentic smart-contract fuzzing orchestrator; do not run on the normal workstation because its documented workflow is unrestricted. Review a stable release and prompts, and use an isolated disposable VM only. |
+| Perimeter EVM Fuzzing Resources | <https://github.com/perimetersec/evm-fuzzing-resources> | Curated EVM fuzzing tools and learning materials; reference list, not a fuzzer to install. |
 
 ## Public Report And Exploit Feeds
 

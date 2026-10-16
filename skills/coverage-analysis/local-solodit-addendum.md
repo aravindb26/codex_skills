@@ -23,6 +23,18 @@ Use this addendum when:
 4. Identify unreachable states needed for accepted public bug classes.
 5. Improve the harness before trusting a "no bug found" result.
 
+## Coverage-Feedback Loop And Crash Triage
+
+After each fuzzing run:
+
+1. Compare reached paths against the invariant and critical-path map; prioritize meaningful state transitions over aggregate coverage percentage.
+2. For each important missed path, diagnose the blocker: missing setup or actor, action ordering/depth, boundary value, role or time precondition, oracle/sysvar state, restrictive harness constraint, or unrealistic mock.
+3. Change the harness, structured/action-sequence mutator, seed corpus, or input constraints to address that specific blocker. Do not treat simply increasing runtime as a substitute for fixing reachability.
+4. Re-run and check whether the intended path became reachable; preserve useful seeds and record remaining unreachable paths and their concrete reasons.
+5. For every crash or failed property, reproduce and minimize the input/sequence, then distinguish a real target failure from an expected revert, harness defect, or environment failure. Map a real failure to a violated invariant and assess scope and impact before treating it as a finding.
+
+No crash is not evidence of safety when critical paths remain unreached or the harness cannot represent the relevant states.
+
 ## Smart Contract Coverage Targets
 
 Prioritize coverage for:
