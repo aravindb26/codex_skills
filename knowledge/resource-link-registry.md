@@ -1,6 +1,6 @@
 # Resource Link Registry
 
-Last updated: 2026-10-16
+Last updated: 2026-10-29
 
 Purpose:
 - Preserve useful URLs discussed while building this Codex audit setup.
@@ -99,6 +99,7 @@ Purpose:
 | <https://x.com/whoareme33/status/2061486969348051313?s=20> | Web3/security reference post. |
 | <https://x.com/pkqs91/status/2070157806104457395?s=20> | Codex/security workflow article reference. |
 | <https://x.com/pkqs91/article/2070157806104457395> | Codex/security workflow article reference. |
+| <https://x.com/sl4x0/status/2115791008747135067> | AI bug-bounty system architecture; distilled in `smart-contract-audit/article-lessons/sl4x0-agentic-bugbounty-workflow.md`. |
 
 ## Reviewed Or Skipped Sources
 
