@@ -263,6 +263,8 @@ For serious audits, use `/home/dinesh/.codex/knowledge/smart-contract-audit/work
 
 When a new report, article, X post, rejected finding, or valid public bug is provided, distill it into the correct file under the knowledge base instead of storing raw long-form content.
 
+At audit close, and whenever later disposition evidence arrives, update the relevant knowledge-base records with confirmed accepted, rejected, duplicate, false-positive, and missed-finding outcomes. Keep case-specific observations distinct from reusable techniques; generalize a technique only when supported by evidence from multiple independent cases. Mark unresolved dispositions as pending rather than treating them as successes or failures.
+
 During serious audits, maintain a working ledger in the chat, current audit workspace, or knowledge base of:
 
 - submitted or report-ready findings
