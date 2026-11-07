@@ -64,7 +64,19 @@ Questions:
 - Are rewards pulled from a wallet that may not have allowance/balance?
 - Is failure isolated to rewards, or does it lock all exits?
 
-### 3. Reward index stale across top-up, readd, or rate change
+### 3. External incentive accrues to an adapter with no claim/forward path
+
+Shape:
+- A strategy/adapter earns incentives from a downstream pool, but no reachable function claims and credits those rewards to their intended beneficiary.
+
+Questions:
+- Who is the downstream incentive recipient: adapter, strategy, vault, or user?
+- Does any harvest, migration, redeem, or emergency-exit route claim and forward the reward?
+- Are the rewards user-owned, protocol revenue, or merely unclaimed optional yield?
+
+Source pattern: [Downstream pool incentives accrue without an adapter claim path](../../knowledge/smart-contract-audit/report-patterns/solodit/medium/downstream-pool-incentives-accrue-with-no-adapter-claim-path-f5edc5acb5.md).
+
+### 4. Reward index stale across top-up, readd, or rate change
 
 Shape:
 - Adding/removing reward tokens, changing rate, or topping up rewards does not settle old accrual first.
@@ -74,7 +86,7 @@ Questions:
 - Can re-adding a reward token corrupt `userRewardPerTokenPaid`?
 - Does `set_rate` or top-up reset already-accrued fees/rewards?
 
-### 4. Epoch, duration, and timestamp boundary bugs
+### 5. Epoch, duration, and timestamp boundary bugs
 
 Shape:
 - Stake duration, epoch, reward cycle, or vesting state is uninitialized, stale, off by one, or bypassable.
@@ -84,7 +96,7 @@ Questions:
 - Can long gaps make claim loops revert or over-accrue?
 - Can anyone front-run vesting/account creation to block it?
 
-### 5. Double claim or missing claim finalization
+### 6. Double claim or missing claim finalization
 
 Shape:
 - Claim path transfers rewards before marking claimed, or unwind/retry paths preserve claimable state.
@@ -94,7 +106,7 @@ Questions:
 - Can accrue/unwind/claim order double count rewards?
 - Are historical tickets/epochs marked claimed exactly once?
 
-### 6. Validator or queued stake griefing
+### 7. Validator or queued stake griefing
 
 Shape:
 - Stake/unstake request queues can be flooded to block validator collateral claims or reward processing.

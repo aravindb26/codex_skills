@@ -105,6 +105,18 @@ Questions:
 - Are fees rounded/charged in a way that exceeds collected output?
 - Can order update/cancel paths invalidate slippage assumptions?
 
+### 7. Delayed liquidation lacks execution loss bounds
+
+Shape:
+- A queued or delayed liquidation fixes debt repayment but has no deadline, maximum debt input, or minimum collateral output, allowing price/liquidity changes before execution to worsen the exchange.
+
+Questions:
+- Is liquidation atomic or can it execute after its quote/state snapshot becomes stale?
+- Are bounds checked against actual debt paid and collateral received at settlement?
+- Can a keeper or caller choose an execution route that transfers value beyond the intended liquidation penalty?
+
+Source pattern: [Delayed liquidation lacks a loss bound and deadline](../../knowledge/smart-contract-audit/report-patterns/solodit/medium/delayed-liquidation-lacks-loss-bound-and-deadline-eea9280bc9.md).
+
 ## False-Positive Filters
 
 Do not escalate unless:

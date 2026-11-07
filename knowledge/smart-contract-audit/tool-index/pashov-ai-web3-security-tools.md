@@ -2,9 +2,9 @@
 
 Source: <https://github.com/pashov/ai-web3-security>
 
-Checked: 2026-10-13
+Checked: 2026-11-07
 
-Source commit checked: `9cdfb337b1bbf80110577bd4734ffc84edc7c3fa`
+Source commit checked: `d9465f8a146c6399ef972f8ef6c3b46f28f2ed48`
 
 ## Classification
 
@@ -201,6 +201,30 @@ Reason:
 - Adds narrow greenfield DeFi protocol discovery and spec-driven development workflows with explicit economic design, invariants, threat modeling, interface/storage specification, and test-spec phases.
 - These are not default audit-hunting skills, but their triggers are specific enough that they should not disturb serious audit sessions.
 
+### Vyper Stateful Fuzzing (`fyzz`)
+
+Source: <https://github.com/rafael-abuawad/skills/tree/c98990cc5882c9f8c4f78a4a62636da4da9f090e/fyzz>
+
+Installed locally at `/home/dinesh/.codex/skills/fyzz/` with a Codex companion rule in
+`local-codex-addendum.md`.
+
+Reason:
+
+- Adds a Vyper-specific stateful fuzzing workflow not covered by the installed Solidity-focused
+  fuzzing skills. It is conditional: first read the code and write invariants manually, review the
+  project runner/config and side effects, then run bounded local campaigns. It is not an always-on
+  audit pass.
+- Validation in an isolated virtual environment: `14 passed, 4 skipped`; skipped tests require
+  optional Ape/Moccasin environments. No global Python packages were installed.
+
+### Pashov Skills Content Update
+
+Checked `pashov/skills` at `eacfc09b365d2697b83355909d0300607e596ffc`. The useful X-Ray update is
+merged narrowly into the existing skill: a parser enumerates Solidity entry points that the prior
+grep patterns could miss, while manual source verification remains mandatory. Installed at
+`/home/dinesh/.codex/skills/x-ray/scripts/entry_points.py`; the local X-Ray skill version is `2.1`.
+The active local Solidity Auditor V3 and its Codex customization were not replaced.
+
 ### ZK / Circom Skills
 
 Source: <https://github.com/zksecurity/zk-skills>
@@ -246,6 +270,17 @@ Reviewed since the previous check:
   than an audit/hunting skill; existing Solana audit skills cover the review path.
 - `GPTScan/GPTScan` was reviewed as a scanner/tool, not a `SKILL.md` package; keep scanners as
   lead generators under the existing evidence rules.
+- `rafael-abuawad/skills/vyper-auditor` was reviewed but not installed: its fixed multi-agent
+  orchestration and broad pass selection would add noise and conflict with dynamic, evidence-led
+  routing. The distinct Vyper `fyzz` fuzz harness was installed conditionally instead.
+- `0xCyrildev/dot` was reviewed but not installed: it focuses on deployed Solana CPI/upgrade
+  graph tracing, not source-level vulnerability discovery, and is useful only for a specific
+  deployment investigation.
+- `TodorBonchev/rust-auditor` was reviewed but not installed: its Rust guidance overlaps the
+  installed `rust-review` workflow without a demonstrated quality gain.
+- `bountyoperator/bounty-operator` was reviewed but not installed: it is a full bounty workflow
+  product that overlaps local triage, report-quality, and handoff skills rather than adding a
+  distinct low-noise audit workflow.
 
 Skipped for now:
 

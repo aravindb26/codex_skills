@@ -1,6 +1,8 @@
 # Tracked Upstream Sources
 
-Last reviewed: 2026-10-13
+Last reviewed: 2026-11-07
+
+Latest refresh: [2026-11-07 source and report review](source-refresh-2026-11-07.md).
 
 This is the canonical URL registry for Codex audit tooling, knowledge feeds, and reference libraries maintained in this workspace. It intentionally excludes incidental article/report links already stored with their individual knowledge cards.
 
@@ -40,6 +42,7 @@ This is the canonical URL registry for Codex audit tooling, knowledge feeds, and
 | Solidity Auditor Private V3 | <https://github.com/0xfirefistt/solidity-auditor-private> | Private upstream for the active V3 Solidity auditor. |
 | Dark Navy Web3 Skills | <https://github.com/DarkNavySecurity/web3-skills> | Source for `client-auditor` and `exploit-investigator`; use for blockchain nodes, clients, and incident analysis, not ordinary contract-audit default routing. |
 | DeFi Builder Skills | <https://github.com/melanke/defi-builder-skills> | Track greenfield DeFi protocol discovery and spec-driven development workflows; not default audit hunting. |
+| Vyper stateful fuzzing (`fyzz`) | <https://github.com/rafael-abuawad/skills/tree/c98990cc5882c9f8c4f78a4a62636da4da9f090e/fyzz> | Conditional Vyper-only fuzz harness; run only after manual code understanding and invariant definition, in an isolated local environment. |
 
 ## Arsen Workflow References
 

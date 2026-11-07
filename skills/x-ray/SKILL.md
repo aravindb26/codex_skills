@@ -100,7 +100,7 @@ ALL calls (coverage, git analysis, reference reads, spec glob) MUST appear in th
 
 ## Step 2: Read Source Files + Entry Point Scan (SINGLE message, ALL tool calls parallel)
 
-CRITICAL: Every tool call — Bash, Agent, Read, Grep — MUST be issued in ONE message so they run concurrently. This includes source file reads, the entry point grep scan, and any spec doc detected in Step 1 (they are all independent).
+CRITICAL: Every tool call — Bash, Agent, Read, Grep — MUST be issued in ONE message so they run concurrently. This includes source file reads, the entry point scan, and any spec doc detected in Step 1 (they are all independent).
 
 ### Scope Filtering
 - Skip interfaces: `interfaces/` dirs or filenames `I` + uppercase letter
@@ -144,37 +144,28 @@ For EACH file, return this exact format:
   - `functionName()` — NONE — calls `ContractName.method()`
 ```
 
-### Entry Point Grep Scan (INCLUDED in the same parallel message as source reads)
+### Entry Point Scan (INCLUDED in the same parallel message as source reads)
 
-Launch these two **Bash** calls in the SAME message as the source file reads above — they are independent and can run concurrently. Commands use **only POSIX ERE + POSIX character classes** (no `-P` / PCRE, no GNU-only escapes like `\s` `\w` `\b`), so they work identically on GNU grep (Linux/WSL), BSD grep (macOS default `/usr/bin/grep`, FreeBSD), and ripgrep:
-
-```bash
-# 1. Single-line signatures: function name and visibility on same line
-grep -rnE 'function[[:space:]]+[[:alnum:]_]+[[:space:]]*\([^)]*\)[[:space:]]+(external|public)' [src-dir]/ --include='*.sol' \
-  | grep -v '/interfaces/' | grep -v '/mock/' \
-  | grep -Ev '(^|[^[:alnum:]_])(view|pure)([^[:alnum:]_]|$)'
-```
+Run the bundled parser in the SAME message as the source-file reads above:
 
 ```bash
-# 2. Multiline signatures: visibility keyword on the closing-paren line (covers 90%+ of multiline cases)
-grep -rnE '^[[:space:]]*\)[[:space:]]+(external|public)' [src-dir]/ --include='*.sol' -B5 \
-  | grep -v '/interfaces/' | grep -v '/mock/' \
-  | grep -Ev '(^|[^[:alnum:]_])(view|pure)([^[:alnum:]_]|$)'
+python3 "$SKILL_DIR/scripts/entry_points.py" [src-dir]
 ```
-Combine results from both. The multiline grep is critical — Solidity functions often split parameters across lines, putting `external`/`public` on the `)` line while `function name(` is lines above. The trailing `grep -Ev '(^|[^[:alnum:]_])(view|pure)([^[:alnum:]_]|$)'` is the POSIX-portable substitute for `\b(view|pure)\b`: it drops any line where `view` or `pure` appears as a standalone identifier (surrounded by non-identifier chars or line boundaries), while preserving lines that merely contain `view_param` / `pure_x` identifier substrings.
 
-**Portability guarantees:**
-- `-E`, `-v`, `-r`, `-n`, `-B` → POSIX (2001+) / supported by macOS, FreeBSD, Linux GNU grep, busybox grep, ripgrep
-- `[[:space:]]`, `[[:alnum:]_]` → POSIX character classes, supported by all above
-- `--include='*.sol'` → GNU + macOS BSD grep + ripgrep. Not supported by busybox grep (niche; Alpine minimal); if the skill ever needs to run there, replace `--include='*.sol' [src]/` with `$(find [src]/ -name '*.sol')` passed as arguments.
+The parser reads complete Solidity function headers after masking comments and strings, including
+wrapped signatures, `receive`, `fallback`, and legacy declarations. It reports unreadable paths and
+a scan summary. Treat its output as an enumeration aid, not proof of access control or exploitability.
+Manually verify each listed function and continue reading every in-scope file as required by this skill.
+If the parser is unavailable or fails, manually enumerate headers from every in-scope file; do not
+claim completeness from line-based grep.
 
-ALL tool calls (source reads/Bash/subagents, BOTH grep scans) MUST be in ONE message.
+ALL tool calls (source reads/Bash/subagents and the entry-point scan) MUST be in ONE message.
 
 Do NOT read test files or documentation files.
 
 ### Step 2b: Entry Point Classification
 
-Using the grep results already returned from Step 2's parallel message, classify ALL entry points. Do NOT rely solely on subagent summaries — subagents extract facts at the contract level and can misattribute which function makes which external call or which function has which modifier.
+Using the entry-point scan results already returned from Step 2's parallel message, classify ALL entry points. Do NOT rely solely on subagent summaries — subagents extract facts at the contract level and can misattribute which function makes which external call or which function has which modifier.
 
 **Exclude** from entry points: view/pure functions, interface-only declarations, library internal functions (they're downstream calls, not entry points), mock contracts.
 
@@ -216,7 +207,7 @@ Using the entry point data already collected in Step 2b, construct flow paths fo
 
 **Output**: Simple arrow chains grouped by actor flow. Reference earlier flows instead of repeating. 15-30 lines total. See the Protocol Flow Paths section in the entry-points.md template for exact format.
 
-The grep scan is a **hard gate**: the permissionless entry points section in the report must match this grep-verified list, not the subagent summaries. If there is a conflict, the grep + code reading result wins.
+The entry-point scan is a **hard gate**: the permissionless entry points section in the report must match this parser-enumerated and manually verified list, not the subagent summaries. If there is a conflict, re-read the code and resolve it before reporting.
 
 ### Step 2c: Backwards-Compatibility Code Detection
 
@@ -350,7 +341,7 @@ All output files go into the `x-ray/` directory. Write ALL FOUR files in a SINGL
 **Writing Section 2 (Threat & Trust Model)** — Follow the structure in the output template. Use `references/threats.md` for threat profiles, temporal threats, and composability threats content (all in one file, already loaded in Step 1). For hybrids, merge: primary adversary list first, then unique secondary threats (de-duplicate overlapping ones).
 
 **Verification rules** (apply during Section 2 writing):
-- **Permissionless entry points**: Use only the grep-verified list from Step 2b. The Step 2b procedure is the source of truth — do not rely on subagent summaries.
+- **Permissionless entry points**: Use only the parser-enumerated and manually verified list from Step 2b. The Step 2b procedure is the source of truth — do not rely on subagent summaries.
 - **Security claims**: Before writing any claim that a security check is missing, incomplete, or bypassable, you MUST trace the actual data flow by reading the relevant code. Specifically: (1) identify all write sites for the variable under question (use Grep), (2) confirm your claim holds against those write sites. Subagent summaries are not sufficient. If you cannot verify, qualify the claim with "could not confirm" rather than stating it as fact.
 
 **Section 7 (Git History)**: Integrate `x-ray/git-security-analysis.json` into: Contributors, Review Signals, Hotspots, Security-Relevant Commits (score >= 5), Dangerous Area Evolution, Forked Dependencies, Tech Debt, Cross-Reference Synthesis (2-4 bullets connecting git signals to Sections 2-3).

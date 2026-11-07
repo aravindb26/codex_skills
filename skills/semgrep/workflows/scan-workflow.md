@@ -459,6 +459,14 @@ one finding flagged by two rulesets is one row in the merge and two in that sum]
   from every scan. semgrep matches it anywhere in the tree, so any other directory with that
   name was skipped too. Move the output directory outside the target to scan those files
 
+### Default Ignore:
+[If the target root has no `.semgrepignore`, record that Semgrep's built-in defaults and `.gitignore`
+may exclude paths such as vendored, minified, `dist`, `build`, and test directories. These skipped
+paths are not a clean result. If a skipped path is security-relevant, rerun with explicit ignore
+control or scan that path separately. Do not claim completeness from an empty skipped-path list.]
+- No repo `.semgrepignore`: default ignores may have excluded unscanned paths; check whether any
+  excluded path is in scope and material before interpreting a low or zero finding count.
+
 Results written to:
 - $OUTPUT_DIR/results/results.sarif (merged SARIF)
 - $OUTPUT_DIR/raw/ (per-scan raw results, unfiltered)

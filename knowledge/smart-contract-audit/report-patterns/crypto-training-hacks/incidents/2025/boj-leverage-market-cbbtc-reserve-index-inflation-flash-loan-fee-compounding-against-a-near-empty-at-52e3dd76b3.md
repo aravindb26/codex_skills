@@ -2,6 +2,7 @@
 
 Source:
 - https://crypto.training/hacks/2025-07-BoJLeverageMarket/
+- Same-root dLEND incident: https://crypto.training/hacks/2026-03-dtrinitydlend/
 
 Imported:
 - 2026-08-01
@@ -24,6 +25,8 @@ Tags:
 Dedupe:
 - id: `2025-07-BoJLeverageMarket`
 - fingerprint: `52e3dd76b32224140260ac98bac06a0cdba30a6628ad14ed16e6b7086e4640a1`
+- related source id: `2026-03-dtrinitydlend`
+- related source fingerprint: `05428f832b47963ed8898ff2f92b10d811101a518a4d859293e648a3bc68e6e7`
 
 Core exploit idea:
 - The BoJ Pool is an Aave-v3-derived lending market on Base branded around "Bank of Japan" leverage. Like upstream Aave v3, when a flash loan is repaid the LP portion of t…

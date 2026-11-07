@@ -306,12 +306,20 @@ Report to user:
 **Query packs:** <list of query packs used>
 **Model packs:** <list of model packs used, or "None">
 **Threat models:** <list of threat models, or "default (remote)">
+**Extraction:** <buildMode from `$DB_NAME/codeql-database.yml`: `autobuild`, `manual`, `none`, or `unverified`>
 
 ### Results Summary:
 - Total findings: <N>
 - Error: <N>
 - Warning: <N>
 - Note: <N>
+
+### Coverage Note
+[For compiled languages only: C/C++, C#, Go, Java, Kotlin, Rust. Omit for Python, JavaScript/TypeScript, Ruby.]
+- `autobuild`/`manual` extraction covers compiled code only; unbuilt files and disabled `#ifdef`/`cfg`
+  branches may be absent. `none` extracts source without a build but drops disabled branches and has
+  weaker dataflow. A low or zero finding count is not evidence of clean code when extraction is
+  incomplete; report the gap and consider a broader build/re-extraction.
 
 ### Output Files:
 - SARIF (final): $OUTPUT_DIR/results/results.sarif

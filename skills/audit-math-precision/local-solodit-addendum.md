@@ -123,6 +123,42 @@ Questions:
 - Can long gaps, disabled recipients, or time moving backward/forward trigger underflow or permanent DoS?
 - Who receives or loses accumulated rounding dust?
 
+### 8. Equivalent routes apply the same fee rate to different bases
+
+Shape:
+- Borrow/reloan or exact-in/exact-out paths apply the same nominal fee to gross versus net quantities, causing different effective fees for economically equivalent actions.
+
+Questions:
+- Is each fee based on gross input, net received, debt created, or value transferred?
+- Do alternate routes with the same economic result charge the same documented fee?
+- Do fee and repayment rounding compound across repeated route conversions?
+
+Source pattern: [One protocol fee is applied to inconsistent bases](../../knowledge/smart-contract-audit/report-patterns/solodit/medium/protocol-fee-charged-on-inconsistent-route-bases-c7438a9bed.md).
+
+### 9. Independently rounded aggregates lose different remainders
+
+Shape:
+- Two aggregate representations are independently rebased with truncating division; repeated partial updates discard different remainders until a consumer underflows, reverts, or misprices state.
+
+Questions:
+- Which totals are intended to remain equal, and are they recomputed from a common source or maintained independently?
+- Are rounding remainders carried forward through partial fills, rebases, and withdrawals?
+- Can the divergence reach an unchecked subtraction or block a user operation?
+
+Source pattern: [Bucket and tick aggregates drift and block operations](../../knowledge/smart-contract-audit/report-patterns/solodit/medium/independent-bucket-and-tick-rounding-drift-blocks-operations-9e799ff6ed.md).
+
+### 10. External NAV changes followed by share-supply collapse
+
+Shape:
+- A share conversion uses NAV from a downstream pool whose balances can change independently of local share supply. Donation/manipulation followed by a large withdrawal leaves tiny supply and magnifies rounding for the next depositor.
+
+Questions:
+- Does `totalAssets` include externally manipulable aToken, pool, or lending positions?
+- Can an actor move external NAV without minting local shares, then withdraw most existing shares?
+- Are virtual offsets/minimum liquidity sufficient after the supply has collapsed, not only at first deposit?
+
+Source pattern: [External NAV donation and supply collapse enable tick-share inflation](../../knowledge/smart-contract-audit/report-patterns/solodit/high/external-nav-donation-and-supply-collapse-enable-tick-share-inflation-ab13980b5b.md). Do not duplicate the generic first-depositor donation check unless the shared external-NAV and post-withdrawal low-supply path is present.
+
 ## False-Positive Filters
 
 Do not escalate unless:

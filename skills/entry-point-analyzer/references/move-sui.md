@@ -2,7 +2,7 @@
 
 ## Entry Point Identification (State-Changing Only)
 
-In Move, `public` functions can be invoked from programmable transaction blocks (Sui) or transaction scripts (Aptos) and typically modify state. In addition, private `entry` functions are entrypoints. Package-protected (`public(package) fun`) and private (`fun`) functions should be excluded.
+For Sui, analyze public functions that can be invoked through programmable transaction blocks and `entry` functions; applicability depends on the Sui Move version and function signature. Do not apply Aptos transaction-script reachability rules to Sui. Package-visible and private functions are not independent transaction entry points, though their callers still need review.
 
 ```move
 // Public functions
@@ -30,7 +30,7 @@ public struct MyObject has key { id: ID, ... }
 // Capability objects typically have names that end with "Cap"
 public struct AdminCap has key { id: ID, ... }
 
-// Shared objects are created via `public_share
+// Shared objects can be created through Sui's sharing APIs
 public struct Pool has key { id: ID, ... }
 
 // Object ownership provides access control
@@ -38,7 +38,8 @@ public fun use_owned_object(obj: &mut MyObject) {
     // Only owner of obj can call this
 }
 
-// Shared object - anyone can access
+// A shared object may be supplied by an arbitrary transaction; the function's
+// signature and body still determine which operations and callers are allowed.
 public fun use_shared(pool: &mut Pool) { }
 
 // Shared Pool object gated by capability - only owner of AdminCap can call
@@ -49,15 +50,17 @@ public fun capability_gate(_cap: &AdminCap, pool: &mut Pool) {}
 | Pattern | Classification |
 |---------|----------------|
 | Owned object parameter | Owner of object |
-| Shared object | Public (Unrestricted) |
+| Shared object | Potentially transaction-accessible; inspect function visibility/signature, transaction constraints, and role/capability checks |
 
 ## Contract-Only Detection
 
 ### Package-protected Functions
 ```move
 // Only callable by other modules in the same Move package
-public(protected) fun internal_fun() { }
+public(package) fun internal_fun() { }
 ```
+
+`public(package)` is not an external transaction entry point. Confirm the target chain and Move version before interpreting visibility modifiers.
 
 ## Extraction Strategy
 
@@ -76,12 +79,12 @@ public(protected) fun internal_fun() { }
 1. **Object Model**: Access control typically through object ownership (rather than runtime assertions)
 2. **Capabilities**: `Cap` suffix typically indicates capability pattern
 4. **Generic Types**: Type parameters may carry capability constraints
-5. **Package Visibility**: `public(pacakge)` limits callers to modules in the same package
+5. **Package Visibility**: `public(package)` limits callers to modules in the same package
 
 ## Common Gotchas
 
 1. **Module Initializers**: `init` functions often create singletone shared objects and initial capabilities
 2. **Object Wrapping**: Wrapped objects transfer ownership
-3. **Shared vs Owned**: Shared objects can be accessed by anyone, owned objects only by a transaction sent by the owner
+3. **Shared vs Owned**: A shared object may be passed to a transaction by a non-owner; this does not bypass function-level authorization or transaction constraints. Owned objects are subject to ownership rules enforced by the runtime.
 4. **Package Upgrades**: Upgrades can introduce new types and functions and change old ones in type-compatible ways
 5. **Phantom Types**: Type parameters with `phantom` don't affect runtime

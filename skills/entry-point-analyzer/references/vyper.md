@@ -124,7 +124,7 @@ assert msg.sender != tx.origin, "No EOA"  # Vyper 0.3.7+
    - No access assertions → Public (Unrestricted)
    - `msg.sender == self.X` → Check what X is
    - `self.mapping[msg.sender]` → Review Required
-   - Known callback name → Contract-Only
+   - Callback-like name or interface → Review Required; verify the actual caller constraint and whether any user can satisfy or route through it
 
 ## Vyper-Specific Considerations
 
@@ -132,6 +132,8 @@ assert msg.sender != tx.origin, "No EOA"  # Vyper 0.3.7+
 2. **No Inheritance**: Each contract is standalone (interfaces only)
 3. **Explicit is Better**: All visibility must be declared explicitly
 4. **Default Internal**: Functions without decorators are internal
+
+`msg.sender != tx.origin` constrains the call path but is not trusted authentication by itself. A callback name, interface, or expected integration pattern likewise does not prove that only a trusted contract can call the function.
 
 ## Common Gotchas
 

@@ -1,12 +1,17 @@
 ---
 name: entry-point-analyzer
 description: Analyzes smart contract codebases to identify state-changing entry points for security auditing. Detects externally callable functions that modify state, categorizes them by access level (public, admin, role-restricted, contract-only), and generates structured audit reports. Excludes view/pure/read-only functions. Use when auditing smart contracts (Solidity, Vyper, Solana/Rust, Move, TON, CosmWasm) or when asked to find entry points, audit flows, external functions, access control patterns, or privileged operations.
-allowed-tools: Read Grep Glob Bash
 ---
 
 # Entry Point Analyzer
 
 Systematically identify all **state-changing** entry points in a smart contract codebase to guide security audits.
+
+## Codex Execution
+
+Use the available file-reading, search, and shell tools. Resolve bundled references relative to this
+SKILL.md, not the audited repository. Slither is optional; use manual inspection if unavailable or
+failing. Report unreadable source or reference files as coverage gaps.
 
 ## When to Use
 
@@ -35,11 +40,15 @@ This skill focuses exclusively on functions that can modify state. **Excluded:**
 | Solidity | `view`, `pure` functions |
 | Vyper | `@view`, `@pure` functions |
 | Solana | Functions without `mut` account references |
-| Move | Non-entry `public fun` (module-callable only) |
+| Move | Read-only function bodies; visibility alone does not establish mutability |
 | TON | `get` methods (FunC), read-only receivers (Tact) |
 | CosmWasm | `query` entry point and its handlers |
 
 **Why exclude read-only functions?** They cannot directly cause loss of funds or state corruption. While they may leak information, the primary audit focus is on functions that can change state.
+
+Include state-changing Move `public fun` even without `entry` where the chain permits transaction
+scripts or programmable transaction blocks to call them. Trace callees to determine state effects;
+record signer, capability, and object-ownership requirements separately from visibility.
 
 ## Workflow
 
@@ -102,7 +111,8 @@ Load the appropriate reference file(s) based on detected language before analysi
 Classify each state-changing entry point into one of these categories:
 
 ### 1. Public (Unrestricted)
-Functions callable by anyone without restrictions.
+Functions with no caller-identity or role restriction. Record pause and other state predicates
+separately; they do not make a function privileged.
 
 ### 2. Role-Restricted
 Functions limited to specific roles. Common patterns to detect:
@@ -111,11 +121,11 @@ Functions limited to specific roles. Common patterns to detect:
 - When role is ambiguous, flag as **"Restricted (review required)"** with the restriction pattern noted
 
 ### 3. Contract-Only (Internal Integration Points)
-Functions callable only by other contracts, not by EOAs. Indicators:
-- Callbacks: `onERC721Received`, `uniswapV3SwapCallback`, `flashLoanCallback`
-- Interface implementations with contract-caller checks
-- Functions that revert if `tx.origin == msg.sender`
-- Cross-contract hooks
+Functions whose enforced caller checks limit them to a contract. Cite the actual check and establish
+the permitted caller. A callback name, implemented interface, or intended integration is not access
+control. An unguarded callback is public; a configured-address check is restricted but unresolved
+until that address is identified. `msg.sender != tx.origin` constrains the call path, not the trusted
+identity of the caller.
 
 ## Output Format
 

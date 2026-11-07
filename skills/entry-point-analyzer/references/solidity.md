@@ -51,7 +51,9 @@ bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
 ```
 
-### Common Modifier Names → Role Classification
+### Common Modifier Names → Candidate Role Classification
+
+Read each modifier body before assigning a role; names are search hints, not proof.
 | Modifier Pattern | Classification |
 |------------------|----------------|
 | `onlyOwner` | Admin/Owner |
@@ -60,7 +62,8 @@ bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
 | `onlyRole(GOVERNANCE_ROLE)` | Governance |
 | `onlyGovernance` | Governance |
 | `onlyGuardian` | Guardian |
-| `onlyPauser`, `whenNotPaused` | Guardian/Pauser |
+| `onlyPauser` | Guardian/Pauser |
+| `whenNotPaused`, `whenPaused` | State condition, not a caller restriction |
 | `onlyMinter` | Minter |
 | `onlyOperator` | Operator |
 | `onlyKeeper` | Keeper |
@@ -79,6 +82,9 @@ if (msg.sender != admin) revert();              // Inline admin check
 ## Contract-Only Detection
 
 ### Callback Functions
+
+These names identify integrations to inspect. Include state-changing callbacks, but classify their
+actual caller checks. An unguarded callback remains public.
 ```solidity
 // ERC token callbacks
 function onERC721Received(...) external returns (bytes4)
@@ -100,8 +106,8 @@ function receiveFlashLoan(...) external                 // Balancer
 ### Contract-Caller Checks
 ```solidity
 require(msg.sender == address(pool), "...");    // Specific contract
-require(msg.sender != tx.origin, "...");        // Must be contract
-require(tx.origin != msg.sender);               // No EOA calls
+require(msg.sender != tx.origin, "...");        // Call-path condition, not protocol authentication
+require(tx.origin != msg.sender);               // Does not identify a trusted integration
 ```
 
 ## Extraction Strategy
@@ -117,7 +123,7 @@ require(tx.origin != msg.sender);               // No EOA calls
    - No access modifiers → Public (Unrestricted)
    - Known role modifier → Appropriate role category
    - Inline `require(msg.sender...)` → Review Required
-   - Callback pattern → Contract-Only
+   - Callback pattern → inspect actual caller checks; name/interface alone is not Contract-Only
 
 ## Inheritance Considerations
 

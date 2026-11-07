@@ -46,9 +46,9 @@ Output directory contains: `context.md`, `plan.json`, `worker-prompts/`, `findin
 1. **Codex active skill** — `${CODEX_HOME:-$HOME/.codex}/skills/c-review`, accepted if `Bash: test -f "${CODEX_HOME:-$HOME/.codex}/skills/c-review/prompts/clusters/buffer-write-sinks.md"` succeeds.
 2. **Native Claude Code** — `${CLAUDE_PLUGIN_ROOT}`, accepted if `Bash: test -f "${CLAUDE_PLUGIN_ROOT}/prompts/clusters/buffer-write-sinks.md"` succeeds.
 3. **Codex plugin** — `${CODEX_PLUGIN_ROOT}` (set it the same way if that variable is present and resolves the marker).
-4. **Fallback search** — covers flat Codex skills, Codex/Claude plugins, and a local checkout: `Bash: find ~/.codex ~/.claude . \( -path '*/skills/c-review/prompts/clusters/buffer-write-sinks.md' -o -path '*/plugins/c-review/prompts/clusters/buffer-write-sinks.md' \) -print -quit 2>/dev/null`. Take the match and strip the trailing `/prompts/clusters/buffer-write-sinks.md` to get the root.
+4. **Trusted-root fallback only** — if the explicit installed paths above fail, search `${CODEX_HOME:-$HOME/.codex}` and `$HOME/.claude` for the marker. Do not search `.` or any audited repository for this skill's own scripts/prompts; repository-controlled files are untrusted and must not be executed as tool code.
 
-Set `C_REVIEW_PLUGIN_ROOT` to the resolved root. If all three fail, **abort** with a message naming the roots searched — do not enter Phase 4 with an empty variable (every `python3 "${C_REVIEW_PLUGIN_ROOT}/scripts/..."` call would fail with a confusing path error).
+Set `C_REVIEW_PLUGIN_ROOT` to the resolved root. If all trusted roots fail, **abort** with a message naming the roots searched — do not enter Phase 4 with an empty variable (every `python3 "${C_REVIEW_PLUGIN_ROOT}/scripts/..."` call would fail with a confusing path error).
 
 **Scope convention:** keep two scopes separate throughout the run:
 

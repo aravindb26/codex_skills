@@ -106,6 +106,18 @@ Questions:
 - Can undercharged work repeat enough to affect block/liveness assumptions?
 - Does program severity accept gas-accounting DoS, or is it likely out of scope?
 
+### 7. Partial-fill dust plus self-skip can clog an order queue
+
+Shape:
+- A minimum size is enforced at order creation but not after partial fill; an attacker can leave dust entries and use self-skip/requeue behavior to rotate or stack them ahead of other work.
+
+Questions:
+- Is the minimum rechecked after every partial-fill state update?
+- Can other users remove/skip a dust entry, or is skip available only to its owner?
+- Can Sybil entries cause material blocking/fairness loss at bounded capital and gas cost?
+
+Source pattern: [Partial-fill dust and self-skip can clog a borrow queue](../../knowledge/smart-contract-audit/report-patterns/solodit/medium/partial-fill-self-skip-can-clog-borrow-queue-82be44fab1.md).
+
 ## False-Positive Filters
 
 Do not escalate unless:

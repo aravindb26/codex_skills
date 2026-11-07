@@ -1,0 +1,4 @@
+interface:
+  display_name: "HackenProof Citation Verifier"
+  short_description: "Verify report citations against their stated sources"
+  default_prompt: "Use $hackenproof-citation-verifier to verify the cited facts in this report."

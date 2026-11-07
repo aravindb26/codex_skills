@@ -124,6 +124,30 @@ Questions:
 - Are seized collateral and repaid debt updated before external transfer?
 - Does reentrancy turn liquidation into vault-fund theft or permanent freeze?
 
+### 9. Rounding-to-zero seizure blocks bad-debt resolution
+
+Shape:
+- Discounted collateral-to-seize floors to zero, a zero-amount guard rejects liquidation, and the bad-debt path only runs after collateral is fully exhausted. Residual dust can leave unrecoverable debt recorded indefinitely.
+
+Questions:
+- Can a validly liquidatable position produce zero seized collateral only because of integer rounding?
+- Does that revert prevent debt write-off, insurance coverage, or socialization?
+- Does the residual debt affect solvency or later users, and is there a separate dust-clear path?
+
+Source pattern: [NoDebtToLiquidate blocks bad-debt socialisation when discounted recovery floors to zero](../../knowledge/smart-contract-audit/report-patterns/solodit/medium/zero-rounded-collateral-blocks-bad-debt-socialization-b33ccca055.md).
+
+### 10. Opening or rollover leaves no liquidation buffer
+
+Shape:
+- Open/borrow and liquidation use the same health threshold, or an unbounded rollover factor/caller-selected rate can leave a position at HF approximately 1 and immediately liquidatable.
+
+Questions:
+- Do open, borrow, rollover, accrual, and liquidation use consistent units and thresholds?
+- Can a normal next accrual or permitted rate/price update make the new position liquidatable without an independent market shock?
+- Are risk factors bounded at the point of use?
+
+Source pattern: [Positions can be opened at the liquidation edge with HF=1](../../knowledge/smart-contract-audit/report-patterns/solodit/high/opening-at-liquidation-threshold-allows-immediate-liquidation-1557c9936c.md).
+
 ## False-Positive Filters
 
 Do not escalate unless:
