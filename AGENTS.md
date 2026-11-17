@@ -618,6 +618,8 @@ For Web2/source-code AppSec audits, Snyk, Codex Security, and offensive referenc
 
 For Web2/source-code audits, search `/home/dinesh/.codex/knowledge/source-code-audit/` before killing or reporting candidates in matching bug classes.
 
+When a Web2/OSS audit would benefit from comparable public disclosures, follow `/home/dinesh/.codex/knowledge/source-code-audit/report-sources/huntdeck-disclosed.md`. Use HuntDeck Disclosed as a searchable lead index, then verify the original report and affected source/version; do not infer an exploit from a title, severity, or summary, or bulk-import reports. This source is conditional on a relevant code surface and is not part of default Web3 audit routing.
+
 Use `/home/dinesh/.codex/audit-reference.md` for the expanded offensive-skills, Snyk, and Codex Security command guidance when the task is Web2/source-code AppSec.
 
 Use tools like `rg`, `rg --files`, `forge test`, `slither`, `semgrep`, and `codeql` when they materially advance the audit. Do not flood the user with scanner noise.

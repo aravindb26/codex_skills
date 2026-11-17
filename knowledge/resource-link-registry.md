@@ -62,6 +62,7 @@ Purpose:
 | Solodit | <https://solodit.cyfrin.io/> | High/Medium report-pattern import source. |
 | Code4rena reports | <https://code4rena.com/reports> | Medium/High report-pattern import source. |
 | Code4rena sitemap | <https://code4rena.com/sitemap.xml> | Discovery feed for local Code4rena importer. |
+| HuntDeck Disclosed | <https://huntdeck.io/disclosed> | Searchable public bug-bounty disclosure index for matching Web2/source-code audit patterns; use the validation and dedupe workflow in `source-code-audit/report-sources/huntdeck-disclosed.md`. |
 | Rekt News Yearn article | <https://rekt.news/yearn-rekt3> | Incident lesson source. |
 | KyberSwap post-mortem | <https://100proof.org/kyberswap-post-mortem.html> | CLMM/math exploit lesson source. |
 | Raydium bug fix review | <https://immunefi.com/blog/all/raydium-liquidity-drain-bug-fix-review/> | Solana/LP minting lesson source. |

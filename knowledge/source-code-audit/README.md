@@ -8,6 +8,7 @@ This directory is passive knowledge, not an active skill pack. Search it when a 
 
 - `bug-patterns/`: reusable vulnerability patterns distilled from public reports, incidents, rejected findings, and audit lessons.
 - `reporting/`: reusable triager-facing report-writing and reproduction guidance.
+- `report-sources/`: focused instructions for searching external public-disclosure indexes and validating their linked cases.
 
 ## Usage Rule
 
@@ -15,6 +16,7 @@ Do not bulk-load every file. During a source-code audit:
 
 - identify the target surface and behavior first
 - search this directory for matching project type, bug class, function names, and value/security boundaries
+- consult a matching `report-sources/` guide when public cases could sharpen checks for the current surface; do not bulk-import an entire feed
 - open only the matching notes
 - convert each matched note into concrete checks against the current code
 - treat these notes as lead generators, not proof
